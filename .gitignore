@@ -1,0 +1,6 @@
+.env
+venv/
+misc/
+pantone/
+suvinil/
+__pycache__/

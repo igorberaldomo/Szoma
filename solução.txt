@@ -1,0 +1,33 @@
+desisntalar tudo do mysql
+apagar foldrs /var/li/mysql*
+instalar mysql
+verificar log em /var/log/mysql/error.log para ver se tem senha na criacao
+não tem senha
+executar sudo mysql -u root
+dentro do mysql alterar senha do root
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'xxxxx'
+entrar no mysql sem sudo
+mysql -u root -p 
+informar a nova senha cadastrada
+
+sudo systemctl start mysql.service
+sudo systemctl status mysql
+
+sqltools
+{
+  "mysqlOptions": {
+    "authProtocol": "default",
+    "enableSsl": "Disabled"
+  },
+  "previewLimit": 50,
+  "server": "localhost",
+  "port": 3306,
+  "driver": "MySQL",
+  "name": "database",
+  "database": "mysql",
+  "username": "root",
+  "password": "xxxxx"
+}
+
+instala workbench e ignora mensagem
+colocar a senha do root 

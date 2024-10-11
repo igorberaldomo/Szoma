@@ -1,0 +1,63 @@
+import  os, json
+import pandas as pd
+import sqlalchemy
+from flask import Flask, request
+# import find_color_in_range
+
+def primary_select(red,green,blue):
+    distancia = 36
+    maxred = red + distancia
+    minred = red - distancia
+    maxgreen = green + distancia
+    mingreen = green - distancia
+    maxblue = blue + distancia
+    minblue = blue - distancia
+    if maxred > 255:
+        maxred = 255
+    if minred < 0:
+        minred = 0
+    if maxgreen > 255:
+        maxgreen = 255
+    if mingreen < 0:
+        mingreen = 0
+    if maxblue > 255:
+        maxblue = 255
+    if minblue < 0:
+        minblue = 0
+    DATABASE_URL = os.getenv("DATABASE_URL")
+    engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
+    search_string = f"SELECT * FROM suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} "
+    resultset  = pd.read_sql(search_string, engine)
+    return resultset
+    
+
+app = Flask(__name__)
+lastQuery = list()
+
+@app.route('/', methods = ['GET'])
+def infopage():
+    return ('<h1>Colors API</h1><p>This api will request a picture or RGB, and will return a product (paint, tiles, fabrics) </p> '
+)
+
+@app.route('/suvinil/', methods =['GET','POST'])
+def getsuvinilColors():
+    if request.method == 'POST':
+        rgb = request.get_json()
+        red = rgb[0]
+        green = rgb[1]
+        blue = rgb[2]
+        temp = primary_select(red,green,blue)
+        response = temp.to_dict(orient='records')
+        c = 0
+        while c < len(response):
+            lastQuery.append(response[c])
+            c+=1
+        print(lastQuery)
+        print(lastQuery[0]['id'])
+        return response
+    if request.method == 'GET':
+        print(lastQuery)
+        return lastQuery
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5555, debug=True)
