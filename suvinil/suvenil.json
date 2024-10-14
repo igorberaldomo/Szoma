@@ -1,0 +1,7294 @@
+{
+    "coressuvinil": [
+        {
+            "nome": "acelga",
+            "rgb": [
+                203,
+                203,
+                147
+            ],
+            "hexadecimal": "#cbcb93",
+            "pantone": {
+                "codigo": "13-0324",
+                "name": "lettuce-green",
+                "hex": "#bed38e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "aceto balsamico",
+            "rgb": [
+                84,
+                76,
+                76
+            ],
+            "hexadecimal": "#544c4c",
+            "pantone": {
+                "codigo": "19-0506",
+                "name": "black-ink",
+                "hex": "#44413c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "acr\u00f3pole",
+            "rgb": [
+                163,
+                163,
+                147
+            ],
+            "hexadecimal": "#a3a393",
+            "pantone": {
+                "codigo": "16-6008",
+                "name": "seagrass",
+                "hex": "#959889"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "acucar cristal",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "hexadecimal": "#ebebe3",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "acucar organico",
+            "rgb": [
+                227,
+                187,
+                131
+            ],
+            "hexadecimal": "#e3bb83",
+            "pantone": {
+                "codigo": "14-1038",
+                "name": "new-wheat",
+                "hex": "#d7b57f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "afrobeat",
+            "rgb": [
+                235,
+                123,
+                59
+            ],
+            "hexadecimal": "#eb7b3b",
+            "pantone": {
+                "codigo": "16-1253",
+                "name": "orange-ochre",
+                "hex": "#dc793a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "agreste",
+            "rgb": [
+                219,
+                171,
+                139
+            ],
+            "hexadecimal": "#dbab8b",
+            "pantone": {
+                "codigo": "15-1125",
+                "name": "porcini",
+                "hex": "#cca580"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "agua de cheiro",
+            "rgb": [
+                187,
+                187,
+                219
+            ],
+            "hexadecimal": "#bbbbdb",
+            "pantone": {
+                "codigo": "14-4112",
+                "name": "skyway",
+                "hex": "#adbed3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "agua fresca",
+            "rgb": [
+                211,
+                235,
+                235
+            ],
+            "hexadecimal": "#d3ebeb",
+            "pantone": {
+                "codigo": "12-5209",
+                "name": "soothing-sea",
+                "hex": "#c3e9e4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "agua marinha",
+            "rgb": [
+                131,
+                187,
+                155
+            ],
+            "hexadecimal": "#83bb9b",
+            "pantone": {
+                "codigo": "15-5711",
+                "name": "dusty-jade-green",
+                "hex": "#7bb5a3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "aguia",
+            "rgb": [
+                187,
+                180,
+                179
+            ],
+            "hexadecimal": "#bbb4b3",
+            "pantone": {
+                "codigo": "15-4703",
+                "name": "mirage-gray",
+                "hex": "#abafae"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "alamanda roxa",
+            "rgb": [
+                147,
+                107,
+                139
+            ],
+            "hexadecimal": "#936b8b",
+            "pantone": {
+                "codigo": "18-3011",
+                "name": "argyle-purple",
+                "hex": "#895c79"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "algodao egipcio",
+            "rgb": [
+                235,
+                227,
+                211
+            ],
+            "hexadecimal": "#ebe3d3",
+            "pantone": {
+                "codigo": "13-0002",
+                "name": "white-sand",
+                "hex": "#dbd5d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "allure",
+            "rgb": [
+                211,
+                195,
+                179
+            ],
+            "hexadecimal": "#d3c3b3",
+            "pantone": {
+                "codigo": "14-3903",
+                "name": "lilac-marble",
+                "hex": "#c3babf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "alto mar",
+            "rgb": [
+                131,
+                203,
+                179
+            ],
+            "hexadecimal": "#83cbb3",
+            "pantone": {
+                "codigo": "14-5713",
+                "name": "cascade",
+                "hex": "#76c1b2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "amanhecer",
+            "rgb": [
+                163,
+                195,
+                211
+            ],
+            "hexadecimal": "#a3c3d3",
+            "pantone": {
+                "codigo": "14-4121",
+                "name": "blue-bell",
+                "hex": "#93b4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "amarelo bandeira",
+            "rgb": [
+                243,
+                203,
+                20
+            ],
+            "hexadecimal": "#f3cb14",
+            "pantone": {
+                "codigo": "13-0752",
+                "name": "lemon",
+                "hex": "#f3bf08"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ambrosia",
+            "rgb": [
+                251,
+                219,
+                139
+            ],
+            "hexadecimal": "#fbdb8b",
+            "pantone": {
+                "codigo": "12-0729",
+                "name": "sundress",
+                "hex": "#ebcf89"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "amor platonico",
+            "rgb": [
+                195,
+                179,
+                179
+            ],
+            "hexadecimal": "#c3b3b3",
+            "pantone": {
+                "codigo": "15-0000",
+                "name": "dove",
+                "hex": "#b3ada7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "andiroba",
+            "rgb": [
+                203,
+                195,
+                187
+            ],
+            "hexadecimal": "#cbc3bb",
+            "pantone": {
+                "codigo": "14-4103",
+                "name": "gray-violet",
+                "hex": "#bbbcbc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "anis estrelado",
+            "rgb": [
+                156,
+                92,
+                116
+            ],
+            "hexadecimal": "#9c5c74",
+            "pantone": {
+                "codigo": "18-1710",
+                "name": "grape-nectar",
+                "hex": "#8d5c74"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "anoitecer",
+            "rgb": [
+                76,
+                108,
+                132
+            ],
+            "hexadecimal": "#4c6c84",
+            "pantone": {
+                "codigo": "19-4039",
+                "name": "delft",
+                "hex": "#3d5e8c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "apanhador de sonhos",
+            "rgb": [
+                91,
+                155,
+                147
+            ],
+            "hexadecimal": "#5b9b93",
+            "pantone": {
+                "codigo": "16-5418",
+                "name": "lagoon",
+                "hex": "#4d9e9a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "aquarela pessego",
+            "rgb": [
+                251,
+                203,
+                171
+            ],
+            "hexadecimal": "#fbcbab",
+            "pantone": {
+                "codigo": "12-0811",
+                "name": "dawn",
+                "hex": "#ebd2b7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "areia do deserto",
+            "rgb": [
+                227,
+                219,
+                203
+            ],
+            "hexadecimal": "#e3dbcb",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "areia",
+            "rgb": [
+                235,
+                227,
+                196
+            ],
+            "hexadecimal": "#ebe3c4",
+            "pantone": {
+                "codigo": "13-0002",
+                "name": "white-sand",
+                "hex": "#dbd5d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "argila",
+            "rgb": [
+                211,
+                155,
+                139
+            ],
+            "hexadecimal": "#d39b8b",
+            "pantone": {
+                "codigo": "15-1317",
+                "name": "sirocco",
+                "hex": "#c39d88"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "arrecifes",
+            "rgb": [
+                203,
+                211,
+                227
+            ],
+            "hexadecimal": "#cbd3e3",
+            "pantone": {
+                "codigo": "12-4607",
+                "name": "pastel-blue",
+                "hex": "#bcd3d5"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "arvore dos sonhos",
+            "rgb": [
+                187,
+                155,
+                155
+            ],
+            "hexadecimal": "#bb9b9b",
+            "pantone": {
+                "codigo": "16-1703",
+                "name": "sphinx",
+                "hex": "#ab9895"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "asteroide",
+            "rgb": [
+                187,
+                195,
+                195
+            ],
+            "hexadecimal": "#bbc3c3",
+            "pantone": {
+                "codigo": "14-5707",
+                "name": "aqua-foam",
+                "hex": "#adc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "aventurina preta",
+            "rgb": [
+                52,
+                52,
+                52
+            ],
+            "hexadecimal": "#343434",
+            "pantone": {
+                "codigo": "19-3911",
+                "name": "black-beauty",
+                "hex": "#26262a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azaleia branca",
+            "rgb": [
+                227,
+                227,
+                235
+            ],
+            "hexadecimal": "#e3e3eb",
+            "pantone": {
+                "codigo": "12-4305",
+                "name": "spa-blue",
+                "hex": "#d3dedf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul bebe",
+            "rgb": [
+                179,
+                211,
+                227
+            ],
+            "hexadecimal": "#b3d3e3",
+            "pantone": {
+                "codigo": "14-4317",
+                "name": "cool-blue",
+                "hex": "#a5c5d9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul celestial",
+            "rgb": [
+                131,
+                211,
+                243
+            ],
+            "hexadecimal": "#83d3f3",
+            "pantone": {
+                "codigo": "13-4720",
+                "name": "tanager-turquoise",
+                "hex": "#91dce8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul eterio",
+            "rgb": [
+                163,
+                179,
+                195
+            ],
+            "hexadecimal": "#a3b3c3",
+            "pantone": {
+                "codigo": "14-4512",
+                "name": "porcelain-blue",
+                "hex": "#95c0cb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul guache",
+            "rgb": [
+                123,
+                171,
+                203
+            ],
+            "hexadecimal": "#7babcb",
+            "pantone": {
+                "codigo": "15-4225",
+                "name": "alaskan-blue",
+                "hex": "#6da9d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul marinho",
+            "rgb": [
+                60,
+                76,
+                92
+            ],
+            "hexadecimal": "#3c4c5c",
+            "pantone": {
+                "codigo": "19-4121",
+                "name": "blue-wing-teal",
+                "hex": "#2c4053"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul petroleo",
+            "rgb": [
+                12,
+                116,
+                124
+            ],
+            "hexadecimal": "#0c747c",
+            "pantone": {
+                "codigo": "18-4728",
+                "name": "harbor-blue",
+                "hex": "#00656e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul polar",
+            "rgb": [
+                195,
+                211,
+                227
+            ],
+            "hexadecimal": "#c3d3e3",
+            "pantone": {
+                "codigo": "13-4308",
+                "name": "baby-blue",
+                "hex": "#b5c7d3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul precioso",
+            "rgb": [
+                4,
+                108,
+                140
+            ],
+            "hexadecimal": "#046c8c",
+            "pantone": {
+                "codigo": "19-4342",
+                "name": "seaport",
+                "hex": "#005e7d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azul rei",
+            "rgb": [
+                99,
+                171,
+                219
+            ],
+            "hexadecimal": "#63abdb",
+            "pantone": {
+                "codigo": "16-4134",
+                "name": "bonnie-blue",
+                "hex": "#539ccc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "babosa",
+            "rgb": [
+                155,
+                163,
+                139
+            ],
+            "hexadecimal": "#9ba38b",
+            "pantone": {
+                "codigo": "16-5808",
+                "name": "iceberg-green",
+                "hex": "#8c9c92"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "baiao",
+            "rgb": [
+                243,
+                171,
+                123
+            ],
+            "hexadecimal": "#f3ab7b",
+            "pantone": {
+                "codigo": "14-1133",
+                "name": "apricot-nectar",
+                "hex": "#ecaa79"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bala de iorgute",
+            "rgb": [
+                243,
+                163,
+                155
+            ],
+            "hexadecimal": "#f3a39b",
+            "pantone": {
+                "codigo": "14-1220",
+                "name": "peach-nougat",
+                "hex": "#e6af91"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bala toffee",
+            "rgb": [
+                219,
+                179,
+                163
+            ],
+            "hexadecimal": "#dbb3a3",
+            "pantone": {
+                "codigo": "14-1014",
+                "name": "gravel",
+                "hex": "#cbbfa2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "baleia azul",
+            "rgb": [
+                92,
+                108,
+                124
+            ],
+            "hexadecimal": "#5c6c7c",
+            "pantone": {
+                "codigo": "18-3921",
+                "name": "bijou-blue",
+                "hex": "#4e5e7f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "banana",
+            "rgb": [
+                235,
+                211,
+                99
+            ],
+            "hexadecimal": "#ebd363",
+            "pantone": {
+                "codigo": "12-0646",
+                "name": "celandine",
+                "hex": "#ebdf67"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bananada",
+            "rgb": [
+                132,
+                108,
+                84
+            ],
+            "hexadecimal": "#846c54",
+            "pantone": {
+                "codigo": "17-0517",
+                "name": "dusky-green",
+                "hex": "#746c57"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "banco de praca",
+            "rgb": [
+                147,
+                123,
+                115
+            ],
+            "hexadecimal": "#937b73",
+            "pantone": {
+                "codigo": "17-1502",
+                "name": "cloudburst",
+                "hex": "#837f7f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "banhos termais",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "hexadecimal": "#ebebe3",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "barbante",
+            "rgb": [
+                211,
+                179,
+                139
+            ],
+            "hexadecimal": "#d3b38b",
+            "pantone": {
+                "codigo": "16-0924",
+                "name": "croissant",
+                "hex": "#c4ab86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "base soft",
+            "rgb": [
+                243,
+                195,
+                155
+            ],
+            "hexadecimal": "#f3c39b",
+            "pantone": {
+                "codigo": "13-1018",
+                "name": "desert-dust",
+                "hex": "#e3bc8e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "batom de cereja",
+            "rgb": [
+                148,
+                68,
+                84
+            ],
+            "hexadecimal": "#944454",
+            "pantone": {
+                "codigo": "18-1426",
+                "name": "apple-butter",
+                "hex": "#844b4d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "batom malva",
+            "rgb": [
+                140,
+                92,
+                116
+            ],
+            "hexadecimal": "#8c5c74",
+            "pantone": {
+                "codigo": "18-3218",
+                "name": "concord-grape",
+                "hex": "#7c5379"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "beira do cais",
+            "rgb": [
+                163,
+                131,
+                99
+            ],
+            "hexadecimal": "#a38363",
+            "pantone": {
+                "codigo": "17-1316",
+                "name": "portabella",
+                "hex": "#937b6a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "berco",
+            "rgb": [
+                227,
+                227,
+                219
+            ],
+            "hexadecimal": "#e3e3db",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "berimbau",
+            "rgb": [
+                179,
+                155,
+                131
+            ],
+            "hexadecimal": "#b39b83",
+            "pantone": {
+                "codigo": "16-0613",
+                "name": "elm",
+                "hex": "#a39f86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bicho de pe",
+            "rgb": [
+                243,
+                179,
+                187
+            ],
+            "hexadecimal": "#f3b3bb",
+            "pantone": {
+                "codigo": "14-1312",
+                "name": "pale-blush",
+                "hex": "#e4bfb3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "biscoito champanhe",
+            "rgb": [
+                211,
+                163,
+                115
+            ],
+            "hexadecimal": "#d3a373",
+            "pantone": {
+                "codigo": "16-0940",
+                "name": "taffy",
+                "hex": "#c39b6a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bodega",
+            "rgb": [
+                179,
+                171,
+                179
+            ],
+            "hexadecimal": "#b3abb3",
+            "pantone": {
+                "codigo": "15-4306",
+                "name": "belgian-block",
+                "hex": "#a3a9a6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bola de basquete",
+            "rgb": [
+                211,
+                155,
+                99
+            ],
+            "hexadecimal": "#d39b63",
+            "pantone": {
+                "codigo": "16-0940",
+                "name": "taffy",
+                "hex": "#c39b6a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bolinha de gude",
+            "rgb": [
+                147,
+                187,
+                187
+            ],
+            "hexadecimal": "#93bbbb",
+            "pantone": {
+                "codigo": "15-5209",
+                "name": "aqua-haze",
+                "hex": "#87b9bc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bolo de nozes",
+            "rgb": [
+                203,
+                171,
+                139
+            ],
+            "hexadecimal": "#cbab8b",
+            "pantone": {
+                "codigo": "15-0719",
+                "name": "silver-fern",
+                "hex": "#bbaa7e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bolsa de veludo",
+            "rgb": [
+                124,
+                36,
+                52
+            ],
+            "hexadecimal": "#7c2434",
+            "pantone": {
+                "codigo": "19-1930",
+                "name": "pomegranate",
+                "hex": "#6c2831"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bombom de licor",
+            "rgb": [
+                179,
+                139,
+                147
+            ],
+            "hexadecimal": "#b38b93",
+            "pantone": {
+                "codigo": "16-1104",
+                "name": "crockery",
+                "hex": "#a49887"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "borra de cafe",
+            "rgb": [
+                108,
+                100,
+                100
+            ],
+            "hexadecimal": "#6c6464",
+            "pantone": {
+                "codigo": "18-5210",
+                "name": "eiffel-tower",
+                "hex": "#5c5658"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bossa nova",
+            "rgb": [
+                203,
+                131,
+                123
+            ],
+            "hexadecimal": "#cb837b",
+            "pantone": {
+                "codigo": "17-1524",
+                "name": "desert-sand",
+                "hex": "#bd7b74"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "botao de rosa",
+            "rgb": [
+                195,
+                147,
+                179
+            ],
+            "hexadecimal": "#c393b3",
+            "pantone": {
+                "codigo": "16-3205",
+                "name": "mauve-shadows",
+                "hex": "#b598a3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "branco puro",
+            "rgb": [
+                251,
+                251,
+                243
+            ],
+            "hexadecimal": "#fbfbf3",
+            "pantone": {
+                "codigo": "11-4001",
+                "name": "brilliant-white",
+                "hex": "#edf1fe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "brilho de estrela",
+            "rgb": [
+                227,
+                227,
+                219
+            ],
+            "hexadecimal": "#e3e3db",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "brilho vitreo",
+            "rgb": [
+                187,
+                195,
+                195
+            ],
+            "hexadecimal": "#bbc3c3",
+            "pantone": {
+                "codigo": "14-5707",
+                "name": "aqua-foam",
+                "hex": "#adc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "brilho solitario",
+            "rgb": [
+                51,
+                155,
+                203
+            ],
+            "hexadecimal": "#339bcb",
+            "pantone": {
+                "codigo": "16-4427",
+                "name": "horizon-blue",
+                "hex": "#289dbe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "brisa da montanha",
+            "rgb": [
+                163,
+                203,
+                195
+            ],
+            "hexadecimal": "#a3cbc3",
+            "pantone": {
+                "codigo": "14-4512",
+                "name": "porcelain-blue",
+                "hex": "#95c0cb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bronze",
+            "rgb": [
+                211,
+                147,
+                115
+            ],
+            "hexadecimal": "#d39373",
+            "pantone": {
+                "codigo": "16-0940",
+                "name": "taffy",
+                "hex": "#c39b6a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "broto de feijao",
+            "rgb": [
+                211,
+                203,
+                195
+            ],
+            "hexadecimal": "#d3cbc3",
+            "pantone": {
+                "codigo": "13-4201",
+                "name": "oyster-mushroom",
+                "hex": "#c3c6c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bumba meu boi",
+            "rgb": [
+                243,
+                155,
+                107
+            ],
+            "hexadecimal": "#f39b6b",
+            "pantone": {
+                "codigo": "15-1334",
+                "name": "shell-coral",
+                "hex": "#ea9575"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cabruca",
+            "rgb": [
+                84,
+                68,
+                60
+            ],
+            "hexadecimal": "#54443c",
+            "pantone": {
+                "codigo": "19-0506",
+                "name": "black-ink",
+                "hex": "#44413c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cacau bahia",
+            "rgb": [
+                251,
+                211,
+                115
+            ],
+            "hexadecimal": "#fbd373",
+            "pantone": {
+                "codigo": "12-0646",
+                "name": "celandine",
+                "hex": "#ebdf67"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cadeira de bambu",
+            "rgb": [
+                187,
+                171,
+                139
+            ],
+            "hexadecimal": "#bbab8b",
+            "pantone": {
+                "codigo": "14-6408",
+                "name": "abbey-stone",
+                "hex": "#aba798"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cafune",
+            "rgb": [
+                235,
+                243,
+                251
+            ],
+            "hexadecimal": "#ebf3fb",
+            "pantone": {
+                "codigo": "11-4601",
+                "name": "bit-of-blue",
+                "hex": "#e2eaeb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caipirinha de limao",
+            "rgb": [
+                187,
+                195,
+                187
+            ],
+            "hexadecimal": "#bbc3bb",
+            "pantone": {
+                "codigo": "14-5707",
+                "name": "aqua-foam",
+                "hex": "#adc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "calamaria",
+            "rgb": [
+                203,
+                235,
+                227
+            ],
+            "hexadecimal": "#cbebe3",
+            "pantone": {
+                "codigo": "12-5410",
+                "name": "bleached-aqua",
+                "hex": "#bce3df"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "calca de linho",
+            "rgb": [
+                219,
+                211,
+                179
+            ],
+            "hexadecimal": "#dbd3b3",
+            "pantone": {
+                "codigo": "13-0401",
+                "name": "oatmeal",
+                "hex": "#cbc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "calca jeans",
+            "rgb": [
+                44,
+                76,
+                116
+            ],
+            "hexadecimal": "#2c4c74",
+            "pantone": {
+                "codigo": "19-4057",
+                "name": "true-blue",
+                "hex": "#1e4477"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "calcita alaranjada",
+            "rgb": [
+                203,
+                139,
+                91
+            ],
+            "hexadecimal": "#cb8b5b",
+            "pantone": {
+                "codigo": "16-1235",
+                "name": "sandstorm",
+                "hex": "#bd8b69"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "calopsita",
+            "rgb": [
+                219,
+                219,
+                211
+            ],
+            "hexadecimal": "#dbdbd3",
+            "pantone": {
+                "codigo": "12-5303",
+                "name": "sprout-green",
+                "hex": "#cbd7d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "camelo",
+            "rgb": [
+                211,
+                187,
+                171
+            ],
+            "hexadecimal": "#d3bbab",
+            "pantone": {
+                "codigo": "14-0105",
+                "name": "overcast",
+                "hex": "#c3bdab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "campanula",
+            "rgb": [
+                132,
+                108,
+                156
+            ],
+            "hexadecimal": "#846c9c",
+            "pantone": {
+                "codigo": "17-3924",
+                "name": "lavender-violet",
+                "hex": "#767ba5"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "canario da terra",
+            "rgb": [
+                251,
+                219,
+                60
+            ],
+            "hexadecimal": "#fbdb3c",
+            "pantone": {
+                "codigo": "13-0644",
+                "name": "golden-kiwi",
+                "hex": "#f3dd3e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "canario",
+            "rgb": [
+                235,
+                211,
+                76
+            ],
+            "hexadecimal": "#ebd34c",
+            "pantone": {
+                "codigo": "13-0646",
+                "name": "meadowlark",
+                "hex": "#ead94e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cancao de ninar",
+            "rgb": [
+                243,
+                211,
+                227
+            ],
+            "hexadecimal": "#f3d3e3",
+            "pantone": {
+                "codigo": "11-0603",
+                "name": "pastel-parchment",
+                "hex": "#e5d9d3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "canjica",
+            "rgb": [
+                235,
+                211,
+                187
+            ],
+            "hexadecimal": "#ebd3bb",
+            "pantone": {
+                "codigo": "12-1404",
+                "name": "pink-tint",
+                "hex": "#dbcbbd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "canoa quebrada",
+            "rgb": [
+                171,
+                147,
+                131
+            ],
+            "hexadecimal": "#ab9383",
+            "pantone": {
+                "codigo": "17-1109",
+                "name": "chinchilla",
+                "hex": "#9c8e7b"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "capim santo",
+            "rgb": [
+                227,
+                227,
+                195
+            ],
+            "hexadecimal": "#e3e3c3",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "capim seco",
+            "rgb": [
+                123,
+                123,
+                91
+            ],
+            "hexadecimal": "#7b7b5b",
+            "pantone": {
+                "codigo": "18-5806",
+                "name": "agave-green",
+                "hex": "#6b7169"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "capoeira",
+            "rgb": [
+                203,
+                179,
+                155
+            ],
+            "hexadecimal": "#cbb39b",
+            "pantone": {
+                "codigo": "16-1509",
+                "name": "shadow-gray",
+                "hex": "#bba5a0"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caramelo",
+            "rgb": [
+                187,
+                139,
+                67
+            ],
+            "hexadecimal": "#bb8b43",
+            "pantone": {
+                "codigo": "16-0639",
+                "name": "golden-olive",
+                "hex": "#af9841"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caravela",
+            "rgb": [
+                155,
+                139,
+                107
+            ],
+            "hexadecimal": "#9b8b6b",
+            "pantone": {
+                "codigo": "17-1019",
+                "name": "elmwood",
+                "hex": "#8c7c61"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caravela do mar",
+            "rgb": [
+                211,
+                235,
+                243
+            ],
+            "hexadecimal": "#d3ebf3",
+            "pantone": {
+                "codigo": "12-5209",
+                "name": "soothing-sea",
+                "hex": "#c3e9e4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "carvao mineral",
+            "rgb": [
+                84,
+                84,
+                84
+            ],
+            "hexadecimal": "#545454",
+            "pantone": {
+                "codigo": "19-3918",
+                "name": "periscope",
+                "hex": "#46444c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "carvao",
+            "rgb": [
+                76,
+                76,
+                76
+            ],
+            "hexadecimal": "#4c4c4c",
+            "pantone": {
+                "codigo": "19-4019",
+                "name": "india-ink",
+                "hex": "#3c3f4a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cashmere",
+            "rgb": [
+                155,
+                171,
+                147
+            ],
+            "hexadecimal": "#9bab93",
+            "pantone": {
+                "codigo": "14-6319",
+                "name": "meadow",
+                "hex": "#8bba94"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "castanha do para",
+            "rgb": [
+                147,
+                115,
+                91
+            ],
+            "hexadecimal": "#93735b",
+            "pantone": {
+                "codigo": "18-1022",
+                "name": "ermine",
+                "hex": "#836b4f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "castanho",
+            "rgb": [
+                148,
+                100,
+                76
+            ],
+            "hexadecimal": "#94644c",
+            "pantone": {
+                "codigo": "18-1229",
+                "name": "carob-brown",
+                "hex": "#855c4c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "castical",
+            "rgb": [
+                235,
+                211,
+                211
+            ],
+            "hexadecimal": "#ebd3d3",
+            "pantone": {
+                "codigo": "13-3802",
+                "name": "orchid-tint",
+                "hex": "#dbd2db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caule",
+            "rgb": [
+                131,
+                123,
+                91
+            ],
+            "hexadecimal": "#837b5b",
+            "pantone": {
+                "codigo": "17-0517",
+                "name": "dusky-green",
+                "hex": "#746c57"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cavalo marinho",
+            "rgb": [
+                179,
+                163,
+                139
+            ],
+            "hexadecimal": "#b3a38b",
+            "pantone": {
+                "codigo": "16-0613",
+                "name": "elm",
+                "hex": "#a39f86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "centaurea azul",
+            "rgb": [
+                99,
+                147,
+                203
+            ],
+            "hexadecimal": "#6393cb",
+            "pantone": {
+                "codigo": "16-4134",
+                "name": "bonnie-blue",
+                "hex": "#539ccc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cereja",
+            "rgb": [
+                172,
+                44,
+                60
+            ],
+            "hexadecimal": "#ac2c3c",
+            "pantone": {
+                "codigo": "19-1559",
+                "name": "scarlet-sage",
+                "hex": "#9d202f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cerrado",
+            "rgb": [
+                203,
+                187,
+                155
+            ],
+            "hexadecimal": "#cbbb9b",
+            "pantone": {
+                "codigo": "15-4503",
+                "name": "chateau-gray",
+                "hex": "#bbb1a8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ceu azul",
+            "rgb": [
+                155,
+                203,
+                235
+            ],
+            "hexadecimal": "#9bcbeb",
+            "pantone": {
+                "codigo": "13-4411",
+                "name": "crystal-blue",
+                "hex": "#a1c8db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ceu nublado",
+            "rgb": [
+                155,
+                171,
+                187
+            ],
+            "hexadecimal": "#9babbb",
+            "pantone": {
+                "codigo": "16-3920",
+                "name": "lavender-lustre",
+                "hex": "#8c9cc1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cha de melissa",
+            "rgb": [
+                219,
+                219,
+                235
+            ],
+            "hexadecimal": "#dbdbeb",
+            "pantone": {
+                "codigo": "12-4805",
+                "name": "wan-blue",
+                "hex": "#cbdcdf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cha de rosas",
+            "rgb": [
+                235,
+                227,
+                235
+            ],
+            "hexadecimal": "#ebe3eb",
+            "pantone": {
+                "codigo": "12-4306",
+                "name": "barely-blue",
+                "hex": "#dde0df"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chapeu de sol",
+            "rgb": [
+                219,
+                163,
+                139
+            ],
+            "hexadecimal": "#dba38b",
+            "pantone": {
+                "codigo": "15-1125",
+                "name": "porcini",
+                "hex": "#cca580"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "charrete",
+            "rgb": [
+                179,
+                155,
+                131
+            ],
+            "hexadecimal": "#b39b83",
+            "pantone": {
+                "codigo": "16-0613",
+                "name": "elm",
+                "hex": "#a39f86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chave de fenda",
+            "rgb": [
+                211,
+                211,
+                211
+            ],
+            "hexadecimal": "#d3d3d3",
+            "pantone": {
+                "codigo": "13-4201",
+                "name": "oyster-mushroom",
+                "hex": "#c3c6c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cheiro verde",
+            "rgb": [
+                187,
+                187,
+                115
+            ],
+            "hexadecimal": "#bbbb73",
+            "pantone": {
+                "codigo": "13-0442",
+                "name": "green-glow",
+                "hex": "#b0c965"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chentile",
+            "rgb": [
+                219,
+                227,
+                195
+            ],
+            "hexadecimal": "#dbe3c3",
+            "pantone": {
+                "codigo": "12-5303",
+                "name": "sprout-green",
+                "hex": "#cbd7d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chicoria",
+            "rgb": [
+                171,
+                171,
+                131
+            ],
+            "hexadecimal": "#abab83",
+            "pantone": {
+                "codigo": "15-6414",
+                "name": "reseda",
+                "hex": "#a1ad92"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chocolate meio amargo",
+            "rgb": [
+                100,
+                76,
+                76
+            ],
+            "hexadecimal": "#644c4c",
+            "pantone": {
+                "codigo": "19-0511",
+                "name": "grape-leaf",
+                "hex": "#545144"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chocolate suico",
+            "rgb": [
+                163,
+                115,
+                83
+            ],
+            "hexadecimal": "#a37353",
+            "pantone": {
+                "codigo": "18-1030",
+                "name": "thrush",
+                "hex": "#936b4f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chocolate",
+            "rgb": [
+                187,
+                171,
+                155
+            ],
+            "hexadecimal": "#bbab9b",
+            "pantone": {
+                "codigo": "14-6408",
+                "name": "abbey-stone",
+                "hex": "#aba798"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "choconhaque",
+            "rgb": [
+                219,
+                179,
+                155
+            ],
+            "hexadecimal": "#dbb39b",
+            "pantone": {
+                "codigo": "14-1014",
+                "name": "gravel",
+                "hex": "#cbbfa2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chuva de petalas",
+            "rgb": [
+                219,
+                203,
+                227
+            ],
+            "hexadecimal": "#dbcbe3",
+            "pantone": {
+                "codigo": "12-4806",
+                "name": "chalk-blue",
+                "hex": "#ccdad7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chuva de prata",
+            "rgb": [
+                195,
+                203,
+                211
+            ],
+            "hexadecimal": "#c3cbd3",
+            "pantone": {
+                "codigo": "13-4308",
+                "name": "baby-blue",
+                "hex": "#b5c7d3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chuva de verao",
+            "rgb": [
+                195,
+                203,
+                195
+            ],
+            "hexadecimal": "#c3cbc3",
+            "pantone": {
+                "codigo": "14-4807",
+                "name": "surf-spray",
+                "hex": "#b4c8c2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cinza espacial",
+            "rgb": [
+                139,
+                139,
+                139
+            ],
+            "hexadecimal": "#8b8b8b",
+            "pantone": {
+                "codigo": "17-5107",
+                "name": "chinois-green",
+                "hex": "#7c8c87"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cinza natural",
+            "rgb": [
+                147,
+                147,
+                147
+            ],
+            "hexadecimal": "#939393",
+            "pantone": {
+                "codigo": "17-3914",
+                "name": "sharkskin",
+                "hex": "#838487"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cinza tecnologico",
+            "rgb": [
+                123,
+                123,
+                123
+            ],
+            "hexadecimal": "#7b7b7b",
+            "pantone": {
+                "codigo": "18-4711",
+                "name": "stormy-sea",
+                "hex": "#6e8082"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cinza urbano",
+            "rgb": [
+                187,
+                179,
+                171
+            ],
+            "hexadecimal": "#bbb3ab",
+            "pantone": {
+                "codigo": "15-4703",
+                "name": "mirage-gray",
+                "hex": "#abafae"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "citrico",
+            "rgb": [
+                211,
+                211,
+                107
+            ],
+            "hexadecimal": "#d3d36b",
+            "pantone": {
+                "codigo": "13-0540",
+                "name": "wild-lime",
+                "hex": "#c3d363"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cocada",
+            "rgb": [
+                211,
+                203,
+                179
+            ],
+            "hexadecimal": "#d3cbb3",
+            "pantone": {
+                "codigo": "14-0105",
+                "name": "overcast",
+                "hex": "#c3bdab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cocar",
+            "rgb": [
+                108,
+                100,
+                92
+            ],
+            "hexadecimal": "#6c645c",
+            "pantone": {
+                "codigo": "18-5210",
+                "name": "eiffel-tower",
+                "hex": "#5c5658"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "conforto",
+            "rgb": [
+                163,
+                171,
+                179
+            ],
+            "hexadecimal": "#a3abb3",
+            "pantone": {
+                "codigo": "16-3919",
+                "name": "eventide",
+                "hex": "#959eb7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "contemplacao",
+            "rgb": [
+                195,
+                211,
+                203
+            ],
+            "hexadecimal": "#c3d3cb",
+            "pantone": {
+                "codigo": "14-4807",
+                "name": "surf-spray",
+                "hex": "#b4c8c2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "conto de fadas",
+            "rgb": [
+                243,
+                211,
+                219
+            ],
+            "hexadecimal": "#f3d3db",
+            "pantone": {
+                "codigo": "12-2902",
+                "name": "mauve-chalk",
+                "hex": "#e5d0cf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cor do ceu",
+            "rgb": [
+                147,
+                179,
+                211
+            ],
+            "hexadecimal": "#93b3d3",
+            "pantone": {
+                "codigo": "14-4615",
+                "name": "antiqua-sand",
+                "hex": "#83c2cd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cortina de teatro",
+            "rgb": [
+                155,
+                107,
+                114
+            ],
+            "hexadecimal": "#9b6b72",
+            "pantone": {
+                "codigo": "18-1807",
+                "name": "twilight-mauve",
+                "hex": "#8b6f70"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cortina infantil",
+            "rgb": [
+                171,
+                171,
+                203
+            ],
+            "hexadecimal": "#ababcb",
+            "pantone": {
+                "codigo": "16-3922",
+                "name": "brunnera-blue",
+                "hex": "#9ba9ca"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cravo da india",
+            "rgb": [
+                124,
+                92,
+                76
+            ],
+            "hexadecimal": "#7c5c4c",
+            "pantone": {
+                "codigo": "18-1222",
+                "name": "cocoa-brown",
+                "hex": "#6c5043"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "creme de limao",
+            "rgb": [
+                235,
+                243,
+                251
+            ],
+            "hexadecimal": "#ebf3fb",
+            "pantone": {
+                "codigo": "11-4601",
+                "name": "bit-of-blue",
+                "hex": "#e2eaeb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "creme delicado",
+            "rgb": [
+                227,
+                235,
+                227
+            ],
+            "hexadecimal": "#e3ebe3",
+            "pantone": {
+                "codigo": "12-4305",
+                "name": "spa-blue",
+                "hex": "#d3dedf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "crisantemo amarelo",
+            "rgb": [
+                251,
+                179,
+                44
+            ],
+            "hexadecimal": "#fbb32c",
+            "pantone": {
+                "codigo": "15-0955",
+                "name": "old-gold",
+                "hex": "#eca825"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cristal de pirita",
+            "rgb": [
+                203,
+                195,
+                163
+            ],
+            "hexadecimal": "#cbc3a3",
+            "pantone": {
+                "codigo": "14-4501",
+                "name": "silver-lining",
+                "hex": "#bdb6ab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "croissant",
+            "rgb": [
+                235,
+                211,
+                171
+            ],
+            "hexadecimal": "#ebd3ab",
+            "pantone": {
+                "codigo": "13-1006",
+                "name": "creme-brulee",
+                "hex": "#dbccb5"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cromio",
+            "rgb": [
+                211,
+                211,
+                203
+            ],
+            "hexadecimal": "#d3d3cb",
+            "pantone": {
+                "codigo": "13-4201",
+                "name": "oyster-mushroom",
+                "hex": "#c3c6c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cruzeiro maritimo",
+            "rgb": [
+                107,
+                123,
+                163
+            ],
+            "hexadecimal": "#6b7ba3",
+            "pantone": {
+                "codigo": "17-4023",
+                "name": "blue-heaven",
+                "hex": "#5b7e98"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "curacau blue",
+            "rgb": [
+                35,
+                163,
+                211
+            ],
+            "hexadecimal": "#23a3d3",
+            "pantone": {
+                "codigo": "16-4529",
+                "name": "cyan-blue",
+                "hex": "#14a3c7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "damasco suave",
+            "rgb": [
+                243,
+                203,
+                163
+            ],
+            "hexadecimal": "#f3cba3",
+            "pantone": {
+                "codigo": "13-1010",
+                "name": "gray-sand",
+                "hex": "#e5ccaf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "delicia de morango",
+            "rgb": [
+                243,
+                211,
+                227
+            ],
+            "hexadecimal": "#f3d3e3",
+            "pantone": {
+                "codigo": "11-0603",
+                "name": "pastel-parchment",
+                "hex": "#e5d9d3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "desejo",
+            "rgb": [
+                132,
+                52,
+                60
+            ],
+            "hexadecimal": "#84343c",
+            "pantone": {
+                "codigo": "19-1338",
+                "name": "russet-brown",
+                "hex": "#743332"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "desfile de moda",
+            "rgb": [
+                155,
+                123,
+                147
+            ],
+            "hexadecimal": "#9b7b93",
+            "pantone": {
+                "codigo": "17-3810",
+                "name": "purple-ash",
+                "hex": "#8f8395"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "dia de sorte",
+            "rgb": [
+                251,
+                227,
+                76
+            ],
+            "hexadecimal": "#fbe34c",
+            "pantone": {
+                "codigo": "12-0642",
+                "name": "aurora",
+                "hex": "#eddd59"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "doce de caju",
+            "rgb": [
+                140,
+                108,
+                76
+            ],
+            "hexadecimal": "#8c6c4c",
+            "pantone": {
+                "codigo": "18-0724",
+                "name": "gothic-olive",
+                "hex": "#7c6e4f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "doce de leite",
+            "rgb": [
+                211,
+                203,
+                179
+            ],
+            "hexadecimal": "#d3cbb3",
+            "pantone": {
+                "codigo": "14-0105",
+                "name": "overcast",
+                "hex": "#c3bdab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "doce de limao",
+            "rgb": [
+                243,
+                235,
+                195
+            ],
+            "hexadecimal": "#f3ebc3",
+            "pantone": {
+                "codigo": "12-0804",
+                "name": "cloud-cream",
+                "hex": "#e6ddc5"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "drinque refrescante",
+            "rgb": [
+                203,
+                235,
+                203
+            ],
+            "hexadecimal": "#cbebcb",
+            "pantone": {
+                "codigo": "12-5506",
+                "name": "dusty-aqua",
+                "hex": "#c0dccd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "duna maranhense",
+            "rgb": [
+                235,
+                219,
+                195
+            ],
+            "hexadecimal": "#ebdbc3",
+            "pantone": {
+                "codigo": "12-1404",
+                "name": "pink-tint",
+                "hex": "#dbcbbd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "duna",
+            "rgb": [
+                227,
+                196,
+                187
+            ],
+            "hexadecimal": "#e3c4bb",
+            "pantone": {
+                "codigo": "14-1506",
+                "name": "rose-smoke",
+                "hex": "#d3b4ad"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "eclipse",
+            "rgb": [
+                171,
+                155,
+                83
+            ],
+            "hexadecimal": "#ab9b53",
+            "pantone": {
+                "codigo": "16-0532",
+                "name": "moss",
+                "hex": "#a09d59"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "elefante",
+            "rgb": [
+                163,
+                163,
+                155
+            ],
+            "hexadecimal": "#a3a39b",
+            "pantone": {
+                "codigo": "16-5304",
+                "name": "jadeite",
+                "hex": "#95a69f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "entardecer",
+            "rgb": [
+                163,
+                147,
+                179
+            ],
+            "hexadecimal": "#a393b3",
+            "pantone": {
+                "codigo": "16-3930",
+                "name": "thistle-down",
+                "hex": "#9499bb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "equilibrio",
+            "rgb": [
+                179,
+                227,
+                211
+            ],
+            "hexadecimal": "#b3e3d3",
+            "pantone": {
+                "codigo": "12-4608",
+                "name": "clearwater",
+                "hex": "#aad5db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "erva doce",
+            "rgb": [
+                235,
+                235,
+                219
+            ],
+            "hexadecimal": "#ebebdb",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "erva melissa",
+            "rgb": [
+                131,
+                163,
+                123
+            ],
+            "hexadecimal": "#83a37b",
+            "pantone": {
+                "codigo": "16-6324",
+                "name": "jadesheen",
+                "hex": "#77a276"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ervas finas",
+            "rgb": [
+                187,
+                211,
+                163
+            ],
+            "hexadecimal": "#bbd3a3",
+            "pantone": {
+                "codigo": "14-0115",
+                "name": "foam-green",
+                "hex": "#b4c79c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "espaco sideral",
+            "rgb": [
+                203,
+                203,
+                219
+            ],
+            "hexadecimal": "#cbcbdb",
+            "pantone": {
+                "codigo": "14-4106",
+                "name": "gray-dawn",
+                "hex": "#bbc1cc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "esperanca",
+            "rgb": [
+                211,
+                227,
+                211
+            ],
+            "hexadecimal": "#d3e3d3",
+            "pantone": {
+                "codigo": "12-5505",
+                "name": "glacier",
+                "hex": "#c3dbd4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "espinafre",
+            "rgb": [
+                107,
+                123,
+                91
+            ],
+            "hexadecimal": "#6b7b5b",
+            "pantone": {
+                "codigo": "17-5912",
+                "name": "dark-ivy",
+                "hex": "#5b7763"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "esponja do mar",
+            "rgb": [
+                227,
+                219,
+                203
+            ],
+            "hexadecimal": "#e3dbcb",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "espuma cremosa",
+            "rgb": [
+                243,
+                235,
+                227
+            ],
+            "hexadecimal": "#f3ebe3",
+            "pantone": {
+                "codigo": "11-4804",
+                "name": "lightest-sky",
+                "hex": "#e4eadf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "espuma de baunilha",
+            "rgb": [
+                243,
+                243,
+                227
+            ],
+            "hexadecimal": "#f3f3e3",
+            "pantone": {
+                "codigo": "11-4804",
+                "name": "lightest-sky",
+                "hex": "#e4eadf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "espuma gelada",
+            "rgb": [
+                219,
+                219,
+                203
+            ],
+            "hexadecimal": "#dbdbcb",
+            "pantone": {
+                "codigo": "13-6105",
+                "name": "celadon-tint",
+                "hex": "#cbcebe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "esqui na neve",
+            "rgb": [
+                235,
+                235,
+                235
+            ],
+            "hexadecimal": "#ebebeb",
+            "pantone": {
+                "codigo": "12-4306",
+                "name": "barely-blue",
+                "hex": "#dde0df"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "essencia de lavanda",
+            "rgb": [
+                187,
+                195,
+                211
+            ],
+            "hexadecimal": "#bbc3d3",
+            "pantone": {
+                "codigo": "14-4112",
+                "name": "skyway",
+                "hex": "#adbed3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "estrada velha",
+            "rgb": [
+                187,
+                163,
+                131
+            ],
+            "hexadecimal": "#bba383",
+            "pantone": {
+                "codigo": "16-1510",
+                "name": "fawn",
+                "hex": "#ae9490"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "estrela radiante",
+            "rgb": [
+                147,
+                131,
+                195
+            ],
+            "hexadecimal": "#9383c3",
+            "pantone": {
+                "codigo": "17-3930",
+                "name": "jacaranda",
+                "hex": "#848dc5"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "eucalipto",
+            "rgb": [
+                131,
+                163,
+                131
+            ],
+            "hexadecimal": "#83a383",
+            "pantone": {
+                "codigo": "16-6324",
+                "name": "jadesheen",
+                "hex": "#77a276"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fabula",
+            "rgb": [
+                211,
+                227,
+                187
+            ],
+            "hexadecimal": "#d3e3bb",
+            "pantone": {
+                "codigo": "13-6006",
+                "name": "almost-aqua",
+                "hex": "#cad3c1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fantasia prateada",
+            "rgb": [
+                171,
+                171,
+                163
+            ],
+            "hexadecimal": "#ababa3",
+            "pantone": {
+                "codigo": "16-4703",
+                "name": "ghost-gray",
+                "hex": "#9c9b98"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "farol do morro",
+            "rgb": [
+                163,
+                155,
+                131
+            ],
+            "hexadecimal": "#a39b83",
+            "pantone": {
+                "codigo": "17-0510",
+                "name": "silver-sage",
+                "hex": "#938b78"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "favo de baunilha",
+            "rgb": [
+                84,
+                76,
+                76
+            ],
+            "hexadecimal": "#544c4c",
+            "pantone": {
+                "codigo": "19-0506",
+                "name": "black-ink",
+                "hex": "#44413c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "festival de teatro",
+            "rgb": [
+                108,
+                100,
+                100
+            ],
+            "hexadecimal": "#6c6464",
+            "pantone": {
+                "codigo": "18-5210",
+                "name": "eiffel-tower",
+                "hex": "#5c5658"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "figo",
+            "rgb": [
+                211,
+                155,
+                155
+            ],
+            "hexadecimal": "#d39b9b",
+            "pantone": {
+                "codigo": "15-1511",
+                "name": "mahogany-rose",
+                "hex": "#c5a193"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fim da estacao",
+            "rgb": [
+                171,
+                147,
+                163
+            ],
+            "hexadecimal": "#ab93a3",
+            "pantone": {
+                "codigo": "16-4703",
+                "name": "ghost-gray",
+                "hex": "#9c9b98"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fim de tarde",
+            "rgb": [
+                203,
+                131,
+                115
+            ],
+            "hexadecimal": "#cb8373",
+            "pantone": {
+                "codigo": "17-1524",
+                "name": "desert-sand",
+                "hex": "#bd7b74"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fio metalizado",
+            "rgb": [
+                203,
+                203,
+                211
+            ],
+            "hexadecimal": "#cbcbd3",
+            "pantone": {
+                "codigo": "14-4106",
+                "name": "gray-dawn",
+                "hex": "#bbc1cc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flaboyant",
+            "rgb": [
+                203,
+                75,
+                67
+            ],
+            "hexadecimal": "#cb4b43",
+            "pantone": {
+                "codigo": "17-1545",
+                "name": "cranberry",
+                "hex": "#bb4a4d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flan de baunilha",
+            "rgb": [
+                251,
+                227,
+                195
+            ],
+            "hexadecimal": "#fbe3c3",
+            "pantone": {
+                "codigo": "12-0806",
+                "name": "rutabaga",
+                "hex": "#ecddbe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flauta doce",
+            "rgb": [
+                171,
+                163,
+                171
+            ],
+            "hexadecimal": "#aba3ab",
+            "pantone": {
+                "codigo": "16-3907",
+                "name": "dapple-gray",
+                "hex": "#9c9ba7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "floco de neve",
+            "rgb": [
+                243,
+                243,
+                243
+            ],
+            "hexadecimal": "#f3f3f3",
+            "pantone": {
+                "codigo": "11-4802",
+                "name": "summer-shower",
+                "hex": "#e5ebe3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flor de anis",
+            "rgb": [
+                195,
+                155,
+                131
+            ],
+            "hexadecimal": "#c39b83",
+            "pantone": {
+                "codigo": "14-1012",
+                "name": "gilded-beige",
+                "hex": "#b39f8d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flor de cerejeira",
+            "rgb": [
+                195,
+                179,
+                171
+            ],
+            "hexadecimal": "#c3b3ab",
+            "pantone": {
+                "codigo": "15-0000",
+                "name": "dove",
+                "hex": "#b3ada7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flor de geranio",
+            "rgb": [
+                195,
+                163,
+                211
+            ],
+            "hexadecimal": "#c3a3d3",
+            "pantone": {
+                "codigo": "15-3720",
+                "name": "lilac-breeze",
+                "hex": "#b3a0c9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flor de pessegueiro",
+            "rgb": [
+                235,
+                203,
+                227
+            ],
+            "hexadecimal": "#ebcbe3",
+            "pantone": {
+                "codigo": "13-3802",
+                "name": "orchid-tint",
+                "hex": "#dbd2db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flor do anturio",
+            "rgb": [
+                203,
+                219,
+                163
+            ],
+            "hexadecimal": "#cbdba3",
+            "pantone": {
+                "codigo": "12-0317",
+                "name": "gleam",
+                "hex": "#bfd1ad"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flor do maracuja",
+            "rgb": [
+                163,
+                131,
+                163
+            ],
+            "hexadecimal": "#a383a3",
+            "pantone": {
+                "codigo": "17-3640",
+                "name": "fairy-wren",
+                "hex": "#9479af"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "folha de menta",
+            "rgb": [
+                195,
+                211,
+                107
+            ],
+            "hexadecimal": "#c3d36b",
+            "pantone": {
+                "codigo": "13-0540",
+                "name": "wild-lime",
+                "hex": "#c3d363"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "folha de tabaco",
+            "rgb": [
+                179,
+                155,
+                131
+            ],
+            "hexadecimal": "#b39b83",
+            "pantone": {
+                "codigo": "16-0613",
+                "name": "elm",
+                "hex": "#a39f86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "folha de uva",
+            "rgb": [
+                203,
+                211,
+                171
+            ],
+            "hexadecimal": "#cbd3ab",
+            "pantone": {
+                "codigo": "13-6208",
+                "name": "bok-choy",
+                "hex": "#bccab3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "folha seca",
+            "rgb": [
+                187,
+                195,
+                163
+            ],
+            "hexadecimal": "#bbc3a3",
+            "pantone": {
+                "codigo": "15-6313",
+                "name": "laurel-green",
+                "hex": "#adbba1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "foto retro",
+            "rgb": [
+                203,
+                203,
+                203
+            ],
+            "hexadecimal": "#cbcbcb",
+            "pantone": {
+                "codigo": "14-4103",
+                "name": "gray-violet",
+                "hex": "#bbbcbc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "frape de pessego",
+            "rgb": [
+                243,
+                171,
+                147
+            ],
+            "hexadecimal": "#f3ab93",
+            "pantone": {
+                "codigo": "15-1319",
+                "name": "almost-apricot",
+                "hex": "#e5b39b"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "frescor da natureza",
+            "rgb": [
+                219,
+                227,
+                211
+            ],
+            "hexadecimal": "#dbe3d3",
+            "pantone": {
+                "codigo": "12-5303",
+                "name": "sprout-green",
+                "hex": "#cbd7d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "frescor de manha",
+            "rgb": [
+                251,
+                211,
+                147
+            ],
+            "hexadecimal": "#fbd393",
+            "pantone": {
+                "codigo": "13-1024",
+                "name": "buff",
+                "hex": "#ebc396"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "frescor de menta",
+            "rgb": [
+                219,
+                227,
+                227
+            ],
+            "hexadecimal": "#dbe3e3",
+            "pantone": {
+                "codigo": "12-4805",
+                "name": "wan-blue",
+                "hex": "#cbdcdf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fruta da condessa",
+            "rgb": [
+                235,
+                187,
+                171
+            ],
+            "hexadecimal": "#ebbbab",
+            "pantone": {
+                "codigo": "14-1313",
+                "name": "rose-cloud",
+                "hex": "#dbb0a2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fundo do mar",
+            "rgb": [
+                187,
+                195,
+                179
+            ],
+            "hexadecimal": "#bbc3b3",
+            "pantone": {
+                "codigo": "14-5707",
+                "name": "aqua-foam",
+                "hex": "#adc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "funghi",
+            "rgb": [
+                124,
+                108,
+                92
+            ],
+            "hexadecimal": "#7c6c5c",
+            "pantone": {
+                "codigo": "18-0601",
+                "name": "charcoal-gray",
+                "hex": "#6c6868"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "gaita",
+            "rgb": [
+                124,
+                116,
+                116
+            ],
+            "hexadecimal": "#7c7474",
+            "pantone": {
+                "codigo": "18-0601",
+                "name": "charcoal-gray",
+                "hex": "#6c6868"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "galho seco",
+            "rgb": [
+                187,
+                171,
+                155
+            ],
+            "hexadecimal": "#bbab9b",
+            "pantone": {
+                "codigo": "14-6408",
+                "name": "abbey-stone",
+                "hex": "#aba798"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "geada",
+            "rgb": [
+                235,
+                235,
+                235
+            ],
+            "hexadecimal": "#ebebeb",
+            "pantone": {
+                "codigo": "12-4306",
+                "name": "barely-blue",
+                "hex": "#dde0df"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "gelatina tuti fruti",
+            "rgb": [
+                76,
+                179,
+                203
+            ],
+            "hexadecimal": "#4cb3cb",
+            "pantone": {
+                "codigo": "16-4530",
+                "name": "aquarius",
+                "hex": "#3cadd4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "gelato de hortela",
+            "rgb": [
+                243,
+                243,
+                235
+            ],
+            "hexadecimal": "#f3f3eb",
+            "pantone": {
+                "codigo": "11-4804",
+                "name": "lightest-sky",
+                "hex": "#e4eadf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "geleia de amora",
+            "rgb": [
+                140,
+                108,
+                116
+            ],
+            "hexadecimal": "#8c6c74",
+            "pantone": {
+                "codigo": "18-1108",
+                "name": "fallen-rock",
+                "hex": "#807669"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "geleia de uva",
+            "rgb": [
+                124,
+                68,
+                108
+            ],
+            "hexadecimal": "#7c446c",
+            "pantone": {
+                "codigo": "18-3518",
+                "name": "patrician-purple",
+                "hex": "#6c4e79"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "geleiras",
+            "rgb": [
+                171,
+                219,
+                235
+            ],
+            "hexadecimal": "#abdbeb",
+            "pantone": {
+                "codigo": "12-4608",
+                "name": "clearwater",
+                "hex": "#aad5db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "gelo",
+            "rgb": [
+                227,
+                235,
+                227
+            ],
+            "hexadecimal": "#e3ebe3",
+            "pantone": {
+                "codigo": "12-4305",
+                "name": "spa-blue",
+                "hex": "#d3dedf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "gema caipira",
+            "rgb": [
+                243,
+                171,
+                59
+            ],
+            "hexadecimal": "#f3ab3b",
+            "pantone": {
+                "codigo": "15-1049",
+                "name": "artisans-gold",
+                "hex": "#f2ab46"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "general",
+            "rgb": [
+                235,
+                123,
+                59
+            ],
+            "hexadecimal": "#eb7b3b",
+            "pantone": {
+                "codigo": "16-1253",
+                "name": "orange-ochre",
+                "hex": "#dc793a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "gengibre",
+            "rgb": [
+                243,
+                227,
+                179
+            ],
+            "hexadecimal": "#f3e3b3",
+            "pantone": {
+                "codigo": "12-0525",
+                "name": "luminary-green",
+                "hex": "#e3eaa5"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "girafa",
+            "rgb": [
+                251,
+                219,
+                107
+            ],
+            "hexadecimal": "#fbdb6b",
+            "pantone": {
+                "codigo": "12-0646",
+                "name": "celandine",
+                "hex": "#ebdf67"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "giz de cera",
+            "rgb": [
+                20,
+                60,
+                116
+            ],
+            "hexadecimal": "#143c74",
+            "pantone": {
+                "codigo": "19-4057",
+                "name": "true-blue",
+                "hex": "#1e4477"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "glamour",
+            "rgb": [
+                140,
+                84,
+                140
+            ],
+            "hexadecimal": "#8c548c",
+            "pantone": {
+                "codigo": "18-3634",
+                "name": "chive-blossom",
+                "hex": "#7d5d99"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "goiaba",
+            "rgb": [
+                219,
+                115,
+                123
+            ],
+            "hexadecimal": "#db737b",
+            "pantone": {
+                "codigo": "17-1927",
+                "name": "desert-rose",
+                "hex": "#cf6977"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "golfinho",
+            "rgb": [
+                147,
+                155,
+                171
+            ],
+            "hexadecimal": "#939bab",
+            "pantone": {
+                "codigo": "17-3919",
+                "name": "purple-impression",
+                "hex": "#858fb1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "granito nobre",
+            "rgb": [
+                108,
+                100,
+                100
+            ],
+            "hexadecimal": "#6c6464",
+            "pantone": {
+                "codigo": "18-5210",
+                "name": "eiffel-tower",
+                "hex": "#5c5658"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "granizo",
+            "rgb": [
+                179,
+                179,
+                171
+            ],
+            "hexadecimal": "#b3b3ab",
+            "pantone": {
+                "codigo": "15-4306",
+                "name": "belgian-block",
+                "hex": "#a3a9a6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "grao de areia",
+            "rgb": [
+                203,
+                195,
+                147
+            ],
+            "hexadecimal": "#cbc393",
+            "pantone": {
+                "codigo": "14-0217",
+                "name": "seedling",
+                "hex": "#c0cba1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "grao de bico",
+            "rgb": [
+                251,
+                211,
+                139
+            ],
+            "hexadecimal": "#fbd38b",
+            "pantone": {
+                "codigo": "13-1024",
+                "name": "buff",
+                "hex": "#ebc396"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "grao de cafe",
+            "rgb": [
+                163,
+                139,
+                131
+            ],
+            "hexadecimal": "#a38b83",
+            "pantone": {
+                "codigo": "17-0510",
+                "name": "silver-sage",
+                "hex": "#938b78"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "hematita",
+            "rgb": [
+                123,
+                123,
+                115
+            ],
+            "hexadecimal": "#7b7b73",
+            "pantone": {
+                "codigo": "18-5806",
+                "name": "agave-green",
+                "hex": "#6b7169"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "hena",
+            "rgb": [
+                148,
+                92,
+                84
+            ],
+            "hexadecimal": "#945c54",
+            "pantone": {
+                "codigo": "18-1229",
+                "name": "carob-brown",
+                "hex": "#855c4c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "hibisco selvagem",
+            "rgb": [
+                163,
+                123,
+                139
+            ],
+            "hexadecimal": "#a37b8b",
+            "pantone": {
+                "codigo": "17-2411",
+                "name": "toadstool",
+                "hex": "#988088"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "horizonte",
+            "rgb": [
+                163,
+                187,
+                179
+            ],
+            "hexadecimal": "#a3bbb3",
+            "pantone": {
+                "codigo": "15-4706",
+                "name": "gray-mist",
+                "hex": "#99aeae"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "hortencia lilaz",
+            "rgb": [
+                179,
+                187,
+                203
+            ],
+            "hexadecimal": "#b3bbcb",
+            "pantone": {
+                "codigo": "14-4210",
+                "name": "celestial-blue",
+                "hex": "#a3b4c4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "hortencia suave",
+            "rgb": [
+                187,
+                211,
+                235
+            ],
+            "hexadecimal": "#bbd3eb",
+            "pantone": {
+                "codigo": "13-5410",
+                "name": "iced-aqua",
+                "hex": "#abd3db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "humanidade",
+            "rgb": [
+                243,
+                227,
+                203
+            ],
+            "hexadecimal": "#f3e3cb",
+            "pantone": {
+                "codigo": "12-0000",
+                "name": "white-swan",
+                "hex": "#e4d7c5"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "indigo blue",
+            "rgb": [
+                60,
+                68,
+                92
+            ],
+            "hexadecimal": "#3c445c",
+            "pantone": {
+                "codigo": "19-4121",
+                "name": "blue-wing-teal",
+                "hex": "#2c4053"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "inox",
+            "rgb": [
+                163,
+                171,
+                163
+            ],
+            "hexadecimal": "#a3aba3",
+            "pantone": {
+                "codigo": "16-5304",
+                "name": "jadeite",
+                "hex": "#95a69f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "inverno gelado",
+            "rgb": [
+                211,
+                203,
+                187
+            ],
+            "hexadecimal": "#d3cbbb",
+            "pantone": {
+                "codigo": "14-0105",
+                "name": "overcast",
+                "hex": "#c3bdab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ipe rosa",
+            "rgb": [
+                195,
+                115,
+                155
+            ],
+            "hexadecimal": "#c3739b",
+            "pantone": {
+                "codigo": "16-2111",
+                "name": "mauve-orchid",
+                "hex": "#b58299"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "jardim de pedras",
+            "rgb": [
+                195,
+                203,
+                195
+            ],
+            "hexadecimal": "#c3cbc3",
+            "pantone": {
+                "codigo": "14-4807",
+                "name": "surf-spray",
+                "hex": "#b4c8c2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "jeans lavado",
+            "rgb": [
+                99,
+                123,
+                155
+            ],
+            "hexadecimal": "#637b9b",
+            "pantone": {
+                "codigo": "17-4123",
+                "name": "niagara",
+                "hex": "#5487a4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "juba de leao",
+            "rgb": [
+                163,
+                131,
+                83
+            ],
+            "hexadecimal": "#a38353",
+            "pantone": {
+                "codigo": "17-0942",
+                "name": "medal-bronze",
+                "hex": "#977547"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "jujuba rosa",
+            "rgb": [
+                243,
+                195,
+                211
+            ],
+            "hexadecimal": "#f3c3d3",
+            "pantone": {
+                "codigo": "13-1504",
+                "name": "peach-blush",
+                "hex": "#e4ccc6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "juta",
+            "rgb": [
+                211,
+                187,
+                139
+            ],
+            "hexadecimal": "#d3bb8b",
+            "pantone": {
+                "codigo": "16-0924",
+                "name": "croissant",
+                "hex": "#c4ab86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "kiwi",
+            "rgb": [
+                163,
+                163,
+                91
+            ],
+            "hexadecimal": "#a3a35b",
+            "pantone": {
+                "codigo": "16-0430",
+                "name": "fern",
+                "hex": "#9aa067"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "igarape",
+            "rgb": [
+                195,
+                235,
+                211
+            ],
+            "hexadecimal": "#c3ebd3",
+            "pantone": {
+                "codigo": "12-5409",
+                "name": "fair-aqua",
+                "hex": "#b8e2dc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ikebana",
+            "rgb": [
+                211,
+                188,
+                227
+            ],
+            "hexadecimal": "#d3bce3",
+            "pantone": {
+                "codigo": "13-3820",
+                "name": "lavender-fog",
+                "hex": "#d2c4d6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ilha deserta",
+            "rgb": [
+                99,
+                163,
+                155
+            ],
+            "hexadecimal": "#63a39b",
+            "pantone": {
+                "codigo": "16-5119",
+                "name": "sea-blue",
+                "hex": "#549f98"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ilha gregas",
+            "rgb": [
+                115,
+                187,
+                227
+            ],
+            "hexadecimal": "#73bbe3",
+            "pantone": {
+                "codigo": "14-4310",
+                "name": "blue-topaz",
+                "hex": "#78bdd4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ima de geladeira",
+            "rgb": [
+                219,
+                235,
+                235
+            ],
+            "hexadecimal": "#dbebeb",
+            "pantone": {
+                "codigo": "12-4805",
+                "name": "wan-blue",
+                "hex": "#cbdcdf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lago de gelo",
+            "rgb": [
+                203,
+                227,
+                243
+            ],
+            "hexadecimal": "#cbe3f3",
+            "pantone": {
+                "codigo": "12-5209",
+                "name": "soothing-sea",
+                "hex": "#c3e9e4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lago frias",
+            "rgb": [
+                179,
+                227,
+                179
+            ],
+            "hexadecimal": "#b3e3b3",
+            "pantone": {
+                "codigo": "13-0116",
+                "name": "pastel-green",
+                "hex": "#b4d3b2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lago grey",
+            "rgb": [
+                131,
+                163,
+                171
+            ],
+            "hexadecimal": "#83a3ab",
+            "pantone": {
+                "codigo": "16-5109",
+                "name": "wasabi",
+                "hex": "#73a89e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lago sarmiento",
+            "rgb": [
+                51,
+                147,
+                171
+            ],
+            "hexadecimal": "#3393ab",
+            "pantone": {
+                "codigo": "16-5123",
+                "name": "baltic",
+                "hex": "#279d9f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lagoa cristalina",
+            "rgb": [
+                115,
+                179,
+                179
+            ],
+            "hexadecimal": "#73b3b3",
+            "pantone": {
+                "codigo": "15-5819",
+                "name": "spearmint",
+                "hex": "#64bfa4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lamparina",
+            "rgb": [
+                211,
+                203,
+                187
+            ],
+            "hexadecimal": "#d3cbbb",
+            "pantone": {
+                "codigo": "14-0105",
+                "name": "overcast",
+                "hex": "#c3bdab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lenco de bolso",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "hexadecimal": "#ebebe3",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lenha",
+            "rgb": [
+                155,
+                131,
+                115
+            ],
+            "hexadecimal": "#9b8373",
+            "pantone": {
+                "codigo": "17-1311",
+                "name": "desert-taupe",
+                "hex": "#8d7e71"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "limao com mel",
+            "rgb": [
+                227,
+                227,
+                187
+            ],
+            "hexadecimal": "#e3e3bb",
+            "pantone": {
+                "codigo": "12-0106",
+                "name": "meadow-mist",
+                "hex": "#d3dec4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "limonada suica",
+            "rgb": [
+                211,
+                227,
+                219
+            ],
+            "hexadecimal": "#d3e3db",
+            "pantone": {
+                "codigo": "12-5505",
+                "name": "glacier",
+                "hex": "#c3dbd4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "limonada",
+            "rgb": [
+                211,
+                211,
+                187
+            ],
+            "hexadecimal": "#d3d3bb",
+            "pantone": {
+                "codigo": "13-4201",
+                "name": "oyster-mushroom",
+                "hex": "#c3c6c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "linha de costura",
+            "rgb": [
+                235,
+                219,
+                235
+            ],
+            "hexadecimal": "#ebdbeb",
+            "pantone": {
+                "codigo": "13-3802",
+                "name": "orchid-tint",
+                "hex": "#dbd2db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lirio africano",
+            "rgb": [
+                123,
+                115,
+                147
+            ],
+            "hexadecimal": "#7b7393",
+            "pantone": {
+                "codigo": "18-3834",
+                "name": "veronica",
+                "hex": "#6d6695"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "luar",
+            "rgb": [
+                227,
+                219,
+                211
+            ],
+            "hexadecimal": "#e3dbd3",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "luz da lua",
+            "rgb": [
+                187,
+                195,
+                203
+            ],
+            "hexadecimal": "#bbc3cb",
+            "pantone": {
+                "codigo": "14-4112",
+                "name": "skyway",
+                "hex": "#adbed3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "luz da manha",
+            "rgb": [
+                195,
+                219,
+                219
+            ],
+            "hexadecimal": "#c3dbdb",
+            "pantone": {
+                "codigo": "12-4609",
+                "name": "starlight-blue",
+                "hex": "#b5ced4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "luz de inverno",
+            "rgb": [
+                235,
+                235,
+                203
+            ],
+            "hexadecimal": "#ebebcb",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "luz do sol",
+            "rgb": [
+                219,
+                211,
+                179
+            ],
+            "hexadecimal": "#dbd3b3",
+            "pantone": {
+                "codigo": "13-0401",
+                "name": "oatmeal",
+                "hex": "#cbc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "madagascar",
+            "rgb": [
+                171,
+                147,
+                131
+            ],
+            "hexadecimal": "#ab9383",
+            "pantone": {
+                "codigo": "17-1109",
+                "name": "chinchilla",
+                "hex": "#9c8e7b"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mangaratiba",
+            "rgb": [
+                195,
+                195,
+                203
+            ],
+            "hexadecimal": "#c3c3cb",
+            "pantone": {
+                "codigo": "14-4807",
+                "name": "surf-spray",
+                "hex": "#b4c8c2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "manha do artico",
+            "rgb": [
+                227,
+                235,
+                235
+            ],
+            "hexadecimal": "#e3ebeb",
+            "pantone": {
+                "codigo": "12-4305",
+                "name": "spa-blue",
+                "hex": "#d3dedf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mantra",
+            "rgb": [
+                147,
+                171,
+                163
+            ],
+            "hexadecimal": "#93aba3",
+            "pantone": {
+                "codigo": "16-4411",
+                "name": "tourmaline",
+                "hex": "#86a1a9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mar mediterraneo",
+            "rgb": [
+                123,
+                187,
+                179
+            ],
+            "hexadecimal": "#7bbbb3",
+            "pantone": {
+                "codigo": "15-4712",
+                "name": "marine-blue",
+                "hex": "#76afb6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mar verde",
+            "rgb": [
+                4,
+                124,
+                108
+            ],
+            "hexadecimal": "#047c6c",
+            "pantone": {
+                "codigo": "18-4936",
+                "name": "fanfare",
+                "hex": "#006d70"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "maraca",
+            "rgb": [
+                251,
+                179,
+                131
+            ],
+            "hexadecimal": "#fbb383",
+            "pantone": {
+                "codigo": "14-1133",
+                "name": "apricot-nectar",
+                "hex": "#ecaa79"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "maravilha",
+            "rgb": [
+                203,
+                99,
+                155
+            ],
+            "hexadecimal": "#cb639b",
+            "pantone": {
+                "codigo": "17-2520",
+                "name": "ibis-rose",
+                "hex": "#ca628f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "marfim nobre",
+            "rgb": [
+                235,
+                211,
+                179
+            ],
+            "hexadecimal": "#ebd3b3",
+            "pantone": {
+                "codigo": "12-1404",
+                "name": "pink-tint",
+                "hex": "#dbcbbd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "marine",
+            "rgb": [
+                123,
+                139,
+                187
+            ],
+            "hexadecimal": "#7b8bbb",
+            "pantone": {
+                "codigo": "17-3934",
+                "name": "persian-jewel",
+                "hex": "#6e81be"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "marinheiro",
+            "rgb": [
+                60,
+                68,
+                76
+            ],
+            "hexadecimal": "#3c444c",
+            "pantone": {
+                "codigo": "19-4121",
+                "name": "blue-wing-teal",
+                "hex": "#2c4053"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "marinho profundo",
+            "rgb": [
+                68,
+                76,
+                108
+            ],
+            "hexadecimal": "#444c6c",
+            "pantone": {
+                "codigo": "19-4118",
+                "name": "dark-denim",
+                "hex": "#35465e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "marmore",
+            "rgb": [
+                203,
+                195,
+                187
+            ],
+            "hexadecimal": "#cbc3bb",
+            "pantone": {
+                "codigo": "14-4103",
+                "name": "gray-violet",
+                "hex": "#bbbcbc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "marrom glace",
+            "rgb": [
+                156,
+                92,
+                92
+            ],
+            "hexadecimal": "#9c5c5c",
+            "pantone": {
+                "codigo": "18-1235",
+                "name": "russet",
+                "hex": "#8f5f50"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "martim pescador",
+            "rgb": [
+                4,
+                147,
+                163
+            ],
+            "hexadecimal": "#0493a3",
+            "pantone": {
+                "codigo": "17-4730",
+                "name": "caneel-bay",
+                "hex": "#00849f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "meia luz",
+            "rgb": [
+                195,
+                163,
+                171
+            ],
+            "hexadecimal": "#c3a3ab",
+            "pantone": {
+                "codigo": "15-0000",
+                "name": "dove",
+                "hex": "#b3ada7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "meia noite",
+            "rgb": [
+                68,
+                68,
+                84
+            ],
+            "hexadecimal": "#444454",
+            "pantone": {
+                "codigo": "19-4110",
+                "name": "midnight-navy",
+                "hex": "#34414e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mel",
+            "rgb": [
+                227,
+                187,
+                131
+            ],
+            "hexadecimal": "#e3bb83",
+            "pantone": {
+                "codigo": "14-1038",
+                "name": "new-wheat",
+                "hex": "#d7b57f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "melancia",
+            "rgb": [
+                219,
+                91,
+                91
+            ],
+            "hexadecimal": "#db5b5b",
+            "pantone": {
+                "codigo": "17-1644",
+                "name": "spiced-coral",
+                "hex": "#d75c5d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mochila de aventura",
+            "rgb": [
+                123,
+                131,
+                115
+            ],
+            "hexadecimal": "#7b8373",
+            "pantone": {
+                "codigo": "18-4711",
+                "name": "stormy-sea",
+                "hex": "#6e8082"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mogno brasileiro",
+            "rgb": [
+                132,
+                84,
+                68
+            ],
+            "hexadecimal": "#845444",
+            "pantone": {
+                "codigo": "19-1241",
+                "name": "tortoise-shell",
+                "hex": "#754734"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "montanha encantada",
+            "rgb": [
+                84,
+                92,
+                84
+            ],
+            "hexadecimal": "#545c54",
+            "pantone": {
+                "codigo": "19-5004",
+                "name": "urban-chic",
+                "hex": "#464e4d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mormaco",
+            "rgb": [
+                251,
+                219,
+                195
+            ],
+            "hexadecimal": "#fbdbc3",
+            "pantone": {
+                "codigo": "12-0807",
+                "name": "sun-kiss",
+                "hex": "#ebd1bb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mostarda picante",
+            "rgb": [
+                235,
+                195,
+                36
+            ],
+            "hexadecimal": "#ebc324",
+            "pantone": {
+                "codigo": "14-0755",
+                "name": "sulphur",
+                "hex": "#ddb614"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mousse de iorgute",
+            "rgb": [
+                243,
+                171,
+                171
+            ],
+            "hexadecimal": "#f3abab",
+            "pantone": {
+                "codigo": "15-1319",
+                "name": "almost-apricot",
+                "hex": "#e5b39b"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mousse de limao",
+            "rgb": [
+                219,
+                227,
+                211
+            ],
+            "hexadecimal": "#dbe3d3",
+            "pantone": {
+                "codigo": "12-5303",
+                "name": "sprout-green",
+                "hex": "#cbd7d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "nanquim",
+            "rgb": [
+                139,
+                139,
+                139
+            ],
+            "hexadecimal": "#8b8b8b",
+            "pantone": {
+                "codigo": "17-5107",
+                "name": "chinois-green",
+                "hex": "#7c8c87"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "nata fresca",
+            "rgb": [
+                243,
+                235,
+                227
+            ],
+            "hexadecimal": "#f3ebe3",
+            "pantone": {
+                "codigo": "11-4804",
+                "name": "lightest-sky",
+                "hex": "#e4eadf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "naturale",
+            "rgb": [
+                251,
+                211,
+                179
+            ],
+            "hexadecimal": "#fbd3b3",
+            "pantone": {
+                "codigo": "12-0807",
+                "name": "sun-kiss",
+                "hex": "#ebd1bb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "nectar de pessego",
+            "rgb": [
+                251,
+                195,
+                155
+            ],
+            "hexadecimal": "#fbc39b",
+            "pantone": {
+                "codigo": "13-1024",
+                "name": "buff",
+                "hex": "#ebc396"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "nevoa intensa",
+            "rgb": [
+                187,
+                195,
+                195
+            ],
+            "hexadecimal": "#bbc3c3",
+            "pantone": {
+                "codigo": "14-5707",
+                "name": "aqua-foam",
+                "hex": "#adc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ninho",
+            "rgb": [
+                195,
+                179,
+                155
+            ],
+            "hexadecimal": "#c3b39b",
+            "pantone": {
+                "codigo": "15-0000",
+                "name": "dove",
+                "hex": "#b3ada7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "novelo de la",
+            "rgb": [
+                195,
+                179,
+                195
+            ],
+            "hexadecimal": "#c3b3c3",
+            "pantone": {
+                "codigo": "15-4003",
+                "name": "storm-gray",
+                "hex": "#b5bab6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "noz moscada",
+            "rgb": [
+                195,
+                171,
+                147
+            ],
+            "hexadecimal": "#c3ab93",
+            "pantone": {
+                "codigo": "14-1012",
+                "name": "gilded-beige",
+                "hex": "#b39f8d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "nuvem de chuva",
+            "rgb": [
+                155,
+                155,
+                155
+            ],
+            "hexadecimal": "#9b9b9b",
+            "pantone": {
+                "codigo": "16-5808",
+                "name": "iceberg-green",
+                "hex": "#8c9c92"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "oasis",
+            "rgb": [
+                179,
+                171,
+                115
+            ],
+            "hexadecimal": "#b3ab73",
+            "pantone": {
+                "codigo": "15-0531",
+                "name": "sweet-pea",
+                "hex": "#a3a969"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "oca",
+            "rgb": [
+                211,
+                179,
+                163
+            ],
+            "hexadecimal": "#d3b3a3",
+            "pantone": {
+                "codigo": "14-0105",
+                "name": "overcast",
+                "hex": "#c3bdab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "oceano indico",
+            "rgb": [
+                147,
+                203,
+                203
+            ],
+            "hexadecimal": "#93cbcb",
+            "pantone": {
+                "codigo": "14-4615",
+                "name": "antiqua-sand",
+                "hex": "#83c2cd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "oceano pacifico",
+            "rgb": [
+                36,
+                92,
+                148
+            ],
+            "hexadecimal": "#245c94",
+            "pantone": {
+                "codigo": "19-4048",
+                "name": "baleine-blue",
+                "hex": "#155187"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "opalina",
+            "rgb": [
+                171,
+                211,
+                235
+            ],
+            "hexadecimal": "#abd3eb",
+            "pantone": {
+                "codigo": "13-4411",
+                "name": "crystal-blue",
+                "hex": "#a1c8db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "orvalho de campo",
+            "rgb": [
+                227,
+                235,
+                235
+            ],
+            "hexadecimal": "#e3ebeb",
+            "pantone": {
+                "codigo": "12-4305",
+                "name": "spa-blue",
+                "hex": "#d3dedf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ouro branco",
+            "rgb": [
+                219,
+                219,
+                211
+            ],
+            "hexadecimal": "#dbdbd3",
+            "pantone": {
+                "codigo": "12-5303",
+                "name": "sprout-green",
+                "hex": "#cbd7d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ouro do egito",
+            "rgb": [
+                195,
+                147,
+                52
+            ],
+            "hexadecimal": "#c39334",
+            "pantone": {
+                "codigo": "16-0948",
+                "name": "harvest-gold",
+                "hex": "#b68a3a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ovelha",
+            "rgb": [
+                195,
+                188,
+                179
+            ],
+            "hexadecimal": "#c3bcb3",
+            "pantone": {
+                "codigo": "15-0000",
+                "name": "dove",
+                "hex": "#b3ada7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "paixao inspiradora",
+            "rgb": [
+                172,
+                44,
+                60
+            ],
+            "hexadecimal": "#ac2c3c",
+            "pantone": {
+                "codigo": "19-1559",
+                "name": "scarlet-sage",
+                "hex": "#9d202f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "palha",
+            "rgb": [
+                219,
+                211,
+                188
+            ],
+            "hexadecimal": "#dbd3bc",
+            "pantone": {
+                "codigo": "13-0401",
+                "name": "oatmeal",
+                "hex": "#cbc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "palito de picole",
+            "rgb": [
+                211,
+                203,
+                195
+            ],
+            "hexadecimal": "#d3cbc3",
+            "pantone": {
+                "codigo": "13-4201",
+                "name": "oyster-mushroom",
+                "hex": "#c3c6c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "palmeira",
+            "rgb": [
+                139,
+                155,
+                123
+            ],
+            "hexadecimal": "#8b9b7b",
+            "pantone": {
+                "codigo": "17-5107",
+                "name": "chinois-green",
+                "hex": "#7c8c87"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pantano",
+            "rgb": [
+                155,
+                155,
+                131
+            ],
+            "hexadecimal": "#9b9b83",
+            "pantone": {
+                "codigo": "17-1501",
+                "name": "wild-dove",
+                "hex": "#8b8c89"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pao de lo",
+            "rgb": [
+                227,
+                195,
+                147
+            ],
+            "hexadecimal": "#e3c393",
+            "pantone": {
+                "codigo": "12-0619",
+                "name": "dusty-yellow",
+                "hex": "#d4cc9a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel de presente",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "hexadecimal": "#ebebe3",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel crepom",
+            "rgb": [
+                227,
+                227,
+                227
+            ],
+            "hexadecimal": "#e3e3e3",
+            "pantone": {
+                "codigo": "12-4305",
+                "name": "spa-blue",
+                "hex": "#d3dedf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel de ceda",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "hexadecimal": "#ebebe3",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel de presente",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "hexadecimal": "#ebebe3",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel picado",
+            "rgb": [
+                219,
+                211,
+                203
+            ],
+            "hexadecimal": "#dbd3cb",
+            "pantone": {
+                "codigo": "13-6105",
+                "name": "celadon-tint",
+                "hex": "#cbcebe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel seda",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "hexadecimal": "#ebebe3",
+            "pantone": {
+                "codigo": "12-6208",
+                "name": "phantom-green",
+                "hex": "#dce4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel sedoso",
+            "rgb": [
+                251,
+                227,
+                195
+            ],
+            "hexadecimal": "#fbe3c3",
+            "pantone": {
+                "codigo": "12-0806",
+                "name": "rutabaga",
+                "hex": "#ecddbe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "passas ao run",
+            "rgb": [
+                171,
+                147,
+                131
+            ],
+            "hexadecimal": "#ab9383",
+            "pantone": {
+                "codigo": "17-1109",
+                "name": "chinchilla",
+                "hex": "#9c8e7b"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "passeio ecologico",
+            "rgb": [
+                187,
+                203,
+                179
+            ],
+            "hexadecimal": "#bbcbb3",
+            "pantone": {
+                "codigo": "14-5707",
+                "name": "aqua-foam",
+                "hex": "#adc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pasta de amendoin",
+            "rgb": [
+                227,
+                211,
+                187
+            ],
+            "hexadecimal": "#e3d3bb",
+            "pantone": {
+                "codigo": "12-0106",
+                "name": "meadow-mist",
+                "hex": "#d3dec4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "patativa",
+            "rgb": [
+                84,
+                84,
+                76
+            ],
+            "hexadecimal": "#54544c",
+            "pantone": {
+                "codigo": "19-0307",
+                "name": "climbing-ivy",
+                "hex": "#444940"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "paturi",
+            "rgb": [
+                179,
+                163,
+                155
+            ],
+            "hexadecimal": "#b3a39b",
+            "pantone": {
+                "codigo": "15-4306",
+                "name": "belgian-block",
+                "hex": "#a3a9a6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pedra tapume",
+            "rgb": [
+                243,
+                243,
+                251
+            ],
+            "hexadecimal": "#f3f3fb",
+            "pantone": {
+                "codigo": "11-4001",
+                "name": "brilliant-white",
+                "hex": "#edf1fe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pedra",
+            "rgb": [
+                131,
+                139,
+                139
+            ],
+            "hexadecimal": "#838b8b",
+            "pantone": {
+                "codigo": "17-3917",
+                "name": "stonewash",
+                "hex": "#74809a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pele de coelho",
+            "rgb": [
+                203,
+                203,
+                203
+            ],
+            "hexadecimal": "#cbcbcb",
+            "pantone": {
+                "codigo": "14-4103",
+                "name": "gray-violet",
+                "hex": "#bbbcbc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pepita de bismuto",
+            "rgb": [
+                171,
+                171,
+                179
+            ],
+            "hexadecimal": "#ababb3",
+            "pantone": {
+                "codigo": "15-4008",
+                "name": "blue-fog",
+                "hex": "#9babbb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pena de prata",
+            "rgb": [
+                179,
+                179,
+                179
+            ],
+            "hexadecimal": "#b3b3b3",
+            "pantone": {
+                "codigo": "15-4306",
+                "name": "belgian-block",
+                "hex": "#a3a9a6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pena de ganso",
+            "rgb": [
+                227,
+                219,
+                211
+            ],
+            "hexadecimal": "#e3dbd3",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "perola cintilante",
+            "rgb": [
+                251,
+                219,
+                187
+            ],
+            "hexadecimal": "#fbdbbb",
+            "pantone": {
+                "codigo": "12-0807",
+                "name": "sun-kiss",
+                "hex": "#ebd1bb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pessego",
+            "rgb": [
+                235,
+                195,
+                163
+            ],
+            "hexadecimal": "#ebc3a3",
+            "pantone": {
+                "codigo": "13-1015",
+                "name": "honey-peach",
+                "hex": "#dcbd9e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "petala laranja",
+            "rgb": [
+                243,
+                171,
+                67
+            ],
+            "hexadecimal": "#f3ab43",
+            "pantone": {
+                "codigo": "14-0941",
+                "name": "beeswax",
+                "hex": "#eba851"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pingo de chuva",
+            "rgb": [
+                187,
+                219,
+                219
+            ],
+            "hexadecimal": "#bbdbdb",
+            "pantone": {
+                "codigo": "13-5410",
+                "name": "iced-aqua",
+                "hex": "#abd3db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pingo de leite",
+            "rgb": [
+                227,
+                203,
+                187
+            ],
+            "hexadecimal": "#e3cbbb",
+            "pantone": {
+                "codigo": "13-0711",
+                "name": "putty",
+                "hex": "#d4cab0"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pinhao",
+            "rgb": [
+                92,
+                76,
+                68
+            ],
+            "hexadecimal": "#5c4c44",
+            "pantone": {
+                "codigo": "19-3901",
+                "name": "magnet",
+                "hex": "#4d4b4f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pinus",
+            "rgb": [
+                219,
+                219,
+                195
+            ],
+            "hexadecimal": "#dbdbc3",
+            "pantone": {
+                "codigo": "13-6105",
+                "name": "celadon-tint",
+                "hex": "#cbcebe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pirineus",
+            "rgb": [
+                187,
+                211,
+                211
+            ],
+            "hexadecimal": "#bbd3d3",
+            "pantone": {
+                "codigo": "13-5410",
+                "name": "iced-aqua",
+                "hex": "#abd3db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pistache",
+            "rgb": [
+                163,
+                203,
+                155
+            ],
+            "hexadecimal": "#a3cb9b",
+            "pantone": {
+                "codigo": "15-6114",
+                "name": "hemlock",
+                "hex": "#97c1a1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "planeta azul",
+            "rgb": [
+                83,
+                139,
+                187
+            ],
+            "hexadecimal": "#538bbb",
+            "pantone": {
+                "codigo": "17-4139",
+                "name": "azure-blue",
+                "hex": "#4d91c6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "planta fantasma",
+            "rgb": [
+                163,
+                171,
+                155
+            ],
+            "hexadecimal": "#a3ab9b",
+            "pantone": {
+                "codigo": "16-5304",
+                "name": "jadeite",
+                "hex": "#95a69f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "po de gengibre",
+            "rgb": [
+                211,
+                187,
+                123
+            ],
+            "hexadecimal": "#d3bb7b",
+            "pantone": {
+                "codigo": "16-0924",
+                "name": "croissant",
+                "hex": "#c4ab86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "po de grafite",
+            "rgb": [
+                108,
+                116,
+                124
+            ],
+            "hexadecimal": "#6c747c",
+            "pantone": {
+                "codigo": "18-4215",
+                "name": "blue-mirage",
+                "hex": "#5c6d7c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ponte estaiada",
+            "rgb": [
+                171,
+                179,
+                171
+            ],
+            "hexadecimal": "#abb3ab",
+            "pantone": {
+                "codigo": "14-6011",
+                "name": "grayed-jade",
+                "hex": "#9bbea9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "praia deserta",
+            "rgb": [
+                227,
+                227,
+                203
+            ],
+            "hexadecimal": "#e3e3cb",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "prata envelhecido",
+            "rgb": [
+                155,
+                155,
+                139
+            ],
+            "hexadecimal": "#9b9b8b",
+            "pantone": {
+                "codigo": "17-1501",
+                "name": "wild-dove",
+                "hex": "#8b8c89"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "prata bali",
+            "rgb": [
+                147,
+                155,
+                163
+            ],
+            "hexadecimal": "#939ba3",
+            "pantone": {
+                "codigo": "17-3919",
+                "name": "purple-impression",
+                "hex": "#858fb1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "preto absoluto",
+            "rgb": [
+                44,
+                44,
+                44
+            ],
+            "hexadecimal": "#2c2c2c",
+            "pantone": {
+                "codigo": "19-5406",
+                "name": "pine-grove",
+                "hex": "#213631"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "puma",
+            "rgb": [
+                211,
+                203,
+                187
+            ],
+            "hexadecimal": "#d3cbbb",
+            "pantone": {
+                "codigo": "14-0105",
+                "name": "overcast",
+                "hex": "#c3bdab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "quaresmeira",
+            "rgb": [
+                163,
+                132,
+                179
+            ],
+            "hexadecimal": "#a384b3",
+            "pantone": {
+                "codigo": "17-3640",
+                "name": "fairy-wren",
+                "hex": "#9479af"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "quase rosa",
+            "rgb": [
+                243,
+                227,
+                219
+            ],
+            "hexadecimal": "#f3e3db",
+            "pantone": {
+                "codigo": "11-4804",
+                "name": "lightest-sky",
+                "hex": "#e4eadf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "quentao",
+            "rgb": [
+                195,
+                147,
+                59
+            ],
+            "hexadecimal": "#c3933b",
+            "pantone": {
+                "codigo": "16-0948",
+                "name": "harvest-gold",
+                "hex": "#b68a3a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "quero quero",
+            "rgb": [
+                179,
+                171,
+                155
+            ],
+            "hexadecimal": "#b3ab9b",
+            "pantone": {
+                "codigo": "15-4306",
+                "name": "belgian-block",
+                "hex": "#a3a9a6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rafia",
+            "rgb": [
+                219,
+                203,
+                179
+            ],
+            "hexadecimal": "#dbcbb3",
+            "pantone": {
+                "codigo": "14-1107",
+                "name": "oyster-gray",
+                "hex": "#cbc1ae"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "recheio de avela",
+            "rgb": [
+                211,
+                187,
+                155
+            ],
+            "hexadecimal": "#d3bb9b",
+            "pantone": {
+                "codigo": "14-0708",
+                "name": "cement",
+                "hex": "#c4b6a6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "reco reco",
+            "rgb": [
+                203,
+                203,
+                195
+            ],
+            "hexadecimal": "#cbcbc3",
+            "pantone": {
+                "codigo": "14-4103",
+                "name": "gray-violet",
+                "hex": "#bbbcbc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "refresco de menta",
+            "rgb": [
+                203,
+                235,
+                235
+            ],
+            "hexadecimal": "#cbebeb",
+            "pantone": {
+                "codigo": "12-5410",
+                "name": "bleached-aqua",
+                "hex": "#bce3df"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "regata",
+            "rgb": [
+                203,
+                219,
+                195
+            ],
+            "hexadecimal": "#cbdbc3",
+            "pantone": {
+                "codigo": "13-6008",
+                "name": "misty-jade",
+                "hex": "#bcd9c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "renda",
+            "rgb": [
+                227,
+                211,
+                211
+            ],
+            "hexadecimal": "#e3d3d3",
+            "pantone": {
+                "codigo": "12-5603",
+                "name": "zephyr-blue",
+                "hex": "#d3d9d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "respiracao profunda",
+            "rgb": [
+                187,
+                203,
+                219
+            ],
+            "hexadecimal": "#bbcbdb",
+            "pantone": {
+                "codigo": "13-5410",
+                "name": "iced-aqua",
+                "hex": "#abd3db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "riacho doce",
+            "rgb": [
+                147,
+                179,
+                219
+            ],
+            "hexadecimal": "#93b3db",
+            "pantone": {
+                "codigo": "14-4615",
+                "name": "antiqua-sand",
+                "hex": "#83c2cd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rio ebro",
+            "rgb": [
+                147,
+                179,
+                195
+            ],
+            "hexadecimal": "#93b3c3",
+            "pantone": {
+                "codigo": "14-4615",
+                "name": "antiqua-sand",
+                "hex": "#83c2cd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rio limpido",
+            "rgb": [
+                147,
+                219,
+                179
+            ],
+            "hexadecimal": "#93dbb3",
+            "pantone": {
+                "codigo": "13-5714",
+                "name": "cabbage",
+                "hex": "#87d7be"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rio nilo",
+            "rgb": [
+                171,
+                155,
+                123
+            ],
+            "hexadecimal": "#ab9b7b",
+            "pantone": {
+                "codigo": "17-1109",
+                "name": "chinchilla",
+                "hex": "#9c8e7b"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rio paine",
+            "rgb": [
+                211,
+                211,
+                195
+            ],
+            "hexadecimal": "#d3d3c3",
+            "pantone": {
+                "codigo": "13-4201",
+                "name": "oyster-mushroom",
+                "hex": "#c3c6c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rio reno",
+            "rgb": [
+                99,
+                131,
+                139
+            ],
+            "hexadecimal": "#63838b",
+            "pantone": {
+                "codigo": "17-4818",
+                "name": "bristol-blue",
+                "hex": "#558f91"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rock n roll",
+            "rgb": [
+                52,
+                52,
+                52
+            ],
+            "hexadecimal": "#343434",
+            "pantone": {
+                "codigo": "19-3911",
+                "name": "black-beauty",
+                "hex": "#26262a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa bebe",
+            "rgb": [
+                243,
+                219,
+                219
+            ],
+            "hexadecimal": "#f3dbdb",
+            "pantone": {
+                "codigo": "11-4804",
+                "name": "lightest-sky",
+                "hex": "#e4eadf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa biquini",
+            "rgb": [
+                235,
+                187,
+                211
+            ],
+            "hexadecimal": "#ebbbd3",
+            "pantone": {
+                "codigo": "12-2903",
+                "name": "light-lilac",
+                "hex": "#dec6d3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa comportado",
+            "rgb": [
+                187,
+                131,
+                139
+            ],
+            "hexadecimal": "#bb838b",
+            "pantone": {
+                "codigo": "16-1806",
+                "name": "woodrose",
+                "hex": "#ae8c8e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa da vez",
+            "rgb": [
+                179,
+                124,
+                163
+            ],
+            "hexadecimal": "#b37ca3",
+            "pantone": {
+                "codigo": "17-3014",
+                "name": "mulberry",
+                "hex": "#a76c97"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa delicado",
+            "rgb": [
+                219,
+                179,
+                163
+            ],
+            "hexadecimal": "#dbb3a3",
+            "pantone": {
+                "codigo": "14-1014",
+                "name": "gravel",
+                "hex": "#cbbfa2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa giz",
+            "rgb": [
+                187,
+                155,
+                155
+            ],
+            "hexadecimal": "#bb9b9b",
+            "pantone": {
+                "codigo": "16-1703",
+                "name": "sphinx",
+                "hex": "#ab9895"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa laranja",
+            "rgb": [
+                243,
+                187,
+                171
+            ],
+            "hexadecimal": "#f3bbab",
+            "pantone": {
+                "codigo": "14-1312",
+                "name": "pale-blush",
+                "hex": "#e4bfb3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa luminoso",
+            "rgb": [
+                235,
+                171,
+                211
+            ],
+            "hexadecimal": "#ebabd3",
+            "pantone": {
+                "codigo": "15-2913",
+                "name": "lilac-chiffon",
+                "hex": "#de9bc4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa neon",
+            "rgb": [
+                251,
+                179,
+                195
+            ],
+            "hexadecimal": "#fbb3c3",
+            "pantone": {
+                "codigo": "14-1511",
+                "name": "powder-pink",
+                "hex": "#ecb2b3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa pastel",
+            "rgb": [
+                243,
+                227,
+                227
+            ],
+            "hexadecimal": "#f3e3e3",
+            "pantone": {
+                "codigo": "11-4804",
+                "name": "lightest-sky",
+                "hex": "#e4eadf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa queimado",
+            "rgb": [
+                211,
+                171,
+                147
+            ],
+            "hexadecimal": "#d3ab93",
+            "pantone": {
+                "codigo": "15-1317",
+                "name": "sirocco",
+                "hex": "#c39d88"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa suave",
+            "rgb": [
+                235,
+                227,
+                235
+            ],
+            "hexadecimal": "#ebe3eb",
+            "pantone": {
+                "codigo": "12-4306",
+                "name": "barely-blue",
+                "hex": "#dde0df"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rosa talco",
+            "rgb": [
+                219,
+                195,
+                195
+            ],
+            "hexadecimal": "#dbc3c3",
+            "pantone": {
+                "codigo": "13-0401",
+                "name": "oatmeal",
+                "hex": "#cbc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "roxo rustico",
+            "rgb": [
+                68,
+                52,
+                108
+            ],
+            "hexadecimal": "#44346c",
+            "pantone": {
+                "codigo": "19-3839",
+                "name": "blue-ribbon",
+                "hex": "#3a395f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rua das pedras",
+            "rgb": [
+                131,
+                123,
+                115
+            ],
+            "hexadecimal": "#837b73",
+            "pantone": {
+                "codigo": "18-5102",
+                "name": "brushed-nickel",
+                "hex": "#73706f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rubi",
+            "rgb": [
+                148,
+                68,
+                76
+            ],
+            "hexadecimal": "#94444c",
+            "pantone": {
+                "codigo": "18-1426",
+                "name": "apple-butter",
+                "hex": "#844b4d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sache de lavanda",
+            "rgb": [
+                163,
+                179,
+                211
+            ],
+            "hexadecimal": "#a3b3d3",
+            "pantone": {
+                "codigo": "14-4121",
+                "name": "blue-bell",
+                "hex": "#93b4d7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sacola de lona",
+            "rgb": [
+                203,
+                203,
+                179
+            ],
+            "hexadecimal": "#cbcbb3",
+            "pantone": {
+                "codigo": "14-4103",
+                "name": "gray-violet",
+                "hex": "#bbbcbc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "saia justa",
+            "rgb": [
+                187,
+                131,
+                131
+            ],
+            "hexadecimal": "#bb8383",
+            "pantone": {
+                "codigo": "17-1223",
+                "name": "praline",
+                "hex": "#ad8b75"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "salgueiro",
+            "rgb": [
+                179,
+                171,
+                123
+            ],
+            "hexadecimal": "#b3ab7b",
+            "pantone": {
+                "codigo": "16-0613",
+                "name": "elm",
+                "hex": "#a39f86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "saia justa",
+            "rgb": [
+                187,
+                131,
+                131
+            ],
+            "hexadecimal": "#bb8383",
+            "pantone": {
+                "codigo": "17-1223",
+                "name": "praline",
+                "hex": "#ad8b75"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "salgueiro",
+            "rgb": [
+                179,
+                171,
+                123
+            ],
+            "hexadecimal": "#b3ab7b",
+            "pantone": {
+                "codigo": "16-0613",
+                "name": "elm",
+                "hex": "#a39f86"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sambaqui",
+            "rgb": [
+                219,
+                219,
+                219
+            ],
+            "hexadecimal": "#dbdbdb",
+            "pantone": {
+                "codigo": "12-5303",
+                "name": "sprout-green",
+                "hex": "#cbd7d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sandalo",
+            "rgb": [
+                187,
+                171,
+                123
+            ],
+            "hexadecimal": "#bbab7b",
+            "pantone": {
+                "codigo": "15-0523",
+                "name": "winter-pear",
+                "hex": "#b0b487"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sapatilha de ponta",
+            "rgb": [
+                235,
+                211,
+                211
+            ],
+            "hexadecimal": "#ebd3d3",
+            "pantone": {
+                "codigo": "13-3802",
+                "name": "orchid-tint",
+                "hex": "#dbd2db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sapatilha verde",
+            "rgb": [
+                187,
+                235,
+                227
+            ],
+            "hexadecimal": "#bbebe3",
+            "pantone": {
+                "codigo": "13-4909",
+                "name": "blue-light",
+                "hex": "#acdfdd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "seixo branco",
+            "rgb": [
+                243,
+                243,
+                243
+            ],
+            "hexadecimal": "#f3f3f3",
+            "pantone": {
+                "codigo": "11-4802",
+                "name": "summer-shower",
+                "hex": "#e5ebe3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "selva de cajuzeiro",
+            "rgb": [
+                227,
+                195,
+                115
+            ],
+            "hexadecimal": "#e3c373",
+            "pantone": {
+                "codigo": "14-1038",
+                "name": "new-wheat",
+                "hex": "#d7b57f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "selva",
+            "rgb": [
+                139,
+                139,
+                115
+            ],
+            "hexadecimal": "#8b8b73",
+            "pantone": {
+                "codigo": "16-0224",
+                "name": "green-eyes",
+                "hex": "#7d956d"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sequilho",
+            "rgb": [
+                251,
+                219,
+                115
+            ],
+            "hexadecimal": "#fbdb73",
+            "pantone": {
+                "codigo": "12-0646",
+                "name": "celandine",
+                "hex": "#ebdf67"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sereia do mar",
+            "rgb": [
+                187,
+                227,
+                203
+            ],
+            "hexadecimal": "#bbe3cb",
+            "pantone": {
+                "codigo": "13-6009",
+                "name": "brook-green",
+                "hex": "#afddcc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sereia",
+            "rgb": [
+                179,
+                227,
+                195
+            ],
+            "hexadecimal": "#b3e3c3",
+            "pantone": {
+                "codigo": "13-6009",
+                "name": "brook-green",
+                "hex": "#afddcc"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sertao",
+            "rgb": [
+                139,
+                123,
+                107
+            ],
+            "hexadecimal": "#8b7b6b",
+            "pantone": {
+                "codigo": "17-0909",
+                "name": "fossil",
+                "hex": "#806f63"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sisal",
+            "rgb": [
+                203,
+                195,
+                163
+            ],
+            "hexadecimal": "#cbc3a3",
+            "pantone": {
+                "codigo": "14-4501",
+                "name": "silver-lining",
+                "hex": "#bdb6ab"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "soda italiana",
+            "rgb": [
+                163,
+                227,
+                211
+            ],
+            "hexadecimal": "#a3e3d3",
+            "pantone": {
+                "codigo": "13-5412",
+                "name": "beach-glass",
+                "hex": "#96dfce"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sofia",
+            "rgb": [
+                163,
+                171,
+                195
+            ],
+            "hexadecimal": "#a3abc3",
+            "pantone": {
+                "codigo": "16-3919",
+                "name": "eventide",
+                "hex": "#959eb7"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sol nascente",
+            "rgb": [
+                251,
+                179,
+                4
+            ],
+            "hexadecimal": "#fbb304",
+            "pantone": {
+                "codigo": "13-0752",
+                "name": "lemon",
+                "hex": "#f3bf08"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sombra verde",
+            "rgb": [
+                171,
+                187,
+                52
+            ],
+            "hexadecimal": "#abbb34",
+            "pantone": {
+                "codigo": "16-0230",
+                "name": "macaw-green",
+                "hex": "#9bb53e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sonho com nata",
+            "rgb": [
+                219,
+                187,
+                171
+            ],
+            "hexadecimal": "#dbbbab",
+            "pantone": {
+                "codigo": "14-1014",
+                "name": "gravel",
+                "hex": "#cbbfa2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sorvete de mamao",
+            "rgb": [
+                251,
+                187,
+                155
+            ],
+            "hexadecimal": "#fbbb9b",
+            "pantone": {
+                "codigo": "13-1024",
+                "name": "buff",
+                "hex": "#ebc396"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "suave lilas",
+            "rgb": [
+                227,
+                195,
+                219
+            ],
+            "hexadecimal": "#e3c3db",
+            "pantone": {
+                "codigo": "14-3206",
+                "name": "winsome-orchid",
+                "hex": "#d4b9cb"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "suco de clorofila",
+            "rgb": [
+                171,
+                219,
+                155
+            ],
+            "hexadecimal": "#abdb9b",
+            "pantone": {
+                "codigo": "13-0117",
+                "name": "green-ash",
+                "hex": "#a0daa9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sueter",
+            "rgb": [
+                155,
+                147,
+                147
+            ],
+            "hexadecimal": "#9b9393",
+            "pantone": {
+                "codigo": "17-1501",
+                "name": "wild-dove",
+                "hex": "#8b8c89"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "supernova",
+            "rgb": [
+                115,
+                123,
+                139
+            ],
+            "hexadecimal": "#737b8b",
+            "pantone": {
+                "codigo": "17-4911",
+                "name": "arctic",
+                "hex": "#648589"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "surpresa de amora",
+            "rgb": [
+                179,
+                147,
+                155
+            ],
+            "hexadecimal": "#b3939b",
+            "pantone": {
+                "codigo": "16-3803",
+                "name": "gull-gray",
+                "hex": "#a49ca0"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "suspiro mentolado",
+            "rgb": [
+                203,
+                235,
+                219
+            ],
+            "hexadecimal": "#cbebdb",
+            "pantone": {
+                "codigo": "12-5410",
+                "name": "bleached-aqua",
+                "hex": "#bce3df"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "suspiro",
+            "rgb": [
+                227,
+                235,
+                227
+            ],
+            "hexadecimal": "#e3ebe3",
+            "pantone": {
+                "codigo": "12-4305",
+                "name": "spa-blue",
+                "hex": "#d3dedf"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "taca real",
+            "rgb": [
+                108,
+                116,
+                124
+            ],
+            "hexadecimal": "#6c747c",
+            "pantone": {
+                "codigo": "18-4215",
+                "name": "blue-mirage",
+                "hex": "#5c6d7c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tapecaria",
+            "rgb": [
+                163,
+                123,
+                115
+            ],
+            "hexadecimal": "#a37b73",
+            "pantone": {
+                "codigo": "17-1316",
+                "name": "portabella",
+                "hex": "#937b6a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tapete de croche",
+            "rgb": [
+                155,
+                139,
+                131
+            ],
+            "hexadecimal": "#9b8b83",
+            "pantone": {
+                "codigo": "17-1501",
+                "name": "wild-dove",
+                "hex": "#8b8c89"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tapete de juta",
+            "rgb": [
+                211,
+                203,
+                195
+            ],
+            "hexadecimal": "#d3cbc3",
+            "pantone": {
+                "codigo": "13-4201",
+                "name": "oyster-mushroom",
+                "hex": "#c3c6c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tatu",
+            "rgb": [
+                76,
+                60,
+                52
+            ],
+            "hexadecimal": "#4c3c34",
+            "pantone": {
+                "codigo": "19-1110",
+                "name": "chocolate-plum",
+                "hex": "#3c2d2e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tecelagem",
+            "rgb": [
+                195,
+                187,
+                147
+            ],
+            "hexadecimal": "#c3bb93",
+            "pantone": {
+                "codigo": "14-0223",
+                "name": "nile",
+                "hex": "#b4bb85"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "telha nova",
+            "rgb": [
+                203,
+                99,
+                83
+            ],
+            "hexadecimal": "#cb6353",
+            "pantone": {
+                "codigo": "18-1450",
+                "name": "mecca-orange",
+                "hex": "#bd5745"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "telhado",
+            "rgb": [
+                140,
+                76,
+                68
+            ],
+            "hexadecimal": "#8c4c44",
+            "pantone": {
+                "codigo": "19-1334",
+                "name": "henna",
+                "hex": "#7c423c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tempeiro sirio",
+            "rgb": [
+                155,
+                155,
+                67
+            ],
+            "hexadecimal": "#9b9b43",
+            "pantone": {
+                "codigo": "16-0439",
+                "name": "spinach-green",
+                "hex": "#909b4c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tempestade do mar",
+            "rgb": [
+                195,
+                195,
+                195
+            ],
+            "hexadecimal": "#c3c3c3",
+            "pantone": {
+                "codigo": "14-4807",
+                "name": "surf-spray",
+                "hex": "#b4c8c2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "templo dos deuses",
+            "rgb": [
+                187,
+                187,
+                211
+            ],
+            "hexadecimal": "#bbbbd3",
+            "pantone": {
+                "codigo": "14-4112",
+                "name": "skyway",
+                "hex": "#adbed3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "terra arada",
+            "rgb": [
+                147,
+                123,
+                91
+            ],
+            "hexadecimal": "#937b5b",
+            "pantone": {
+                "codigo": "18-1022",
+                "name": "ermine",
+                "hex": "#836b4f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "terra batida",
+            "rgb": [
+                140,
+                100,
+                92
+            ],
+            "hexadecimal": "#8c645c",
+            "pantone": {
+                "codigo": "18-0724",
+                "name": "gothic-olive",
+                "hex": "#7c6e4f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "terra roxa",
+            "rgb": [
+                187,
+                115,
+                99
+            ],
+            "hexadecimal": "#bb7363",
+            "pantone": {
+                "codigo": "18-1436",
+                "name": "light-mahogany",
+                "hex": "#ad6d68"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tesouro",
+            "rgb": [
+                251,
+                227,
+                92
+            ],
+            "hexadecimal": "#fbe35c",
+            "pantone": {
+                "codigo": "12-0646",
+                "name": "celandine",
+                "hex": "#ebdf67"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tijolo",
+            "rgb": [
+                195,
+                107,
+                67
+            ],
+            "hexadecimal": "#c36b43",
+            "pantone": {
+                "codigo": "17-1347",
+                "name": "autumn-leaf",
+                "hex": "#b56a4c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "topo do mundo",
+            "rgb": [
+                4,
+                132,
+                140
+            ],
+            "hexadecimal": "#04848c",
+            "pantone": {
+                "codigo": "18-4528",
+                "name": "mosaic-blue",
+                "hex": "#00758f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "torre de pisa",
+            "rgb": [
+                179,
+                179,
+                163
+            ],
+            "hexadecimal": "#b3b3a3",
+            "pantone": {
+                "codigo": "15-4306",
+                "name": "belgian-block",
+                "hex": "#a3a9a6"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tranquilidade",
+            "rgb": [
+                195,
+                211,
+                219
+            ],
+            "hexadecimal": "#c3d3db",
+            "pantone": {
+                "codigo": "13-4308",
+                "name": "baby-blue",
+                "hex": "#b5c7d3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "travesseiro de pena",
+            "rgb": [
+                235,
+                227,
+                211
+            ],
+            "hexadecimal": "#ebe3d3",
+            "pantone": {
+                "codigo": "13-0002",
+                "name": "white-sand",
+                "hex": "#dbd5d1"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "trigo",
+            "rgb": [
+                235,
+                219,
+                195
+            ],
+            "hexadecimal": "#ebdbc3",
+            "pantone": {
+                "codigo": "12-1404",
+                "name": "pink-tint",
+                "hex": "#dbcbbd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "trilha da mata",
+            "rgb": [
+                107,
+                123,
+                91
+            ],
+            "hexadecimal": "#6b7b5b",
+            "pantone": {
+                "codigo": "17-5912",
+                "name": "dark-ivy",
+                "hex": "#5b7763"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tronco",
+            "rgb": [
+                124,
+                100,
+                92
+            ],
+            "hexadecimal": "#7c645c",
+            "pantone": {
+                "codigo": "18-1409",
+                "name": "peppercorn",
+                "hex": "#6c5656"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tropicalia",
+            "rgb": [
+                251,
+                179,
+                131
+            ],
+            "hexadecimal": "#fbb383",
+            "pantone": {
+                "codigo": "14-1133",
+                "name": "apricot-nectar",
+                "hex": "#ecaa79"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "trovoada",
+            "rgb": [
+                123,
+                139,
+                155
+            ],
+            "hexadecimal": "#7b8b9b",
+            "pantone": {
+                "codigo": "17-4412",
+                "name": "smoke-blue",
+                "hex": "#6d8994"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tunel do tempo",
+            "rgb": [
+                108,
+                116,
+                132
+            ],
+            "hexadecimal": "#6c7484",
+            "pantone": {
+                "codigo": "18-4215",
+                "name": "blue-mirage",
+                "hex": "#5c6d7c"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "umbu do sertao",
+            "rgb": [
+                155,
+                155,
+                131
+            ],
+            "hexadecimal": "#9b9b83",
+            "pantone": {
+                "codigo": "17-1501",
+                "name": "wild-dove",
+                "hex": "#8b8c89"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "uva tempranillo",
+            "rgb": [
+                147,
+                155,
+                211
+            ],
+            "hexadecimal": "#939bd3",
+            "pantone": {
+                "codigo": "16-3929",
+                "name": "grapemist",
+                "hex": "#8398ca"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "valentino",
+            "rgb": [
+                196,
+                36,
+                44
+            ],
+            "hexadecimal": "#c4242c",
+            "pantone": {
+                "codigo": "18-1551",
+                "name": "aura-orange",
+                "hex": "#b4262a"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vapor de agua",
+            "rgb": [
+                187,
+                195,
+                203
+            ],
+            "hexadecimal": "#bbc3cb",
+            "pantone": {
+                "codigo": "14-4112",
+                "name": "skyway",
+                "hex": "#adbed3"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vaso de ceramica",
+            "rgb": [
+                123,
+                171,
+                163
+            ],
+            "hexadecimal": "#7baba3",
+            "pantone": {
+                "codigo": "15-4715",
+                "name": "aqua-sea",
+                "hex": "#6baaae"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vela arromatizada",
+            "rgb": [
+                179,
+                139,
+                147
+            ],
+            "hexadecimal": "#b38b93",
+            "pantone": {
+                "codigo": "16-1104",
+                "name": "crockery",
+                "hex": "#a49887"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "veludo azul",
+            "rgb": [
+                115,
+                147,
+                163
+            ],
+            "hexadecimal": "#7393a3",
+            "pantone": {
+                "codigo": "16-5114",
+                "name": "dusty-turquoise",
+                "hex": "#649b9e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde agua",
+            "rgb": [
+                211,
+                227,
+                211
+            ],
+            "hexadecimal": "#d3e3d3",
+            "pantone": {
+                "codigo": "12-5505",
+                "name": "glacier",
+                "hex": "#c3dbd4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde boemia",
+            "rgb": [
+                179,
+                211,
+                195
+            ],
+            "hexadecimal": "#b3d3c3",
+            "pantone": {
+                "codigo": "14-4809",
+                "name": "eggshell-blue",
+                "hex": "#a3ccc9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde cartolina",
+            "rgb": [
+                179,
+                227,
+                171
+            ],
+            "hexadecimal": "#b3e3ab",
+            "pantone": {
+                "codigo": "13-0221",
+                "name": "pistachio-green",
+                "hex": "#a9d39e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde catamara",
+            "rgb": [
+                179,
+                203,
+                195
+            ],
+            "hexadecimal": "#b3cbc3",
+            "pantone": {
+                "codigo": "14-4809",
+                "name": "eggshell-blue",
+                "hex": "#a3ccc9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde citrico",
+            "rgb": [
+                163,
+                187,
+                36
+            ],
+            "hexadecimal": "#a3bb24",
+            "pantone": {
+                "codigo": "14-0452",
+                "name": "lime-green",
+                "hex": "#9fc131"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde cristalino",
+            "rgb": [
+                187,
+                227,
+                219
+            ],
+            "hexadecimal": "#bbe3db",
+            "pantone": {
+                "codigo": "13-5410",
+                "name": "iced-aqua",
+                "hex": "#abd3db"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde lavado",
+            "rgb": [
+                219,
+                227,
+                203
+            ],
+            "hexadecimal": "#dbe3cb",
+            "pantone": {
+                "codigo": "12-5303",
+                "name": "sprout-green",
+                "hex": "#cbd7d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde neon",
+            "rgb": [
+                163,
+                195,
+                67
+            ],
+            "hexadecimal": "#a3c343",
+            "pantone": {
+                "codigo": "16-0230",
+                "name": "macaw-green",
+                "hex": "#9bb53e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde nostalgia",
+            "rgb": [
+                75,
+                195,
+                179
+            ],
+            "hexadecimal": "#4bc3b3",
+            "pantone": {
+                "codigo": "15-5519",
+                "name": "turquoise",
+                "hex": "#45b5aa"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde organico",
+            "rgb": [
+                171,
+                195,
+                163
+            ],
+            "hexadecimal": "#abc3a3",
+            "pantone": {
+                "codigo": "14-6011",
+                "name": "grayed-jade",
+                "hex": "#9bbea9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde pastel",
+            "rgb": [
+                155,
+                179,
+                155
+            ],
+            "hexadecimal": "#9bb39b",
+            "pantone": {
+                "codigo": "14-6319",
+                "name": "meadow",
+                "hex": "#8bba94"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde preguica",
+            "rgb": [
+                203,
+                219,
+                195
+            ],
+            "hexadecimal": "#cbdbc3",
+            "pantone": {
+                "codigo": "13-6008",
+                "name": "misty-jade",
+                "hex": "#bcd9c8"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde psicina",
+            "rgb": [
+                155,
+                219,
+                179
+            ],
+            "hexadecimal": "#9bdbb3",
+            "pantone": {
+                "codigo": "13-0117",
+                "name": "green-ash",
+                "hex": "#a0daa9"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde silencioso",
+            "rgb": [
+                187,
+                211,
+                195
+            ],
+            "hexadecimal": "#bbd3c3",
+            "pantone": {
+                "codigo": "14-5707",
+                "name": "aqua-foam",
+                "hex": "#adc3b4"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde sublime",
+            "rgb": [
+                219,
+                227,
+                211
+            ],
+            "hexadecimal": "#dbe3d3",
+            "pantone": {
+                "codigo": "12-5303",
+                "name": "sprout-green",
+                "hex": "#cbd7d2"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verdite",
+            "rgb": [
+                179,
+                179,
+                123
+            ],
+            "hexadecimal": "#b3b37b",
+            "pantone": {
+                "codigo": "15-0326",
+                "name": "tarragon",
+                "hex": "#a4ae77"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vermelho amor",
+            "rgb": [
+                204,
+                68,
+                68
+            ],
+            "hexadecimal": "#cc4444",
+            "pantone": {
+                "codigo": "17-1641",
+                "name": "chrysanthemum",
+                "hex": "#be454f"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vida azul",
+            "rgb": [
+                147,
+                187,
+                219
+            ],
+            "hexadecimal": "#93bbdb",
+            "pantone": {
+                "codigo": "14-4615",
+                "name": "antiqua-sand",
+                "hex": "#83c2cd"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vinho tinto",
+            "rgb": [
+                132,
+                76,
+                84
+            ],
+            "hexadecimal": "#844c54",
+            "pantone": {
+                "codigo": "18-1614",
+                "name": "nocturne",
+                "hex": "#7a4b56"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vinicola",
+            "rgb": [
+                187,
+                179,
+                195
+            ],
+            "hexadecimal": "#bbb3c3",
+            "pantone": {
+                "codigo": "15-4101",
+                "name": "high-rise",
+                "hex": "#aeb2b5"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "violeta africana",
+            "rgb": [
+                195,
+                139,
+                195
+            ],
+            "hexadecimal": "#c38bc3",
+            "pantone": {
+                "codigo": "16-3617",
+                "name": "sheer-lilac",
+                "hex": "#b793c0"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "violeta queimado",
+            "rgb": [
+                163,
+                147,
+                163
+            ],
+            "hexadecimal": "#a393a3",
+            "pantone": {
+                "codigo": "17-3906",
+                "name": "minimal-gray",
+                "hex": "#948d99"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "violeta vapor",
+            "rgb": [
+                243,
+                243,
+                251
+            ],
+            "hexadecimal": "#f3f3fb",
+            "pantone": {
+                "codigo": "11-4001",
+                "name": "brilliant-white",
+                "hex": "#edf1fe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vitamina de papaia",
+            "rgb": [
+                235,
+                139,
+                75
+            ],
+            "hexadecimal": "#eb8b4b",
+            "pantone": {
+                "codigo": "15-1147",
+                "name": "butterscotch",
+                "hex": "#e19640"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "yoga",
+            "rgb": [
+                163,
+                147,
+                163
+            ],
+            "hexadecimal": "#a393a3",
+            "pantone": {
+                "codigo": "17-3906",
+                "name": "minimal-gray",
+                "hex": "#948d99"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "amarelo real",
+            "rgb": [
+                251,
+                211,
+                44
+            ],
+            "hexadecimal": "#fbd32c",
+            "pantone": {
+                "codigo": "14-0755",
+                "name": "sulphur",
+                "hex": "#ddb614"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "borboleta azul",
+            "rgb": [
+                59,
+                139,
+                195
+            ],
+            "hexadecimal": "#3b8bc3",
+            "pantone": {
+                "codigo": "16-4427",
+                "name": "horizon-blue",
+                "hex": "#289dbe"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde cha",
+            "rgb": [
+                187,
+                211,
+                83
+            ],
+            "hexadecimal": "#bbd353",
+            "pantone": {
+                "codigo": "16-0230",
+                "name": "macaw-green",
+                "hex": "#9bb53e"
+            },
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde trevo",
+            "rgb": [
+                99,
+                179,
+                115
+            ],
+            "hexadecimal": "#63b373",
+            "pantone": {
+                "codigo": "15-6340",
+                "name": "irish-green",
+                "hex": "#45be76"
+            },
+            "loja": "suvenil"
+        }
+    ]
+}

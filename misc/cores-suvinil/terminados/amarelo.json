@@ -1,0 +1,427 @@
+{
+    "amarelo": [
+        {
+            "nome": "a\u00e7ucar org\u00e2nico",
+            "rgb": [
+                227,
+                187,
+                131
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "amarelo bandeira",
+            "rgb": [
+                243,
+                203,
+                20
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "amarelo real",
+            "rgb": [
+                251,
+                211,
+                44
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ambrosia",
+            "rgb": [
+                251,
+                219,
+                139
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "banana",
+            "rgb": [
+                235,
+                211,
+                99
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "bananada",
+            "rgb": [
+                132,
+                108,
+                84
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cacau bahia",
+            "rgb": [
+                251,
+                211,
+                115
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cadeira de bambu",
+            "rgb": [
+                187,
+                171,
+                139
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "calopsita",
+            "rgb": [
+                219,
+                219,
+                211
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cal\u00e7a de linho",
+            "rgb": [
+                219,
+                211,
+                179
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "can\u00e1rio da terra",
+            "rgb": [
+                251,
+                219,
+                60
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "can\u00e1rio",
+            "rgb": [
+                235,
+                211,
+                76
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caramelo",
+            "rgb": [
+                187,
+                139,
+                67
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caravela",
+            "rgb": [
+                155,
+                139,
+                107
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caule",
+            "rgb": [
+                131,
+                123,
+                91
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cerrado",
+            "rgb": [
+                203,
+                187,
+                155
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chale do campo",
+            "rgb": [
+                131,
+                123,
+                115
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "charrete",
+            "rgb": [
+                179,
+                155,
+                131
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cinza urbano",
+            "rgb": [
+                187,
+                179,
+                171
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cocar",
+            "rgb": [
+                108,
+                100,
+                92
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "dia de sorte",
+            "rgb": [
+                251,
+                227,
+                76
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "eclipse",
+            "rgb": [
+                171,
+                155,
+                83
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "espuma de baunilha",
+            "rgb": [
+                243,
+                243,
+                227
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "marmore",
+            "rgb": [
+                203,
+                195,
+                187
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mostarda picante",
+            "rgb": [
+                235,
+                195,
+                36
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ouro do egito",
+            "rgb": [
+                195,
+                147,
+                52
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel de ceda",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "papel de presente",
+            "rgb": [
+                235,
+                235,
+                227
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pinolli",
+            "rgb": [
+                243,
+                227,
+                187
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pinus",
+            "rgb": [
+                219,
+                219,
+                195
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "prata",
+            "rgb": [
+                195,
+                195,
+                187
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "prata envelhecido",
+            "rgb": [
+                155,
+                155,
+                139
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "p\u00f3 de gengibre",
+            "rgb": [
+                211,
+                187,
+                123
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "quent\u00e3o",
+            "rgb": [
+                195,
+                147,
+                59
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rio nilo",
+            "rgb": [
+                171,
+                155,
+                123
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rock nroll",
+            "rgb": [
+                52,
+                52,
+                52
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rua das pedras",
+            "rgb": [
+                131,
+                123,
+                115
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sacola de lona",
+            "rgb": [
+                203,
+                203,
+                179
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sandalo",
+            "rgb": [
+                187,
+                171,
+                123
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "selva de cajuzeiro",
+            "rgb": [
+                227,
+                195,
+                115
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sequilho",
+            "rgb": [
+                251,
+                219,
+                115
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sisal",
+            "rgb": [
+                203,
+                195,
+                163
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sol nascente",
+            "rgb": [
+                251,
+                179,
+                4
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tatu",
+            "rgb": [
+                76,
+                60,
+                52
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tecelagem",
+            "rgb": [
+                195,
+                187,
+                147
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "tesouro",
+            "rgb": [
+                251,
+                227,
+                92
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "travesseiro pena",
+            "rgb": [
+                235,
+                227,
+                211
+            ],
+            "loja": "suvenil"
+        }
+    ]
+}

@@ -31,36 +31,89 @@ def receivesuvinil():
     response = requests.get("http://localhost:5555/suvinil/")
     data = response.json()
     cores_df = pd.DataFrame(data).filter(['id','nome','red','green','blue','hexadecimal','pantone_código','pantone_name','pantone_hex','fornecedores'])  
-    st.text(data)
     st.dataframe(cores_df)
-    if len(data) > 0:
-        row1 =st.columns(2)
-    if len(data) > 1:
-        row2 =st.columns(2)
-    if len(data) > 2:
-        row3 =st.columns(2)
-    if len(data) > 3:
-        row4 =st.columns(2)
-    if len(data) > 4:
-        row5 =st.columns(2)
-    st.markdown("""
-        <style>
-        .st-emotion-cache-1apb2ab.e1f1d6gn0{
-            background-color: red;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-    c=0
-    while c < len(data):
-        for col in row1+row2+row3+row4+row5:
-            if col == row1[0] or col == row2[0] or col == row3[0] or col == row4[0] or col == row5[0]:
-                tile = col.container(height=200)
-                tile.write(f'{data[c]["nome"]}',key='main'+str(c))
-            else:
-                tile = col.container(height=200)
-                tile.write(f'{data[c]["pantone_name"]}',key='pant'+str(c))
-                c+=1
-    
+    # if len(data) > 0:
+    #     row1 =st.columns(2)
+    # if len(data) > 1:
+    #     row2 =st.columns(2)
+    # if len(data) > 2:
+    #     row3 =st.columns(2)
+    # if len(data) > 3:
+    #     row4 =st.columns(2)
+    # if len(data) > 4:
+    #     row5 =st.columns(2)
+    # st.markdown("""
+    #     <style>
+    #     .st-emotion-cache-1apb2ab.e1f1d6gn0{
+    #         background-color: red;
+    #     }
+    #     .st-key-main00{
+    #         background-color: yellow;
+    #     }
+    #     </style>
+    #     """, unsafe_allow_html=True)
+    # c=0
+    # if len(data) > 4:
+    #     maximo = 5
+    # else:
+    #     maximo = len(data)
+    # while c < maximo:
+    #     if len(data) == 1 :
+    #         for col in row1:
+    #             if col == row1[0]:
+    #                 key = 'main'+ '0'+str(c)
+    #                 tile = col.container(height=200,key=key)
+    #                 tile.write(f'{data[c]["nome"]}')
+    #             else:
+    #                 key = 'main'+ '1'+str(c)
+    #                 tile = col.container(height=200, key=key)
+    #                 tile.write(f'{data[c]["pantone_name"]}')
+    #                 c+=1
+    #     elif len(data) == 2:
+    #         for col in row1+row2:
+    #             if col == row1[0] or col == row2[0]:
+    #                 key = 'main'+ '0'+str(c)
+    #                 tile = col.container(height=200, key=key)
+    #                 tile.write(f'{data[c]["nome"]}')
+    #             else:
+    #                 key = 'main'+ '1'+str(c)
+    #                 tile = col.container(height=200, key=key)
+    #                 tile.write(f'{data[c]["pantone_name"]}')
+    #                 c+=1
+    #     elif len(data) == 3:
+    #         for col in row1+row2+row3:
+    #                 if col == row1[0] or col == row2[0] or col == row3[0]:
+    #                     key = 'main'+ '0'+str(c)
+    #                     tile = col.container(height=200, key=key)
+    #                     tile.write(f'{data[c]["nome"]}')
+    #                 else:
+    #                     key = 'main'+ '1'+str(c)
+    #                     tile = col.container(height=200, key=key)
+    #                     tile.write(f'{data[c]["pantone_name"]}')
+    #                     c+=1
+    #     elif len(data) == 4:
+    #         for col in row1+row2+row3+row4:
+    #                 if col == row1[0] or col == row2[0] or col == row3[0] or col == row4[0]:
+    #                     key = 'main'+ '0'+str(c)
+    #                     tile = col.container(height=200, key=key)
+    #                     tile.write(f'{data[c]["nome"]}')
+    #                 else:
+    #                     key = 'main'+ '1'+str(c)
+    #                     tile = col.container(height=200, key=key)
+    #                     tile.write(f'{data[c]["pantone_name"]}')
+    #                     c+=1
+    #     elif len(data) > 4:
+    #         for col in row1+row2+row3+row4+row5:
+    #             if col == row1[0] or col == row2[0] or col == row3[0] or col == row4[0] or col == row5[0]:
+    #                 key = 'main'+ '0'+str(c)
+    #                 tile = col.container(height=200, key=key)
+    #                 tile.write(f'{data[c]["nome"]}')
+    #             else:
+    #                 key = 'main'+ '1'+str(c)
+    #                 tile = col.container(height=200, key=key)
+    #                 tile.write(f'{data[c]["pantone_name"]}')
+    #                 c+=1
+        
     
 st.title('Find me')
 st.subheader('Onde você acha sua cor')

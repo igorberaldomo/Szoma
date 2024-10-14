@@ -1,0 +1,310 @@
+{
+    "cinza": [
+        {
+            "nome": "asteroide",
+            "rgb": [
+                187,
+                195,
+                195
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "aventurina preta",
+            "rgb": [
+                52,
+                52,
+                52
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "azal\u00e9ia branca",
+            "rgb": [
+                227,
+                227,
+                235
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "banho de platina",
+            "rgb": [
+                187,
+                195,
+                187
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "branco puro",
+            "rgb": [
+                251,
+                251,
+                243
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "carv\u00e3o mineral",
+            "rgb": [
+                84,
+                84,
+                84
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chave de fenda",
+            "rgb": [
+                211,
+                211,
+                211
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cinza cl\u00e1ssico",
+            "rgb": [
+                131,
+                131,
+                139
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cinza natural",
+            "rgb": [
+                147,
+                147,
+                147
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cinza tecnol\u00f3gico",
+            "rgb": [
+                123,
+                123,
+                123
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "esqui na neve",
+            "rgb": [
+                235,
+                235,
+                235
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fantasia prateada",
+            "rgb": [
+                171,
+                171,
+                163
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fio metalizado",
+            "rgb": [
+                203,
+                203,
+                211
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "foto retr\u00f4",
+            "rgb": [
+                203,
+                203,
+                203
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "geada",
+            "rgb": [
+                235,
+                235,
+                235
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "gelato de hortel\u00e3",
+            "rgb": [
+                243,
+                243,
+                235
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "granito nobre",
+            "rgb": [
+                108,
+                100,
+                100
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "inox",
+            "rgb": [
+                163,
+                171,
+                163
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mangaratiba",
+            "rgb": [
+                195,
+                195,
+                203
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "manh\u00e2 do \u00e1rtico",
+            "rgb": [
+                227,
+                235,
+                235
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "nanquim",
+            "rgb": [
+                139,
+                139,
+                139
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "nuvem de chuva",
+            "rgb": [
+                155,
+                155,
+                155
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "n\u00e9voa intensa",
+            "rgb": [
+                187,
+                195,
+                195
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "patativa",
+            "rgb": [
+                84,
+                84,
+                76
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pedra tapune",
+            "rgb": [
+                243,
+                243,
+                251
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pele de coelho",
+            "rgb": [
+                203,
+                203,
+                203
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pena de prata",
+            "rgb": [
+                179,
+                179,
+                179
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pepita de bismuto",
+            "rgb": [
+                171,
+                171,
+                179
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ponte estaiada",
+            "rgb": [
+                171,
+                179,
+                171
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "prata bali",
+            "rgb": [
+                147,
+                155,
+                163
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "preto absoluto",
+            "rgb": [
+                44,
+                44,
+                44
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sambaqui",
+            "rgb": [
+                219,
+                219,
+                219
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "suspiro",
+            "rgb": [
+                227,
+                235,
+                227
+            ],
+            "loja": "suvenil"
+        },
+        {
+            "nome": "vapor de \u00e1gua",
+            "rgb": [
+                187,
+                195,
+                203
+            ],
+            "loja": "suvenil"
+        }
+    ]
+}
