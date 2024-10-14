@@ -1,0 +1,14 @@
+{
+    "padrão":[
+        {"id":1,
+        "padrão":"rgb"
+        },
+        {"id":2,
+        "padrão":"hexadecimal"
+        },
+        {"id":3,
+        "padrão":"pantone"
+        }
+
+    ]
+}

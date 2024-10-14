@@ -1,13 +1,14 @@
 import sqlalchemy
 import os
 import json
+import datetime
 from sqlalchemy import insert
 from sqlalchemy import Column, Integer, String, Table
 from sqlalchemy import MetaData
 from dotenv import load_dotenv
-
 load_dotenv()
 
+# rode isso para criar o esqueleto da tabela suvinil e inserir os dados
 
 def db_table_insertinto_suvinil():
     DATABASE_URL = os.getenv("DATABASE_URL")
@@ -29,6 +30,7 @@ def db_table_insertinto_suvinil():
         Column('pantone_name', String(20)),
         Column('pantone_hex', String(7)),
         Column('fornecedores', String(20)),
+
         mysql_charset='utf8mb4',
     )
 
@@ -48,7 +50,7 @@ def db_table_insertinto_suvinil():
             pantone_name = str(file_data['coressuvinil'][c]['pantone']['name'])
             pantone_hex = str(file_data['coressuvinil'][c]['pantone']['hex'])
             fornecedores = str(file_data['coressuvinil'][c]['loja'])
-            
+
             
             stmt = insert(my_table).values(nome = nome, red = red, green = green, blue = blue, hexadecimal = hexadecimal, pantone_código = pantone_código, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores)
             compiled = stmt.compile()

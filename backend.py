@@ -28,6 +28,7 @@ def primary_select(red,green,blue):
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
     search_string = f"SELECT * FROM suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} "
     resultset  = pd.read_sql(search_string, engine)
+
     return resultset
     
 
@@ -52,12 +53,14 @@ def getsuvinilColors():
         while c < len(response):
             lastQuery.append(response[c])
             c+=1
-        print(lastQuery)
-        print(lastQuery[0]['id'])
+        with open ('response.json', 'w+') as file:
+            json.dump(lastQuery, file)
+            lastQuery.clear()
         return response
     if request.method == 'GET':
-        print(lastQuery)
-        return lastQuery
+        with open ('response.json', 'r') as file:
+            response = json.load(file)
+            return response
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5555, debug=True)

@@ -5,6 +5,7 @@ from sqlalchemy import MetaData
 from dotenv import load_dotenv
 load_dotenv()
 
+# rode isso para criar o esqueleto da tabela suvinil
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = sqlalchemy.create_engine( DATABASE_URL , pool_size=5, max_overflow=10)

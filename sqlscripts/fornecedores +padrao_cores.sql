@@ -1,0 +1,1 @@
+Alter table fornecedores add constraint padrão_id Foreign KEY (padrão_id) references padrao_cores(id)
