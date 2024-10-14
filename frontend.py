@@ -30,18 +30,21 @@ def findrgb():
 def receivesuvinil():
     response = requests.get("http://localhost:5555/suvinil/")
     data = response.json()
-    cores_df = pd.DataFrame(data).filter(['id','nome','red','green','blue','hexadecimal','pantone_código','pantone_name','pantone_hex','fornecedores'])
-    
+    cores_df = pd.DataFrame(data).filter(['id','nome','red','green','blue','hexadecimal','pantone_código','pantone_name','pantone_hex','fornecedores'])  
     st.text(data)
     st.dataframe(cores_df)
-    row1 =st.columns(2)
-    row2 =st.columns(2)
-    row3 =st.columns(2)
-    row4 =st.columns(2)
-    row5 =st.columns(2)
+    if len(data) > 0:
+        row1 =st.columns(2)
+    if len(data) > 1:
+        row2 =st.columns(2)
+    if len(data) > 2:
+        row3 =st.columns(2)
+    if len(data) > 3:
+        row4 =st.columns(2)
+    if len(data) > 4:
+        row5 =st.columns(2)
     st.markdown("""
         <style>
- 
         .st-emotion-cache-1apb2ab.e1f1d6gn0{
             background-color: red;
         }
