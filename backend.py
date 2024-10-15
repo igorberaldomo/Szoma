@@ -78,5 +78,13 @@ def getNames():
         with open ('response.json', 'w+') as file:
             json.dump(response, file)
         return data
+    
+@app.route('/procura/', methods =['POST'])
+def getProcura():
+    if request.method == 'POST':
+        codigo_cor = request.get_json()
+        #  para buscar o nome da cor no futuro
+        
+         
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5555, debug=True)
