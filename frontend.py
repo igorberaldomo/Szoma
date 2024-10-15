@@ -24,16 +24,16 @@ def findrgb():
         response = requests.post("http://localhost:5555/suvinil/",json=cor)
         data = response.json()
         return data
-    else:
-        st.text('Por favor coloque uma imagem para verificar a cor')
-
-def findname():
-     if nomecor is not None:
+    if nomecor is not None and upload is None:
         st.session_state.cliked = True
         name = {"nome":nomecor}
         response = requests.post("http://localhost:5555/names/",json=name)
         print(response)
         return response
+    else:
+        st.text('Por favor coloque uma imagem para verificar a cor')
+
+     
 def receivesuvinil():
     response = requests.get("http://localhost:5555/suvinil/")
     data = response.json()
@@ -47,8 +47,8 @@ st.markdown('---')
 upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', type=['png','jpg','jpeg'])
 select = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil'))
 nomecor = st.text_input('Qual é o nome da cor que deseja verificar?')
-button = st.button('Verificar', on_click=findrgb)
-button2 = st.button('Verificar nome', on_click=findname)
+button = st.button('Procurar', on_click=findrgb)
+
 receivesuvinil()
 
 
