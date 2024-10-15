@@ -11,7 +11,29 @@ st.markdown("""
 .st-emotion-cache-yfhhig.ef3psqc5{
 visibility:hidden
 }
-
+.stAppHeader.st-emotion-cache-h4xjwg.ezrtsby2{
+    background-color: black
+}
+.stMain.st-emotion-cache-bm2z3a.ea3mdgi8{
+    background-color: white;
+}
+#find-me{
+    color: black;
+}
+h3{
+    color: black;
+}
+.st-emotion-cache-m78myu.e1nzilvr3{
+    color: black;
+}
+.st-emotion-cache-1erivf3.e1b2p2ww15, .st-emotion-cache-15hul6a.ef3psqc16{
+    background-color: lightgray;
+    color:black;
+    border: 1px solid black;
+}
+.st-emotion-cache-uef7qa.e1nzilvr5,.stFileUploaderFileName.st-emotion-cache-1uixxvy.e1b2p2ww6, .st-emotion-cache-7oyrr6.e1bju1570{
+    color: black
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -46,19 +68,12 @@ def findrgb():
         response = requests.post("http://localhost:5555/suvinil/",json=cor)
         data = response.json()
         return data
-    if procura is not None and upload is None and procura[0] not in '0123456789#':
+    if procura is not None and upload is None :
         st.session_state.cliked = True
         name = {"nome":procura}
         response = requests.post("http://localhost:5555/names/",json=name)
         return response
-    if procura is not None and upload is None and procura[0] in '0123456789#':
-        st.session_state.cliked = True
-        if procura[0] == '#':
-            procura = {"hexadecimal":procura}
-        else:
-            procura = {"pantone": procura}
-        response = requests.post("http://localhost:5555/procura/",json=name)
-        return response
+
     else:
         st.text('Por favor coloque uma imagem para verificar a cor')
 
@@ -73,13 +88,12 @@ def receivesuvinil():
     c1,y1,m1,k1 = rgb_to_cmyk(data[1]['red'],data[1]['green'],data[1]['blue'])
     c2,y2,m2,k2 = rgb_to_cmyk(data[2]['red'],data[2]['green'],data[2]['blue'])
     with container:
-        script = "<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px'> <div style='background-color: white ; width: 220px; height: 400px;border-radius: 10px; padding: 10px'><div id='container' style='background-color: {}; width: 200px; height: 200px; '></div><p style='color:black; margin: 0px; padding:0px'>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p><p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p><p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f}<br>yellow: {:.2f}<br>magenta: {:.2f}<br>key: {:.2f} </p></div><div style='background-color: white ; width: 220px; height: 400px;border-radius: 10px; padding: 10px'><div id='container' style='background-color: {}; width: 200px; height: 200px; '></div><p style='color:black; margin: 0px; padding:0px'>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p><p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p><p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f}<br>yellow: {:.2f}<br>magenta: {:.2f}<br>key: {:.2f} </p></div><div style='background-color: white ; width: 220px; height: 400px;border-radius: 10px; padding: 10px'><div id='container' style='background-color: {}; width: 200px; height: 200px; '></div><p style='color:black; margin: 0px; padding:0px'>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p><p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p><p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f}<br>yellow: {:.2f}<br>magenta: {:.2f}<br>key: {:.2f} </p></div></div>".format(data[0]['hexadecimal'], data[0]['fornecedores'], data[0]['nome'],data[0] ['pantone_name'],data[0]['red'],data[0]['green'],data[0]['blue'],float(c),float(m),float(y),float(k),data[1]['hexadecimal'], data[1]['fornecedores'], data[1]['nome'],data[1] ['pantone_name'],data[1]['red'],data[1]['green'],data[1]['blue'],float(c1),float(m1),float(y1),float(k1),data[2]['hexadecimal'], data[2]['fornecedores'], data[2]['nome'],data[2] ['pantone_name'],data[2]['red'],data[2]['green'],data[2]['blue'],float(c2),float(m2),float(y2),float(k2))
+        script = "<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px; ;'> <div style='background-color: oldlace ; width: 220px; height: 400px;border-radius: 10px; padding: 10px;box-shadow: 2px 2px 2px 1.5px lightgray'><div id='container' style='background-color: {}; width: 200px; height: 200px; '></div><p style='color:black; margin: 0px; padding:0px'>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p><p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p><p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f}<br>yellow: {:.2f}<br>magenta: {:.2f}<br>key: {:.2f} </p></div><div style='background-color: oldlace ; width: 220px; height: 400px;border-radius: 10px; padding: 10px; box-shadow: 2px 2px 2px 1.5px lightgray'><div id='container' style='background-color: {}; width: 200px; height: 200px; '></div><p style='color:black; margin: 0px; padding:0px'>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p><p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p><p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f}<br>yellow: {:.2f}<br>magenta: {:.2f}<br>key: {:.2f} </p></div><div style='background-color: oldlace ; width: 220px; height: 400px;border-radius: 10px; padding: 10px;box-shadow: 2px 2px 2px 1.5px lightgray'><div id='container' style='background-color: {}; width: 200px; height: 200px; ;'></div><p style='color:black; margin: 0px; padding:0px; '>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p><p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p><p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f}<br>yellow: {:.2f}<br>magenta: {:.2f}<br>key: {:.2f} </p></div></div>".format(data[0]['hexadecimal'], data[0]['fornecedores'], data[0]['nome'],data[0] ['pantone_name'],data[0]['red'],data[0]['green'],data[0]['blue'],float(c),float(m),float(y),float(k),data[1]['hexadecimal'], data[1]['fornecedores'], data[1]['nome'],data[1] ['pantone_name'],data[1]['red'],data[1]['green'],data[1]['blue'],float(c1),float(m1),float(y1),float(k1),data[2]['hexadecimal'], data[2]['fornecedores'], data[2]['nome'],data[2] ['pantone_name'],data[2]['red'],data[2]['green'],data[2]['blue'],float(c2),float(m2),float(y2),float(k2))
         st.markdown(script, unsafe_allow_html=True)
-
+        
  
 st.title('Find me')
-st.subheader('Onde você acha sua cor')
-st.markdown('---')
+st.subheader('Onde você acha sua cor',divider='rainbow')
 upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', type=['png','jpg','jpeg'])
 select = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil'))
 procura = st.text_input('Digite o nome da cor, o código pantone ou o hexadecimal(#000000):')
