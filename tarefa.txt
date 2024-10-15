@@ -1,0 +1,9 @@
+suvinil = basfi
+coral
+
+distância  = 3
+
+nomecomercial:
+pantone 
+rgb
+cmyk

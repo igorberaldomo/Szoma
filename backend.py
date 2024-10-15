@@ -2,8 +2,13 @@ import  os, json
 import pandas as pd
 import sqlalchemy
 from flask import Flask, request
-# import find_color_in_range
-
+DATABASE_URL = os.getenv("DATABASE_URL")
+engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
+def select_names(nome):
+    search_string = f"SELECT * FROM suvinil WHERE nome = '{nome}' or pantone_name = '{nome}' "
+    resultset  = pd.read_sql(search_string, engine)
+    print(resultset)
+    return resultset
 def primary_select(red,green,blue):
     distancia = 36
     maxred = red + distancia
@@ -62,5 +67,16 @@ def getsuvinilColors():
             response = json.load(file)
             return response
 
+@app.route('/names/', methods =['POST'])
+def getNames():
+    if request.method == 'POST':
+        nomecor = request.get_json()
+        print(nomecor['nome'])
+        nome = nomecor['nome']
+        response = select_names(nome)
+        response = response.to_dict(orient='records')
+        with open ('response.json', 'w+') as file:
+            json.dump(response, file)
+        return data
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5555, debug=True)
