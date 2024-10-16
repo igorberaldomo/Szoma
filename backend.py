@@ -5,6 +5,13 @@ from flask import Flask, request
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
 
+def select_hexadecimal(hexadecimal):
+    search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
+    resultset  = pd.read_sql(search_string, engine)
+    if resultset.empty:
+        search_string = f"SELECT * FROM suvinil where hexadecimal like ':hexadecimal' or pantone_hex like ':hexadecimal' "
+        resultset  = pd.read_sql(search_string, engine, params={'hexadecimal': hexadecimal})
+    return resultset
 def select_códigos(codigo):
     search_string = f"SELECT * FROM suvinil WHERE pantone_código = '{codigo}'"
     resultset  = pd.read_sql(search_string, engine)
@@ -22,7 +29,7 @@ def select_names(nome):
 
 
 def primary_select(red,green,blue):
-    distancia = 36
+    distancia = 18
     maxred = red + distancia
     minred = red - distancia
     maxgreen = green + distancia
@@ -96,6 +103,18 @@ def getProcura():
         codigo_cor = request.get_json()
         codigo = codigo_cor['codigo']
         response = select_códigos(codigo)
+        response = response.to_dict(orient='records')
+        print(response)
+        with open ('response.json', 'w+') as file:
+            json.dump(response, file)
+        return response
+    
+@app.route('/hex/', methods =['POST'])
+def getProcura():
+    if request.method == 'POST':
+        codigo_cor = request.get_json()
+        hexadecimal = codigo_cor['headecimal']
+        response = select_hexadecimal(hexadecimal)
         response = response.to_dict(orient='records')
         print(response)
         with open ('response.json', 'w+') as file:

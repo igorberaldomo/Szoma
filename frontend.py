@@ -78,6 +78,9 @@ def findrgb():
         if procura[0].isnumeric():
             codigo = {"codigo":procura}
             response = requests.post("http://localhost:5555/codigos/",json=codigo)
+        if procura[0] == '#':
+            hexa = {"hexadecimal":procura}
+            response = requests.post("http://localhost:5555/hex/",json=hexa)
         return response
     else:
         st.text('Por favor coloque uma imagem para verificar a cor')
