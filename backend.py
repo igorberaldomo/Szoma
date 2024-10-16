@@ -4,6 +4,14 @@ import sqlalchemy
 from flask import Flask, request
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
+
+def select_códigos(codigo):
+    search_string = f"SELECT * FROM suvinil WHERE pantone_código = '{codigo}'"
+    resultset  = pd.read_sql(search_string, engine)
+    if resultset.empty:
+        search_string = f"SELECT * FROM suvinil where pantone_código like ':codigo'"
+        resultset  = pd.read_sql(search_string, engine, params={'codigo': codigo})
+    return resultset
 def select_names(nome):
     search_string = f"SELECT * FROM suvinil WHERE nome = '{nome}' or pantone_name = '{nome}' "
     resultset  = pd.read_sql(search_string, engine)
@@ -82,12 +90,17 @@ def getNames():
             json.dump(response, file)
         return data
     
-@app.route('/procura/', methods =['POST'])
+@app.route('/codigos/', methods =['POST'])
 def getProcura():
     if request.method == 'POST':
         codigo_cor = request.get_json()
-        
-        
-         
+        codigo = codigo_cor['codigo']
+        response = select_códigos(codigo)
+        response = response.to_dict(orient='records')
+        print(response)
+        with open ('response.json', 'w+') as file:
+            json.dump(response, file)
+        return response
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5555, debug=True)

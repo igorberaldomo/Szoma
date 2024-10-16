@@ -71,9 +71,13 @@ def findrgb():
         data = response.json()
         return data
     if procura is not None and upload is None :
-        st.session_state.cliked = True
-        name = {"nome":procura}
-        response = requests.post("http://localhost:5555/names/",json=name)
+        if procura[0].isalpha():
+            st.session_state.cliked = True
+            name = {"nome":procura}
+            response = requests.post("http://localhost:5555/names/",json=name)
+        if procura[0].isnumeric():
+            codigo = {"codigo":procura}
+            response = requests.post("http://localhost:5555/codigos/",json=codigo)
         return response
     else:
         st.text('Por favor coloque uma imagem para verificar a cor')
@@ -97,7 +101,7 @@ def receivesuvinil():
             update(card)
 
         
-        if len(data) >= 0 and len(data) <=1:
+        if len(data) >= 0 and len(data)-1 <=1:
             hexadecimal,fornecedores = (data[card]['hexadecimal']), data[card]['fornecedores']
             nome,pantone_codigo = data[card]['nome'],data[card] ['pantone_código']
             red,green,blue = data[card]['red'],data[card]['green'],data[card]['blue']
