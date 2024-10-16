@@ -135,7 +135,7 @@ st.title('Find me')
 st.subheader('Onde você acha sua cor',divider='rainbow')
 upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', type=['png','jpg','jpeg'])
 select = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil'))
-procura = st.text_input('Digite o nome da cor, o código pantone ou o hexadecimal(#000000):')
+procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o hexadecimal(#000000):')
 button = st.button('Procurar', on_click=findrgb)
 
 receivesuvinil()
