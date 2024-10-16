@@ -10,7 +10,6 @@ def select_names(nome):
     if resultset.empty:
         search_string = f"SELECT * FROM suvinil where nome like ':nome' or pantone_name like ':nome' "
         resultset  = pd.read_sql(search_string, engine, params={'nome': nome})
-    print(resultset)
     return resultset
 
 
@@ -76,7 +75,6 @@ def getsuvinilColors():
 def getNames():
     if request.method == 'POST':
         nomecor = request.get_json()
-        print(nomecor['nome'])
         nome = nomecor['nome']
         response = select_names(nome)
         response = response.to_dict(orient='records')
@@ -88,7 +86,7 @@ def getNames():
 def getProcura():
     if request.method == 'POST':
         codigo_cor = request.get_json()
-        #  para buscar o nome da cor no futuro
+        
         
          
 if __name__ == '__main__':
