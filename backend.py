@@ -9,6 +9,8 @@ def select_names(nome):
     resultset  = pd.read_sql(search_string, engine)
     print(resultset)
     return resultset
+
+
 def primary_select(red,green,blue):
     distancia = 36
     maxred = red + distancia
