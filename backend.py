@@ -91,7 +91,8 @@ def select_complementos(red, green, blue, palheta):
             resultado = pd.read_sql(complementar, engine)
             return resultado 
         if palheta == "análoga":
-
+            print(red)
+            
 def select_hexadecimal(hexadecimal):
     search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
     resultset = pd.read_sql(search_string, engine)
