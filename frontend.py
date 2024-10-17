@@ -138,7 +138,7 @@ def receivesuvinil():
                 st.button('proximo', key='proximo', on_click=add)
  
 st.title('Find me')
-st.subheader('Onde você acha sua cor',divider='rainbow')
+st.subheader('Onde você acha sua cor')
 upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', type=['png','jpg','jpeg'])
 select = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil'))
 tipo_de_palheta =st.selectbox('quais opções de palheta você está procurando?', options=('complementar','análoga', 'triade'))
