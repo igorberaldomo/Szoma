@@ -91,7 +91,62 @@ def select_complementos(red, green, blue, palheta):
             resultado = pd.read_sql(complementar, engine)
             return resultado 
         if palheta == "análoga":
-            print(red)
+            lista_complementos.clear()
+            maior = max(red, green, blue)
+            menor = min(red, green, blue)
+            meio = 0
+            if red != maior and red != menor :
+                meio = red
+            if green != maior and green != menor:
+                meio = green
+            if blue != maior and blue != menor:
+                meio = blue
+            meio += 60 
+            menor_valor_de_maior = maior - 10
+            maior_valor_de_maior = maior + 10
+            menor_valor_de_menor = menor - 10
+            maior_valor_de_menor = menor + 10
+            menor_valor_de_meio = meio - 30
+            maior_valor_de_meio = meio + 30
+
+            if menor_valor_de_maior < 0:
+                menor_valor_de_maior = 0
+            if maior_valor_de_maior > 255:
+                maior_valor_de_maior = 255
+            if menor_valor_de_menor < 0:
+                menor_valor_de_menor = 0
+            if maior_valor_de_menor > 255:
+                maior_valor_de_menor = 255
+            if menor_valor_de_meio < 0:
+                menor_valor_de_meio = 0
+            if maior_valor_de_meio > 255:
+                maior_valor_de_meio = 255
+            
+            if maior == red:
+                primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_do_menor} AND blue <={maior_valor_do_menor} "
+                segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_do_maior} AND red <={maior_valor_do_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
+                resultado1 = pd.read_sql(primeira, engine)
+                resultado2 = pd.read_sql(segunda, engine)
+                print(resultado1, resultado2)
+                lista_complementos.append(resultado1)
+                lista_complementos.append(resultado2)
+                return lista_complementos
+            if maior == green:
+                primeira = f"SELECT * FROM suvinil WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
+                segunda = f"SELECT * FROM suvinil WHERE red >={menor_valor_do_menor} AND red <={maior_valor_do_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} " 
+                resultado1 = pd.read_sql(primeira, engine)
+                resultado2 = pd.read_sql(segunda, engine)
+                lista_complementos.append(resultado1)
+                lista_complementos.append(resultado2)
+                return lista_complementos
+            if maior == blue:
+                primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_do_maior} AND blue <={maior_valor_do_maior} "
+                segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_do_maior} AND blue <={maior_valor_do_maior} "
+                resultado1 = pd.read_sql(primeira, engine)
+                resultado2 = pd.read_sql(segunda, engine)
+                lista_complementos.append(resultado1)
+                lista_complementos.append(resultado2)
+                return lista_complementos
             
 def select_hexadecimal(hexadecimal):
     search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
