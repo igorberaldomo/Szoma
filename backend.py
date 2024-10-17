@@ -13,44 +13,56 @@ def select_complementos(red, green, blue, palheta):
         lista_complementos.clear()
         maior = max(red, green, blue)
         menor = min(red, green, blue)
-        meio = 0
-        if red != maior and red != menor and meio == 0:
+        if red != maior and red != menor :
             meio = red
-        if green != maior and green != menor and meio == 0:
+        if green != maior and green != menor:
             meio = green
-        if blue != maior and blue != menor and meio == 0:
+        if blue != maior and blue != menor:
             meio = blue
+
         menor_valor_do_meio = meio - 60
         maior_valor_do_meio = meio + 60
         menor_valor_de_menor = menor - 20
         maior_valor_de_menor = menor + 20
         maior_valor_de_maior = maior + 20
         menor_valor_de_maior = maior - 20
+        if menor_valor_de_maior < 0:
+            menor_valor_de_maior = 0
+        if maior_valor_de_maior > 255:
+            maior_valor_de_maior = 255
+        if menor_valor_de_menor < 0:
+            menor_valor_de_menor = 0
+        if maior_valor_de_menor > 255:
+            maior_valor_de_menor = 255
+        if maior_valor_do_meio < 0:
+            maior_valor_do_meio = 0
+        if menor_valor_do_meio > 255:
+            menor_valor_do_meio = 255
         if maior == red:
-            primeira = f"SELECT * FROM suvinil WHERE red > '{menor_valor_de_menor}' AND red < '{maior_valor_de_menor}' AND green > '{menor_valor_de_maior}' AND green < '{maior_valor_de_maior}' AND blue > '{menor_valor_do_meio}' AND blue <'{maior_valor_do_meio}' "
-            segunda = f"SELECT * FROM suvinil WHERE red >'{menor_valor_do_meio}' AND red <'{maior_valor_do_meio}' AND green > '{menor_valor_de_menor}' AND green < '{maior_valor_de_menor}' AND blue > '{menor_valor_de_maior}' AND blue < '{maior_valor_de_maior}' "
+            primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
+            segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
             resultado1 = pd.read_sql(primeira, engine)
             resultado2 = pd.read_sql(segunda, engine)
             lista_complementos.append(resultado1)
             lista_complementos.append(resultado2)
+            return lista_complementos
         if maior == green:
-            primeira = f"SELECT * FROM suvinil WHERE red >'{menor_valor_do_meio}' AND red <'{maior_valor_do_meio}' AND green > '{menor_valor_de_menor}' AND green < '{maior_valor_de_menor}' AND blue > '{menor_valor_de_maior}' AND blue < '{maior_valor_de_maior}' "
-            segunda = f"SELECT * FROM suvinil WHERE red > '{menor_valor_de_maior}' AND red < '{maior_valor_de_maior}' AND green > '{menor_valor_do_meio}' AND green < '{maior_valor_do_meio}' AND blue > '{menor_valor_de_menor}' AND blue <'{maior_valor_de_menor}' "
+            primeira = f"SELECT * FROM suvinil WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
+            segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
             resultado1 = pd.read_sql(primeira, engine)
             resultado2 = pd.read_sql(segunda, engine)
             lista_complementos.append(resultado1)
             lista_complementos.append(resultado2)
+            return lista_complementos
         if maior == blue:
-            primeira = f"SELECT * FROM suvinil WHERE red > '{menor_valor_de_menor}' AND red < '{maior_valor_de_menor}' AND green > '{menor_valor_de_maior}' AND green < '{maior_valor_de_maior}' AND blue > '{menor_valor_do_meio}' AND blue <'{maior_valor_do_meio}' "
-            segunda = f"SELECT * FROM suvinil WHERE red >'{menor_valor_de_maior}' AND red <'{maior_valor_de_maior}' AND green > '{menor_valor_do_meio}' AND green < '{maior_valor_do_meio}' AND blue > '{menor_valor_de_menor}' AND blue < '{maior_valor_de_menor}' "
+            primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
+            segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
             resultado1 = pd.read_sql(primeira, engine)
             resultado2 = pd.read_sql(segunda, engine)
             lista_complementos.append(resultado1)
             lista_complementos.append(resultado2)
-        print(resultado1)
-        print(resultado2)
-        return lista_complementos
-
+            return lista_complementos
+        #  ainda falta aqui palheta complementar e análoga
 
 def select_hexadecimal(hexadecimal):
     search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
@@ -193,6 +205,7 @@ def getComplementos():
             json.dump(lastQuery, file)
             lastQuery.clear()
         return lastQuery
+
 
 
 if __name__ == "__main__":
