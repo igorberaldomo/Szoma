@@ -109,6 +109,9 @@ def receivesuvinil():
             nome,pantone_codigo = data[card]['nome'],data[card] ['pantone_código']
             red,green,blue = data[card]['red'],data[card]['green'],data[card]['blue']
             c,y,m,k = rgb_to_cmyk(data[card]['red'],data[card]['green'],data[card]['blue'])
+            complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta })
+            st.write(complementos)
+            
             with container:
                 script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 450px;'><div style='background-color: white ; width: 220px; height: 400px;border-radius: 10px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25); margin: 5px;'><div id='container' style='background-color:{}; width: 200px; height: 200px; '></div> <p style='color:black; margin: 0px; padding:0px'>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p> <p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p> <p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f} <br>yellow: {:.2f} <br>magenta: {:.2f} <br>key:{:.2f} </p> </div></div>").format(hexadecimal,fornecedores,nome,pantone_codigo,red,green,blue,float(c),float(m),float(y),float(k))
                 st.markdown(script, unsafe_allow_html=True)
@@ -138,6 +141,7 @@ st.title('Find me')
 st.subheader('Onde você acha sua cor',divider='rainbow')
 upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', type=['png','jpg','jpeg'])
 select = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil'))
+tipo_de_palheta =st.selectbox('quais opções de palheta você está procurando?', options=('complementar','análoga', 'triade'))
 procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o hexadecimal(#000000):')
 button = st.button('Procurar', on_click=findrgb)
 
