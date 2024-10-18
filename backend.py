@@ -14,6 +14,8 @@ def select_complementos(red, green, blue, palheta):
         maior = max(red, green, blue)
         menor = min(red, green, blue)
         meio = 0
+        complemento1 = True
+        complemento2 = True
         if red != maior and red != menor :
             meio = red
         if green != maior and green != menor:
@@ -45,25 +47,66 @@ def select_complementos(red, green, blue, palheta):
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
             resultado1 = pd.read_sql(primeira, engine)
             resultado2 = pd.read_sql(segunda, engine)
-            print(resultado1, resultado2)
-            lista_complementos.append(resultado1)
-            lista_complementos.append(resultado2)
+            if resultado1.empty and resultado2.empty:
+                complemento1 = False
+                complemento2 = False
+            elif resultado1.empty:
+                complemento1 = False
+            elif resultado2.empty:
+                complemento2 = False
+            if complemento1 == True and complemento2 == True:
+                lista_complementos.append(resultado1)
+                lista_complementos.append(resultado2)
+            elif complemento1 == False:
+                lista_complementos.append(resultado2)
+            elif complemento2 == False:
+                lista_complementos.append(resultado1)
+            elif complemento1 == False and complemento2 == False:
+                return []
             return lista_complementos
         if maior == green:
             primeira = f"SELECT * FROM suvinil WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
             resultado1 = pd.read_sql(primeira, engine)
             resultado2 = pd.read_sql(segunda, engine)
-            lista_complementos.append(resultado1)
-            lista_complementos.append(resultado2)
+            if resultado1.empty and resultado2.empty:
+                complemento1 = False
+                complemento2 = False
+            elif resultado1.empty:
+                complemento1 = False
+            elif resultado2.empty:
+                complemento2 = False
+            if complemento1 == True and complemento2 == True:
+                lista_complementos.append(resultado1)
+                lista_complementos.append(resultado2)
+            elif complemento1 == False:
+                lista_complementos.append(resultado2)
+            elif complemento2 == False:
+                lista_complementos.append(resultado1)
+            elif complemento1 == False and complemento2 == False:
+                return []
             return lista_complementos
         if maior == blue:
             primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
             resultado1 = pd.read_sql(primeira, engine)
             resultado2 = pd.read_sql(segunda, engine)
-            lista_complementos.append(resultado1)
-            lista_complementos.append(resultado2)
+            if resultado1.empty and resultado2.empty:
+                complemento1 = False
+                complemento2 = False
+            elif resultado1.empty:
+                complemento1 = False
+            elif resultado2.empty:
+                complemento2 = False
+            if complemento1 == True and complemento2 == True:
+                lista_complementos.append(resultado1)
+                lista_complementos.append(resultado2)
+            elif complemento1 == False:
+                lista_complementos.append(resultado2)
+            elif complemento2 == False:
+                lista_complementos.append(resultado1)
+            elif complemento1 == False and complemento2 == False:
+                return []
             return lista_complementos
         if palheta == "complementar": 
             cr = 255 - red
@@ -89,7 +132,10 @@ def select_complementos(red, green, blue, palheta):
                 cb_min = 0
             complementar = f"SELECT * FROM suvinil WHERE red >= {cr_max} AND red <= {cr_min} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} "
             resultado = pd.read_sql(complementar, engine)
-            return resultado 
+            if resultado.empty:
+                return []
+            else:
+                return resultado 
         if palheta == "análoga":
             lista_complementos.clear()
             maior = max(red, green, blue)
@@ -127,26 +173,67 @@ def select_complementos(red, green, blue, palheta):
                 segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_do_maior} AND red <={maior_valor_do_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
                 resultado1 = pd.read_sql(primeira, engine)
                 resultado2 = pd.read_sql(segunda, engine)
-                print(resultado1, resultado2)
-                lista_complementos.append(resultado1)
-                lista_complementos.append(resultado2)
+                if resultado1.empty and resultado2.empty:
+                    complemento1 = False
+                    complemento2 = False
+                elif resultado1.empty:
+                    complemento1 = False
+                elif resultado2.empty:
+                    complemento2 = False
+                if complemento1 == True and complemento2 == True:
+                    lista_complementos.append(resultado1)
+                    lista_complementos.append(resultado2)
+                elif complemento1 == False:
+                    lista_complementos.append(resultado2)
+                elif complemento2 == False:
+                    lista_complementos.append(resultado1)
+                elif complemento1 == False and complemento2 == False:
+                    return []
                 return lista_complementos
             if maior == green:
                 primeira = f"SELECT * FROM suvinil WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
                 segunda = f"SELECT * FROM suvinil WHERE red >={menor_valor_do_menor} AND red <={maior_valor_do_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} " 
                 resultado1 = pd.read_sql(primeira, engine)
                 resultado2 = pd.read_sql(segunda, engine)
-                lista_complementos.append(resultado1)
-                lista_complementos.append(resultado2)
+                if resultado1.empty and resultado2.empty:
+                    complemento1 = False
+                    complemento2 = False
+                elif resultado1.empty:
+                    complemento1 = False
+                elif resultado2.empty:
+                    complemento2 = False
+                if complemento1 == True and complemento2 == True:
+                    lista_complementos.append(resultado1)
+                    lista_complementos.append(resultado2)
+                elif complemento1 == False:
+                    lista_complementos.append(resultado2)
+                elif complemento2 == False:
+                    lista_complementos.append(resultado1)
+                elif complemento1 == False and complemento2 == False:
+                    return []
                 return lista_complementos
             if maior == blue:
                 primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_do_maior} AND blue <={maior_valor_do_maior} "
                 segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_do_maior} AND blue <={maior_valor_do_maior} "
                 resultado1 = pd.read_sql(primeira, engine)
                 resultado2 = pd.read_sql(segunda, engine)
-                lista_complementos.append(resultado1)
-                lista_complementos.append(resultado2)
-                return lista_complementos
+                if resultado1.empty and resultado2.empty:
+                    complemento1 = False
+                    complemento2 = False
+                elif resultado1.empty:
+                    complemento1 = False
+                elif resultado2.empty:
+                    complemento2 = False
+                if complemento1 == True and complemento2 == True:
+                    lista_complementos.append(resultado1)
+                    lista_complementos.append(resultado2)
+                elif complemento1 == False:
+                    lista_complementos.append(resultado2)
+                elif complemento2 == False:
+                    lista_complementos.append(resultado1)
+                elif complemento1 == False and complemento2 == False:
+                    return []
+            return lista_complementos
             
 def select_hexadecimal(hexadecimal):
     search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
@@ -203,8 +290,10 @@ def primary_select(red, green, blue):
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
     search_string = f"SELECT * FROM suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} "
     resultset = pd.read_sql(search_string, engine)
-
-    return resultset
+    if resultset.empty:
+        return []
+    else:
+        return resultset
 
 
 app = Flask(__name__)
