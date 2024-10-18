@@ -23,12 +23,12 @@ def select_complementos(red, green, blue, palheta):
         if blue != maior and blue != menor:
             meio = blue
 
-        menor_valor_do_meio = meio - 60
-        maior_valor_do_meio = meio + 60
-        menor_valor_de_menor = menor - 30
-        maior_valor_de_menor = menor + 20
-        menor_valor_de_maior = maior - 20
-        maior_valor_de_maior = maior + 20
+        menor_valor_do_meio = meio - 40
+        maior_valor_do_meio = meio + 40
+        menor_valor_de_menor = menor - 10
+        maior_valor_de_menor = menor + 10
+        menor_valor_de_maior = maior - 10
+        maior_valor_de_maior = maior + 10
 
         if menor_valor_de_maior < 0:
             menor_valor_de_maior = 0
@@ -54,6 +54,8 @@ def select_complementos(red, green, blue, palheta):
                 complemento1 = False
             elif resultado2.empty:
                 complemento2 = False
+            resultado1 = resultado1.to_dict(orient="records")
+            resultado2 = resultado2.to_dict(orient="records")
             if complemento1 == True and complemento2 == True:
                 lista_complementos.append(resultado1)
                 lista_complementos.append(resultado2)
@@ -76,6 +78,8 @@ def select_complementos(red, green, blue, palheta):
                 complemento1 = False
             elif resultado2.empty:
                 complemento2 = False
+            resultado1 = resultado1.to_dict(orient="records")
+            resultado2 = resultado2.to_dict(orient="records")
             if complemento1 == True and complemento2 == True:
                 lista_complementos.append(resultado1)
                 lista_complementos.append(resultado2)
@@ -98,6 +102,8 @@ def select_complementos(red, green, blue, palheta):
                 complemento1 = False
             elif resultado2.empty:
                 complemento2 = False
+            resultado1 = resultado1.to_dict(orient="records")
+            resultado2 = resultado2.to_dict(orient="records")
             if complemento1 == True and complemento2 == True:
                 lista_complementos.append(resultado1)
                 lista_complementos.append(resultado2)
@@ -130,8 +136,10 @@ def select_complementos(red, green, blue, palheta):
                 cb_max = 255
             if cb_min < 0:
                 cb_min = 0
-            complementar = f"SELECT * FROM suvinil WHERE red >= {cr_max} AND red <= {cr_min} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} "
+            complementar = f"SELECT * FROM suvinil WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} "
             resultado = pd.read_sql(complementar, engine)
+            resultado = resultado.to_dict(orient="records")
+            print(resultado)
             if resultado.empty:
                 return []
             else:
@@ -180,6 +188,8 @@ def select_complementos(red, green, blue, palheta):
                     complemento1 = False
                 elif resultado2.empty:
                     complemento2 = False
+                resultado1 = resultado1.to_dict(orient="records")
+                resultado2 = resultado2.to_dict(orient="records")
                 if complemento1 == True and complemento2 == True:
                     lista_complementos.append(resultado1)
                     lista_complementos.append(resultado2)
@@ -202,6 +212,8 @@ def select_complementos(red, green, blue, palheta):
                     complemento1 = False
                 elif resultado2.empty:
                     complemento2 = False
+                resultado1 = resultado1.to_dict(orient="records")
+                resultado2 = resultado2.to_dict(orient="records")
                 if complemento1 == True and complemento2 == True:
                     lista_complementos.append(resultado1)
                     lista_complementos.append(resultado2)
@@ -224,6 +236,8 @@ def select_complementos(red, green, blue, palheta):
                     complemento1 = False
                 elif resultado2.empty:
                     complemento2 = False
+                resultado1 = resultado1.to_dict(orient="records")
+                resultado2 = resultado2.to_dict(orient="records")
                 if complemento1 == True and complemento2 == True:
                     lista_complementos.append(resultado1)
                     lista_complementos.append(resultado2)
@@ -373,7 +387,10 @@ def getComplementos():
         blue = complementos["blue"]
         palheta = complementos["palheta"]
         lista = select_complementos(red, green, blue, palheta)
-        print(lista)
+        c = 0
+        while c < len(lista):
+            lastQuery.append(lista[c])
+            c += 1
         with open("complementos.json", "w+") as file:
             json.dump(lastQuery, file)
             lastQuery.clear()

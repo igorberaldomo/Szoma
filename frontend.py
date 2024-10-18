@@ -25,20 +25,20 @@ CMYK_SCALE = 100
 query = True
 
 
-def add():
+def add_count():
     number = st.session_state.count
     newvalue= int(number) + 3
     st.session_state.count = str(newvalue)
     
-def subtract():
+def subtract_count():
     number = st.session_state.count
     newvalue= int(number) - 3
     st.session_state.count = str(newvalue)
     
-def pickcard():
+def select_count():
     return st.session_state.count
 
-def update(updated):
+def update_counter(updated):
     number = st.session_state.count
     newvalue= updated
     st.session_state.count = str(newvalue)
@@ -94,29 +94,27 @@ def receivesuvinil():
     
     if data is not None:
         # seleciona o numero do index
-        posição = pickcard()
+        posição = select_count()
         card = (int(posição))
         if (card +1) +3 > len(data):
             card = len(data) -3
-            update(card)
-        if card <0:
+            update_counter(card)
+        if card < 0:
             card = 0
-            update(card)
-
+            update_counter(card)
         
-        if len(data) >= 0 and len(data)-1 <=1:
+        if len(data) > 0 and len(data)-1 <=1:
             hexadecimal,fornecedores = (data[card]['hexadecimal']), data[card]['fornecedores']
             nome,pantone_codigo = data[card]['nome'],data[card] ['pantone_código']
             red,green,blue = data[card]['red'],data[card]['green'],data[card]['blue']
             c,y,m,k = rgb_to_cmyk(data[card]['red'],data[card]['green'],data[card]['blue'])
             complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta })
-            st.write(complementos)
             
             with container:
                 script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 450px;'><div style='background-color: white ; width: 220px; height: 400px;border-radius: 10px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25); margin: 5px;'><div id='container' style='background-color:{}; width: 200px; height: 200px; '></div> <p style='color:black; margin: 0px; padding:0px'>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p> <p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p> <p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f} <br>yellow: {:.2f} <br>magenta: {:.2f} <br>key:{:.2f} </p> </div></div>").format(hexadecimal,fornecedores,nome,pantone_codigo,red,green,blue,float(c),float(m),float(y),float(k))
                 st.markdown(script, unsafe_allow_html=True)
 
-        else:
+        elif len(data)-1 > 1:
             # pega os dados em variáveis
             hexadecimal,fornecedores = (data[card]['hexadecimal']), data[card]['fornecedores']
             nome,pantone_codigo = data[card]['nome'],data[card] ['pantone_código']
@@ -132,16 +130,17 @@ def receivesuvinil():
             c2,y2,m2,k2 = rgb_to_cmyk(data[card+2]['red'],data[card+2]['green'],data[card+2]['blue'])
         
             with container:
-                st.button('anterior', key='anterior', on_click=subtract)
+                st.button('anterior', key='anterior', on_click=subtract_count)
                 script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 450px;'><div style='background-color: white ; width: 220px; height: 400px;border-radius: 10px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25); margin: 5px;'><div id='container' style='background-color: {}; width: 200px; height: 200px; '></div> <p style='color:black; margin: 0px; padding:0px'>{}: {}</p><p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p> <p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p> <p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f} <br>yellow: {:.2f} <br>magenta: {:.2f} <br>key:{:.2f} </p> </div><div style='background-color: white ; width: 220px; height: 400px;border-radius: 10px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25); margin: 5px;'> <div id='container' style='background-color: {}; width: 200px; height: 200px; '></div> <p style='color:black; margin: 0px; padding:0px'>{}: {}</p> <p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p> <p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p> <p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f} <br>yellow: {:.2f} <br>magenta: {:.2f} <br>key:{:.2f} </p> </div><div style='background-color: white ; width: 220px; height: 400px;border-radius: 10px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25); margin: 5px;'> <div id='container' style='background-color: {}; width: 200px; height: 200px; '></div> <p style='color:black; margin: 0px; padding:0px'>{}: {}</p> <p style='color:black;margin: 0px; padding:0px;'>pantone: {}</p> <p style='color:black;margin: 0px; padding:0px'>rgb: {},{},{} </p> <p style='color:black;margin: 0px; padding:0px'>cyan: {:.2f} <br>yellow: {:.2f}<br>magenta: {:.2f}<br>key:{:.2f} </p> </div></div>").format(hexadecimal,fornecedores,nome,pantone_codigo,red,green,blue,float(c),float(m),float(y),float(k),hexadecimal1,fornecedores1,nome1,pantone_codigo1,red1,green1,blue1,float(c1),float(m1),float(y1),float(k1),hexadecimal2,fornecedores2,nome2,pantone_codigo2,red2,green2,blue2,float(c2),float(m2),float(y2),float(k2))
                 st.markdown(script, unsafe_allow_html=True)
-                st.button('proximo', key='proximo', on_click=add)
- 
+                st.button('proximo', key='proximo', on_click=add_count)
+        else:
+            st.write("Nenhuma cor encontrada")
 st.title('Find me')
 st.subheader('Onde você acha sua cor')
 upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', type=['png','jpg','jpeg'])
 select = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil'))
-tipo_de_palheta =st.selectbox('quais opções de palheta você está procurando?', options=('complementar','análoga', 'triade'))
+tipo_de_palheta =st.selectbox('quais opções de palheta você está procurando?', options=('triade','complementar','análoga' ))
 procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o hexadecimal(#000000):')
 button = st.button('Procurar', on_click=findrgb)
 
