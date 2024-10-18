@@ -1,11 +1,11 @@
 from colorthief import ColorThief
 import json
 
-cor = 'verde_trevo.png'
+nome = 'teste'
+red = 0
+green = 0
+blue = 0
 data = dict()
-nome = ''
-
-
 # function to add to JSON
 
 # formats name variable
@@ -22,24 +22,22 @@ def formatnome(cor):
 
 
 
-ct = ColorThief(cor)
-dominant_color = ct.get_color(quality=1)
-nome = formatnome(cor)
-color = dominant_color
+nome = formatnome(nome)
+
 
 data['nome'] = nome
-data['rgb'] = color[0], color[1], color[2]
-hexa = f'{color[0]:02x}{color[1]:02x}{color[2]:02x}'
+data['rgb'] = red,green,blue
+hexa = f'{red:02x}{green:02x}{blue:02x}'
 data['hexadecimal'] = f"#{hexa}"
 def findpant(r,g,b):
     with open('pantone.json','r+') as file:
         file_data = json.load(file)
-    maxr = r+32
-    minr = r-32
-    maxg = g+32
-    ming = g-32
-    maxb = b+32
-    minb = b-32
+    maxr = r+16
+    minr = r-16
+    maxg = g+16
+    ming = g-16
+    maxb = b+16
+    minb = b-16
     if maxr > 255:
         maxr = 255
     if minr < 0:
@@ -63,9 +61,7 @@ def findpant(r,g,b):
                         break
                     else:
                         continue
-
-
-pant = findpant(color[0], color[1], color[2])
+pant = findpant(red, green, blue)
 data['pantone'] = pant
 data['loja'] = 'suvenil'
 # fornecedor

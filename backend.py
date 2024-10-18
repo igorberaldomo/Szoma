@@ -23,8 +23,8 @@ def select_complementos(red, green, blue, palheta):
         if blue != maior and blue != menor:
             meio = blue
 
-        menor_valor_do_meio = meio - 40
-        maior_valor_do_meio = meio + 40
+        menor_valor_do_meio = meio - 60
+        maior_valor_do_meio = meio + 60
         menor_valor_de_menor = menor - 10
         maior_valor_de_menor = menor + 10
         menor_valor_de_maior = maior - 10
