@@ -378,7 +378,7 @@ def getHex():
         return response
 
 
-@app.route("/complementos/", methods=["POST"])
+@app.route("/complementos/", methods=["POST","GET"])
 def getComplementos():
     if request.method == "POST":
         complementos = request.get_json()
@@ -395,7 +395,10 @@ def getComplementos():
             json.dump(lastQuery, file)
             lastQuery.clear()
         return lastQuery
-
+    if request.method == "GET":
+        with open("complementos.json", "r") as file:
+            response = json.load(file)
+            return response
 
 
 if __name__ == "__main__":
