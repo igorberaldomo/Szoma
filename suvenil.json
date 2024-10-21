@@ -5290,6 +5290,695 @@
             "hexadecimal": "#d4e4da",
             "pantone": null,
             "loja": "suvenil"
+        },
+        {
+            "nome": "frescor_da_natureza",
+            "rgb": [
+                216,
+                225,
+                214
+            ],
+            "ncs": "1008-G18Y",
+            "codigo_suvinil": "F050",
+            "hexadecimal": "#d8e1d6",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_lavado",
+            "rgb": [
+                217,
+                225,
+                206
+            ],
+            "ncs": "0910-G35Y",
+            "codigo_suvinil": "FB055",
+            "hexadecimal": "#d9e1ce",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cha_de_menta",
+            "rgb": [
+                215,
+                232,
+                212
+            ],
+            "ncs": "0613-G18Y",
+            "codigo_suvinil": "A048",
+            "hexadecimal": "#d7e8d4",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "esperanca",
+            "rgb": [
+                209,
+                225,
+                212
+            ],
+            "ncs": "0911-G02Y",
+            "codigo_suvinil": "B061",
+            "hexadecimal": "#d1e1d4",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_sublime",
+            "rgb": [
+                217,
+                228,
+                210
+            ],
+            "ncs": "1010-G20Y",
+            "codigo_suvinil": "N799",
+            "hexadecimal": "#d9e4d2",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "contemplacao",
+            "rgb": [
+                192,
+                208,
+                207
+            ],
+            "ncs": "1407-B77G",
+            "codigo_suvinil": "A767",
+            "hexadecimal": "#c0d0cf",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "regata",
+            "rgb": [
+                207,
+                219,
+                195
+            ],
+            "ncs": "1113-G31Y",
+            "codigo_suvinil": "P024",
+            "hexadecimal": "#cfdbc3",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_silencioso",
+            "rgb": [
+                184,
+                209,
+                195
+            ],
+            "ncs": "1515-B94G",
+            "codigo_suvinil": "C061",
+            "hexadecimal": "#b8d1c3",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "chuva_de_verao",
+            "rgb": [
+                195,
+                200,
+                198
+            ],
+            "ncs": "2103-B93G",
+            "codigo_suvinil": "B159",
+            "hexadecimal": "#c3c8c6",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "jardim_de_pedras",
+            "rgb": [
+                193,
+                200,
+                195
+            ],
+            "ncs": "2005-G",
+            "codigo_suvinil": "N814",
+            "hexadecimal": "#c1c8c3",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "caipirinha_de_limao",
+            "rgb": [
+                185,
+                199,
+                187
+            ],
+            "ncs": "2010-G",
+            "codigo_suvinil": "N822",
+            "hexadecimal": "#b9c7bb",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "lago_frias",
+            "rgb": [
+                181,
+                225,
+                179
+            ],
+            "ncs": "0533-G15Y",
+            "codigo_suvinil": "C048",
+            "hexadecimal": "#b5e1b3",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_psicina",
+            "rgb": [
+                155,
+                222,
+                182
+            ],
+            "ncs": "0636-G01Y",
+            "codigo_suvinil": "B628",
+            "hexadecimal": "#9bdeb6",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rio_limpido",
+            "rgb": [
+                148,
+                218,
+                182
+            ],
+            "ncs": "0736-B98G",
+            "codigo_suvinil": "C630",
+            "hexadecimal": "#94dab6",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_cartolina",
+            "rgb": [
+                182,
+                230,
+                175
+            ],
+            "ncs": "0540-G10Y",
+            "codigo_suvinil": "N790",
+            "hexadecimal": "#b6e6af",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "balao_de_festa",
+            "rgb": [
+                188,
+                232,
+                168
+            ],
+            "ncs": "0540-G20Y",
+            "codigo_suvinil": "N791",
+            "hexadecimal": "#bce8a8",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "pistache",
+            "rgb": [
+                160,
+                200,
+                154
+            ],
+            "ncs": "1532-G21Y",
+            "codigo_suvinil": "D311",
+            "hexadecimal": "#a0c89a",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "suco_de_clorofila",
+            "rgb": [
+                175,
+                223,
+                154
+            ],
+            "ncs": "0544-G25Y",
+            "codigo_suvinil": "C050",
+            "hexadecimal": "#afdf9a",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "alto-mar",
+            "rgb": [
+                128,
+                202,
+                182
+            ],
+            "ncs": "1435-B82G",
+            "codigo_suvinil": "D062",
+            "hexadecimal": "#80cab6",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "agua_marinha",
+            "rgb": [
+                131,
+                185,
+                156
+            ],
+            "ncs": "2230-G",
+            "codigo_suvinil": "C315",
+            "hexadecimal": "#83b99c",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_catamara",
+            "rgb": [
+                178,
+                207,
+                197
+            ],
+            "ncs": "1615-B84G",
+            "codigo_suvinil": "H044",
+            "hexadecimal": "#b2cfc5",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "passeio_ecologico",
+            "rgb": [
+                184,
+                205,
+                181
+            ],
+            "ncs": "1615-G15Y",
+            "codigo_suvinil": "B644",
+            "hexadecimal": "#b8cdb5",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "fundo_do_mar",
+            "rgb": [
+                189,
+                197,
+                177
+            ],
+            "ncs": "2110-G35Y",
+            "codigo_suvinil": "D056",
+            "hexadecimal": "#bdc5b1",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_boemia",
+            "rgb": [
+                177,
+                214,
+                192
+            ],
+            "ncs": "1121-B99G",
+            "codigo_suvinil": "B315",
+            "hexadecimal": "#b1d6c0",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "equilibrio",
+            "rgb": [
+                176,
+                225,
+                210
+            ],
+            "ncs": "0726-B84G",
+            "codigo_suvinil": "C062",
+            "hexadecimal": "#b0e1d2",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sereia",
+            "rgb": [
+                176,
+                229,
+                195
+            ],
+            "ncs": "0529-G01Y",
+            "codigo_suvinil": "A628",
+            "hexadecimal": "#b0e5c3",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "rio_bonito",
+            "rgb": [
+                173,
+                224,
+                200
+            ],
+            "ncs": "0827-B94G",
+            "codigo_suvinil": "C059",
+            "hexadecimal": "#ade0c8",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "soda_italiana",
+            "rgb": [
+                164,
+                226,
+                211
+            ],
+            "ncs": "0729-B75G",
+            "codigo_suvinil": "R543",
+            "hexadecimal": "#a4e2d3",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "flor_do_anturio",
+            "rgb": [
+                206,
+                221,
+                160
+            ],
+            "ncs": "0929-G46Y",
+            "codigo_suvinil": "C637",
+            "hexadecimal": "#cedda0",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_organico",
+            "rgb": [
+                170,
+                197,
+                166
+            ],
+            "ncs": "1821-G19Y",
+            "codigo_suvinil": "C310",
+            "hexadecimal": "#aac5a6",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ervas_finas",
+            "rgb": [
+                188,
+                211,
+                164
+            ],
+            "ncs": "1227-G32Y",
+            "codigo_suvinil": "C051",
+            "hexadecimal": "#bcd3a4",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_pastel",
+            "rgb": [
+                159,
+                183,
+                156
+            ],
+            "ncs": "2519-G19Y",
+            "codigo_suvinil": "E058",
+            "hexadecimal": "#9fb79c",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "ponte_estaiada",
+            "rgb": [
+                171,
+                178,
+                169
+            ],
+            "ncs": "3005-G20Y",
+            "codigo_suvinil": "N563",
+            "hexadecimal": "#abb2a9",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "inox",
+            "rgb": [
+                166,
+                170,
+                165
+            ],
+            "ncs": "3502-G24Y",
+            "codigo_suvinil": "C388",
+            "hexadecimal": "#a6aaa5",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "planta_fantasma",
+            "rgb": [
+                163,
+                174,
+                159
+            ],
+            "ncs": "3010-G20Y",
+            "codigo_suvinil": "N838",
+            "hexadecimal": "#a3ae9f",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "cashmere",
+            "rgb": [
+                159,
+                175,
+                150
+            ],
+            "ncs": "3015-G27Y",
+            "codigo_suvinil": "N053",
+            "hexadecimal": "#9faf96",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "babosa",
+            "rgb": [
+                152,
+                166,
+                139
+            ],
+            "ncs": "3317-G33Y",
+            "codigo_suvinil": "E056",
+            "hexadecimal": "#98a68b",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "nanquim",
+            "rgb": [
+                137,
+                139,
+                136
+            ],
+            "ncs": "5201-G28Y",
+            "codigo_suvinil": "E161",
+            "hexadecimal": "#898b88",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "eucalipto",
+            "rgb": [
+                133,
+                164,
+                133
+            ],
+            "ncs": "3224-G16Y",
+            "codigo_suvinil": "P058",
+            "hexadecimal": "#85a485",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_cha",
+            "rgb": [
+                189,
+                208,
+                87
+            ],
+            "ncs": "0858-G50Y",
+            "codigo_suvinil": "E620",
+            "hexadecimal": "#bdd057",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_trevo",
+            "rgb": [
+                101,
+                180,
+                117
+            ],
+            "ncs": "1754-G13Y",
+            "codigo_suvinil": "D049",
+            "hexadecimal": "#65b475",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_neon",
+            "rgb": [
+                167,
+                198,
+                67
+            ],
+            "ncs": "0771-G44Y",
+            "codigo_suvinil": "R299",
+            "hexadecimal": "#a7c643",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "sombra_verde",
+            "rgb": [
+                169,
+                189,
+                54
+            ],
+            "ncs": "1268-G50Y",
+            "codigo_suvinil": "P621",
+            "hexadecimal": "#a9bd36",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "verde_citrico",
+            "rgb": [
+                162,
+                187,
+                37
+            ],
+            "ncs": "1173-G48Y",
+            "codigo_suvinil": "R620",
+            "hexadecimal": "#a2bb25",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "brilho_da_esmeralda",
+            "rgb": [
+                93,
+                136,
+                60
+            ],
+            "ncs": "3157-G31Y",
+            "codigo_suvinil": "R623",
+            "hexadecimal": "#5d883c",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "folha_de_menta",
+            "rgb": [
+                196,
+                214,
+                107
+            ],
+            "ncs": "0850-G52Y",
+            "codigo_suvinil": "D620",
+            "hexadecimal": "#c4d66b",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "palmeira",
+            "rgb": [
+                137,
+                156,
+                120
+            ],
+            "ncs": "3624-G33Y",
+            "codigo_suvinil": "E055",
+            "hexadecimal": "#899c78",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "erva_melissa",
+            "rgb": [
+                132,
+                162,
+                121
+            ],
+            "ncs": "3030-G20Y",
+            "codigo_suvinil": "N850",
+            "hexadecimal": "#84a279",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "mochila_de_aventura",
+            "rgb": [
+                122,
+                131,
+                116
+            ],
+            "ncs": "5010-G30Y",
+            "codigo_suvinil": "N873",
+            "hexadecimal": "#7a8374",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "trilha_na_mata",
+            "rgb": [
+                109,
+                124,
+                95
+            ],
+            "ncs": "5020-G30Y",
+            "codigo_suvinil": "N874",
+            "hexadecimal": "#6d7c5f",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "espinafre",
+            "rgb": [
+                104,
+                124,
+                88
+            ],
+            "ncs": "4928-G32Y",
+            "codigo_suvinil": "P055",
+            "hexadecimal": "#687c58",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "montanha_encantada",
+            "rgb": [
+                82,
+                93,
+                80
+            ],
+            "ncs": "7110-G29Y",
+            "codigo_suvinil": "P388",
+            "hexadecimal": "#525d50",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "patativa",
+            "rgb": [
+                80,
+                81,
+                79
+            ],
+            "ncs": "8101-G50Y",
+            "codigo_suvinil": "R385",
+            "hexadecimal": "#50514f",
+            "pantone": null,
+            "loja": "suvenil"
         }
     ]
 }

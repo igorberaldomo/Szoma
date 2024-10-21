@@ -1,12 +1,12 @@
 from colorthief import ColorThief
 import json
 
-nome = 'limonada suiça'
-ncs = '0810-g02y'
-código_suvinil = 'a066'
-red = 212
-green = 228
-blue = 218
+nome = 'patativa'
+ncs = '8101-g50y'
+código_suvinil = 'r385'
+red = 80
+green = 81
+blue = 79
 
 data = dict()
 # function to add to JSON
