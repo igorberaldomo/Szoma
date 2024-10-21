@@ -56,6 +56,12 @@ def select_complementos(red, green, blue, palheta):
                 complemento2 = False
             resultado1 = resultado1.to_dict(orient="records")
             resultado2 = resultado2.to_dict(orient="records")
+            c = 0
+            while c < len(resultado1):
+                distancia_atual = (resultado1[c]['red'] - red)  + (resultado1[c]['green'] - green) + (resultado1[c]['blue'] - blue)
+                if c == 0 or distancia_atual < distancia:
+                    menor_distancia = c
+                    distancia = distancia_atual  
             if complemento1 == True and complemento2 == True:
                 lista_complementos.append(resultado1)
                 lista_complementos.append(resultado2)

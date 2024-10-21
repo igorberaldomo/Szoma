@@ -1,43 +1,44 @@
 from colorthief import ColorThief
 import json
 
-nome = 'teste'
-red = 0
-green = 0
-blue = 0
+nome = 'limonada suiça'
+ncs = '0810-g02y'
+código_suvinil = 'a066'
+red = 212
+green = 228
+blue = 218
+
 data = dict()
 # function to add to JSON
 
 # formats name variable
 def formatnome(cor):
-    ponto = cor.find('.')
-    sliceposition = slice(0, ponto, 1)
-    tempnome = (cor[sliceposition]).replace('_', ' ')
+    tempnome = cor.replace(' ', '_')
     tempnome = tempnome.replace('á','a').replace('ã','a').replace('â','a')
     tempnome = tempnome.replace('é', 'e').replace('ê','e')
     tempnome = tempnome.replace('í','i')
     tempnome = tempnome.replace('õ','o').replace('ô', 'o').replace('ó','o')
-    nome = tempnome.replace('ç','c').replace('ú','u')
+    nome = tempnome.replace('ç','c').replace('ú','u').replace('=','-')
     return nome
-
-
 
 nome = formatnome(nome)
 
 
 data['nome'] = nome
 data['rgb'] = red,green,blue
+data['ncs'] = ncs.upper()
+data['codigo_suvinil'] = código_suvinil.upper()
 hexa = f'{red:02x}{green:02x}{blue:02x}'
 data['hexadecimal'] = f"#{hexa}"
 def findpant(r,g,b):
     with open('pantone.json','r+') as file:
         file_data = json.load(file)
-    maxr = r+16
-    minr = r-16
-    maxg = g+16
-    ming = g-16
-    maxb = b+16
-    minb = b-16
+    maxr = r+32
+    minr = r-32
+    maxg = g+32
+    ming = g-32
+    maxb = b+32
+    minb = b+32
     if maxr > 255:
         maxr = 255
     if minr < 0:
