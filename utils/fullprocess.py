@@ -1,12 +1,12 @@
 from colorthief import ColorThief
 import json
 
-nome = 'patativa'
-ncs = '8101-g50y'
-código_suvinil = 'r385'
-red = 80
-green = 81
-blue = 79
+nome = 'carvão'
+ncs = '8301-Y97R'
+código_suvinil = 'm167'
+red = 77
+green = 74
+blue = 73
 
 data = dict()
 # function to add to JSON
@@ -33,12 +33,12 @@ data['hexadecimal'] = f"#{hexa}"
 def findpant(r,g,b):
     with open('pantone.json','r+') as file:
         file_data = json.load(file)
-    maxr = r+32
-    minr = r-32
-    maxg = g+32
-    ming = g-32
-    maxb = b+32
-    minb = b+32
+    maxr = r+64
+    minr = r-64
+    maxg = g+64
+    ming = g-64
+    maxb = b+64
+    minb = b+64
     if maxr > 255:
         maxr = 255
     if minr < 0:
