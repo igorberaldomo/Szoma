@@ -334,6 +334,14 @@ def select_names(nome):
         resultset = pd.read_sql(search_string, engine, params={"nome": nome})
     return resultset
 
+def search_name_for_id(nome):
+    with open ("search/search_dict.json", "r") as file:
+        search_dict = json.load(file)
+        print (search_dict)
+        if nome in search_dict:
+             return search_dict[nome]
+        else:
+            return None
 
 def primary_select(red, green, blue):
     distancia = 18
@@ -374,7 +382,7 @@ def infopage():
     return "<h1>Colors API</h1><p>This api will request a picture or RGB, and will return a product (paint, tiles, fabrics) </p> "
 
 
-@app.route("/suvinil/", methods=["GET", "POST"])
+@app.route("/suvinil/<int:red>/<int:green>/<int:blue>", methods=["GET", "POST"])
 def getsuvinilColors():
     if request.method == "POST":
         rgb = request.get_json()
@@ -397,7 +405,7 @@ def getsuvinilColors():
             return response
 
 
-@app.route("/names/", methods=["POST"])
+@app.route("/names/<string:nome>", methods=["POST"])
 def getNames():
     if request.method == "POST":
         nomecor = request.get_json()
@@ -409,7 +417,7 @@ def getNames():
         return response
 
 
-@app.route("/codigos/", methods=["POST"])
+@app.route("/codigos/<string:codigo>", methods=["POST"])
 def getProcura():
     if request.method == "POST":
         codigo_cor = request.get_json()
@@ -421,7 +429,7 @@ def getProcura():
         return response
 
 
-@app.route("/hex/", methods=["POST"])
+@app.route("/hex/<string:hexadecimal>", methods=["POST"])
 def getHex():
     if request.method == "POST":
         codigo_cor = request.get_json()
@@ -433,7 +441,7 @@ def getHex():
         return response
 
 
-@app.route("/complementos/", methods=["POST","GET"])
+@app.route("/complementos/<int:red>/<int:green>/<int:blue>/<string:palheta>", methods=["POST","GET"])
 def getComplementos():
     if request.method == "POST":
         complementos = request.get_json()
