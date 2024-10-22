@@ -25,6 +25,8 @@ def db_table_insertinto_suvinil():
         Column('red', Integer),
         Column('green', Integer),
         Column('blue', Integer),
+        Column('ncs',String(10)),
+        Column('codigo_suvinil',String(5)),
         Column('hexadecimal', String(7)),
         Column('pantone_código', String(8)),
         Column('pantone_name', String(20)),
@@ -36,7 +38,7 @@ def db_table_insertinto_suvinil():
 
     metadata_obj.create_all(engine)
 
-    with open('./suvinil/suvenil.json','r+') as file:
+    with open('./suvinil/suvinil.json','r+') as file:
         file_data = json.load(file)
         c = 0
         while c < len(file_data['coressuvinil']):
@@ -45,14 +47,16 @@ def db_table_insertinto_suvinil():
             red = int(file_data['coressuvinil'][c]['rgb'][0])
             green= int(file_data['coressuvinil'][c]['rgb'][1])
             blue = int(file_data['coressuvinil'][c]['rgb'][2])
+            ncs = str(file_data['coressuvinil'][c]['ncs']) 
+            codigo_suvinil = str(file_data['coressuvinil'][c]['codigo'])
             hexadecimal = str(file_data['coressuvinil'][c]['hexadecimal'])
-            pantone_código = str(file_data['coressuvinil'][c]['pantone']['codigo'])
+            pantone_código = str(file_data['coressuvinil'][c]['pantone']['pantone'])
             pantone_name = str(file_data['coressuvinil'][c]['pantone']['name'])
             pantone_hex = str(file_data['coressuvinil'][c]['pantone']['hex'])
-            fornecedores = str(file_data['coressuvinil'][c]['loja'])
+            fornecedores = str(file_data['coressuvinil'][c]['fornecedores'])
 
             
-            stmt = insert(my_table).values(nome = nome, red = red, green = green, blue = blue, hexadecimal = hexadecimal, pantone_código = pantone_código, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores)
+            stmt = insert(my_table).values(nome = nome, red = red, green = green, blue = blue, ncs = ncs, codigo_suvinil = codigo_suvinil, hexadecimal = hexadecimal, pantone_código = pantone_código, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores)
             compiled = stmt.compile()
             print(compiled.params)
             
