@@ -63,25 +63,26 @@ def rgb_to_cmyk(r, g, b):
     return c * CMYK_SCALE, m * CMYK_SCALE, y * CMYK_SCALE, k * CMYK_SCALE
 
 def findrgb():
-    if upload is not None:
-        st.session_state.cliked = True
-        ct = ColorThief(upload)
-        cor = ct.get_color(quality=1)
-        response = requests.post("http://localhost:5555/suvinil/",json=cor)
-        data = response.json()
-        return data
-    if procura is not None and upload is None :
-        if procura[0].isalpha():
+    if  procura is not None and upload is not None :
+        if upload is not None:
             st.session_state.cliked = True
-            name = {"nome":procura}
-            response = requests.post("http://localhost:5555/names/",json=name)
-        if procura[0].isnumeric():
-            codigo = {"codigo":procura}
-            response = requests.post("http://localhost:5555/codigos/",json=codigo)
-        if procura[0] == '#':
-            hexa = {"hexadecimal":procura}
-            response = requests.post("http://localhost:5555/hex/",json=hexa)
-        return response
+            ct = ColorThief(upload)
+            cor = ct.get_color(quality=1)
+            response = requests.post("http://localhost:5555/suvinil/",json=cor)
+            data = response.json()
+            return data
+        else:
+            if procura[0].isalpha():
+                st.session_state.cliked = True
+                name = {"nome":procura}
+                response = requests.post("http://localhost:5555/names/",json=name)
+            if procura[0].isnumeric():
+                codigo = {"codigo":procura}
+                response = requests.post("http://localhost:5555/codigos/",json=codigo)
+            if procura[0] == '#':
+                hexa = {"hexadecimal":procura}
+                response = requests.post("http://localhost:5555/hex/",json=hexa)
+            return response
     else:
         st.text('Por favor coloque uma imagem para verificar a cor')
 
@@ -139,6 +140,5 @@ procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o h
 button = st.button('Procurar', on_click=findrgb)
 
 receivesuvinil()
-
 
 
