@@ -9,9 +9,9 @@ from sqlalchemy.dialects.mysql import DATETIME as DATE
 from dotenv import load_dotenv
 load_dotenv()
 
-# rode isso para criar o esqueleto da tabela suvinil e inserir os dados
+# rode isso para criar o esqueleto da tabela padrao_cores e inserir os dados
 
-def db_table_insertinto_suvinil():
+def db_table_insertinto_padrao_cores():
     DATABASE_URL = os.getenv("DATABASE_URL")
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
     
@@ -49,4 +49,4 @@ def db_table_insertinto_suvinil():
                 print(c)
                 conn.commit()
             c+=1
-db_table_insertinto_suvinil()
+db_table_insertinto_padrao_cores()
