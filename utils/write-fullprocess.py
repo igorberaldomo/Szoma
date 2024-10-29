@@ -54,15 +54,13 @@ def findpant(r,g,b):
     for red in range(minr, maxr):
         for green in range(ming, maxg):
             for blue in range(minb, maxb):
-                print(red, green, blue)
                 hexa = f'{red:02x}{green:02x}{blue:02x}'
-                if f"#{hexa}" in file_data:
-                    pantone = file_data[f"#{hexa}"]
-                    print(file_data[f"#{hexa}"])
+                if f"#{hexa}" in file_data['corespantone']:
+                    pantone = file_data['corespantone'][f"#{hexa}"]
                     return pantone
-                    break
                 else:
                     continue
+                
 pant = findpant(red, green, blue)
 data['pantone'] = pant
 data['loja'] = 'suvenil'

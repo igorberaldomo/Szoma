@@ -1,9 +1,10 @@
 from colorthief import ColorThief
 import json
 
-cor = 'abacaxi_doce.png'
+cor = 'extremo_sul.png'
 data = dict()
 nome = ''
+
 
 def findpant(r,g,b):
     with open('pantone.json','r+') as file:
