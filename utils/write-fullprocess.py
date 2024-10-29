@@ -38,7 +38,7 @@ def findpant(r,g,b):
     maxg = g+64
     ming = g-64
     maxb = b+64
-    minb = b+64
+    minb = b-64
     if maxr > 255:
         maxr = 255
     if minr < 0:
@@ -52,26 +52,27 @@ def findpant(r,g,b):
     if minb < 0:
         minb = 0
     for red in range(minr, maxr):
-            for green in range(ming, maxg):
-                for blue in range(minb, maxb):
-                    hexa = f'{red:02x}{green:02x}{blue:02x}'
-                    if f"#{hexa}" in file_data:
-                        pantone = file_data[f"#{hexa}"]
-                        print(file_data[f"#{hexa}"])
-                        return pantone
-                        break
-                    else:
-                        continue
+        for green in range(ming, maxg):
+            for blue in range(minb, maxb):
+                print(red, green, blue)
+                hexa = f'{red:02x}{green:02x}{blue:02x}'
+                if f"#{hexa}" in file_data:
+                    pantone = file_data[f"#{hexa}"]
+                    print(file_data[f"#{hexa}"])
+                    return pantone
+                    break
+                else:
+                    continue
 pant = findpant(red, green, blue)
 data['pantone'] = pant
 data['loja'] = 'suvenil'
 # fornecedor
 
-def write_json(new_data, filename='suvenil.json'):
+def write_json(new_data, filename='coral.json'):
     with open(filename,'r+') as file:
         file_data = json.load(file)
         # Join new_data with file_data inside emp_details
-        file_data["cores"].append(new_data)
+        file_data["corescoral"].append(new_data)
         # Sets file's current position at offset.
         file.seek(0)
         # convert back to json.

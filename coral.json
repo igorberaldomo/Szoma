@@ -1,0 +1,100 @@
+{
+    "corescoral": [
+        {
+            "nome": "abacaxi_doce",
+            "rgb": [
+                251,
+                235,
+                187
+            ],
+            "hexadecimal": "#fbebbb",
+            "pantone": null,
+            "fornecedores": "coral"
+        },
+        {
+            "nome": "carvao",
+            "rgb": [
+                77,
+                74,
+                73
+            ],
+            "ncs": "8301-Y97R",
+            "codigo_suvinil": "M167",
+            "hexadecimal": "#4d4a49",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "carvao",
+            "rgb": [
+                77,
+                74,
+                73
+            ],
+            "ncs": "8301-Y97R",
+            "codigo_suvinil": "M167",
+            "hexadecimal": "#4d4a49",
+            "pantone": null,
+            "loja": "suvenil"
+        },
+        {
+            "nome": "abacaxi_doce",
+            "rgb": [
+                251,
+                235,
+                187
+            ],
+            "hexadecimal": "#fbebbb",
+            "pantone": null,
+            "fornecedores": "coral"
+        },
+        {
+            "nome": "abacaxi_doce",
+            "rgb": [
+                251,
+                235,
+                187
+            ],
+            "hexadecimal": "#fbebbb",
+            "pantone": null,
+            "fornecedores": "coral"
+        },
+        {
+            "nome": "abacaxi_doce",
+            "rgb": [
+                251,
+                235,
+                187
+            ],
+            "hexadecimal": "#fbebbb",
+            "pantone": null,
+            "fornecedores": "coral"
+        },
+        {
+            "nome": "abacaxi_doce",
+            "rgb": [
+                251,
+                235,
+                187
+            ],
+            "hexadecimal": "#fbebbb",
+            "pantone": null,
+            "fornecedores": "coral"
+        },
+        {
+            "nome": "abacaxi_doce",
+            "rgb": [
+                251,
+                235,
+                187
+            ],
+            "hexadecimal": "#fbebbb",
+            "pantone": {
+                "pantone": "15-4503",
+                "name": "chateau-gray",
+                "hex": "#bbb1a8"
+            },
+            "fornecedores": "coral"
+        }
+    ]
+}
