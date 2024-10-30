@@ -1,9 +1,14 @@
 import sqlalchemy
 import os
+import json
+import datetime
+from sqlalchemy import insert
 from sqlalchemy import Column, Integer, String, Table
 from sqlalchemy import MetaData
+from sqlalchemy.dialects.mysql import DATETIME as DATE
 from dotenv import load_dotenv
 load_dotenv()
+
 
 # rode isso para criar o esqueleto da tabela coral
 def db_table_insertinto_coral():
@@ -34,18 +39,23 @@ def db_table_insertinto_coral():
         file_data = json.load(file)
         c = 0
         while c < len(file_data['corescoral']):
-            
-            # given_id = int(file_data['padrão'][c]['id'])
-            # padrão = str(file_data['padrão'][c]['padrão'])
+            given_id = c+1
+            nome = str(file_data['corescoral'][c]['nome'])
+            r = file_data['corescoral'][c]['rgb'][0]
+            g = file_data['corescoral'][c]['rgb'][1]
+            b = file_data['corescoral'][c]['rgb'][2]
+            hexadecimal = file_data['corescoral'][c]['hexadecimal']
+            pantone = file_data['corescoral'][c]['pantone']['codigo']
+            pantone_name = file_data['corescoral'][c]['pantone']['name']
+            pantone_hex = file_data['corescoral'][c]['pantone']['hex']
+            fornecedores = file_data['corescoral'][c]['fornecedores']
 
 
-            stmt = insert(my_table).values( id = given_id, padrão = padrão)
+            stmt = insert(my_table).values( id = given_id,nome = nome, red = r, green = g, blue = b, hexadecimal = hexadecimal, pantone_código = pantone, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores)
             compiled = stmt.compile()
-            print(compiled.params)
             
             with engine.connect() as conn:
                 result = conn.execute(stmt)
-                print(c)
                 conn.commit()
             c+=1
 db_table_insertinto_coral()
