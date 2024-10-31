@@ -109,6 +109,7 @@ def receivesuvinil():
             nome,pantone_codigo = data[card]['nome'],data[card] ['pantone_código']
             red,green,blue = data[card]['red'],data[card]['green'],data[card]['blue']
             c,y,m,k = rgb_to_cmyk(data[card]['red'],data[card]['green'],data[card]['blue'])
+            
             response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta })
             complementos = requests.get("http://localhost:5555/complementos/",headers={'Content-Type': 'application/json'})
             complementos = complementos.json()

@@ -1,7 +1,7 @@
 from colorthief import ColorThief
 import json
 
-cor = 'zona_do_crepusculo.png'
+cor = 'cabare.png'
 data = dict()
 nome = ''
 

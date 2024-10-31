@@ -30764,6 +30764,21 @@
                 "hex": "#004b8d"
             },
             "fornecedores": "coral"
+        },
+        {
+            "nome": "cabare",
+            "rgb": [
+                116,
+                44,
+                44
+            ],
+            "hexadecimal": "#742c2c",
+            "pantone": {
+                "pantone": "19-1018",
+                "name": "ganache",
+                "hex": "#34292a"
+            },
+            "fornecedores": "coral"
         }
     ]
 }
