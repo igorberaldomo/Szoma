@@ -1,1 +1,90 @@
-[[{"id": 328, "nome": "riacho_doce", "red": 148, "green": 177, "blue": 218, "ncs": "1536-R81B", "codigo_suvinil": "C344", "hexadecimal": "#94b1da", "pantone_c\u00f3digo": "17-4033", "pantone_name": "pacific-coast", "pantone_hex": "#5480ac", "fornecedores": "suvenil"}], [{"id": 64, "nome": "pessego", "red": 237, "green": 196, "blue": 167, "ncs": "0918-Y50R", "codigo_suvinil": "RM022", "hexadecimal": "#edc4a7", "pantone_c\u00f3digo": "17-1328", "pantone_name": "indian-tan", "pantone_hex": "#ad8567", "fornecedores": "suvenil"}, {"id": 89, "nome": "marfim nobre", "red": 232, "green": 213, "blue": 177, "ncs": "1213-Y23R", "codigo_suvinil": "B283", "hexadecimal": "#e8d5b1", "pantone_c\u00f3digo": "16-1407", "pantone_name": "cobblestone", "pantone_hex": "#a89a8e", "fornecedores": "suvenil"}, {"id": 186, "nome": "fruta_da_condessa", "red": 236, "green": 191, "blue": 174, "ncs": "1121-Y71R", "codigo_suvinil": "S134", "hexadecimal": "#ecbfae", "pantone_c\u00f3digo": "13-4909", "pantone_name": "blue-light", "pantone_hex": "#acdfdd", "fornecedores": "suvenil"}, {"id": 190, "nome": "rosa_delicado", "red": 220, "green": 180, "blue": 167, "ncs": "1718-Y78R", "codigo_suvinil": "C698", "hexadecimal": "#dcb4a7", "pantone_c\u00f3digo": "17-1109", "pantone_name": "chinchilla", "pantone_hex": "#9c8e7b", "fornecedores": "suvenil"}, {"id": 191, "nome": "bala_toffee", "red": 220, "green": 182, "blue": 166, "ncs": "1718-Y73R", "codigo_suvinil": "S125", "hexadecimal": "#dcb6a6", "pantone_c\u00f3digo": "17-1109", "pantone_name": "chinchilla", "pantone_hex": "#9c8e7b", "fornecedores": "suvenil"}]]
+[
+    [
+        {
+            "id": 328,
+            "nome": "riacho_doce",
+            "red": 148,
+            "green": 177,
+            "blue": 218,
+            "ncs": "1536-R81B",
+            "codigo_suvinil": "C344",
+            "hexadecimal": "#94b1da",
+            "pantone_c\u00f3digo": "17-4033",
+            "pantone_name": "pacific-coast",
+            "pantone_hex": "#5480ac",
+            "fornecedores": "suvenil"
+        }
+    ],
+    [
+        {
+            "id": 64,
+            "nome": "pessego",
+            "red": 237,
+            "green": 196,
+            "blue": 167,
+            "ncs": "0918-Y50R",
+            "codigo_suvinil": "RM022",
+            "hexadecimal": "#edc4a7",
+            "pantone_c\u00f3digo": "17-1328",
+            "pantone_name": "indian-tan",
+            "pantone_hex": "#ad8567",
+            "fornecedores": "suvenil"
+        },
+        {
+            "id": 89,
+            "nome": "marfim nobre",
+            "red": 232,
+            "green": 213,
+            "blue": 177,
+            "ncs": "1213-Y23R",
+            "codigo_suvinil": "B283",
+            "hexadecimal": "#e8d5b1",
+            "pantone_c\u00f3digo": "16-1407",
+            "pantone_name": "cobblestone",
+            "pantone_hex": "#a89a8e",
+            "fornecedores": "suvenil"
+        },
+        {
+            "id": 186,
+            "nome": "fruta_da_condessa",
+            "red": 236,
+            "green": 191,
+            "blue": 174,
+            "ncs": "1121-Y71R",
+            "codigo_suvinil": "S134",
+            "hexadecimal": "#ecbfae",
+            "pantone_c\u00f3digo": "13-4909",
+            "pantone_name": "blue-light",
+            "pantone_hex": "#acdfdd",
+            "fornecedores": "suvenil"
+        },
+        {
+            "id": 190,
+            "nome": "rosa_delicado",
+            "red": 220,
+            "green": 180,
+            "blue": 167,
+            "ncs": "1718-Y78R",
+            "codigo_suvinil": "C698",
+            "hexadecimal": "#dcb4a7",
+            "pantone_c\u00f3digo": "17-1109",
+            "pantone_name": "chinchilla",
+            "pantone_hex": "#9c8e7b",
+            "fornecedores": "suvenil"
+        },
+        {
+            "id": 191,
+            "nome": "bala_toffee",
+            "red": 220,
+            "green": 182,
+            "blue": 166,
+            "ncs": "1718-Y73R",
+            "codigo_suvinil": "S125",
+            "hexadecimal": "#dcb6a6",
+            "pantone_c\u00f3digo": "17-1109",
+            "pantone_name": "chinchilla",
+            "pantone_hex": "#9c8e7b",
+            "fornecedores": "suvenil"
+        }
+    ]
+]

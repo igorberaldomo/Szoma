@@ -11,7 +11,7 @@ lista_complementos = []
 def select_complementos(red, green, blue, palheta):
     if palheta == "triade":
         lista_complementos.clear()
-        desvio_maior = 60
+        desvio_maior = 30
         desvio_menor = 10
         maior = max(red, green, blue)
         menor = min(red, green, blue)
@@ -201,8 +201,9 @@ def select_complementos(red, green, blue, palheta):
             
         if palheta == "análoga":
             lista_complementos.clear()
-            desvio_maior = 30
-            desvio_menor = 10
+            desvio_maior = 60
+            desvio_menor = 20
+            
             maior = max(red, green, blue)
             menor = min(red, green, blue)
             meio = 0
@@ -213,6 +214,7 @@ def select_complementos(red, green, blue, palheta):
             if blue != maior and blue != menor:
                 meio = blue
             meio += 60
+            
             menor_valor_de_meio = meio - desvio_maior
             maior_valor_de_meio = meio + desvio_maior
             menor_valor_de_maior = maior - desvio_menor
@@ -248,6 +250,7 @@ def select_complementos(red, green, blue, palheta):
                 
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
+        print(resultado1, resultado2)
         if resultado1.empty and resultado2.empty:
             complemento1 = False
             complemento2 = False
@@ -365,7 +368,7 @@ def primary_select(red, green, blue):
         minblue = 0
     DATABASE_URL = os.getenv("DATABASE_URL")
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
-    search_string = f"SELECT * FROM suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} "
+    search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
     resultset = pd.read_sql(search_string, engine)
     if resultset.empty:
         return []
@@ -382,7 +385,8 @@ def infopage():
     return "<h1>Colors API</h1><p>This api will request a picture or RGB, and will return a product (paint, tiles, fabrics) </p> "
 
 
-@app.route("/suvinil/<int:red>/<int:green>/<int:blue>", methods=["GET", "POST"])
+
+@app.route("/suvinil/", methods=["GET", "POST"])
 def getsuvinilColors():
     if request.method == "POST":
         rgb = request.get_json()
@@ -398,6 +402,7 @@ def getsuvinilColors():
         with open("response.json", "w+") as file:
             json.dump(lastQuery, file)
             lastQuery.clear()
+        
         return response
     if request.method == "GET":
         with open("response.json", "r") as file:
@@ -405,19 +410,22 @@ def getsuvinilColors():
             return response
 
 
-@app.route("/names/<string:nome>", methods=["POST"])
+
+@app.route("/names/", methods=["POST"])
 def getNames():
     if request.method == "POST":
         nomecor = request.get_json()
         nome = nomecor["nome"]
         response = select_names(nome)
         response = response.to_dict(orient="records")
+        print(response)
         with open("response.json", "w+") as file:
             json.dump(response, file)
         return response
 
 
-@app.route("/codigos/<string:codigo>", methods=["POST"])
+
+@app.route("/codigos/", methods=["POST"])
 def getProcura():
     if request.method == "POST":
         codigo_cor = request.get_json()
@@ -429,7 +437,8 @@ def getProcura():
         return response
 
 
-@app.route("/hex/<string:hexadecimal>", methods=["POST"])
+
+@app.route("/hex/", methods=["POST"])
 def getHex():
     if request.method == "POST":
         codigo_cor = request.get_json()
@@ -441,7 +450,8 @@ def getHex():
         return response
 
 
-@app.route("/complementos/<int:red>/<int:green>/<int:blue>/<string:palheta>", methods=["POST","GET"])
+
+@app.route("/complementos/", methods=["GET","POST"])
 def getComplementos():
     if request.method == "POST":
         complementos = request.get_json()
@@ -449,6 +459,7 @@ def getComplementos():
         green = complementos["green"]
         blue = complementos["blue"]
         palheta = complementos["palheta"]
+
         lista = select_complementos(red, green, blue, palheta)
         c = 0
         while c < len(lista):

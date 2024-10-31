@@ -88,7 +88,7 @@ def findrgb():
 
      
 def receivesuvinil():
-    response = requests.get("http://localhost:5555/suvinil/")
+    response = requests.get("http://localhost:5555/suvinil/", headers={'Content-Type': 'application/json', "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.207.132.170 Safari/537.36"})
     data = response.json()
     cores_df = pd.DataFrame(data).filter(['id','nome','red','green','blue','hexadecimal','pantone_código','pantone_name','pantone_hex','fornecedores']) 
     container = st.container()
@@ -110,7 +110,7 @@ def receivesuvinil():
             red,green,blue = data[card]['red'],data[card]['green'],data[card]['blue']
             c,y,m,k = rgb_to_cmyk(data[card]['red'],data[card]['green'],data[card]['blue'])
             response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta })
-            complementos = requests.get("http://localhost:5555/complementos/")
+            complementos = requests.get("http://localhost:5555/complementos/",headers={'Content-Type': 'application/json'})
             complementos = complementos.json()
             hexadecimalc1,fornecedoresc1 = (complementos[0][0]['hexadecimal']), complementos[0][0]['fornecedores']
             nomec1,pantone_codigoc1 = complementos[0][0]['nome'],complementos[0][0]['pantone_código']
@@ -122,7 +122,6 @@ def receivesuvinil():
             redc2,greenc2,bluec2 = complementos[1][0]['red'],complementos[1][0]['green'],complementos[1][0]['blue']
             cc2,yc2,mc2,kc2 = rgb_to_cmyk(complementos[1][0]['red'],complementos[1][0]['green'],complementos[1][0]['blue'])
                 
-            
             
             with container:
                 # st.button('anterior', key='anterior', on_click=subtract_count)
