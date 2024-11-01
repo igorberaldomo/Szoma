@@ -56,13 +56,13 @@ def findrgb():
         else:
             if procura[0].isalpha():
                 st.session_state.cliked = True
-                name = {"nome":procura}
+                name = {"nome":procura, "fornecedores":opcao_fornecedores}
                 response = requests.post("http://localhost:5555/names/",json=name)
             if procura[0].isnumeric():
-                codigo = {"codigo":procura}
+                codigo = {"codigo":procura, "fornecedores":opcao_fornecedores}
                 response = requests.post("http://localhost:5555/codigos/",json=codigo)
             if procura[0] == '#':
-                hexa = {"hexadecimal":procura}
+                hexa = {"hexadecimal":procura, "fornecedores":opcao_fornecedores}
                 response = requests.post("http://localhost:5555/hex/",json=hexa)
             return response
     else:
@@ -82,7 +82,7 @@ def receivesuvinil():
             red,green,blue = data[0]['red'],data[0]['green'],data[0]['blue']
             c,y,m,k = rgb_to_cmyk(data[0]['red'],data[0]['green'],data[0]['blue'])
             
-            response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta })
+            response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta, fornecedores:opcao_fornecedores}) 
             complementos = requests.get("http://localhost:5555/complementos/",headers={'Content-Type': 'application/json'})
             complementos = complementos.json()
             hexadecimalc1,fornecedoresc1 = (complementos[0]['hexadecimal']), complementos[0]['fornecedores']
