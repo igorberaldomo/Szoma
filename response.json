@@ -1,1 +1,173 @@
-[{"hexadecimal": "#a04f58", "fornecedores": "suvenil", "nome": "camu-camu", "pantone_c\u00f3digo": "19-1327", "red": 160, "green": 79, "blue": 88}, {"hexadecimal": "#844955", "fornecedores": "suvenil", "nome": "vinho_tinto", "pantone_c\u00f3digo": "19-3847", "red": 132, "green": 73, "blue": 85}, {"hexadecimal": "#914356", "fornecedores": "suvenil", "nome": "batom_de_cereja", "pantone_c\u00f3digo": "19-3218", "red": 145, "green": 67, "blue": 86}, {"hexadecimal": "#91444c", "fornecedores": "suvenil", "nome": "rubi", "pantone_c\u00f3digo": "19-3218", "red": 145, "green": 68, "blue": 76}, {"hexadecimal": "#8f4c41", "fornecedores": "suvenil", "nome": "telhado", "pantone_c\u00f3digo": "19-3518", "red": 143, "green": 76, "blue": 65}, {"hexadecimal": "#8c3c5c", "fornecedores": "coral", "nome": "bordo_parisiense", "pantone_c\u00f3digo": "19-3215", "red": 140, "green": 60, "blue": 92}, {"hexadecimal": "#9c545c", "fornecedores": "coral", "nome": "compota_de_goiaba", "pantone_c\u00f3digo": "19-1522", "red": 156, "green": 84, "blue": 92}, {"hexadecimal": "#9c3c3c", "fornecedores": "coral", "nome": "danca_espanhola", "pantone_c\u00f3digo": "19-1522", "red": 156, "green": 60, "blue": 60}, {"hexadecimal": "#9c3444", "fornecedores": "coral", "nome": "encontro_marcado", "pantone_c\u00f3digo": "19-1522", "red": 156, "green": 52, "blue": 68}, {"hexadecimal": "#9c4454", "fornecedores": "coral", "nome": "framboesa_radical", "pantone_c\u00f3digo": "19-1522", "red": 156, "green": 68, "blue": 84}, {"hexadecimal": "#943444", "fornecedores": "coral", "nome": "jardim_de_rosas", "pantone_c\u00f3digo": "19-3528", "red": 148, "green": 52, "blue": 68}, {"hexadecimal": "#844c5c", "fornecedores": "coral", "nome": "pluma_vermelha", "pantone_c\u00f3digo": "19-3847", "red": 132, "green": 76, "blue": 92}, {"hexadecimal": "#843444", "fornecedores": "coral", "nome": "rota_do_vinho", "pantone_c\u00f3digo": "19-3847", "red": 132, "green": 52, "blue": 68}, {"hexadecimal": "#8c4c3c", "fornecedores": "coral", "nome": "verao_siciliano", "pantone_c\u00f3digo": "19-3215", "red": 140, "green": 76, "blue": 60}, {"hexadecimal": "#9c4c3c", "fornecedores": "coral", "nome": "vermelho_henna", "pantone_c\u00f3digo": "19-1522", "red": 156, "green": 76, "blue": 60}, {"hexadecimal": "#9c543c", "fornecedores": "coral", "nome": "vermelho_oleiro", "pantone_c\u00f3digo": "19-1522", "red": 156, "green": 84, "blue": 60}, {"hexadecimal": "#9c3454", "fornecedores": "coral", "nome": "vermelho_picante", "pantone_c\u00f3digo": "19-1522", "red": 156, "green": 52, "blue": 84}, {"hexadecimal": "#84444c", "fornecedores": "coral", "nome": "vermelho_tribal", "pantone_c\u00f3digo": "19-3847", "red": 132, "green": 68, "blue": 76}, {"hexadecimal": "#8c4c54", "fornecedores": "coral", "nome": "vinho_sofisticado", "pantone_c\u00f3digo": "19-3215", "red": 140, "green": 76, "blue": 84}]
+[
+    {
+        "hexadecimal": "#a04f58",
+        "fornecedores": "suvenil",
+        "nome": "camu-camu",
+        "pantone_c\u00f3digo": "19-1327",
+        "red": 160,
+        "green": 79,
+        "blue": 88
+    },
+    {
+        "hexadecimal": "#844955",
+        "fornecedores": "suvenil",
+        "nome": "vinho_tinto",
+        "pantone_c\u00f3digo": "19-3847",
+        "red": 132,
+        "green": 73,
+        "blue": 85
+    },
+    {
+        "hexadecimal": "#914356",
+        "fornecedores": "suvenil",
+        "nome": "batom_de_cereja",
+        "pantone_c\u00f3digo": "19-3218",
+        "red": 145,
+        "green": 67,
+        "blue": 86
+    },
+    {
+        "hexadecimal": "#91444c",
+        "fornecedores": "suvenil",
+        "nome": "rubi",
+        "pantone_c\u00f3digo": "19-3218",
+        "red": 145,
+        "green": 68,
+        "blue": 76
+    },
+    {
+        "hexadecimal": "#8f4c41",
+        "fornecedores": "suvenil",
+        "nome": "telhado",
+        "pantone_c\u00f3digo": "19-3518",
+        "red": 143,
+        "green": 76,
+        "blue": 65
+    },
+    {
+        "hexadecimal": "#8c3c5c",
+        "fornecedores": "coral",
+        "nome": "bordo_parisiense",
+        "pantone_c\u00f3digo": "19-3215",
+        "red": 140,
+        "green": 60,
+        "blue": 92
+    },
+    {
+        "hexadecimal": "#9c545c",
+        "fornecedores": "coral",
+        "nome": "compota_de_goiaba",
+        "pantone_c\u00f3digo": "19-1522",
+        "red": 156,
+        "green": 84,
+        "blue": 92
+    },
+    {
+        "hexadecimal": "#9c3c3c",
+        "fornecedores": "coral",
+        "nome": "danca_espanhola",
+        "pantone_c\u00f3digo": "19-1522",
+        "red": 156,
+        "green": 60,
+        "blue": 60
+    },
+    {
+        "hexadecimal": "#9c3444",
+        "fornecedores": "coral",
+        "nome": "encontro_marcado",
+        "pantone_c\u00f3digo": "19-1522",
+        "red": 156,
+        "green": 52,
+        "blue": 68
+    },
+    {
+        "hexadecimal": "#9c4454",
+        "fornecedores": "coral",
+        "nome": "framboesa_radical",
+        "pantone_c\u00f3digo": "19-1522",
+        "red": 156,
+        "green": 68,
+        "blue": 84
+    },
+    {
+        "hexadecimal": "#943444",
+        "fornecedores": "coral",
+        "nome": "jardim_de_rosas",
+        "pantone_c\u00f3digo": "19-3528",
+        "red": 148,
+        "green": 52,
+        "blue": 68
+    },
+    {
+        "hexadecimal": "#844c5c",
+        "fornecedores": "coral",
+        "nome": "pluma_vermelha",
+        "pantone_c\u00f3digo": "19-3847",
+        "red": 132,
+        "green": 76,
+        "blue": 92
+    },
+    {
+        "hexadecimal": "#843444",
+        "fornecedores": "coral",
+        "nome": "rota_do_vinho",
+        "pantone_c\u00f3digo": "19-3847",
+        "red": 132,
+        "green": 52,
+        "blue": 68
+    },
+    {
+        "hexadecimal": "#8c4c3c",
+        "fornecedores": "coral",
+        "nome": "verao_siciliano",
+        "pantone_c\u00f3digo": "19-3215",
+        "red": 140,
+        "green": 76,
+        "blue": 60
+    },
+    {
+        "hexadecimal": "#9c4c3c",
+        "fornecedores": "coral",
+        "nome": "vermelho_henna",
+        "pantone_c\u00f3digo": "19-1522",
+        "red": 156,
+        "green": 76,
+        "blue": 60
+    },
+    {
+        "hexadecimal": "#9c543c",
+        "fornecedores": "coral",
+        "nome": "vermelho_oleiro",
+        "pantone_c\u00f3digo": "19-1522",
+        "red": 156,
+        "green": 84,
+        "blue": 60
+    },
+    {
+        "hexadecimal": "#9c3454",
+        "fornecedores": "coral",
+        "nome": "vermelho_picante",
+        "pantone_c\u00f3digo": "19-1522",
+        "red": 156,
+        "green": 52,
+        "blue": 84
+    },
+    {
+        "hexadecimal": "#84444c",
+        "fornecedores": "coral",
+        "nome": "vermelho_tribal",
+        "pantone_c\u00f3digo": "19-3847",
+        "red": 132,
+        "green": 68,
+        "blue": 76
+    },
+    {
+        "hexadecimal": "#8c4c54",
+        "fornecedores": "coral",
+        "nome": "vinho_sofisticado",
+        "pantone_c\u00f3digo": "19-3215",
+        "red": 140,
+        "green": 76,
+        "blue": 84
+    }
+]

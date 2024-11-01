@@ -12,7 +12,7 @@ def select_complementos(red, green, blue, palheta):
     if palheta == "triade":
         lista_complementos.clear()
         desvio_maior = 30
-        desvio_menor = 10
+        desvio_menor = 30
         maior = max(red, green, blue)
         menor = min(red, green, blue)
         meio = 0
@@ -55,6 +55,7 @@ def select_complementos(red, green, blue, palheta):
         if maior == blue:
             primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
+            
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
         if resultado1.empty and resultado2.empty:
@@ -383,6 +384,7 @@ def primary_select(red, green, blue, fornecedores):
     elif fornecedores == "todos":
         search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
     resultset = pd.read_sql(search_string, engine)
+    print(resultset)
     if resultset.empty:
         return []
     else:
@@ -471,6 +473,7 @@ def getComplementos():
         green = complementos["green"]
         blue = complementos["blue"]
         palheta = complementos["palheta"]
+        print(red, green, blue, palheta)
         lista = select_complementos(red, green, blue, palheta)
         print(lista)
         c = 0
