@@ -51,8 +51,8 @@ def findrgb():
             cor = ct.get_color(quality=1)
             json_procura = {'cor': cor,'fornecedores':opcao_fornecedores}
             response = requests.post("http://localhost:5555/suvinil/",json=json_procura)
-            data = response.json()
-            return data
+
+            st.write(response)
         else:
             if procura[0].isalpha():
                 st.session_state.cliked = True
@@ -82,7 +82,7 @@ def receivesuvinil():
             red,green,blue = data[0]['red'],data[0]['green'],data[0]['blue']
             c,y,m,k = rgb_to_cmyk(data[0]['red'],data[0]['green'],data[0]['blue'])
             
-            response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta, fornecedores:opcao_fornecedores}) 
+            response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta, 'fornecedores':opcao_fornecedores}) 
             complementos = requests.get("http://localhost:5555/complementos/",headers={'Content-Type': 'application/json'})
             complementos = complementos.json()
             hexadecimalc1,fornecedoresc1 = (complementos[0]['hexadecimal']), complementos[0]['fornecedores']

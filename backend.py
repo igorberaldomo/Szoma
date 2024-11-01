@@ -44,6 +44,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             maior_valor_do_meio = 0
         if menor_valor_do_meio > 255:
             menor_valor_do_meio = 255
+            
+        primeira = ""
+        segunda = ""
         if maior == red:
             if fornecedores != 'todos':
                 primeira = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
@@ -162,15 +165,21 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             cb_max = 255
         if cb_min < 0:
             cb_min = 0
+            
         cr_inter = (cr + red) / 2
         cg_inter = (cg + green) / 2
         cb_inter = (cb + blue) / 2
+        
         cr_inter_max = cr_inter + desvio_complementar
         cr_inter_min = cr_inter - desvio_complementar
         cg_inter_max = cg_inter + desvio_complementar
         cg_inter_min = cg_inter - desvio_complementar
         cb_inter_max = cb_inter + desvio_complementar
         cb_inter_min = cb_inter - desvio_complementar
+        
+        intermediaria = ""
+        complementar = ""
+        
         if fornecedores != "todos":
             intermediaria = f"SELECT * FROM {fornecedores} WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} "
             
@@ -272,6 +281,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             menor_valor_de_meio = 0
         if maior_valor_de_meio > 255:
             maior_valor_de_meio = 255
+        
+        primeira = ""
+        segunda = ""
 
         if maior == red:
             if fornecedores != "todos":
@@ -370,6 +382,8 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
 
 def select_hexadecimal(hexadecimal, fornecedores):
+    seach_string = ""
+    
     if fornecedores != "todos":
         search_string = f"SELECT * FROM {fornecedores} WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
     else:
@@ -380,6 +394,7 @@ def select_hexadecimal(hexadecimal, fornecedores):
 
 
 def select_códigos(codigo, fornecedores):
+    seach_string = ""
     if fornecedores != "todos":
         search_string = f"SELECT * FROM {fornecedores} WHERE pantone_código = '{codigo}'"
     else:
@@ -389,6 +404,7 @@ def select_códigos(codigo, fornecedores):
 
 
 def select_names(nome):
+    seach_string = ""
     if fornecedores != "todos":
         search_string = f"SELECT * FROM {fornecedores} WHERE nome = '{nome}' or pantone_name = '{nome}' "
     else:
@@ -429,10 +445,9 @@ def primary_select(red, green, blue, fornecedores):
         minblue = 0
     DATABASE_URL = os.getenv("DATABASE_URL")
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
-    if fornecedores == "suvinil":
-        search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
-    elif fornecedores == "coral":
-        search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
+    seach_string = ""
+    if fornecedores != "todos":
+        search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from {fornecedores} WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
     elif fornecedores == "todos":
         search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
     resultset = pd.read_sql(search_string, engine)
