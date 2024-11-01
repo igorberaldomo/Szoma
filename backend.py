@@ -369,34 +369,32 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         return err
 
 
-def select_hexadecimal(hexadecimal):
-    search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
+def select_hexadecimal(hexadecimal, fornecedores):
+    if fornecedores != "todos":
+        search_string = f"SELECT * FROM {fornecedores} WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
+    else:
+        search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' union SELECT * FROM coral WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
+        
     resultset = pd.read_sql(search_string, engine)
-    if resultset.empty:
-        search_string = f"SELECT * FROM suvinil where hexadecimal like ':hexadecimal' or pantone_hex like ':hexadecimal' "
-        resultset = pd.read_sql(
-            search_string, engine, params={"hexadecimal": hexadecimal}
-        )
     return resultset
 
 
-def select_códigos(codigo):
-    search_string = f"SELECT * FROM suvinil WHERE pantone_código = '{codigo}'"
+def select_códigos(codigo, fornecedores):
+    if fornecedores != "todos":
+        search_string = f"SELECT * FROM {fornecedores} WHERE pantone_código = '{codigo}'"
+    else:
+        search_string = f"SELECT * FROM suvinil WHERE pantone_código = '{codigo}' union SELECT * FROM coral WHERE pantone_código = '{codigo}' "
     resultset = pd.read_sql(search_string, engine)
-    if resultset.empty:
-        search_string = f"SELECT * FROM suvinil where pantone_código like ':codigo'"
-        resultset = pd.read_sql(search_string, engine, params={"codigo": codigo})
     return resultset
 
 
 def select_names(nome):
-    search_string = (
-        f"SELECT * FROM suvinil WHERE nome = '{nome}' or pantone_name = '{nome}' "
-    )
+    if fornecedores != "todos":
+        search_string = f"SELECT * FROM {fornecedores} WHERE nome = '{nome}' or pantone_name = '{nome}' "
+    else:
+        search_string = f"SELECT * FROM suvinil WHERE nome = '{nome}' or pantone_name = '{nome}' union SELECT * FROM coral WHERE nome = '{nome}' or pantone_name = '{nome}' "
+    
     resultset = pd.read_sql(search_string, engine)
-    if resultset.empty:
-        search_string = f"SELECT * FROM suvinil where nome like ':nome' or pantone_name like ':nome' "
-        resultset = pd.read_sql(search_string, engine, params={"nome": nome})
     return resultset
 
 
@@ -481,9 +479,10 @@ def getsuvinilColors():
 @app.route("/names/", methods=["POST"])
 def getNames():
     if request.method == "POST":
-        nomecor = request.get_json()
-        nome = nomecor["nome"]
-        response = select_names(nome)
+        req = request.get_json()
+        nome = req["nome"]
+        fornecedores = req["fornecedores"]
+        response = select_names(nome, fornecedores)
         response = response.to_dict(orient="records")
         with open("response.json", "w+") as file:
             json.dump(response, file)
@@ -495,7 +494,8 @@ def getProcura():
     if request.method == "POST":
         codigo_cor = request.get_json()
         codigo = codigo_cor["codigo"]
-        response = select_códigos(codigo)
+        fornecedores = codigo_cor["fornecedores"]
+        response = select_códigos(codigo, fornecedores)
         response = response.to_dict(orient="records")
         with open("response.json", "w+") as file:
             json.dump(response, file)
@@ -507,7 +507,8 @@ def getHex():
     if request.method == "POST":
         codigo_cor = request.get_json()
         hexadecimal = codigo_cor["headecimal"]
-        response = select_hexadecimal(hexadecimal)
+        fornecedores = codigo_cor["fornecedores"]
+        response = select_hexadecimal(hexadecimal, fornecedores)
         response = response.to_dict(orient="records")
         with open("response.json", "w+") as file:
             json.dump(response, file)

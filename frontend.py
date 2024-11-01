@@ -56,8 +56,8 @@ def findrgb():
         else:
             if procura[0].isalpha():
                 st.session_state.cliked = True
-                name = {"nome":procura, "fornecedores":opcao_fornecedores}
-                response = requests.post("http://localhost:5555/names/",json=name)
+                nome = {"nome":procura, "fornecedores":opcao_fornecedores}
+                response = requests.post("http://localhost:5555/names/",json=nome)
             if procura[0].isnumeric():
                 codigo = {"codigo":procura, "fornecedores":opcao_fornecedores}
                 response = requests.post("http://localhost:5555/codigos/",json=codigo)
