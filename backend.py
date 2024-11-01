@@ -10,6 +10,7 @@ lista_complementos = []
 
 def select_complementos(red, green, blue, palheta):
     if palheta == "triade":
+        print(red, green, blue,palheta)
         lista_complementos.clear()
         desvio_maior = 30
         desvio_menor = 30
