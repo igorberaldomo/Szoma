@@ -85,15 +85,15 @@ def receivesuvinil():
             response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta })
             complementos = requests.get("http://localhost:5555/complementos/",headers={'Content-Type': 'application/json'})
             complementos = complementos.json()
-            hexadecimalc1,fornecedoresc1 = (complementos[0][0]['hexadecimal']), complementos[0][0]['fornecedores']
-            nomec1,pantone_codigoc1 = complementos[0][0]['nome'],complementos[0][0]['pantone_código']
-            redc1,greenc1,bluec1 =complementos[0][0]['red'],complementos[0][0]['green'],complementos[0][0]['blue']
-            cc1,yc1,mc1,kc1 = rgb_to_cmyk(complementos[0][0]['red'],complementos[0][0]['green'],complementos[0][0]['blue'])
+            hexadecimalc1,fornecedoresc1 = (complementos[0]['hexadecimal']), complementos[0]['fornecedores']
+            nomec1,pantone_codigoc1 = complementos[0]['nome'],complementos[0]['pantone_código']
+            redc1,greenc1,bluec1 =complementos[0]['red'],complementos[0]['green'],complementos[0]['blue']
+            cc1,yc1,mc1,kc1 = rgb_to_cmyk(complementos[0]['red'],complementos[0]['green'],complementos[0]['blue'])
 
-            hexadecimalc2,fornecedoresc2 = (complementos[1][0]['hexadecimal']), complementos[1][0]['fornecedores']
-            nomec2,pantone_codigoc2 = complementos[1][0]['nome'],complementos[1][0] ['pantone_código']
-            redc2,greenc2,bluec2 = complementos[1][0]['red'],complementos[1][0]['green'],complementos[1][0]['blue']
-            cc2,yc2,mc2,kc2 = rgb_to_cmyk(complementos[1][0]['red'],complementos[1][0]['green'],complementos[1][0]['blue'])
+            hexadecimalc2,fornecedoresc2 = (complementos[1]['hexadecimal']), complementos[1]['fornecedores']
+            nomec2,pantone_codigoc2 = complementos[1]['nome'],complementos[1]['pantone_código']
+            redc2,greenc2,bluec2 = complementos[1]['red'],complementos[1]['green'],complementos[1]['blue']
+            cc2,yc2,mc2,kc2 = rgb_to_cmyk(complementos[1]['red'],complementos[1]['green'],complementos[1]['blue'])
                 
             
             with container:

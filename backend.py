@@ -10,7 +10,6 @@ lista_complementos = []
 
 def select_complementos(red, green, blue, palheta):
     if palheta == "triade":
-        print(red, green, blue,palheta)
         lista_complementos.clear()
         desvio_maior = 30
         desvio_menor = 30
@@ -19,7 +18,7 @@ def select_complementos(red, green, blue, palheta):
         meio = 0
         complemento1 = True
         complemento2 = True
-        if red != maior and red != menor :
+        if red != maior and red != menor:
             meio = red
         if green != maior and green != menor:
             meio = green
@@ -48,15 +47,15 @@ def select_complementos(red, green, blue, palheta):
         if maior == red:
             primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
-            
+
         if maior == green:
             primeira = f"SELECT * FROM suvinil WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
-            
+
         if maior == blue:
             primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
-            
+
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
         if resultado1.empty and resultado2.empty:
@@ -67,46 +66,50 @@ def select_complementos(red, green, blue, palheta):
         elif resultado2.empty:
             complemento2 = False
         else:
-            print('todos os complementos existem')
+            print("todos os complementos existem")
         resultado1 = resultado1.to_dict(orient="records")
         resultado2 = resultado2.to_dict(orient="records")
+
         c = 0
         x = 0
         menor_distancia_1 = 0
         menor_distancia_2 = 0
-        
-        if complemento1 == True:
-            while c < len(resultado1):
-                atual_red = (resultado1[c]['red'] - red)
-                if atual_red < 0:
-                    atual_red = atual_red * -1
-                atual_green = (resultado1[c]['green'] - green)
-                if atual_green < 0:
-                    atual_green = atual_green * -1
-                atual_blue = (resultado1[c]['blue'] - blue)
-                if atual_blue < 0:
-                    atual_blue = atual_blue * -1
-                distancia_atual =  atual_red + atual_green + atual_blue
-                if c == 0 or distancia_atual < distancia:
-                    menor_distancia_1 = c
-                    distancia = distancia_atual
-        if complemento2 == True:
-            while x < len(resultado2):
-                atual_red = (resultado2[x]['red'] - red)
-                if atual_red < 0:
-                    atual_red = atual_red * -1
-                atual_green = (resultado2[x]['green'] - green)
-                if atual_green < 0:
-                    atual_green = atual_green * -1
-                atual_blue = (resultado2[x]['blue'] - blue)
-                if atual_blue < 0:
-                    atual_blue = atual_blue * -1
-                distancia_atual =  atual_red + atual_green + atual_blue
-                print(distancia_atual)
-                if c == 0 or distancia_atual < distancia:
-                    menor_distancia_2 = x
-                    distancia = distancia_atual
-                
+        while c < len(resultado1):
+            atual_red = resultado1[c]["red"] - red
+            atual_green = resultado1[c]["green"] - green
+            atual_blue = resultado1[c]["blue"] - blue
+
+            if atual_red < 0:
+                atual_red = atual_red * -1
+            if atual_green < 0:
+                atual_green = atual_green * -1
+            if atual_blue < 0:
+                atual_blue = atual_blue * -1
+
+            distancia_atual = atual_red + atual_green + atual_blue
+            if c == 0 or distancia_atual < distancia:
+                menor_distancia_1 = c
+                distancia = distancia_atual
+            c += 1
+
+        while x < len(resultado2):
+            atual_red = resultado2[x]["red"] - red
+            atual_green = resultado2[x]["green"] - green
+            atual_blue = resultado2[x]["blue"] - blue
+
+            if atual_red < 0:
+                atual_red = atual_red * -1
+            if atual_green < 0:
+                atual_green = atual_green * -1
+            if atual_blue < 0:
+                atual_blue = atual_blue * -1
+
+            distancia_atual = atual_red + atual_green + atual_blue
+            if c == 0 or distancia_atual < distancia:
+                menor_distancia_2 = x
+                distancia = distancia_atual
+            x += 1
+
         if complemento1 == True and complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
             lista_complementos.append(resultado2[menor_distancia_2])
@@ -140,9 +143,9 @@ def select_complementos(red, green, blue, palheta):
             cb_max = 255
         if cb_min < 0:
             cb_min = 0
-        cr_inter= (cr + red)/2
-        cg_inter = (cg + green)/2
-        cb_inter = (cb + blue)/2
+        cr_inter = (cr + red) / 2
+        cg_inter = (cg + green) / 2
+        cb_inter = (cb + blue) / 2
         cr_inter_max = cr_inter + desvio_complementar
         cr_inter_min = cr_inter - desvio_complementar
         cg_inter_max = cg_inter + desvio_complementar
@@ -150,7 +153,6 @@ def select_complementos(red, green, blue, palheta):
         cb_inter_max = cb_inter + desvio_complementar
         cb_inter_min = cb_inter - desvio_complementar
 
-            
         intermediaria = f"SELECT * FROM suvinil WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} "
         complementar = f"SELECT * FROM suvinil WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} "
         resultado1 = pd.read_sql(intermediaria, engine)
@@ -162,37 +164,43 @@ def select_complementos(red, green, blue, palheta):
         x = 0
         menor_distancia_1 = 0
         menor_distancia_2 = 0
-        
+
         while c < len(resultado1):
-            atual_red = (resultado1[c]['red'] - cr_inter)
+            atual_red = resultado1[c]["red"] - cr_inter
+            atual_green = resultado1[c]["green"] - cg_inter
+            atual_blue = resultado1[c]["blue"] - cb_inter
+
             if atual_red < 0:
                 atual_red = atual_red * -1
-            atual_green = (resultado1[c]['green'] - cg_inter)
             if atual_green < 0:
                 atual_green = atual_green * -1
-            atual_blue = (resultado1[c]['blue'] - cb_inter)
             if atual_blue < 0:
                 atual_blue = atual_blue * -1
-            distancia_atual =  atual_red + atual_green + atual_blue
+
+            distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
                 menor_distancia_1 = c
                 distancia = distancia_atual
+            c += 1
 
         while x < len(resultado2):
-            atual_red = (resultado2[x]['red'] - cr)
+            atual_red = resultado2[x]["red"] - cr
+            atual_green = resultado2[x]["green"] - cg
+            atual_blue = resultado2[x]["blue"] - cb
+
             if atual_red < 0:
                 atual_red = atual_red * -1
-            atual_green = (resultado2[x]['green'] - cg)
             if atual_green < 0:
                 atual_green = atual_green * -1
-            atual_blue = (resultado2[x]['blue'] - cb)
             if atual_blue < 0:
                 atual_blue = atual_blue * -1
-            distancia_atual =  atual_red + atual_green + atual_blue
+
+            distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
                 menor_distancia_2 = x
                 distancia = distancia_atual
-                
+            x += 1
+
         if complemento1 == True and complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
             lista_complementos.append(resultado2[menor_distancia_2])
@@ -202,32 +210,31 @@ def select_complementos(red, green, blue, palheta):
             lista_complementos.append(resultado1[menor_distancia_1])
         elif complemento1 == False and complemento2 == False:
             return []
-        print(lista_complementos)
+
         return lista_complementos
-            
+
     elif palheta == "análoga":
         lista_complementos.clear()
         desvio_maior = 60
         desvio_menor = 20
-        
+
         maior = max(red, green, blue)
         menor = min(red, green, blue)
         meio = 0
-        if red != maior and red != menor :
+        if red != maior and red != menor:
             meio = red
         if green != maior and green != menor:
             meio = green
         if blue != maior and blue != menor:
             meio = blue
         meio += 60
-        
+
         menor_valor_de_meio = meio - desvio_maior
         maior_valor_de_meio = meio + desvio_maior
         menor_valor_de_maior = maior - desvio_menor
         maior_valor_de_maior = maior + desvio_menor
         menor_valor_de_menor = menor - desvio_menor
         maior_valor_de_menor = menor + desvio_menor
-
 
         if menor_valor_de_maior < 0:
             menor_valor_de_maior = 0
@@ -241,21 +248,22 @@ def select_complementos(red, green, blue, palheta):
             menor_valor_de_meio = 0
         if maior_valor_de_meio > 255:
             maior_valor_de_meio = 255
-        
+
         if maior == red:
             primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
-            
+
         if maior == green:
             primeira = f"SELECT * FROM suvinil WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
-            segunda = f"SELECT * FROM suvinil WHERE red >={menor_valor_de_menor} AND red <={maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} " 
-            
+            segunda = f"SELECT * FROM suvinil WHERE red >={menor_valor_de_menor} AND red <={maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
+
         if maior == blue:
             primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} "
             segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} "
-                
+
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
+
         if resultado1.empty and resultado2.empty:
             complemento1 = False
             complemento2 = False
@@ -265,42 +273,47 @@ def select_complementos(red, green, blue, palheta):
             complemento2 = False
         resultado1 = resultado1.to_dict(orient="records")
         resultado2 = resultado2.to_dict(orient="records")
-        
+
         c = 0
         x = 0
         menor_distancia_1 = 0
         menor_distancia_2 = 0
-        
+
         while c < len(resultado1):
-            atual_red = (resultado1[c]['red'] - red)
+            atual_red = resultado1[c]["red"] - red
+            atual_green = resultado1[c]["green"] - green
+            atual_blue = resultado1[c]["blue"] - blue
+
             if atual_red < 0:
                 atual_red = atual_red * -1
-            atual_green = (resultado1[c]['green'] - green)
             if atual_green < 0:
                 atual_green = atual_green * -1
-            atual_blue = (resultado1[c]['blue'] - blue)
             if atual_blue < 0:
                 atual_blue = atual_blue * -1
-            distancia_atual =  atual_red + atual_green + atual_blue
+
+            distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
                 menor_distancia_1 = c
                 distancia = distancia_atual
+            c += 1
 
         while x < len(resultado2):
-            atual_red = (resultado2[x]['red'] - red)
+            atual_red = resultado2[x]["red"] - red
+            atual_green = resultado2[x]["green"] - green
+            atual_blue = resultado2[x]["blue"] - blue
             if atual_red < 0:
                 atual_red = atual_red * -1
-            atual_green = (resultado2[x]['green'] - green)
             if atual_green < 0:
                 atual_green = atual_green * -1
-            atual_blue = (resultado2[x]['blue'] - blue)
             if atual_blue < 0:
                 atual_blue = atual_blue * -1
-            distancia_atual =  atual_red + atual_green + atual_blue
+                
+            distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
                 menor_distancia_2 = x
                 distancia = distancia_atual
-                
+            x += 1
+
         if complemento1 == True and complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
             lista_complementos.append(resultado2[menor_distancia_2])
@@ -311,13 +324,14 @@ def select_complementos(red, green, blue, palheta):
         elif complemento1 == False and complemento2 == False:
             return []
 
-        print( lista_complementos)
+        print(lista_complementos)
         return lista_complementos
     else:
         err = "Complemento indisponível"
         print(err)
         return err
-            
+
+
 def select_hexadecimal(hexadecimal):
     search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
     resultset = pd.read_sql(search_string, engine)
@@ -348,13 +362,15 @@ def select_names(nome):
         resultset = pd.read_sql(search_string, engine, params={"nome": nome})
     return resultset
 
+
 def search_name_for_id(nome):
-    with open ("search/search_dict.json", "r") as file:
+    with open("search/search_dict.json", "r") as file:
         search_dict = json.load(file)
         if nome in search_dict:
-             return search_dict[nome]
+            return search_dict[nome]
         else:
             return None
+
 
 def primary_select(red, green, blue, fornecedores):
     distancia = 18
@@ -401,15 +417,14 @@ def infopage():
     return "<h1>Colors API</h1><p>This api will request a picture or RGB, and will return a product (paint, tiles, fabrics) </p> "
 
 
-
 @app.route("/suvinil/", methods=["GET", "POST"])
 def getsuvinilColors():
     if request.method == "POST":
         req = request.get_json()
-        red = req['cor'][0][0]
-        green = req['cor'][0][1]
-        blue = req['cor'][0][2]
-        temp = primary_select(red, green, blue, req['fornecedores'])
+        red = req["cor"][0][0]
+        green = req["cor"][0][1]
+        blue = req["cor"][0][2]
+        temp = primary_select(red, green, blue, req["fornecedores"])
         response = temp.to_dict(orient="records")
         c = 0
         while c < len(response):
@@ -418,13 +433,12 @@ def getsuvinilColors():
         with open("response.json", "w+") as file:
             json.dump(lastQuery, file)
             lastQuery.clear()
-        
+
         return response
     if request.method == "GET":
         with open("response.json", "r") as file:
             response = json.load(file)
             return response
-
 
 
 @app.route("/names/", methods=["POST"])
@@ -439,7 +453,6 @@ def getNames():
         return response
 
 
-
 @app.route("/codigos/", methods=["POST"])
 def getProcura():
     if request.method == "POST":
@@ -450,7 +463,6 @@ def getProcura():
         with open("response.json", "w+") as file:
             json.dump(response, file)
         return response
-
 
 
 @app.route("/hex/", methods=["POST"])
@@ -465,8 +477,7 @@ def getHex():
         return response
 
 
-
-@app.route("/complementos/", methods=["GET","POST"])
+@app.route("/complementos/", methods=["GET", "POST"])
 def getComplementos():
     if request.method == "POST":
         complementos = request.get_json()
@@ -474,7 +485,6 @@ def getComplementos():
         green = complementos["green"]
         blue = complementos["blue"]
         palheta = complementos["palheta"]
-        print(red, green, blue, palheta)
         lista = select_complementos(red, green, blue, palheta)
         print(lista)
         c = 0
