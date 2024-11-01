@@ -1,0 +1,5 @@
+1 inicialmente o programa ia retornar todas as tintas parecidas com a cor enviada isso permitia que tivessemos botoes para avancar e retornar até o cliente encontrar a cor que ele procura, agora o progama evoluiu para identificar a tinta enviada e duas tintas complementares, não tem mais necessidade de dessa ida e volta, dá para limpar essa parte?
+
+2 a procura por nome procura em um json que continha somente o nome das cores e seu id, vai gerar um novo json com o nome como key e ambos o id quanto o fornecedor de ambas os fornecedores para fazer essa procura, ou vai deixar somente para suvinil?
+
+3 vai ser atualizado o backend para quando receber nomes ele faça a consulta automaticamente e invez de ser feita a query por nome, usa-se o retorno da id + o fornecedor para consultar diretamente na tabela
