@@ -400,7 +400,7 @@ def select_códigos(codigo, fornecedores):
     return resultset
 
 
-def select_names(nome):
+def select_names(nome,fornecedores):
     seach_string = ""
     if fornecedores != "todos":
         search_string = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE nome = '{nome}' or pantone_name = '{nome}' "

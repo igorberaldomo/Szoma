@@ -44,24 +44,22 @@ def rgb_to_cmyk(r, g, b):
     return c * CMYK_SCALE, m * CMYK_SCALE, y * CMYK_SCALE, k * CMYK_SCALE
 
 def findrgb():
-    if  procura is not None and upload is not None :
+    if  procura is not None or upload is not None:
         if upload is not None:
             st.session_state.cliked = True
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             json_procura = {'cor': cor,'fornecedores':opcao_fornecedores}
             response = requests.post("http://localhost:5555/suvinil/",json=json_procura)
-
-            st.write(response)
-        else:
+        if procura is not None:
             if procura[0].isalpha():
                 st.session_state.cliked = True
                 nome = {"nome":procura, "fornecedores":opcao_fornecedores}
                 response = requests.post("http://localhost:5555/names/",json=nome)
-            if procura[0].isnumeric():
+            elif procura[0].isnumeric():
                 codigo = {"codigo":procura, "fornecedores":opcao_fornecedores}
                 response = requests.post("http://localhost:5555/codigos/",json=codigo)
-            if procura[0] == '#':
+            elif procura[0] == '#':
                 hexa = {"hexadecimal":procura, "fornecedores":opcao_fornecedores}
                 response = requests.post("http://localhost:5555/hex/",json=hexa)
             return response
@@ -110,6 +108,7 @@ upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', ty
 opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil','coral'))
 tipo_de_palheta =st.selectbox('quais opções de palheta você está procurando?', options=('triade','complementar','análoga' ))
 procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o hexadecimal(#000000):')
+
 button = st.button('Procurar', on_click=findrgb)
 
 receivesuvinil()
