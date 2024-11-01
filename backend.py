@@ -85,7 +85,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         elif resultado2.empty:
             complemento2 = False
         else:
-            print("todos os complementos existem")
+            print("complementos triade encontrados")
         resultado1 = resultado1.to_dict(orient="records")
         resultado2 = resultado2.to_dict(orient="records")
 
@@ -171,9 +171,14 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         cg_inter_min = cg_inter - desvio_complementar
         cb_inter_max = cb_inter + desvio_complementar
         cb_inter_min = cb_inter - desvio_complementar
-
-        intermediaria = f"SELECT * FROM suvinil WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} "
-        complementar = f"SELECT * FROM suvinil WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} "
+        if fornecedores != "todos":
+            intermediaria = f"SELECT * FROM {fornecedores} WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} "
+            
+            complementar = f"SELECT * FROM {fornecedores} WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} "
+        else:
+            intermediaria = f"SELECT * FROM suvinil WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} union SELECT * FROM coral WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max}"
+            
+            complementar = f"SELECT * FROM suvinil WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} union SELECT * FROM coral WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max}"
         resultado1 = pd.read_sql(intermediaria, engine)
         resultado2 = pd.read_sql(complementar, engine)
 
