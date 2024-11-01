@@ -49,35 +49,34 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         segunda = ""
         if maior == red:
             if fornecedores != 'todos':
-                primeira = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
                 
-                segunda = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
             else: 
-                primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} union SELECT * FROM coral WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio}"
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio}"
                 
-                segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} union SELECT * FROM coral WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior}"
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior}"
 
         if maior == green:
             if fornecedores != 'todos':
-                primeira = f"SELECT * FROM {fornecedores} WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
                 
-                segunda = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
             else:
-                primeira = f"SELECT * FROM suvinil WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} union SELECT * FROM coral WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
                 
-                segunda = f"SELECT * FROM suvinilWHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT * FROM coral WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinilWHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
                 
 
         if maior == blue:
             if fornecedores != 'todos':
-                primeira = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
-                segunda = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} "
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
             else:
-                primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} union SELECT * FROM coral WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio}"
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_do_meio} AND blue <={maior_valor_do_meio}"
                 
-                segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} union SELECT * FROM coral WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
-                
-                
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
+                      
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
         if resultado1.empty and resultado2.empty:
@@ -88,7 +87,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         elif resultado2.empty:
             complemento2 = False
         else:
-            print("complementos triade encontrados")
+            print(" ")
         resultado1 = resultado1.to_dict(orient="records")
         resultado2 = resultado2.to_dict(orient="records")
 
@@ -122,7 +121,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             if atual_red < 0:
                 atual_red = atual_red * -1
             if atual_green < 0:
-                atual_green = atual_green * -1
+                atual_green = atual_green* -1
             if atual_blue < 0:
                 atual_blue = atual_blue * -1
 
@@ -181,13 +180,13 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         complementar = ""
         
         if fornecedores != "todos":
-            intermediaria = f"SELECT * FROM {fornecedores} WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} "
+            intermediaria = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} "
             
-            complementar = f"SELECT * FROM {fornecedores} WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} "
+            complementar = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} "
         else:
-            intermediaria = f"SELECT * FROM suvinil WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} union SELECT * FROM coral WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max}"
+            intermediaria = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {cr_inter_min} AND red <= {cr_inter_max} AND green >= {cg_inter_min} AND green <= {cg_inter_max} AND blue >= {cb_inter_min} AND blue <= {cb_inter_max}"
             
-            complementar = f"SELECT * FROM suvinil WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} union SELECT * FROM coral WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max}"
+            complementar = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max}"
         resultado1 = pd.read_sql(intermediaria, engine)
         resultado2 = pd.read_sql(complementar, engine)
 
@@ -206,9 +205,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             if atual_red < 0:
                 atual_red = atual_red * -1
             if atual_green < 0:
-                atual_green = atual_green * -1
+                atual_green = atual_green *-1
             if atual_blue < 0:
-                atual_blue = atual_blue * -1
+                atual_blue = atual_blue *-1
 
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
@@ -287,27 +286,27 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
         if maior == red:
             if fornecedores != "todos":
-                primeira = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
-                segunda = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
             else:
-                primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT * FROM coral WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
-                segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} union SELECT * FROM coral WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
 
         if maior == green:
             if fornecedores != "todos":
-                primeira = f"SELECT * FROM {fornecedores} WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
-                segunda = f"SELECT * FROM {fornecedores} WHERE red >={menor_valor_de_menor} AND red <={maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >={menor_valor_de_menor} AND red <={maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
             else:
-                primeira = f"SELECT * FROM suvinil WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} union SELECT * FROM coral WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor}"
-                segunda = f"SELECT * FROM suvinil WHERE red >={menor_valor_de_menor} AND red <={maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} union SELECT * FROM coral WHERE red >={menor_valor_de_menor} AND red <={maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor}"
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >={menor_valor_de_menor} AND red <={maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >={menor_valor_de_menor} AND red <={maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
 
         if maior == blue:
             if fornecedores != "todos":
-                primeira = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} "
-                segunda = f"SELECT * FROM {fornecedores} WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} "
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} "
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} "
             else:
-                primeira = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} union SELECT * FROM coral WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} "
-                segunda = f"SELECT * FROM suvinil WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} union SELECT * FROM coral WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior}"
+                primeira = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} "
+                segunda = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior}"
 
 
         resultado1 = pd.read_sql(primeira, engine)
@@ -353,7 +352,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             if atual_red < 0:
                 atual_red = atual_red * -1
             if atual_green < 0:
-                atual_green = atual_green * -1
+                atual_green = atual_green* -1
             if atual_blue < 0:
                 atual_blue = atual_blue * -1
                 
@@ -372,8 +371,6 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             lista_complementos.append(resultado1[menor_distancia_1])
         elif complemento1 == False and complemento2 == False:
             return []
-
-        print(lista_complementos)
         return lista_complementos
     else:
         err = "Complemento indisponível"
@@ -385,9 +382,9 @@ def select_hexadecimal(hexadecimal, fornecedores):
     seach_string = ""
     
     if fornecedores != "todos":
-        search_string = f"SELECT * FROM {fornecedores} WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
+        search_string = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
     else:
-        search_string = f"SELECT * FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' union SELECT * FROM coral WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
+        search_string = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "
         
     resultset = pd.read_sql(search_string, engine)
     return resultset
@@ -396,9 +393,9 @@ def select_hexadecimal(hexadecimal, fornecedores):
 def select_códigos(codigo, fornecedores):
     seach_string = ""
     if fornecedores != "todos":
-        search_string = f"SELECT * FROM {fornecedores} WHERE pantone_código = '{codigo}'"
+        search_string = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE pantone_código = '{codigo}'"
     else:
-        search_string = f"SELECT * FROM suvinil WHERE pantone_código = '{codigo}' union SELECT * FROM coral WHERE pantone_código = '{codigo}' "
+        search_string = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE pantone_código = '{codigo}' union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE pantone_código = '{codigo}' "
     resultset = pd.read_sql(search_string, engine)
     return resultset
 
@@ -406,9 +403,9 @@ def select_códigos(codigo, fornecedores):
 def select_names(nome):
     seach_string = ""
     if fornecedores != "todos":
-        search_string = f"SELECT * FROM {fornecedores} WHERE nome = '{nome}' or pantone_name = '{nome}' "
+        search_string = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM {fornecedores} WHERE nome = '{nome}' or pantone_name = '{nome}' "
     else:
-        search_string = f"SELECT * FROM suvinil WHERE nome = '{nome}' or pantone_name = '{nome}' union SELECT * FROM coral WHERE nome = '{nome}' or pantone_name = '{nome}' "
+        search_string = f"SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM suvinil WHERE nome = '{nome}' or pantone_name = '{nome}' union SELECT hexadecimal,fornecedores,nome,pantone_código,red,green,blue FROM coral WHERE nome = '{nome}' or pantone_name = '{nome}' "
     
     resultset = pd.read_sql(search_string, engine)
     return resultset
@@ -451,7 +448,6 @@ def primary_select(red, green, blue, fornecedores):
     elif fornecedores == "todos":
         search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
     resultset = pd.read_sql(search_string, engine)
-    print(resultset)
     if resultset.empty:
         return []
     else:
@@ -471,9 +467,9 @@ def infopage():
 def getsuvinilColors():
     if request.method == "POST":
         req = request.get_json()
-        red = req["cor"][0][0]
-        green = req["cor"][0][1]
-        blue = req["cor"][0][2]
+        red = req["cor"][0]
+        green = req["cor"][1]
+        blue = req["cor"][2]
         temp = primary_select(red, green, blue, req["fornecedores"])
         response = temp.to_dict(orient="records")
         c = 0
