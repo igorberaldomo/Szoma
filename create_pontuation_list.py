@@ -1,6 +1,6 @@
 import json
-sem_acento = "inercia"
-acento = "inércia"
+sem_acento = "botanico"
+acento = "botâncio"
 
 data = dict()
 data['modificado'] = sem_acento

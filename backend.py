@@ -354,7 +354,7 @@ def search_name_for_id(nome):
         else:
             return None
 
-def primary_select(red, green, blue):
+def primary_select(red, green, blue, fornecedores):
     distancia = 18
     maxred = red + distancia
     minred = red - distancia
@@ -376,7 +376,12 @@ def primary_select(red, green, blue):
         minblue = 0
     DATABASE_URL = os.getenv("DATABASE_URL")
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
-    search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
+    if fornecedores == "suvinil":
+        search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
+    elif fornecedores == "coral":
+        search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
+    elif fornecedores == "todos":
+        search_string = f"select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union select hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
     resultset = pd.read_sql(search_string, engine)
     if resultset.empty:
         return []
@@ -397,11 +402,11 @@ def infopage():
 @app.route("/suvinil/", methods=["GET", "POST"])
 def getsuvinilColors():
     if request.method == "POST":
-        rgb = request.get_json()
-        red = rgb[0]
-        green = rgb[1]
-        blue = rgb[2]
-        temp = primary_select(red, green, blue)
+        req = request.get_json()
+        red = req['cor'][0][0]
+        green = req['cor'][0][1]
+        blue = req['cor'][0][2]
+        temp = primary_select(red, green, blue, req['fornecedores'])
         response = temp.to_dict(orient="records")
         c = 0
         while c < len(response):

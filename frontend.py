@@ -25,23 +25,23 @@ CMYK_SCALE = 100
 query = True
 
 
-def add_count():
-    number = st.session_state.count
-    newvalue= int(number) + 3
-    st.session_state.count = str(newvalue)
+# def add_count():
+#     number = st.session_state.count
+#     newvalue= int(number) + 3
+#     st.session_state.count = str(newvalue)
     
-def subtract_count():
-    number = st.session_state.count
-    newvalue= int(number) - 3
-    st.session_state.count = str(newvalue)
+# def subtract_count():
+#     number = st.session_state.count
+#     newvalue= int(number) - 3
+#     st.session_state.count = str(newvalue)
     
-def select_count():
-    return st.session_state.count
+# def select_count():
+#     return st.session_state.count
 
-def update_counter(updated):
-    number = st.session_state.count
-    newvalue= updated
-    st.session_state.count = str(newvalue)
+# def update_counter(updated):
+#     number = st.session_state.count
+#     newvalue= updated
+#     st.session_state.count = str(newvalue)
 def rgb_to_cmyk(r, g, b):
     if (r, g, b) == (0, 0, 0):
         # black
@@ -68,7 +68,8 @@ def findrgb():
             st.session_state.cliked = True
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
-            response = requests.post("http://localhost:5555/suvinil/",json=cor)
+            json_procura = {'cor': cor,'fornecedores':opcao_fornecedores}
+            response = requests.post("http://localhost:5555/suvinil/",json=json_procura)
             data = response.json()
             return data
         else:
@@ -95,20 +96,20 @@ def receivesuvinil():
     
     if data is not None:
         # seleciona o numero do index
-        posição = select_count()
-        card = (int(posição))
-        if (card +1) > len(data):
-            card = len(data)
-            update_counter(card)
-        if card < 0:
-            card = 0
-            update_counter(card)
+        # posição = select_count()
+        # card = (int(posição))
+        # if (card +1) > len(data):
+        #     card = len(data)
+        #     update_counter(card)
+        # if card < 0:
+        #     card = 0
+        #     update_counter(card)
         
         if len(data) > 0 :
-            hexadecimal,fornecedores = (data[card]['hexadecimal']), data[card]['fornecedores']
-            nome,pantone_codigo = data[card]['nome'],data[card] ['pantone_código']
-            red,green,blue = data[card]['red'],data[card]['green'],data[card]['blue']
-            c,y,m,k = rgb_to_cmyk(data[card]['red'],data[card]['green'],data[card]['blue'])
+            hexadecimal,fornecedores = (data[0]['hexadecimal']), data[0]['fornecedores']
+            nome,pantone_codigo = data[0]['nome'],data[0] ['pantone_código']
+            red,green,blue = data[0]['red'],data[0]['green'],data[0]['blue']
+            c,y,m,k = rgb_to_cmyk(data[0]['red'],data[0]['green'],data[0]['blue'])
             
             response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta })
             complementos = requests.get("http://localhost:5555/complementos/",headers={'Content-Type': 'application/json'})
@@ -136,7 +137,7 @@ def receivesuvinil():
 st.title('Find me')
 st.subheader('Onde você acha sua cor')
 upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', type=['png','jpg','jpeg'])
-select = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil'))
+opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil','coral'))
 tipo_de_palheta =st.selectbox('quais opções de palheta você está procurando?', options=('triade','complementar','análoga' ))
 procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o hexadecimal(#000000):')
 button = st.button('Procurar', on_click=findrgb)
