@@ -32,6 +32,9 @@ def db_table_insertinto_suvinil():
         Column('pantone_name', String(20)),
         Column('pantone_hex', String(7)),
         Column('fornecedores', String(20)),
+        Column('CREATED_AT', DATE),
+        Column('UPDATED_AT', DATE),
+        Column('DELETED_AT', DATE),
 
         mysql_charset='utf8mb4',
     )

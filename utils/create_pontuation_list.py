@@ -1,6 +1,6 @@
 import json
-sem_acento = "voo"
-acento = "vôo"
+sem_acento = "organico"
+acento = "orgânico"
 
 
 
@@ -10,7 +10,7 @@ data['original'] = acento
 
 print(data)
 def create_pontuation_list(data):
-    with open("lista_acentos_coral.json", "r+") as lista_acentos:
+    with open("lista_acentos_suvinil.json", "r+") as lista_acentos:
         lista = json.load(lista_acentos)
         
         lista['checklist'].append(data)

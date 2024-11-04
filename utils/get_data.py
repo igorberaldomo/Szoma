@@ -37,4 +37,6 @@ def getting_data():
             print(f"Erro ao processar a tabela {table_name}: {e}")
     return dataframes
 table = getting_data()
-print(table)
+
+final_df = pd.merge(table['suvinil'], table['coral'], on='hexadecimal', how='outer')
+print(final_df)
