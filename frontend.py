@@ -104,7 +104,7 @@ def receivesuvinil():
 st.title('Find me')
 st.subheader('Onde você acha sua cor')
 upload = st.file_uploader('dê upload na imagem abaixo para verificar a cor', type=['png','jpg','jpeg'])
-opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'suvinil','coral'))
+opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral','suvinil'))
 tipo_de_palheta =st.selectbox('quais opções de palheta você está procurando?', options=('triade','complementar','análoga' ))
 procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o hexadecimal(#000000):')
 
