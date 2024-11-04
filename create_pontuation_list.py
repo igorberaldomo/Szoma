@@ -2,7 +2,8 @@ import json
 sem_acento = "voo"
 acento = "vôo"
 
-# maré, pará, balé, patê, pé,pêra, peça,pó, pôr, poção, puré,vó, maço, cha, romã, tulê precisa ser feito depois a mão
+
+
 data = dict()
 data['modificado'] = sem_acento
 data['original'] = acento
