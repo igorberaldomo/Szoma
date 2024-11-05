@@ -190,9 +190,15 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         return lista_complementos
     elif palheta == "complementar":
         desvio_complementar = 30
+        if red <140 and red > 100 and green < 140 and green > 100 and blue < 140 and blue > 100:
+            red += 20
+            green += 20
+            blue += 20 
         cr = 255 - red
         cg = 255 - green
         cb = 255 - blue
+        complemento1 = True
+        complemento2 = True
         cr_max = cr + desvio_complementar
         cr_min = cr - desvio_complementar
         cg_max = cg + desvio_complementar
@@ -236,7 +242,16 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             complementar = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max}"
         resultado1 = pd.read_sql(intermediaria, engine)
         resultado2 = pd.read_sql(complementar, engine)
-
+        
+        if resultado1.empty and resultado2.empty:
+            complemento1 = False
+            complemento2 = False
+        elif resultado1.empty:
+            complemento1 = False
+        elif resultado2.empty:
+            complemento2 = False
+        else:
+            print(" ")
         resultado1 = resultado1.to_dict(orient="records")
         resultado2 = resultado2.to_dict(orient="records")
         c = 0
@@ -296,7 +311,8 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         lista_complementos.clear()
         desvio_maior = 60
         desvio_menor = 20
-
+        complemento1 = True
+        complemento2 = True
         maior = max(red, green, blue)
         menor = min(red, green, blue)
         meio = 0
