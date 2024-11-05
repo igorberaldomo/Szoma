@@ -154,8 +154,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
-                menor_distancia_1 = c
-                distancia = distancia_atual
+                if distancia_atual != 0:
+                    menor_distancia_1 = c
+                    distancia = distancia_atual
             c += 1
 
         while x < len(resultado2):
@@ -172,8 +173,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
-                menor_distancia_2 = x
-                distancia = distancia_atual
+                if distancia_atual != 0:
+                    menor_distancia_2 = x
+                    distancia = distancia_atual
             x += 1
         resultado1 = filter_lines(resultado1)
         resultado2 = filter_lines(resultado2)
@@ -273,8 +275,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
-                menor_distancia_1 = c
-                distancia = distancia_atual
+                if distancia_atual != 0:
+                    menor_distancia_1 = c
+                    distancia = distancia_atual
             c += 1
 
         while x < len(resultado2):
@@ -291,8 +294,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
-                menor_distancia_2 = x
-                distancia = distancia_atual
+                if distancia_atual != 0:
+                    menor_distancia_2 = x
+                    distancia = distancia_atual
             x += 1
 
         if complemento1 == True and complemento2 == True:
@@ -309,7 +313,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
     elif palheta == "análoga":
         lista_complementos.clear()
-        desvio_maior = 60
+        desvio_maior = 50
         desvio_menor = 20
         complemento1 = True
         complemento2 = True
@@ -403,8 +407,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
-                menor_distancia_1 = c
-                distancia = distancia_atual
+                if distancia_atual != 0:
+                    menor_distancia_1 = c
+                    distancia = distancia_atual
             c += 1
 
         while x < len(resultado2):
@@ -420,8 +425,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
-                menor_distancia_2 = x
-                distancia = distancia_atual
+                if distancia_atual != 0:
+                    menor_distancia_2 = x
+                    distancia = distancia_atual
             x += 1
 
         if complemento1 == True and complemento2 == True:
