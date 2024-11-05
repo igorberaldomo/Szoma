@@ -7,6 +7,41 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
 lista_complementos = []
 
+def generate_pandas_table(segundo_query,primeiro_query):
+    lista_pandas = []
+    def getting_data():
+        queries = {
+            "suvinil": primeiro_query,
+            "coral": segundo_query,
+
+        }
+        dataframes = {}
+        def convert_to_float(value):
+            value = str(value).replace(',', '')  # Substituir vírgula por ponto
+            try:
+                return float(value)
+            except ValueError:
+                return None
+
+        for table_name, query in queries.items():
+            try:
+                df = pd.read_sql(query, engine)
+                if table_name in ['suvinil', 'coral']:
+                    df['fornecedores'] = df['fornecedores'].astype(str)
+                    df['hexadecimal'] = df['hexadecimal'].astype(str)
+                    df['nome']  = df['nome'].astype(str)
+                    df['pantone_código'] = df['pantone_código'].astype(str)
+                    df['red'] = df['red'].astype(int)
+                    df['green'] = df['green'].astype(int)
+                    df['blue'] = df['blue'].astype(int)    
+                dataframes[table_name] = df
+            except Exception as e:
+                print(f"Erro ao processar a tabela {table_name}: {e}")
+            return dataframes
+    table = getting_data()
+    print(table)
+    
+    
 
 def select_complementos(red, green, blue, palheta, fornecedores):
     if palheta == "triade":
@@ -78,6 +113,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
+        
+        generate_pandas_table(primeira, segunda)
+
         if resultado1.empty and resultado2.empty:
             complemento1 = False
             complemento2 = False
@@ -129,7 +167,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 menor_distancia_2 = x
                 distancia = distancia_atual
             x += 1
-
+            
         if complemento1 == True and complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
             lista_complementos.append(resultado2[menor_distancia_2])
@@ -470,8 +508,8 @@ def getsuvinilColors():
         red = req["cor"][0]
         green = req["cor"][1]
         blue = req["cor"][2]
-        temp = primary_select(red, green, blue, req["fornecedores"])
-        response = temp.to_dict(orient="records")
+        response = primary_select(red, green, blue, req["fornecedores"])
+        response = response.to_dict(orient="records")
         c = 0
         while c < len(response):
             lastQuery.append(response[c])
@@ -494,6 +532,7 @@ def getNames():
         nome = req["nome"]
         fornecedores = req["fornecedores"]
         response = select_names(nome, fornecedores)
+        response = filtrar_colunas(response)
         response = response.to_dict(orient="records")
         with open("response.json", "w+") as file:
             json.dump(response, file)
@@ -507,6 +546,7 @@ def getProcura():
         codigo = codigo_cor["codigo"]
         fornecedores = codigo_cor["fornecedores"]
         response = select_códigos(codigo, fornecedores)
+        response = filtrar_colunas(response)
         response = response.to_dict(orient="records")
         with open("response.json", "w+") as file:
             json.dump(response, file)
@@ -520,6 +560,7 @@ def getHex():
         hexadecimal = codigo_cor["headecimal"]
         fornecedores = codigo_cor["fornecedores"]
         response = select_hexadecimal(hexadecimal, fornecedores)
+        lista = filtrar_colunas(response)
         response = response.to_dict(orient="records")
         with open("response.json", "w+") as file:
             json.dump(response, file)
@@ -536,7 +577,7 @@ def getComplementos():
         palheta = complementos["palheta"]
         fornecedores = complementos["fornecedores"]
         lista = select_complementos(red, green, blue, palheta, fornecedores)
-        print(lista)
+        lista = filtrar_colunas(lista)
         c = 0
         while c < len(lista):
             lastQuery.append(lista[c])
