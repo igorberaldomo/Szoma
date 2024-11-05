@@ -44,7 +44,6 @@ def generate_pandas_table(segundo_query,primeiro_query):
 def filter_lines(table):
     data = []
     i = 0
-    print(table[0]['nome'])
     for i in range(len(table)):
         data.append({"nome":table[i]['nome'], "hexadecimal":table[i]['hexadecimal'], "fornecedores":table[i]['fornecedores'], "pantone_código":table[i]['pantone_código'], "red":table[i]['red'], "green":table[i]['green'], "blue":table[i]['blue']})
         i += 1
@@ -54,8 +53,8 @@ def filter_lines(table):
 def select_complementos(red, green, blue, palheta, fornecedores):
     if palheta == "triade":
         lista_complementos.clear()
-        desvio_maior = 30
-        desvio_menor = 30
+        desvio_maior = 20
+        desvio_menor = 20
         maior = max(red, green, blue)
         menor = min(red, green, blue)
         meio = 0
@@ -108,7 +107,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             else:
                 primeira = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >={menor_valor_do_meio} AND red <={maior_valor_do_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
 
-                segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinilWHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
+                segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_do_meio} AND green <= {maior_valor_do_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
 
         if maior == blue:
             if fornecedores != "todos":
@@ -192,10 +191,6 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         return lista_complementos
     elif palheta == "complementar":
         desvio_complementar = 30
-        if red <140 and red > 100 and green < 140 and green > 100 and blue < 140 and blue > 100:
-            red += 20
-            green += 20
-            blue += 20 
         cr = 255 - red
         cg = 255 - green
         cb = 255 - blue
