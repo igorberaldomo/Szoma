@@ -6,7 +6,7 @@ data = dict()
 lista_hexa = list()
 
 def por_acentos(nome):
-    with open("lista_acentos_coral.json", "r+") as acentos:
+    with open("lista_acentos_suvinil.json", "r+") as acentos:
         acentosdata = json.load(acentos)
         x = 0 # contador do acento
         while x < len(acentosdata["checklist"]):
@@ -21,18 +21,18 @@ def por_acentos(nome):
     return nome
 
 
-def write_json(new_data, filename="coral2.json"):
+def write_json(new_data, filename="suvinil2.json"):
     with open(filename, "r+") as file:
         file_data = json.load(file)
         # Join new_data with file_data inside emp_details
-        file_data["corescoral"].append(new_data)
+        file_data["coressuvinil"].append(new_data)
         # Sets file's current position at offset.
         file.seek(0)
         # convert back to json.
         json.dump(file_data, file, indent=4)
 
 def findpant(r, g, b):
-    with open("pantone.json", "r+") as file:
+    with open("pantone/pantone.json", "r+") as file:
         file_data = json.load(file)
     maxr = r + 32
     minr = r - 32
@@ -84,24 +84,26 @@ def findpant(r, g, b):
         c += 1
     return pant
 
-with open("coral.json", "r+") as file:
-    coraldata = json.load(file)
+with open("suvinil/suvinil.json", "r+") as file:
+    suvinildata = json.load(file)
     c = 0 # posição do dicionário
-    while c < len(coraldata["corescoral"]):
-        tempnome = coraldata["corescoral"][c]["nome"]
+    while c < len(suvinildata["coressuvinil"]):
+        tempnome = suvinildata["coressuvinil"][c]["nome"]
         data["nome"] = por_acentos(tempnome)
-        red = coraldata["corescoral"][c]["rgb"][0]
-        green = coraldata["corescoral"][c]["rgb"][1]
-        blue = coraldata["corescoral"][c]["rgb"][2]
+        red = suvinildata["coressuvinil"][c]["rgb"][0]
+        green = suvinildata["coressuvinil"][c]["rgb"][1]
+        blue = suvinildata["coressuvinil"][c]["rgb"][2]
         print(red, green, blue)
         data["rgb"] = (red, green, blue)
+        data["ncs"] = suvinildata["coressuvinil"][c]["ncs"]
+        data["codigo_suvinil"] = suvinildata["coressuvinil"][c]["codigo"]
         hexa = f"{red:02x}{green:02x}{blue:02x}"
         data["hexadecimal"] = f"#{hexa}"
         pant = findpant(red, green, blue)
-        with open("pantone.json", "r+") as pantone:
+        with open("pantone/pantone.json", "r+") as pantone:
             file_data = json.load(pantone)
         data["pantone"] = file_data["corespantone"][f"#{pant}"]
-        data["fornecedores"] = "coral"
+        data["fornecedores"] = "suvinil"
         write_json(data)
         c += 1
       

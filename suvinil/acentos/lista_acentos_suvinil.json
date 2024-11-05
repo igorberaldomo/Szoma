@@ -1,0 +1,444 @@
+{
+    "checklist": [
+        {
+            "modificado": "balsamico",
+            "original": "bals\u00e2mico"
+        },
+        {
+            "modificado": "acropole",
+            "original": "acr\u00f3pole"
+        },
+        {
+            "modificado": "acucar",
+            "original": "a\u00e7ucar"
+        },
+        {
+            "modificado": "organico",
+            "original": "org\u00e2nico"
+        },
+        {
+            "modificado": "acucena",
+            "original": "a\u00e7ucena"
+        },
+        {
+            "modificado": "agua",
+            "original": "\u00e1gua"
+        },
+        {
+            "modificado": "aguia",
+            "original": "\u00e1guia"
+        },
+        {
+            "modificado": "egipcio",
+            "original": "eg\u00edpcio"
+        },
+        {
+            "modificado": "platonico",
+            "original": "plat\u00f4nico"
+        },
+        {
+            "modificado": "pessego",
+            "original": "p\u00eassego"
+        },
+        {
+            "modificado": "areia",
+            "original": "\u00e1reia"
+        },
+        {
+            "modificado": "arvore",
+            "original": "\u00e1rvore"
+        },
+        {
+            "modificado": "azaleia",
+            "original": "azal\u00e9ia"
+        },
+        {
+            "modificado": "bebe",
+            "original": "beb\u00ea"
+        },
+        {
+            "modificado": "eterio",
+            "original": "et\u00e9rio"
+        },
+        {
+            "modificado": "petroleo",
+            "original": "petr\u00f3leo"
+        },
+        {
+            "modificado": "baiao",
+            "original": "bai\u00e3o"
+        },
+        {
+            "modificado": "berco",
+            "original": "ber\u00e7o"
+        },
+        {
+            "modificado": "botao",
+            "original": "bot\u00e3o"
+        },
+        {
+            "modificado": "cafe",
+            "original": "caf\u00e9"
+        },
+        {
+            "modificado": "solitario",
+            "original": "solit\u00e1rio"
+        },
+        {
+            "modificado": "vitrio",
+            "original": "v\u00edtrio"
+        },
+        {
+            "modificado": "feijao",
+            "original": "feij\u00e3o"
+        },
+        {
+            "modificado": "cafune",
+            "original": "cafun\u00e9"
+        },
+        {
+            "modificado": "limao",
+            "original": "lim\u00e3o"
+        },
+        {
+            "modificado": "calca",
+            "original": "cal\u00e7a"
+        },
+        {
+            "modificado": "campanula",
+            "original": "camp\u00e2nula"
+        },
+        {
+            "modificado": "canario",
+            "original": "can\u00e1rio"
+        },
+        {
+            "modificado": "cancao",
+            "original": "can\u00e7\u00e3o"
+        },
+        {
+            "modificado": "carvao",
+            "original": "carv\u00e3o"
+        },
+        {
+            "modificado": "castical",
+            "original": "casti\u00e7al"
+        },
+        {
+            "modificado": "centaurea",
+            "original": "cent\u00e1urea"
+        },
+        {
+            "modificado": "ceu",
+            "original": "c\u00e9u"
+        },
+        {
+            "modificado": "chale",
+            "original": "chal\u00e9"
+        },
+        {
+            "modificado": "chapeu",
+            "original": "chap\u00e9u"
+        },
+        {
+            "modificado": "chicoria",
+            "original": "chic\u00f3ria"
+        },
+        {
+            "modificado": "suico",
+            "original": "sui\u00e7o"
+        },
+        {
+            "modificado": "petala",
+            "original": "p\u00e9tala"
+        },
+        {
+            "modificado": "verao",
+            "original": "ver\u00e3o"
+        },
+        {
+            "modificado": "classico",
+            "original": "cl\u00e1ssico"
+        },
+        {
+            "modificado": "tecnologico",
+            "original": "tecnol\u00f3gico"
+        },
+        {
+            "modificado": "citrico",
+            "original": "c\u00edtrico"
+        },
+        {
+            "modificado": "contemplacao",
+            "original": "contempla\u00e7\u00e3o"
+        },
+        {
+            "modificado": "india",
+            "original": "\u00edndia"
+        },
+        {
+            "modificado": "crisantemo",
+            "original": "cris\u00e2ntemo"
+        },
+        {
+            "modificado": "cromio",
+            "original": "cr\u00f4mio"
+        },
+        {
+            "modificado": "maritimo",
+            "original": "mar\u00edtimo"
+        },
+        {
+            "modificado": "cuica",
+            "original": "cu\u00edca"
+        },
+        {
+            "modificado": "curacau",
+            "original": "cura\u00e7au"
+        },
+        {
+            "modificado": "equilibrio",
+            "original": "equil\u00edbrio"
+        },
+        {
+            "modificado": "espaco",
+            "original": "espa\u00e7o"
+        },
+        {
+            "modificado": "esperanca",
+            "original": "esperan\u00e7a"
+        },
+        {
+            "modificado": "essencia",
+            "original": "ess\u00eancia"
+        },
+        {
+            "modificado": "eucalipto",
+            "original": "eucal\u00edpto"
+        },
+        {
+            "modificado": "fabula",
+            "original": "f\u00e1bula"
+        },
+        {
+            "modificado": "estacao",
+            "original": "esta\u00e7\u00e3o"
+        },
+        {
+            "modificado": "geranio",
+            "original": "ger\u00e2nio"
+        },
+        {
+            "modificado": "anturio",
+            "original": "ant\u00fario"
+        },
+        {
+            "modificado": "maracuja",
+            "original": "maracuj\u00e1"
+        },
+        {
+            "modificado": "retro",
+            "original": "retr\u00f4"
+        },
+        {
+            "modificado": "manha",
+            "original": "manh\u00e3"
+        },
+        {
+            "modificado": "hortela",
+            "original": "hortel\u00e3"
+        },
+        {
+            "modificado": "grao",
+            "original": "gr\u00e3o"
+        },
+        {
+            "modificado": "hibisco",
+            "original": "hib\u00edsco"
+        },
+        {
+            "modificado": "hortensia",
+            "original": "hort\u00eansia"
+        },
+        {
+            "modificado": "lilaz",
+            "original": "lil\u00e1z"
+        },
+        {
+            "modificado": "igarape",
+            "original": "igarap\u00e9"
+        },
+        {
+            "modificado": "indigo",
+            "original": "\u00edndigo"
+        },
+        {
+            "modificado": "leao",
+            "original": "le\u00e3o"
+        },
+        {
+            "modificado": "suica",
+            "original": "sui\u00e7a"
+        },
+        {
+            "modificado": "lirio",
+            "original": "l\u00edrio"
+        },
+        {
+            "modificado": "artico",
+            "original": "\u00e1rtico"
+        },
+        {
+            "modificado": "mediterraneo",
+            "original": "mediterr\u00e2neo"
+        },
+        {
+            "modificado": "maraca",
+            "original": "marac\u00e1"
+        },
+        {
+            "modificado": "marmore",
+            "original": "m\u00e1rmore"
+        },
+        {
+            "modificado": "glace",
+            "original": "glac\u00ea"
+        },
+        {
+            "modificado": "mormaco",
+            "original": "morma\u00e7o"
+        },
+        {
+            "modificado": "nectar",
+            "original": "n\u00e9ctar"
+        },
+        {
+            "modificado": "nevoa",
+            "original": "n\u00e9voa"
+        },
+        {
+            "modificado": "oasis",
+            "original": "o\u00e1sis"
+        },
+        {
+            "modificado": "indico",
+            "original": "\u00edndico"
+        },
+        {
+            "modificado": "pacifico",
+            "original": "pac\u00edfico"
+        },
+        {
+            "modificado": "paixao",
+            "original": "paix\u00e3o"
+        },
+        {
+            "modificado": "picole",
+            "original": "picol\u00e9"
+        },
+        {
+            "modificado": "pantano",
+            "original": "p\u00e2ntano"
+        },
+        {
+            "modificado": "ecologico",
+            "original": "ecol\u00f3gico"
+        },
+        {
+            "modificado": "perola",
+            "original": "p\u00e9rola"
+        },
+        {
+            "modificado": "pinhao",
+            "original": "pinh\u00e3o"
+        },
+        {
+            "modificado": "quentao",
+            "original": "quent\u00e3o"
+        },
+        {
+            "modificado": "rafia",
+            "original": "r\u00e1fia"
+        },
+        {
+            "modificado": "avela",
+            "original": "avel\u00e3"
+        },
+        {
+            "modificado": "respiracao",
+            "original": "respira\u00e7\u00e3o"
+        },
+        {
+            "modificado": "limpido",
+            "original": "l\u00edmpido"
+        },
+        {
+            "modificado": "paine",
+            "original": "pa\u00edne"
+        },
+        {
+            "modificado": "biquini",
+            "original": "biqu\u00edni"
+        },
+        {
+            "modificado": "rustico",
+            "original": "r\u00fastico"
+        },
+        {
+            "modificado": "sache",
+            "original": "sach\u00ea"
+        },
+        {
+            "modificado": "s\u00e2ndalo",
+            "original": "s\u00e2ndalo"
+        },
+        {
+            "modificado": "sertao",
+            "original": "sert\u00e3o"
+        },
+        {
+            "modificado": "mamao",
+            "original": "mam\u00e3o"
+        },
+        {
+            "modificado": "sueter",
+            "original": "su\u00e9ter"
+        },
+        {
+            "modificado": "tapecaria",
+            "original": "tape\u00e7aria"
+        },
+        {
+            "modificado": "croche",
+            "original": "croch\u00ea"
+        },
+        {
+            "modificado": "sirio",
+            "original": "s\u00edrio"
+        },
+        {
+            "modificado": "tropicalia",
+            "original": "tropic\u00e1lia"
+        },
+        {
+            "modificado": "tunel",
+            "original": "t\u00fanel"
+        },
+        {
+            "modificado": "ceramica",
+            "original": "cer\u00e2mica"
+        },
+        {
+            "modificado": "boemia",
+            "original": "bo\u00eamia"
+        },
+        {
+            "modificado": "catamara",
+            "original": "catamar\u00e3"
+        },
+        {
+            "modificado": "vinicola",
+            "original": "vin\u00edcola"
+        }
+    ]
+}

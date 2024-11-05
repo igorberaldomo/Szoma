@@ -32,9 +32,9 @@ def db_table_insertinto_suvinil():
         Column('pantone_name', String(20)),
         Column('pantone_hex', String(7)),
         Column('fornecedores', String(20)),
-        Column('CREATED_AT', DATE),
-        Column('UPDATED_AT', DATE),
-        Column('DELETED_AT', DATE),
+        Column('CREATED_AT', String(40)),
+        Column('UPDATED_AT', String(40)),
+        Column('DELETED_AT', String(40)),
 
         mysql_charset='utf8mb4',
     )
@@ -51,15 +51,17 @@ def db_table_insertinto_suvinil():
             green= int(file_data['coressuvinil'][c]['rgb'][1])
             blue = int(file_data['coressuvinil'][c]['rgb'][2])
             ncs = str(file_data['coressuvinil'][c]['ncs']) 
-            codigo_suvinil = str(file_data['coressuvinil'][c]['codigo'])
+            codigo_suvinil = str(file_data['coressuvinil'][c]['codigo_suvinil'])
             hexadecimal = str(file_data['coressuvinil'][c]['hexadecimal'])
             pantone_código = str(file_data['coressuvinil'][c]['pantone']['pantone'])
             pantone_name = str(file_data['coressuvinil'][c]['pantone']['name'])
             pantone_hex = str(file_data['coressuvinil'][c]['pantone']['hex'])
             fornecedores = str(file_data['coressuvinil'][c]['fornecedores'])
-
+            created_at = datetime.datetime.now()
+            updated_at = datetime.datetime.now()
+            deleted_at = 0
             
-            stmt = insert(my_table).values(nome = nome, red = red, green = green, blue = blue, ncs = ncs, codigo_suvinil = codigo_suvinil, hexadecimal = hexadecimal, pantone_código = pantone_código, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores)
+            stmt = insert(my_table).values(nome = nome, red = red, green = green, blue = blue, ncs = ncs, codigo_suvinil = codigo_suvinil, hexadecimal = hexadecimal, pantone_código = pantone_código, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores, CREATED_AT = created_at, UPDATED_AT = updated_at, DELETED_AT = deleted_at)
             compiled = stmt.compile()
             print(compiled.params)
             
