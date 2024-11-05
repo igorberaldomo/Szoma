@@ -73,7 +73,7 @@ def receivesuvinil():
     cores_df = pd.DataFrame(data).filter(['id','nome','red','green','blue','hexadecimal','pantone_código','pantone_name','pantone_hex','fornecedores']) 
     container = st.container()
     st.toast('loading...')
-    time.sleep(2)
+    time.sleep(1.5)
     try:
         hexadecimal,fornecedores = (data[0]['hexadecimal']), data[0]['fornecedores']
         nome,pantone_codigo = data[0]['nome'],data[0] ['pantone_código']

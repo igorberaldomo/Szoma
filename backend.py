@@ -39,9 +39,17 @@ def generate_pandas_table(segundo_query,primeiro_query):
                 print(f"Erro ao processar a tabela {table_name}: {e}")
             return dataframes
     table = getting_data()
-    print(table)
-    
-    
+    # print(table)
+
+def filter_lines(table):
+    data = []
+    i = 0
+    print(table[0]['nome'])
+    for i in range(len(table)):
+        data.append({"nome":table[i]['nome'], "hexadecimal":table[i]['hexadecimal'], "fornecedores":table[i]['fornecedores'], "pantone_código":table[i]['pantone_código'], "red":table[i]['red'], "green":table[i]['green'], "blue":table[i]['blue']})
+        i += 1
+    print(data)
+    return data 
 
 def select_complementos(red, green, blue, palheta, fornecedores):
     if palheta == "triade":
@@ -167,7 +175,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 menor_distancia_2 = x
                 distancia = distancia_atual
             x += 1
-            
+        resultado1 = filter_lines(resultado1)
+        resultado2 = filter_lines(resultado2)
+        
         if complemento1 == True and complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
             lista_complementos.append(resultado2[menor_distancia_2])
@@ -514,13 +524,13 @@ def getsuvinilColors():
         while c < len(response):
             lastQuery.append(response[c])
             c += 1
-        with open("response.json", "w+") as file:
+        with open("response/response.json", "w+") as file:
             json.dump(lastQuery, file)
             lastQuery.clear()
 
         return response
     if request.method == "GET":
-        with open("response.json", "r") as file:
+        with open("response/response.json", "r") as file:
             response = json.load(file)
             return response
 
@@ -532,9 +542,8 @@ def getNames():
         nome = req["nome"]
         fornecedores = req["fornecedores"]
         response = select_names(nome, fornecedores)
-        response = filtrar_colunas(response)
         response = response.to_dict(orient="records")
-        with open("response.json", "w+") as file:
+        with open("response/response.json", "w+") as file:
             json.dump(response, file)
         return response
 
@@ -546,9 +555,8 @@ def getProcura():
         codigo = codigo_cor["codigo"]
         fornecedores = codigo_cor["fornecedores"]
         response = select_códigos(codigo, fornecedores)
-        response = filtrar_colunas(response)
         response = response.to_dict(orient="records")
-        with open("response.json", "w+") as file:
+        with open("response/response.json", "w+") as file:
             json.dump(response, file)
         return response
 
@@ -560,9 +568,8 @@ def getHex():
         hexadecimal = codigo_cor["headecimal"]
         fornecedores = codigo_cor["fornecedores"]
         response = select_hexadecimal(hexadecimal, fornecedores)
-        lista = filtrar_colunas(response)
         response = response.to_dict(orient="records")
-        with open("response.json", "w+") as file:
+        with open("response/response.json", "w+") as file:
             json.dump(response, file)
         return response
 
@@ -577,17 +584,16 @@ def getComplementos():
         palheta = complementos["palheta"]
         fornecedores = complementos["fornecedores"]
         lista = select_complementos(red, green, blue, palheta, fornecedores)
-        lista = filtrar_colunas(lista)
         c = 0
         while c < len(lista):
             lastQuery.append(lista[c])
             c += 1
-        with open("complementos.json", "w+") as file:
+        with open("complementos/complementos.json", "w+") as file:
             json.dump(lastQuery, file)
             lastQuery.clear()
         return lastQuery
     if request.method == "GET":
-        with open("complementos.json", "r") as file:
+        with open("complementos/complementos.json", "r") as file:
             response = json.load(file)
             return response
 
