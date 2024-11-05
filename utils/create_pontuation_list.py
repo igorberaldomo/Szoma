@@ -2,7 +2,6 @@ import json
 sem_acento = "vinicola"
 acento = "vinícola"
 
-# pé, pará, chá, imã, lã, ipê, ló, pó, taça
 data = dict()
 data['modificado'] = sem_acento
 data['original'] = acento
