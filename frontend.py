@@ -51,7 +51,7 @@ def findrgb():
             cor = ct.get_color(quality=1)
             json_procura = {'cor': cor,'fornecedores':opcao_fornecedores}
             response = requests.post("http://localhost:5555/suvinil/",json=json_procura)
-        elif procura is not '':
+        elif procura != '':
             if procura[0].isalpha():
                 st.session_state.cliked = True
                 nome = {"nome":procura, "fornecedores":opcao_fornecedores}
