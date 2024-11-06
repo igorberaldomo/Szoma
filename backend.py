@@ -7,17 +7,19 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
 lista_complementos = []
 
-def generate_pandas_table(segundo_query,primeiro_query):
+
+def generate_pandas_table(segundo_query, primeiro_query):
     lista_pandas = []
+
     def getting_data():
         queries = {
             "suvinil": primeiro_query,
             "coral": segundo_query,
-
         }
         dataframes = {}
+
         def convert_to_float(value):
-            value = str(value).replace(',', '')  # Substituir vírgula por ponto
+            value = str(value).replace(",", "")  # Substituir vírgula por ponto
             try:
                 return float(value)
             except ValueError:
@@ -26,29 +28,41 @@ def generate_pandas_table(segundo_query,primeiro_query):
         for table_name, query in queries.items():
             try:
                 df = pd.read_sql(query, engine)
-                if table_name in ['suvinil', 'coral']:
-                    df['fornecedores'] = df['fornecedores'].astype(str)
-                    df['hexadecimal'] = df['hexadecimal'].astype(str)
-                    df['nome']  = df['nome'].astype(str)
-                    df['pantone_código'] = df['pantone_código'].astype(str)
-                    df['red'] = df['red'].astype(int)
-                    df['green'] = df['green'].astype(int)
-                    df['blue'] = df['blue'].astype(int)    
+                if table_name in ["suvinil", "coral"]:
+                    df["fornecedores"] = df["fornecedores"].astype(str)
+                    df["hexadecimal"] = df["hexadecimal"].astype(str)
+                    df["nome"] = df["nome"].astype(str)
+                    df["pantone_código"] = df["pantone_código"].astype(str)
+                    df["red"] = df["red"].astype(int)
+                    df["green"] = df["green"].astype(int)
+                    df["blue"] = df["blue"].astype(int)
                 dataframes[table_name] = df
             except Exception as e:
                 print(f"Erro ao processar a tabela {table_name}: {e}")
             return dataframes
+
     table = getting_data()
     # print(table)
+
 
 def filter_lines(table):
     data = []
     i = 0
     for i in range(len(table)):
-        data.append({"nome":table[i]['nome'], "hexadecimal":table[i]['hexadecimal'], "fornecedores":table[i]['fornecedores'], "pantone_código":table[i]['pantone_código'], "red":table[i]['red'], "green":table[i]['green'], "blue":table[i]['blue']})
+        data.append(
+            {
+                "nome": table[i]["nome"],
+                "hexadecimal": table[i]["hexadecimal"],
+                "fornecedores": table[i]["fornecedores"],
+                "pantone_código": table[i]["pantone_código"],
+                "red": table[i]["red"],
+                "green": table[i]["green"],
+                "blue": table[i]["blue"],
+            }
+        )
         i += 1
-    print(data)
-    return data 
+    return data
+
 
 def select_complementos(red, green, blue, palheta, fornecedores):
     if palheta == "triade":
@@ -120,7 +134,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
-        
+
         generate_pandas_table(primeira, segunda)
 
         if resultado1.empty and resultado2.empty:
@@ -178,7 +192,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             x += 1
         resultado1 = filter_lines(resultado1)
         resultado2 = filter_lines(resultado2)
-        
+
         if complemento1 == True and complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
             lista_complementos.append(resultado2[menor_distancia_2])
@@ -239,7 +253,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             complementar = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {cr_min} AND red <= {cr_max} AND green >= {cg_min} AND green <= {cg_max} AND blue >= {cb_min} AND blue <= {cb_max}"
         resultado1 = pd.read_sql(intermediaria, engine)
         resultado2 = pd.read_sql(complementar, engine)
-        
+
         if resultado1.empty and resultado2.empty:
             complemento1 = False
             complemento2 = False
@@ -465,24 +479,34 @@ def select_códigos(codigo, fornecedores):
     return resultset
 
 
-def select_names(nome, fornecedores):
-    seach_string = ""
+def select_id(request_id, nome, fornecedores):
     if fornecedores != "todos":
-        search_string = f"SELECT * from {fornecedores} WHERE nome = '{nome}' or pantone_name = '{nome}' "
+        seach_string = f"Select * from {fornecedores} WHERE id = {request_id}"
+        resultset = pd.read_sql(seach_string, engine)
     else:
-        search_string = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE nome = '{nome}' or pantone_name = '{nome}' union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE nome = '{nome}' or pantone_name = '{nome}' "
-
-    resultset = pd.read_sql(search_string, engine)
+        seach_string = f"Select * from suvinil WHERE id = {request_id} "
+        search_string_2 = f"Select * from coral WHERE id = {request_id}"
+        resultset_1 = pd.read_sql(seach_string, engine)
+        resultset_2 = pd.read_sql(search_string_2, engine)
+        if nome in resultset_1["nome"].values:
+            resultset = resultset_1
+        else:
+            resultset = resultset_2
     return resultset
 
 
 def search_name_for_id(nome):
     with open("search/search_dict.json", "r") as file:
         search_dict = json.load(file)
-        if nome in search_dict:
-            return search_dict[nome]
+        if nome in search_dict["quickSearch"][0]:
+            select_id = search_dict["quickSearch"][0][nome]
+        elif nome in search_dict["suvinil"][0]:
+            select_id = search_dict["suvinil"][0][nome]
+        elif nome in search_dict["coral"][0]:
+            select_id = search_dict["coral"][0][nome]
         else:
-            return None
+            select_id = None
+    return select_id
 
 
 def primary_select(red, green, blue, fornecedores):
@@ -558,7 +582,8 @@ def getNames():
         req = request.get_json()
         nome = req["nome"]
         fornecedores = req["fornecedores"]
-        response = select_names(nome, fornecedores)
+        request_id = search_name_for_id(nome)
+        response = select_id(request_id, nome, fornecedores)
         response = response.to_dict(orient="records")
         with open("response/response.json", "w+") as file:
             json.dump(response, file)
