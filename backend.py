@@ -206,6 +206,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             return []
         return lista_complementos
     elif palheta == "complementar":
+        lista_complementos.clear()
         desvio_complementar = 60
         cr = 255 - red
         cg = 255 - green
@@ -316,7 +317,8 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                     menor_distancia_2 = x
                     distancia = distancia_atual
             x += 1
-
+        print(resultado1[menor_distancia_1], complemento1)
+        print(resultado2[menor_distancia_2], complemento2)
         if complemento1 == True and complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
             lista_complementos.append(resultado2[menor_distancia_2])
