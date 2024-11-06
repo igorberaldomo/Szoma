@@ -344,7 +344,6 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             meio_analoga = green
         if red == maior_analoga and green == menor_analoga or red == menor_analoga and green == maior_analoga:
             meio_analoga = blue
-        print(meio_analoga, maior_analoga, menor_analoga) 
 
         menor_valor_de_maior_analoga = maior_analoga - desvio_menor_analoga
         maior_valor_de_maior_analoga = maior_analoga + desvio_menor_analoga
@@ -396,8 +395,6 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
-        print(resultado1)
-        print(resultado2)
         if resultado1.empty and resultado2.empty:
             complemento1 = False
             complemento2 = False
@@ -509,13 +506,14 @@ def select_id(request_id, nome, fornecedores):
 def search_name_for_id(nome):
     with open("search/search_dict.json", "r") as file:
         search_dict = json.load(file)
+        select_id = None
+        if nome in search_dict["quickSearch"][0]:
+            select_id = search_dict["quickSearch"][0][nome]
         if nome in search_dict["suvinil"][0]:
             select_id = search_dict["suvinil"][0][nome]
-        elif nome in search_dict["coral"][0]:
+        if nome in search_dict["coral"][0]:
             select_id = search_dict["coral"][0][nome]
-        else:
-            select_id = None
-        # print(select_id)
+        print(select_id)
     return select_id
 
 
