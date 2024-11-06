@@ -20,5 +20,25 @@ for i in range(len(resultset)):
         id1 = int(resultset[i]['id'])
         newdict[nome] = id1
 print(newdict)
-with open ('search_dict.json', 'w+') as file:
-    json.dump(newdict, file)
+with open ('search_dict.json', 'r+') as file:
+   search = json.load(file)
+   search['suvinil'].append(newdict)
+   file.seek(0)
+   json.dump(search, file)
+
+search_string = f"SELECT nome , id FROM coral"
+resultset = pd.read_sql(search_string, engine)
+resultset = resultset.to_dict(orient='records')
+newdict.clear()
+print(newdict)
+
+for i in range(len(resultset)):
+        nome = resultset[i]['nome']
+        id1 = int(resultset[i]['id'])
+        newdict[nome] = id1
+print(newdict)
+with open ('search_dict.json', 'r+') as file:
+   search = json.load(file)
+   search['coral'].append(newdict)
+   file.seek(0)
+   json.dump(search, file)
