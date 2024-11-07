@@ -5,7 +5,7 @@ import streamlit as st
 from flask import Flask, request
 
 
-DATABASE_URL = st.secrets["DATABASE_URL"]
+DATABASE_URL = os.getenv("DATABASE_URL")
 engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
 lista_complementos = []
 

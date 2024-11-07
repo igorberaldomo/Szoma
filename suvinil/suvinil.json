@@ -11,7 +11,7 @@
             "codigo_suvinil": "B031",
             "hexadecimal": "#f2e7b5",
             "pantone": {
-                "pantone": "11-0616",
+                "codigo": "11-0616",
                 "name": "pastel-yellow",
                 "hex": "#f2e6b1"
             },
@@ -28,7 +28,7 @@
             "codigo_suvinil": "B508",
             "hexadecimal": "#f3f1e5",
             "pantone": {
-                "pantone": "11-0607",
+                "codigo": "11-0607",
                 "name": "sugar-swizzle",
                 "hex": "#f3eee7"
             },
@@ -45,7 +45,7 @@
             "codigo_suvinil": "A208",
             "hexadecimal": "#edece3",
             "pantone": {
-                "pantone": "11-0608",
+                "codigo": "11-0608",
                 "name": "coconut-milk",
                 "hex": "#f0ede5"
             },
@@ -62,7 +62,7 @@
             "codigo_suvinil": "B208",
             "hexadecimal": "#eae9e2",
             "pantone": {
-                "pantone": "11-4802",
+                "codigo": "11-4802",
                 "name": "summer-shower",
                 "hex": "#e5ebe3"
             },
@@ -79,7 +79,7 @@
             "codigo_suvinil": "F064",
             "hexadecimal": "#eae7d5",
             "pantone": {
-                "pantone": "12-0601",
+                "codigo": "12-0601",
                 "name": "eggnog",
                 "hex": "#ece1d3"
             },
@@ -96,7 +96,7 @@
             "codigo_suvinil": "A014",
             "hexadecimal": "#dbdad7",
             "pantone": {
-                "pantone": "12-4302",
+                "codigo": "12-4302",
                 "name": "vaporous-gray",
                 "hex": "#dfddd7"
             },
@@ -113,7 +113,7 @@
             "codigo_suvinil": "Z076",
             "hexadecimal": "#e0dcd2",
             "pantone": {
-                "pantone": "12-4302",
+                "codigo": "12-4302",
                 "name": "vaporous-gray",
                 "hex": "#dfddd7"
             },
@@ -130,7 +130,7 @@
             "codigo_suvinil": "A031",
             "hexadecimal": "#eee9c9",
             "pantone": {
-                "pantone": "12-0607",
+                "codigo": "12-0607",
                 "name": "green-essence",
                 "hex": "#e9eac8"
             },
@@ -147,7 +147,7 @@
             "codigo_suvinil": "A146",
             "hexadecimal": "#d9d8cf",
             "pantone": {
-                "pantone": "12-5201",
+                "codigo": "12-5201",
                 "name": "icicle",
                 "hex": "#dadcd0"
             },
@@ -164,7 +164,7 @@
             "codigo_suvinil": "N575",
             "hexadecimal": "#dcd9c6",
             "pantone": {
-                "pantone": "12-0404",
+                "codigo": "12-0404",
                 "name": "light-gray",
                 "hex": "#dad8c9"
             },
@@ -181,7 +181,7 @@
             "codigo_suvinil": "D020",
             "hexadecimal": "#f5e4bb",
             "pantone": {
-                "pantone": "12-0717",
+                "codigo": "12-0717",
                 "name": "anise-flower",
                 "hex": "#f4e3b5"
             },
@@ -198,7 +198,7 @@
             "codigo_suvinil": "N579",
             "hexadecimal": "#ddd7b7",
             "pantone": {
-                "pantone": "12-0605",
+                "codigo": "12-0605",
                 "name": "angora",
                 "hex": "#dfd1bb"
             },
@@ -215,7 +215,7 @@
             "codigo_suvinil": "B142",
             "hexadecimal": "#dad0b6",
             "pantone": {
-                "pantone": "13-1008",
+                "codigo": "13-1008",
                 "name": "bleached-sand",
                 "hex": "#daccb4"
             },
@@ -232,7 +232,7 @@
             "codigo_suvinil": "C144",
             "hexadecimal": "#cfc8b7",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -249,7 +249,7 @@
             "codigo_suvinil": "B163",
             "hexadecimal": "#c8c5ba",
             "pantone": {
-                "pantone": "14-0002",
+                "codigo": "14-0002",
                 "name": "pumice-stone",
                 "hex": "#cac2b9"
             },
@@ -266,7 +266,7 @@
             "codigo_suvinil": "C161",
             "hexadecimal": "#c0c0ba",
             "pantone": {
-                "pantone": "14-4203",
+                "codigo": "14-4203",
                 "name": "vapor-blue",
                 "hex": "#bebdbd"
             },
@@ -283,7 +283,7 @@
             "codigo_suvinil": "D033",
             "hexadecimal": "#fad68c",
             "pantone": {
-                "pantone": "12-0825",
+                "codigo": "12-0825",
                 "name": "popcorn",
                 "hex": "#f8de8d"
             },
@@ -300,7 +300,7 @@
             "codigo_suvinil": "D028",
             "hexadecimal": "#f9da8a",
             "pantone": {
-                "pantone": "12-0825",
+                "codigo": "12-0825",
                 "name": "popcorn",
                 "hex": "#f8de8d"
             },
@@ -317,7 +317,7 @@
             "codigo_suvinil": "N586",
             "hexadecimal": "#d1b97b",
             "pantone": {
-                "pantone": "14-0826",
+                "codigo": "14-0826",
                 "name": "pampas",
                 "hex": "#cfbb7b"
             },
@@ -334,7 +334,7 @@
             "codigo_suvinil": "C608",
             "hexadecimal": "#ffd973",
             "pantone": {
-                "pantone": "13-0840",
+                "codigo": "13-0840",
                 "name": "snapdragon",
                 "hex": "#fed777"
             },
@@ -351,7 +351,7 @@
             "codigo_suvinil": "E029",
             "hexadecimal": "#e4c177",
             "pantone": {
-                "pantone": "13-0932",
+                "codigo": "13-0932",
                 "name": "cornsilk",
                 "hex": "#edc373"
             },
@@ -368,7 +368,7 @@
             "codigo_suvinil": "D137",
             "hexadecimal": "#ffd171",
             "pantone": {
-                "pantone": "12-0758",
+                "codigo": "12-0758",
                 "name": "yarrow",
                 "hex": "#face6d"
             },
@@ -385,7 +385,7 @@
             "codigo_suvinil": "C142",
             "hexadecimal": "#cbc1a6",
             "pantone": {
-                "pantone": "14-0615",
+                "codigo": "14-0615",
                 "name": "green-haze",
                 "hex": "#cac4a4"
             },
@@ -402,7 +402,7 @@
             "codigo_suvinil": "C163",
             "hexadecimal": "#b9b6ac",
             "pantone": {
-                "pantone": "14-4501",
+                "codigo": "14-4501",
                 "name": "silver-lining",
                 "hex": "#bdb6ab"
             },
@@ -419,7 +419,7 @@
             "codigo_suvinil": "C289",
             "hexadecimal": "#c9c1a5",
             "pantone": {
-                "pantone": "14-0615",
+                "codigo": "14-0615",
                 "name": "green-haze",
                 "hex": "#cac4a4"
             },
@@ -436,7 +436,7 @@
             "codigo_suvinil": "Y121",
             "hexadecimal": "#cbbc9c",
             "pantone": {
-                "pantone": "14-1014",
+                "codigo": "14-1014",
                 "name": "gravel",
                 "hex": "#cbbfa2"
             },
@@ -453,7 +453,7 @@
             "codigo_suvinil": "C290",
             "hexadecimal": "#c3b995",
             "pantone": {
-                "pantone": "15-1217",
+                "codigo": "15-1217",
                 "name": "mojave-desert",
                 "hex": "#c7b595"
             },
@@ -470,7 +470,7 @@
             "codigo_suvinil": "N581",
             "hexadecimal": "#cdc191",
             "pantone": {
-                "pantone": "14-0425",
+                "codigo": "14-0425",
                 "name": "beechnut",
                 "hex": "#c2c18d"
             },
@@ -487,7 +487,7 @@
             "codigo_suvinil": "D281",
             "hexadecimal": "#e1bd82",
             "pantone": {
-                "pantone": "14-0935",
+                "codigo": "14-0935",
                 "name": "jojoba",
                 "hex": "#dabe81"
             },
@@ -504,7 +504,7 @@
             "codigo_suvinil": "S100",
             "hexadecimal": "#baab8c",
             "pantone": {
-                "pantone": "15-1116",
+                "codigo": "15-1116",
                 "name": "safari",
                 "hex": "#baaa91"
             },
@@ -521,7 +521,7 @@
             "codigo_suvinil": "D164",
             "hexadecimal": "#9f998d",
             "pantone": {
-                "pantone": "16-1407",
+                "codigo": "16-1407",
                 "name": "cobblestone",
                 "hex": "#a89a8e"
             },
@@ -538,7 +538,7 @@
             "codigo_suvinil": "D282",
             "hexadecimal": "#b09f81",
             "pantone": {
-                "pantone": "16-1010",
+                "codigo": "16-1010",
                 "name": "incense",
                 "hex": "#af9a7e"
             },
@@ -555,7 +555,7 @@
             "codigo_suvinil": "D140",
             "hexadecimal": "#bba87e",
             "pantone": {
-                "pantone": "15-0719",
+                "codigo": "15-0719",
                 "name": "silver-fern",
                 "hex": "#bbaa7e"
             },
@@ -572,7 +572,7 @@
             "codigo_suvinil": "E144",
             "hexadecimal": "#a19983",
             "pantone": {
-                "pantone": "16-1104",
+                "codigo": "16-1104",
                 "name": "crockery",
                 "hex": "#a49887"
             },
@@ -589,7 +589,7 @@
             "codigo_suvinil": "D142",
             "hexadecimal": "#a99b7c",
             "pantone": {
-                "pantone": "16-1110",
+                "codigo": "16-1110",
                 "name": "olive-gray",
                 "hex": "#a6997a"
             },
@@ -606,7 +606,7 @@
             "codigo_suvinil": "E027",
             "hexadecimal": "#ffd86c",
             "pantone": {
-                "pantone": "12-0737",
+                "codigo": "12-0737",
                 "name": "goldfinch",
                 "hex": "#f8dc6c"
             },
@@ -623,7 +623,7 @@
             "codigo_suvinil": "D614",
             "hexadecimal": "#ffe65f",
             "pantone": {
-                "pantone": "13-0851",
+                "codigo": "13-0851",
                 "name": "minion-yellow",
                 "hex": "#fed55d"
             },
@@ -640,7 +640,7 @@
             "codigo_suvinil": "E615",
             "hexadecimal": "#ffe24f",
             "pantone": {
-                "pantone": "14-1050",
+                "codigo": "14-1050",
                 "name": "marigold",
                 "hex": "#fadc53"
             },
@@ -657,7 +657,7 @@
             "codigo_suvinil": "N573",
             "hexadecimal": "#efd34e",
             "pantone": {
-                "pantone": "13-0646",
+                "codigo": "13-0646",
                 "name": "meadowlark",
                 "hex": "#ead94e"
             },
@@ -674,7 +674,7 @@
             "codigo_suvinil": "P039",
             "hexadecimal": "#fcda3d",
             "pantone": {
-                "pantone": "12-0752",
+                "codigo": "12-0752",
                 "name": "buttercup",
                 "hex": "#fae03c"
             },
@@ -691,7 +691,7 @@
             "codigo_suvinil": "D611",
             "hexadecimal": "#f9d428",
             "pantone": {
-                "pantone": "14-0852",
+                "codigo": "14-0852",
                 "name": "freesia",
                 "hex": "#f3c12c"
             },
@@ -708,7 +708,7 @@
             "codigo_suvinil": "R615",
             "hexadecimal": "#edc423",
             "pantone": {
-                "pantone": "14-0852",
+                "codigo": "14-0852",
                 "name": "freesia",
                 "hex": "#f3c12c"
             },
@@ -725,7 +725,7 @@
             "codigo_suvinil": "R027",
             "hexadecimal": "#ffb52c",
             "pantone": {
-                "pantone": "14-0955",
+                "codigo": "14-0955",
                 "name": "citrus",
                 "hex": "#f9ac2f"
             },
@@ -742,7 +742,7 @@
             "codigo_suvinil": "R039",
             "hexadecimal": "#f2cb15",
             "pantone": {
-                "pantone": "13-0752",
+                "codigo": "13-0752",
                 "name": "lemon",
                 "hex": "#f3bf08"
             },
@@ -759,7 +759,7 @@
             "codigo_suvinil": "R035",
             "hexadecimal": "#c4923e",
             "pantone": {
-                "pantone": "15-0948",
+                "codigo": "15-0948",
                 "name": "golden-spice",
                 "hex": "#c6973f"
             },
@@ -776,7 +776,7 @@
             "codigo_suvinil": "E606",
             "hexadecimal": "#feb000",
             "pantone": {
-                "pantone": "13-0752",
+                "codigo": "13-0752",
                 "name": "lemon",
                 "hex": "#f3bf08"
             },
@@ -793,7 +793,7 @@
             "codigo_suvinil": "R283",
             "hexadecimal": "#c79437",
             "pantone": {
-                "pantone": "15-0948",
+                "codigo": "15-0948",
                 "name": "golden-spice",
                 "hex": "#c6973f"
             },
@@ -810,7 +810,7 @@
             "codigo_suvinil": "N572",
             "hexadecimal": "#edd564",
             "pantone": {
-                "pantone": "12-0646",
+                "codigo": "12-0646",
                 "name": "celandine",
                 "hex": "#ebdf67"
             },
@@ -827,7 +827,7 @@
             "codigo_suvinil": "N600",
             "hexadecimal": "#b8a067",
             "pantone": {
-                "pantone": "16-1326",
+                "codigo": "16-1326",
                 "name": "prairie-sand",
                 "hex": "#b59a6a"
             },
@@ -844,7 +844,7 @@
             "codigo_suvinil": "E282",
             "hexadecimal": "#9e8b68",
             "pantone": {
-                "pantone": "17-1320",
+                "codigo": "17-1320",
                 "name": "tannin",
                 "hex": "#a68a6d"
             },
@@ -861,7 +861,7 @@
             "codigo_suvinil": "P290",
             "hexadecimal": "#ad9e57",
             "pantone": {
-                "pantone": "16-0737",
+                "codigo": "16-0737",
                 "name": "burnished-gold",
                 "hex": "#aa9855"
             },
@@ -878,7 +878,7 @@
             "codigo_suvinil": "R723",
             "hexadecimal": "#ba8d41",
             "pantone": {
-                "pantone": "16-0948",
+                "codigo": "16-0948",
                 "name": "harvest-gold",
                 "hex": "#b68a3a"
             },
@@ -895,7 +895,7 @@
             "codigo_suvinil": "D750",
             "hexadecimal": "#7c7a74",
             "pantone": {
-                "pantone": "18-1210",
+                "codigo": "18-1210",
                 "name": "driftwood",
                 "hex": "#847a75"
             },
@@ -912,7 +912,7 @@
             "codigo_suvinil": "E380",
             "hexadecimal": "#847f77",
             "pantone": {
-                "pantone": "18-1210",
+                "codigo": "18-1210",
                 "name": "driftwood",
                 "hex": "#847a75"
             },
@@ -929,7 +929,7 @@
             "codigo_suvinil": "Y090",
             "hexadecimal": "#817c74",
             "pantone": {
-                "pantone": "18-1210",
+                "codigo": "18-1210",
                 "name": "driftwood",
                 "hex": "#847a75"
             },
@@ -946,7 +946,7 @@
             "codigo_suvinil": "R139",
             "hexadecimal": "#86785b",
             "pantone": {
-                "pantone": "17-0627",
+                "codigo": "17-0627",
                 "name": "dried-herb",
                 "hex": "#847a59"
             },
@@ -963,7 +963,7 @@
             "codigo_suvinil": "R147",
             "hexadecimal": "#6c655b",
             "pantone": {
-                "pantone": "18-1304",
+                "codigo": "18-1304",
                 "name": "falcon",
                 "hex": "#6d625b"
             },
@@ -980,7 +980,7 @@
             "codigo_suvinil": "T100",
             "hexadecimal": "#806b50",
             "pantone": {
-                "pantone": "18-1022",
+                "codigo": "18-1022",
                 "name": "ermine",
                 "hex": "#836b4f"
             },
@@ -997,7 +997,7 @@
             "codigo_suvinil": "R747",
             "hexadecimal": "#493d31",
             "pantone": {
-                "pantone": "19-0814",
+                "codigo": "19-0814",
                 "name": "slate-black",
                 "hex": "#4b3d33"
             },
@@ -1014,7 +1014,7 @@
             "codigo_suvinil": "R750",
             "hexadecimal": "#373531",
             "pantone": {
-                "pantone": "19-1103",
+                "codigo": "19-1103",
                 "name": "espresso",
                 "hex": "#363031"
             },
@@ -1031,7 +1031,7 @@
             "codigo_suvinil": "B120",
             "hexadecimal": "#faddbf",
             "pantone": {
-                "pantone": "12-0815",
+                "codigo": "12-0815",
                 "name": "vanilla-custard",
                 "hex": "#f3e0be"
             },
@@ -1048,7 +1048,7 @@
             "codigo_suvinil": "B032",
             "hexadecimal": "#efd4af",
             "pantone": {
-                "pantone": "12-0813",
+                "codigo": "12-0813",
                 "name": "autumn-blonde",
                 "hex": "#eed0ae"
             },
@@ -1065,7 +1065,7 @@
             "codigo_suvinil": "J091",
             "hexadecimal": "#f9d0b5",
             "pantone": {
-                "pantone": "12-0912",
+                "codigo": "12-0912",
                 "name": "tender-peach",
                 "hex": "#f8d5b8"
             },
@@ -1082,7 +1082,7 @@
             "codigo_suvinil": "RM022",
             "hexadecimal": "#edc4a7",
             "pantone": {
-                "pantone": "14-1120",
+                "codigo": "14-1120",
                 "name": "apricot-illusion",
                 "hex": "#e2c4a6"
             },
@@ -1099,7 +1099,7 @@
             "codigo_suvinil": "B595",
             "hexadecimal": "#fbcdad",
             "pantone": {
-                "pantone": "12-0917",
+                "codigo": "12-0917",
                 "name": "bleached-apricot",
                 "hex": "#fccaac"
             },
@@ -1116,7 +1116,7 @@
             "codigo_suvinil": "E204",
             "hexadecimal": "#f1e9e1",
             "pantone": {
-                "pantone": "11-0604",
+                "codigo": "11-0604",
                 "name": "gardenia",
                 "hex": "#f1e8df"
             },
@@ -1133,7 +1133,7 @@
             "codigo_suvinil": "A204",
             "hexadecimal": "#eae8e3",
             "pantone": {
-                "pantone": "11-4802",
+                "codigo": "11-4802",
                 "name": "summer-shower",
                 "hex": "#e5ebe3"
             },
@@ -1150,7 +1150,7 @@
             "codigo_suvinil": "A175",
             "hexadecimal": "#e6e1db",
             "pantone": {
-                "pantone": "11-4301",
+                "codigo": "11-4301",
                 "name": "lily-white",
                 "hex": "#e2e2da"
             },
@@ -1167,7 +1167,7 @@
             "codigo_suvinil": "C531",
             "hexadecimal": "#f7e7d9",
             "pantone": {
-                "pantone": "11-1306",
+                "codigo": "11-1306",
                 "name": "cream-pink",
                 "hex": "#f6e4d9"
             },
@@ -1184,7 +1184,7 @@
             "codigo_suvinil": "A154",
             "hexadecimal": "#e5e2db",
             "pantone": {
-                "pantone": "11-4301",
+                "codigo": "11-4301",
                 "name": "lily-white",
                 "hex": "#e2e2da"
             },
@@ -1201,7 +1201,7 @@
             "codigo_suvinil": "F100",
             "hexadecimal": "#eae3d5",
             "pantone": {
-                "pantone": "12-0601",
+                "codigo": "12-0601",
                 "name": "eggnog",
                 "hex": "#ece1d3"
             },
@@ -1218,7 +1218,7 @@
             "codigo_suvinil": "A092",
             "hexadecimal": "#e2dcd6",
             "pantone": {
-                "pantone": "12-4302",
+                "codigo": "12-4302",
                 "name": "vaporous-gray",
                 "hex": "#dfddd7"
             },
@@ -1235,7 +1235,7 @@
             "codigo_suvinil": "RM012",
             "hexadecimal": "#e6eae1",
             "pantone": {
-                "pantone": "11-4804",
+                "codigo": "11-4804",
                 "name": "lightest-sky",
                 "hex": "#e4eadf"
             },
@@ -1252,7 +1252,7 @@
             "codigo_suvinil": "RM010",
             "hexadecimal": "#dfd4bc",
             "pantone": {
-                "pantone": "12-0605",
+                "codigo": "12-0605",
                 "name": "angora",
                 "hex": "#dfd1bb"
             },
@@ -1269,7 +1269,7 @@
             "codigo_suvinil": "A162",
             "hexadecimal": "#dad8d0",
             "pantone": {
-                "pantone": "12-5201",
+                "codigo": "12-5201",
                 "name": "icicle",
                 "hex": "#dadcd0"
             },
@@ -1286,7 +1286,7 @@
             "codigo_suvinil": "D532",
             "hexadecimal": "#f4e4ca",
             "pantone": {
-                "pantone": "11-0510",
+                "codigo": "11-0510",
                 "name": "afterglow",
                 "hex": "#f3e6c9"
             },
@@ -1303,7 +1303,7 @@
             "codigo_suvinil": "F104",
             "hexadecimal": "#e5dccc",
             "pantone": {
-                "pantone": "12-0104",
+                "codigo": "12-0104",
                 "name": "white-asparagus",
                 "hex": "#e1dbc8"
             },
@@ -1320,7 +1320,7 @@
             "codigo_suvinil": "B166",
             "hexadecimal": "#e3dacd",
             "pantone": {
-                "pantone": "12-0104",
+                "codigo": "12-0104",
                 "name": "white-asparagus",
                 "hex": "#e1dbc8"
             },
@@ -1337,7 +1337,7 @@
             "codigo_suvinil": "B148",
             "hexadecimal": "#d8d3ca",
             "pantone": {
-                "pantone": "12-6204",
+                "codigo": "12-6204",
                 "name": "silver-green",
                 "hex": "#d7d7c7"
             },
@@ -1354,7 +1354,7 @@
             "codigo_suvinil": "Z006",
             "hexadecimal": "#f8e7c4",
             "pantone": {
-                "pantone": "11-0615",
+                "codigo": "11-0615",
                 "name": "pear-sorbet",
                 "hex": "#f3eac3"
             },
@@ -1371,7 +1371,7 @@
             "codigo_suvinil": "R534",
             "hexadecimal": "#ecdcc4",
             "pantone": {
-                "pantone": "12-0710",
+                "codigo": "12-0710",
                 "name": "navajo",
                 "hex": "#efdcc3"
             },
@@ -1388,7 +1388,7 @@
             "codigo_suvinil": "D553",
             "hexadecimal": "#f9e2c4",
             "pantone": {
-                "pantone": "12-0712",
+                "codigo": "12-0712",
                 "name": "vanilla",
                 "hex": "#f4e1c1"
             },
@@ -1405,7 +1405,7 @@
             "codigo_suvinil": "A112",
             "hexadecimal": "#f2d9c7",
             "pantone": {
-                "pantone": "12-1009",
+                "codigo": "12-1009",
                 "name": "vanilla-cream",
                 "hex": "#f4d8c6"
             },
@@ -1422,7 +1422,7 @@
             "codigo_suvinil": "E508",
             "hexadecimal": "#e8dcc6",
             "pantone": {
-                "pantone": "12-0804",
+                "codigo": "12-0804",
                 "name": "cloud-cream",
                 "hex": "#e6ddc5"
             },
@@ -1439,7 +1439,7 @@
             "codigo_suvinil": "G096",
             "hexadecimal": "#f8dac4",
             "pantone": {
-                "pantone": "12-1009",
+                "codigo": "12-1009",
                 "name": "vanilla-cream",
                 "hex": "#f4d8c6"
             },
@@ -1456,7 +1456,7 @@
             "codigo_suvinil": "B172",
             "hexadecimal": "#e1d2be",
             "pantone": {
-                "pantone": "13-0908",
+                "codigo": "13-0908",
                 "name": "parchment",
                 "hex": "#dfd1be"
             },
@@ -1473,7 +1473,7 @@
             "codigo_suvinil": "RM003",
             "hexadecimal": "#eee0c7",
             "pantone": {
-                "pantone": "12-0704",
+                "codigo": "12-0704",
                 "name": "white-smoke",
                 "hex": "#eddcc9"
             },
@@ -1490,7 +1490,7 @@
             "codigo_suvinil": "B277",
             "hexadecimal": "#e9d1b8",
             "pantone": {
-                "pantone": "12-0811",
+                "codigo": "12-0811",
                 "name": "dawn",
                 "hex": "#ebd2b7"
             },
@@ -1507,7 +1507,7 @@
             "codigo_suvinil": "B283",
             "hexadecimal": "#e8d5b1",
             "pantone": {
-                "pantone": "13-0815",
+                "codigo": "13-0815",
                 "name": "banana-crepe",
                 "hex": "#e7d3ad"
             },
@@ -1524,7 +1524,7 @@
             "codigo_suvinil": "B161",
             "hexadecimal": "#d1d0ca",
             "pantone": {
-                "pantone": "13-4403",
+                "codigo": "13-4403",
                 "name": "silver-birch",
                 "hex": "#d2cfc4"
             },
@@ -1541,7 +1541,7 @@
             "codigo_suvinil": "C147",
             "hexadecimal": "#d5cec2",
             "pantone": {
-                "pantone": "12-4301",
+                "codigo": "12-4301",
                 "name": "almond-milk",
                 "hex": "#d6cebe"
             },
@@ -1558,7 +1558,7 @@
             "codigo_suvinil": "B711",
             "hexadecimal": "#d3c9bb",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -1575,7 +1575,7 @@
             "codigo_suvinil": "B165",
             "hexadecimal": "#d0cac1",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -1592,7 +1592,7 @@
             "codigo_suvinil": "B526",
             "hexadecimal": "#c7c7c4",
             "pantone": {
-                "pantone": "14-4201",
+                "codigo": "14-4201",
                 "name": "lunar-rock",
                 "hex": "#c5c5c5"
             },
@@ -1609,7 +1609,7 @@
             "codigo_suvinil": "B288",
             "hexadecimal": "#dacfb7",
             "pantone": {
-                "pantone": "13-1308",
+                "codigo": "13-1308",
                 "name": "brazilian-sand",
                 "hex": "#dacab7"
             },
@@ -1626,7 +1626,7 @@
             "codigo_suvinil": "B729",
             "hexadecimal": "#d1c9b9",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -1643,7 +1643,7 @@
             "codigo_suvinil": "V100",
             "hexadecimal": "#d7cdb8",
             "pantone": {
-                "pantone": "12-0110",
+                "codigo": "12-0110",
                 "name": "pistachio-shell",
                 "hex": "#d7cfbb"
             },
@@ -1660,7 +1660,7 @@
             "codigo_suvinil": "C166",
             "hexadecimal": "#d4c8b6",
             "pantone": {
-                "pantone": "13-0711",
+                "codigo": "13-0711",
                 "name": "putty",
                 "hex": "#d4cab0"
             },
@@ -1677,7 +1677,7 @@
             "codigo_suvinil": "B378",
             "hexadecimal": "#d7c8b1",
             "pantone": {
-                "pantone": "14-1108",
+                "codigo": "14-1108",
                 "name": "wood-ash",
                 "hex": "#d7cab0"
             },
@@ -1694,7 +1694,7 @@
             "codigo_suvinil": "C373",
             "hexadecimal": "#cac1b8",
             "pantone": {
-                "pantone": "14-0002",
+                "codigo": "14-0002",
                 "name": "pumice-stone",
                 "hex": "#cac2b9"
             },
@@ -1711,7 +1711,7 @@
             "codigo_suvinil": "C164",
             "hexadecimal": "#c5bfb3",
             "pantone": {
-                "pantone": "14-4500",
+                "codigo": "14-4500",
                 "name": "moonstruck",
                 "hex": "#c2beb6"
             },
@@ -1728,7 +1728,7 @@
             "codigo_suvinil": "B270",
             "hexadecimal": "#d1bdab",
             "pantone": {
-                "pantone": "13-1012",
+                "codigo": "13-1012",
                 "name": "frosted-almond",
                 "hex": "#d2c2ac"
             },
@@ -1745,7 +1745,7 @@
             "codigo_suvinil": "C114",
             "hexadecimal": "#febe9a",
             "pantone": {
-                "pantone": "13-1020",
+                "codigo": "13-1020",
                 "name": "apricot-ice",
                 "hex": "#fbbe99"
             },
@@ -1762,7 +1762,7 @@
             "codigo_suvinil": "C604",
             "hexadecimal": "#f0c583",
             "pantone": {
-                "pantone": "13-1027",
+                "codigo": "13-1027",
                 "name": "apricot-cream",
                 "hex": "#f1bd89"
             },
@@ -1779,7 +1779,7 @@
             "codigo_suvinil": "C595",
             "hexadecimal": "#ffb182",
             "pantone": {
-                "pantone": "14-1230",
+                "codigo": "14-1230",
                 "name": "apricot-wash",
                 "hex": "#fbac82"
             },
@@ -1796,7 +1796,7 @@
             "codigo_suvinil": "C591",
             "hexadecimal": "#fcb384",
             "pantone": {
-                "pantone": "14-1230",
+                "codigo": "14-1230",
                 "name": "apricot-wash",
                 "hex": "#fbac82"
             },
@@ -1813,7 +1813,7 @@
             "codigo_suvinil": "C594",
             "hexadecimal": "#f7a879",
             "pantone": {
-                "pantone": "14-1241",
+                "codigo": "14-1241",
                 "name": "orange-chiffon",
                 "hex": "#f9aa7d"
             },
@@ -1830,7 +1830,7 @@
             "codigo_suvinil": "D268",
             "hexadecimal": "#d6a177",
             "pantone": {
-                "pantone": "15-1231",
+                "codigo": "15-1231",
                 "name": "clay",
                 "hex": "#d2a172"
             },
@@ -1847,7 +1847,7 @@
             "codigo_suvinil": "E118",
             "hexadecimal": "#d09375",
             "pantone": {
-                "pantone": "16-1330",
+                "codigo": "16-1330",
                 "name": "muted-clay",
                 "hex": "#d29380"
             },
@@ -1864,7 +1864,7 @@
             "codigo_suvinil": "A598",
             "hexadecimal": "#f6c8a0",
             "pantone": {
-                "pantone": "13-1017",
+                "codigo": "13-1017",
                 "name": "almond-cream",
                 "hex": "#f4c29f"
             },
@@ -1881,7 +1881,7 @@
             "codigo_suvinil": "X085",
             "hexadecimal": "#d5bc9f",
             "pantone": {
-                "pantone": "14-1118",
+                "codigo": "14-1118",
                 "name": "beige",
                 "hex": "#d5ba98"
             },
@@ -1898,7 +1898,7 @@
             "codigo_suvinil": "X032",
             "hexadecimal": "#d2b6a2",
             "pantone": {
-                "pantone": "14-1212",
+                "codigo": "14-1212",
                 "name": "frappe",
                 "hex": "#d1b7a0"
             },
@@ -1915,7 +1915,7 @@
             "codigo_suvinil": "C271",
             "hexadecimal": "#f0c49f",
             "pantone": {
-                "pantone": "13-1017",
+                "codigo": "13-1017",
                 "name": "almond-cream",
                 "hex": "#f4c29f"
             },
@@ -1932,7 +1932,7 @@
             "codigo_suvinil": "J090",
             "hexadecimal": "#fdc59f",
             "pantone": {
-                "pantone": "13-1031",
+                "codigo": "13-1031",
                 "name": "apricot-sherbet",
                 "hex": "#facd9e"
             },
@@ -1949,7 +1949,7 @@
             "codigo_suvinil": "N084",
             "hexadecimal": "#e3c397",
             "pantone": {
-                "pantone": "13-1024",
+                "codigo": "13-1024",
                 "name": "buff",
                 "hex": "#ebc396"
             },
@@ -1966,7 +1966,7 @@
             "codigo_suvinil": "C378",
             "hexadecimal": "#c7b59c",
             "pantone": {
-                "pantone": "15-1217",
+                "codigo": "15-1217",
                 "name": "mojave-desert",
                 "hex": "#c7b595"
             },
@@ -1983,7 +1983,7 @@
             "codigo_suvinil": "B606",
             "hexadecimal": "#fdd494",
             "pantone": {
-                "pantone": "12-0826",
+                "codigo": "12-0826",
                 "name": "golden-haze",
                 "hex": "#fbd897"
             },
@@ -2000,7 +2000,7 @@
             "codigo_suvinil": "C172",
             "hexadecimal": "#cbb59c",
             "pantone": {
-                "pantone": "14-1112",
+                "codigo": "14-1112",
                 "name": "pebble",
                 "hex": "#cab698"
             },
@@ -2017,7 +2017,7 @@
             "codigo_suvinil": "D169",
             "hexadecimal": "#bfaa9d",
             "pantone": {
-                "pantone": "15-1308",
+                "codigo": "15-1308",
                 "name": "doeskin",
                 "hex": "#bdab9b"
             },
@@ -2034,7 +2034,7 @@
             "codigo_suvinil": "C262",
             "hexadecimal": "#dbb19b",
             "pantone": {
-                "pantone": "15-1318",
+                "codigo": "15-1318",
                 "name": "pink-sand",
                 "hex": "#dfb19b"
             },
@@ -2051,7 +2051,7 @@
             "codigo_suvinil": "N582",
             "hexadecimal": "#d0b98b",
             "pantone": {
-                "pantone": "14-1116",
+                "codigo": "14-1116",
                 "name": "almond-buff",
                 "hex": "#ccb390"
             },
@@ -2068,7 +2068,7 @@
             "codigo_suvinil": "D173",
             "hexadecimal": "#c3a993",
             "pantone": {
-                "pantone": "15-1315",
+                "codigo": "15-1315",
                 "name": "rugby-tan",
                 "hex": "#c2a594"
             },
@@ -2085,7 +2085,7 @@
             "codigo_suvinil": "RM019",
             "hexadecimal": "#e7bd87",
             "pantone": {
-                "pantone": "12-0921",
+                "codigo": "12-0921",
                 "name": "golden-straw",
                 "hex": "#e6bd8f"
             },
@@ -2102,7 +2102,7 @@
             "codigo_suvinil": "Z016",
             "hexadecimal": "#d0a993",
             "pantone": {
-                "pantone": "14-1315",
+                "codigo": "14-1315",
                 "name": "hazelnut",
                 "hex": "#cfb095"
             },
@@ -2119,7 +2119,7 @@
             "codigo_suvinil": "D276",
             "hexadecimal": "#c9ad8c",
             "pantone": {
-                "pantone": "15-1214",
+                "codigo": "15-1214",
                 "name": "warm-sand",
                 "hex": "#c5ae91"
             },
@@ -2136,7 +2136,7 @@
             "codigo_suvinil": "X091",
             "hexadecimal": "#d4b488",
             "pantone": {
-                "pantone": "14-1038",
+                "codigo": "14-1038",
                 "name": "new-wheat",
                 "hex": "#d7b57f"
             },
@@ -2153,7 +2153,7 @@
             "codigo_suvinil": "D118",
             "hexadecimal": "#dba88b",
             "pantone": {
-                "pantone": "14-1122",
+                "codigo": "14-1122",
                 "name": "sheepskin",
                 "hex": "#dab58f"
             },
@@ -2170,7 +2170,7 @@
             "codigo_suvinil": "X156",
             "hexadecimal": "#d8a488",
             "pantone": {
-                "pantone": "15-1322",
+                "codigo": "15-1322",
                 "name": "dusty-coral",
                 "hex": "#d29b83"
             },
@@ -2187,7 +2187,7 @@
             "codigo_suvinil": "C380",
             "hexadecimal": "#b6aead",
             "pantone": {
-                "pantone": "15-0703",
+                "codigo": "15-0703",
                 "name": "ashes-of-roses",
                 "hex": "#b5acab"
             },
@@ -2204,7 +2204,7 @@
             "codigo_suvinil": "C711",
             "hexadecimal": "#b6a798",
             "pantone": {
-                "pantone": "15-1306",
+                "codigo": "15-1306",
                 "name": "oxford-tan",
                 "hex": "#b8a99a"
             },
@@ -2221,7 +2221,7 @@
             "codigo_suvinil": "C379",
             "hexadecimal": "#b9af9c",
             "pantone": {
-                "pantone": "15-1305",
+                "codigo": "15-1305",
                 "name": "feather-gray",
                 "hex": "#b8ad9e"
             },
@@ -2238,7 +2238,7 @@
             "codigo_suvinil": "E378",
             "hexadecimal": "#b3a48f",
             "pantone": {
-                "pantone": "14-1012",
+                "codigo": "14-1012",
                 "name": "gilded-beige",
                 "hex": "#b39f8d"
             },
@@ -2255,7 +2255,7 @@
             "codigo_suvinil": "D373",
             "hexadecimal": "#aa9c92",
             "pantone": {
-                "pantone": "16-1406",
+                "codigo": "16-1406",
                 "name": "atmosphere",
                 "hex": "#a89c94"
             },
@@ -2272,7 +2272,7 @@
             "codigo_suvinil": "S115",
             "hexadecimal": "#b39a87",
             "pantone": {
-                "pantone": "16-1320",
+                "codigo": "16-1320",
                 "name": "nougat",
                 "hex": "#b69885"
             },
@@ -2289,7 +2289,7 @@
             "codigo_suvinil": "D274",
             "hexadecimal": "#bfa081",
             "pantone": {
-                "pantone": "16-0920",
+                "codigo": "16-0920",
                 "name": "curds-and-whey",
                 "hex": "#bca483"
             },
@@ -2306,7 +2306,7 @@
             "codigo_suvinil": "D172",
             "hexadecimal": "#b49b84",
             "pantone": {
-                "pantone": "16-1320",
+                "codigo": "16-1320",
                 "name": "nougat",
                 "hex": "#b69885"
             },
@@ -2323,7 +2323,7 @@
             "codigo_suvinil": "E169",
             "hexadecimal": "#aa9385",
             "pantone": {
-                "pantone": "16-1318",
+                "codigo": "16-1318",
                 "name": "warm-taupe",
                 "hex": "#af9483"
             },
@@ -2340,7 +2340,7 @@
             "codigo_suvinil": "D166",
             "hexadecimal": "#ab9782",
             "pantone": {
-                "pantone": "16-1108",
+                "codigo": "16-1108",
                 "name": "twill",
                 "hex": "#a79b82"
             },
@@ -2357,7 +2357,7 @@
             "codigo_suvinil": "D263",
             "hexadecimal": "#c39a81",
             "pantone": {
-                "pantone": "15-1317",
+                "codigo": "15-1317",
                 "name": "sirocco",
                 "hex": "#c39d88"
             },
@@ -2374,7 +2374,7 @@
             "codigo_suvinil": "E596",
             "hexadecimal": "#ef8a4e",
             "pantone": {
-                "pantone": "16-1343",
+                "codigo": "16-1343",
                 "name": "autumn-sunset",
                 "hex": "#f38554"
             },
@@ -2391,7 +2391,7 @@
             "codigo_suvinil": "E604",
             "hexadecimal": "#f1ad44",
             "pantone": {
-                "pantone": "15-1049",
+                "codigo": "15-1049",
                 "name": "artisans-gold",
                 "hex": "#f2ab46"
             },
@@ -2408,7 +2408,7 @@
             "codigo_suvinil": "P279",
             "hexadecimal": "#f3a93a",
             "pantone": {
-                "pantone": "15-1049",
+                "codigo": "15-1049",
                 "name": "artisans-gold",
                 "hex": "#f2ab46"
             },
@@ -2425,7 +2425,7 @@
             "codigo_suvinil": "R593",
             "hexadecimal": "#ed7d3b",
             "pantone": {
-                "pantone": "16-1257",
+                "codigo": "16-1257",
                 "name": "sun-orange",
                 "hex": "#f48037"
             },
@@ -2442,7 +2442,7 @@
             "codigo_suvinil": "R121",
             "hexadecimal": "#c16c45",
             "pantone": {
-                "pantone": "16-1348",
+                "codigo": "16-1348",
                 "name": "tomato-cream",
                 "hex": "#c57644"
             },
@@ -2459,7 +2459,7 @@
             "codigo_suvinil": "P125",
             "hexadecimal": "#ea783b",
             "pantone": {
-                "pantone": "17-1360",
+                "codigo": "17-1360",
                 "name": "celosia-orange",
                 "hex": "#e8703a"
             },
@@ -2476,7 +2476,7 @@
             "codigo_suvinil": "E121",
             "hexadecimal": "#f29f6d",
             "pantone": {
-                "pantone": "14-1139",
+                "codigo": "14-1139",
                 "name": "pumpkin",
                 "hex": "#f5a26f"
             },
@@ -2493,7 +2493,7 @@
             "codigo_suvinil": "N589",
             "hexadecimal": "#d29963",
             "pantone": {
-                "pantone": "16-1144",
+                "codigo": "16-1144",
                 "name": "oak-buff",
                 "hex": "#cf9c63"
             },
@@ -2510,7 +2510,7 @@
             "codigo_suvinil": "N614",
             "hexadecimal": "#a18366",
             "pantone": {
-                "pantone": "17-1022",
+                "codigo": "17-1022",
                 "name": "kelp",
                 "hex": "#988467"
             },
@@ -2527,7 +2527,7 @@
             "codigo_suvinil": "P375",
             "hexadecimal": "#97785d",
             "pantone": {
-                "pantone": "17-1038",
+                "codigo": "17-1038",
                 "name": "tigers-eye",
                 "hex": "#977c61"
             },
@@ -2544,7 +2544,7 @@
             "codigo_suvinil": "P720",
             "hexadecimal": "#a17752",
             "pantone": {
-                "pantone": "17-1330",
+                "codigo": "17-1330",
                 "name": "lion",
                 "hex": "#a0714f"
             },
@@ -2561,7 +2561,7 @@
             "codigo_suvinil": "Y010",
             "hexadecimal": "#c98b5a",
             "pantone": {
-                "pantone": "16-1143",
+                "codigo": "16-1143",
                 "name": "honey-yellow",
                 "hex": "#ca9456"
             },
@@ -2578,7 +2578,7 @@
             "codigo_suvinil": "P276",
             "hexadecimal": "#a68257",
             "pantone": {
-                "pantone": "17-0929",
+                "codigo": "17-0929",
                 "name": "fennel-seed",
                 "hex": "#998456"
             },
@@ -2595,7 +2595,7 @@
             "codigo_suvinil": "E166",
             "hexadecimal": "#8e7b68",
             "pantone": {
-                "pantone": "17-1316",
+                "codigo": "17-1316",
                 "name": "portabella",
                 "hex": "#937b6a"
             },
@@ -2612,7 +2612,7 @@
             "codigo_suvinil": "E710",
             "hexadecimal": "#7b6859",
             "pantone": {
-                "pantone": "18-1312",
+                "codigo": "18-1312",
                 "name": "deep-taupe",
                 "hex": "#7b6660"
             },
@@ -2629,7 +2629,7 @@
             "codigo_suvinil": "E172",
             "hexadecimal": "#92725d",
             "pantone": {
-                "pantone": "17-1422",
+                "codigo": "17-1422",
                 "name": "raw-umber",
                 "hex": "#92705f"
             },
@@ -2646,7 +2646,7 @@
             "codigo_suvinil": "P168",
             "hexadecimal": "#796559",
             "pantone": {
-                "pantone": "18-1312",
+                "codigo": "18-1312",
                 "name": "deep-taupe",
                 "hex": "#7b6660"
             },
@@ -2663,7 +2663,7 @@
             "codigo_suvinil": "R375",
             "hexadecimal": "#88694f",
             "pantone": {
-                "pantone": "18-1029",
+                "codigo": "18-1029",
                 "name": "toasted-coconut",
                 "hex": "#8b6a4f"
             },
@@ -2680,7 +2680,7 @@
             "codigo_suvinil": "Y037",
             "hexadecimal": "#6b5b51",
             "pantone": {
-                "pantone": "19-0808",
+                "codigo": "19-0808",
                 "name": "morel",
                 "hex": "#685c53"
             },
@@ -2697,7 +2697,7 @@
             "codigo_suvinil": "R172",
             "hexadecimal": "#795f4c",
             "pantone": {
-                "pantone": "18-1314",
+                "codigo": "18-1314",
                 "name": "acorn",
                 "hex": "#7e5e52"
             },
@@ -2714,7 +2714,7 @@
             "codigo_suvinil": "P263",
             "hexadecimal": "#906749",
             "pantone": {
-                "pantone": "18-1030",
+                "codigo": "18-1030",
                 "name": "thrush",
                 "hex": "#936b4f"
             },
@@ -2731,7 +2731,7 @@
             "codigo_suvinil": "P167",
             "hexadecimal": "#5f4f45",
             "pantone": {
-                "pantone": "19-0820",
+                "codigo": "19-0820",
                 "name": "canteen",
                 "hex": "#5e5347"
             },
@@ -2748,7 +2748,7 @@
             "codigo_suvinil": "B228",
             "hexadecimal": "#f3d4de",
             "pantone": {
-                "pantone": "13-2807",
+                "codigo": "13-2807",
                 "name": "ballerina",
                 "hex": "#f2cfdc"
             },
@@ -2765,7 +2765,7 @@
             "codigo_suvinil": "B227",
             "hexadecimal": "#f3d1e2",
             "pantone": {
-                "pantone": "13-2807",
+                "codigo": "13-2807",
                 "name": "ballerina",
                 "hex": "#f2cfdc"
             },
@@ -2782,7 +2782,7 @@
             "codigo_suvinil": "N522",
             "hexadecimal": "#f5f5f5",
             "pantone": {
-                "pantone": "11-0601",
+                "codigo": "11-0601",
                 "name": "bright-white",
                 "hex": "#f4f5f0"
             },
@@ -2799,7 +2799,7 @@
             "codigo_suvinil": "C523",
             "hexadecimal": "#eae8e7",
             "pantone": {
-                "pantone": "11-4800",
+                "codigo": "11-4800",
                 "name": "blanc-de-blanc",
                 "hex": "#e7e9e7"
             },
@@ -2816,7 +2816,7 @@
             "codigo_suvinil": "C524",
             "hexadecimal": "#f2e9e7",
             "pantone": {
-                "pantone": "11-1001",
+                "codigo": "11-1001",
                 "name": "white-alyssum",
                 "hex": "#efebe7"
             },
@@ -2833,7 +2833,7 @@
             "codigo_suvinil": "B528",
             "hexadecimal": "#f2e5e2",
             "pantone": {
-                "pantone": "11-2309",
+                "codigo": "11-2309",
                 "name": "petal-pink",
                 "hex": "#f2e2e0"
             },
@@ -2850,7 +2850,7 @@
             "codigo_suvinil": "C010",
             "hexadecimal": "#e0d7d7",
             "pantone": {
-                "pantone": "12-4302",
+                "codigo": "12-4302",
                 "name": "vaporous-gray",
                 "hex": "#dfddd7"
             },
@@ -2867,7 +2867,7 @@
             "codigo_suvinil": "A242",
             "hexadecimal": "#f1dcdb",
             "pantone": {
-                "pantone": "12-1305",
+                "codigo": "12-1305",
                 "name": "heavenly-pink",
                 "hex": "#f4dede"
             },
@@ -2884,7 +2884,7 @@
             "codigo_suvinil": "B100",
             "hexadecimal": "#e8d5d6",
             "pantone": {
-                "pantone": "12-2102",
+                "codigo": "12-2102",
                 "name": "mauve-morn",
                 "hex": "#ecd6d6"
             },
@@ -2901,7 +2901,7 @@
             "codigo_suvinil": "A101",
             "hexadecimal": "#ecd4d7",
             "pantone": {
-                "pantone": "12-2102",
+                "codigo": "12-2102",
                 "name": "mauve-morn",
                 "hex": "#ecd6d6"
             },
@@ -2918,7 +2918,7 @@
             "codigo_suvinil": "B286",
             "hexadecimal": "#e7cfbe",
             "pantone": {
-                "pantone": "12-1005",
+                "codigo": "12-1005",
                 "name": "novelle-peach",
                 "hex": "#e7cfbd"
             },
@@ -2935,7 +2935,7 @@
             "codigo_suvinil": "H121",
             "hexadecimal": "#e1c7ba",
             "pantone": {
-                "pantone": "13-1108",
+                "codigo": "13-1108",
                 "name": "cream-tan",
                 "hex": "#e4c7b8"
             },
@@ -2952,7 +2952,7 @@
             "codigo_suvinil": "C106",
             "hexadecimal": "#dfc5c0",
             "pantone": {
-                "pantone": "14-1905",
+                "codigo": "14-1905",
                 "name": "lotus",
                 "hex": "#e2c1c0"
             },
@@ -2969,7 +2969,7 @@
             "codigo_suvinil": "B154",
             "hexadecimal": "#cfc9c5",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -2986,7 +2986,7 @@
             "codigo_suvinil": "B373",
             "hexadecimal": "#d6cdc7",
             "pantone": {
-                "pantone": "13-3801",
+                "codigo": "13-3801",
                 "name": "crystal-gray",
                 "hex": "#d7cbc4"
             },
@@ -3003,7 +3003,7 @@
             "codigo_suvinil": "B174",
             "hexadecimal": "#d5c1b5",
             "pantone": {
-                "pantone": "14-1803",
+                "codigo": "14-1803",
                 "name": "sepia-rose",
                 "hex": "#d4bab6"
             },
@@ -3020,7 +3020,7 @@
             "codigo_suvinil": "B263",
             "hexadecimal": "#d8bdad",
             "pantone": {
-                "pantone": "14-1210",
+                "codigo": "14-1210",
                 "name": "shifting-sand",
                 "hex": "#d8c0ad"
             },
@@ -3037,7 +3037,7 @@
             "codigo_suvinil": "N645",
             "hexadecimal": "#f0c4d5",
             "pantone": {
-                "pantone": "13-2806",
+                "codigo": "13-2806",
                 "name": "pink-lady",
                 "hex": "#efc1d6"
             },
@@ -3054,7 +3054,7 @@
             "codigo_suvinil": "C241",
             "hexadecimal": "#ffb6c0",
             "pantone": {
-                "pantone": "14-1911",
+                "codigo": "14-1911",
                 "name": "candy-pink",
                 "hex": "#f5b0bd"
             },
@@ -3071,7 +3071,7 @@
             "codigo_suvinil": "B573",
             "hexadecimal": "#f6b0bc",
             "pantone": {
-                "pantone": "14-1911",
+                "codigo": "14-1911",
                 "name": "candy-pink",
                 "hex": "#f5b0bd"
             },
@@ -3088,7 +3088,7 @@
             "codigo_suvinil": "C115",
             "hexadecimal": "#f5a892",
             "pantone": {
-                "pantone": "14-1323",
+                "codigo": "14-1323",
                 "name": "salmon",
                 "hex": "#faaa94"
             },
@@ -3105,7 +3105,7 @@
             "codigo_suvinil": "C244",
             "hexadecimal": "#d79c98",
             "pantone": {
-                "pantone": "16-1511",
+                "codigo": "16-1511",
                 "name": "rose-tan",
                 "hex": "#d19c97"
             },
@@ -3122,7 +3122,7 @@
             "codigo_suvinil": "C365",
             "hexadecimal": "#f5a8ac",
             "pantone": {
-                "pantone": "14-1714",
+                "codigo": "14-1714",
                 "name": "quartz-pink",
                 "hex": "#efa6aa"
             },
@@ -3139,7 +3139,7 @@
             "codigo_suvinil": "C113",
             "hexadecimal": "#f3a29b",
             "pantone": {
-                "pantone": "15-1621",
+                "codigo": "15-1621",
                 "name": "candlelight-peach",
                 "hex": "#f8a39d"
             },
@@ -3156,7 +3156,7 @@
             "codigo_suvinil": "S134",
             "hexadecimal": "#ecbfae",
             "pantone": {
-                "pantone": "14-1312",
+                "codigo": "14-1312",
                 "name": "pale-blush",
                 "hex": "#e4bfb3"
             },
@@ -3173,7 +3173,7 @@
             "codigo_suvinil": "B408",
             "hexadecimal": "#c4b3b3",
             "pantone": {
-                "pantone": "15-1905",
+                "codigo": "15-1905",
                 "name": "burnished-lilac",
                 "hex": "#c5aeb1"
             },
@@ -3190,7 +3190,7 @@
             "codigo_suvinil": "D149",
             "hexadecimal": "#b8b2b3",
             "pantone": {
-                "pantone": "14-4202",
+                "codigo": "14-4202",
                 "name": "harbor-mist",
                 "hex": "#afb1b4"
             },
@@ -3207,7 +3207,7 @@
             "codigo_suvinil": "A704",
             "hexadecimal": "#c4b2ae",
             "pantone": {
-                "pantone": "15-1905",
+                "codigo": "15-1905",
                 "name": "burnished-lilac",
                 "hex": "#c5aeb1"
             },
@@ -3224,7 +3224,7 @@
             "codigo_suvinil": "C698",
             "hexadecimal": "#dcb4a7",
             "pantone": {
-                "pantone": "14-1311",
+                "codigo": "14-1311",
                 "name": "evening-sand",
                 "hex": "#ddb6ab"
             },
@@ -3241,7 +3241,7 @@
             "codigo_suvinil": "S125",
             "hexadecimal": "#dcb6a6",
             "pantone": {
-                "pantone": "14-1311",
+                "codigo": "14-1311",
                 "name": "evening-sand",
                 "hex": "#ddb6ab"
             },
@@ -3258,7 +3258,7 @@
             "codigo_suvinil": "C582",
             "hexadecimal": "#f5b9aa",
             "pantone": {
-                "pantone": "14-1219",
+                "codigo": "14-1219",
                 "name": "peach-parfait",
                 "hex": "#f8bfa8"
             },
@@ -3275,7 +3275,7 @@
             "codigo_suvinil": "C367",
             "hexadecimal": "#ba9f9c",
             "pantone": {
-                "pantone": "16-1508",
+                "codigo": "16-1508",
                 "name": "adobe-rose",
                 "hex": "#ba9f99"
             },
@@ -3292,7 +3292,7 @@
             "codigo_suvinil": "V121",
             "hexadecimal": "#cfada4",
             "pantone": {
-                "pantone": "14-1307",
+                "codigo": "14-1307",
                 "name": "rose-dust",
                 "hex": "#cdb2a5"
             },
@@ -3309,7 +3309,7 @@
             "codigo_suvinil": "C589",
             "hexadecimal": "#f0b296",
             "pantone": {
-                "pantone": "13-1125",
+                "codigo": "13-1125",
                 "name": "peach-quartz",
                 "hex": "#f5b895"
             },
@@ -3326,7 +3326,7 @@
             "codigo_suvinil": "D237",
             "hexadecimal": "#c5a7ac",
             "pantone": {
-                "pantone": "15-2705",
+                "codigo": "15-2705",
                 "name": "keepsake-lilac",
                 "hex": "#c0a5ae"
             },
@@ -3343,7 +3343,7 @@
             "codigo_suvinil": "C119",
             "hexadecimal": "#eaae9d",
             "pantone": {
-                "pantone": "15-1319",
+                "codigo": "15-1319",
                 "name": "almost-apricot",
                 "hex": "#e5b39b"
             },
@@ -3360,7 +3360,7 @@
             "codigo_suvinil": "N123",
             "hexadecimal": "#d29e8c",
             "pantone": {
-                "pantone": "15-1322",
+                "codigo": "15-1322",
                 "name": "dusty-coral",
                 "hex": "#d29b83"
             },
@@ -3377,7 +3377,7 @@
             "codigo_suvinil": "D369",
             "hexadecimal": "#b7a19a",
             "pantone": {
-                "pantone": "16-1508",
+                "codigo": "16-1508",
                 "name": "adobe-rose",
                 "hex": "#ba9f99"
             },
@@ -3394,7 +3394,7 @@
             "codigo_suvinil": "C406",
             "hexadecimal": "#9d9497",
             "pantone": {
-                "pantone": "16-4703",
+                "codigo": "16-4703",
                 "name": "ghost-gray",
                 "hex": "#9c9b98"
             },
@@ -3411,7 +3411,7 @@
             "codigo_suvinil": "D170",
             "hexadecimal": "#a89287",
             "pantone": {
-                "pantone": "16-1106",
+                "codigo": "16-1106",
                 "name": "tuffet",
                 "hex": "#a59788"
             },
@@ -3428,7 +3428,7 @@
             "codigo_suvinil": "N681",
             "hexadecimal": "#9c8b87",
             "pantone": {
-                "pantone": "16-3800",
+                "codigo": "16-3800",
                 "name": "satellite",
                 "hex": "#9f8d89"
             },
@@ -3445,7 +3445,7 @@
             "codigo_suvinil": "E237",
             "hexadecimal": "#b58f96",
             "pantone": {
-                "pantone": "16-1708",
+                "codigo": "16-1708",
                 "name": "lilas",
                 "hex": "#b88995"
             },
@@ -3462,7 +3462,7 @@
             "codigo_suvinil": "D231",
             "hexadecimal": "#b2909a",
             "pantone": {
-                "pantone": "16-1707",
+                "codigo": "16-1707",
                 "name": "deauville-mauve",
                 "hex": "#af9294"
             },
@@ -3479,7 +3479,7 @@
             "codigo_suvinil": "D370",
             "hexadecimal": "#8c8988",
             "pantone": {
-                "pantone": "17-1501",
+                "codigo": "17-1501",
                 "name": "wild-dove",
                 "hex": "#8b8c89"
             },
@@ -3496,7 +3496,7 @@
             "codigo_suvinil": "D175",
             "hexadecimal": "#a68c84",
             "pantone": {
-                "pantone": "16-1412",
+                "codigo": "16-1412",
                 "name": "stucco",
                 "hex": "#a58d7f"
             },
@@ -3513,7 +3513,7 @@
             "codigo_suvinil": "D107",
             "hexadecimal": "#bb8580",
             "pantone": {
-                "pantone": "16-1516",
+                "codigo": "16-1516",
                 "name": "cameo-brown",
                 "hex": "#c08a80"
             },
@@ -3530,7 +3530,7 @@
             "codigo_suvinil": "D111",
             "hexadecimal": "#de767c",
             "pantone": {
-                "pantone": "16-1620",
+                "codigo": "16-1620",
                 "name": "tea-rose",
                 "hex": "#dc7178"
             },
@@ -3547,7 +3547,7 @@
             "codigo_suvinil": "P112",
             "hexadecimal": "#dc5c58",
             "pantone": {
-                "pantone": "17-1644",
+                "codigo": "17-1644",
                 "name": "spiced-coral",
                 "hex": "#d75c5d"
             },
@@ -3564,7 +3564,7 @@
             "codigo_suvinil": "P249",
             "hexadecimal": "#c86355",
             "pantone": {
-                "pantone": "17-1444",
+                "codigo": "17-1444",
                 "name": "ginger",
                 "hex": "#c96551"
             },
@@ -3581,7 +3581,7 @@
             "codigo_suvinil": "R575",
             "hexadecimal": "#af2d3b",
             "pantone": {
-                "pantone": "19-1760",
+                "codigo": "19-1760",
                 "name": "scarlet",
                 "hex": "#bc2b3d"
             },
@@ -3598,7 +3598,7 @@
             "codigo_suvinil": "R115",
             "hexadecimal": "#ca4f43",
             "pantone": {
-                "pantone": "17-1553",
+                "codigo": "17-1553",
                 "name": "paprika",
                 "hex": "#ce4d42"
             },
@@ -3615,7 +3615,7 @@
             "codigo_suvinil": "R241",
             "hexadecimal": "#cd4244",
             "pantone": {
-                "pantone": "17-1553",
+                "codigo": "17-1553",
                 "name": "paprika",
                 "hex": "#ce4d42"
             },
@@ -3632,7 +3632,7 @@
             "codigo_suvinil": "R581",
             "hexadecimal": "#c6262d",
             "pantone": {
-                "pantone": "18-1763",
+                "codigo": "18-1763",
                 "name": "high-risk-red",
                 "hex": "#c71f2d"
             },
@@ -3649,7 +3649,7 @@
             "codigo_suvinil": "R242",
             "hexadecimal": "#a82939",
             "pantone": {
-                "pantone": "18-1658",
+                "codigo": "18-1658",
                 "name": "pompeian-red",
                 "hex": "#a4292e"
             },
@@ -3666,7 +3666,7 @@
             "codigo_suvinil": "D238",
             "hexadecimal": "#bd8b89",
             "pantone": {
-                "pantone": "16-1516",
+                "codigo": "16-1516",
                 "name": "cameo-brown",
                 "hex": "#c08a80"
             },
@@ -3683,7 +3683,7 @@
             "codigo_suvinil": "E168",
             "hexadecimal": "#998377",
             "pantone": {
-                "pantone": "17-1009",
+                "codigo": "17-1009",
                 "name": "dune",
                 "hex": "#998978"
             },
@@ -3700,7 +3700,7 @@
             "codigo_suvinil": "N662",
             "hexadecimal": "#c88374",
             "pantone": {
-                "pantone": "16-1431",
+                "codigo": "16-1431",
                 "name": "canyon-clay",
                 "hex": "#ce8477"
             },
@@ -3717,7 +3717,7 @@
             "codigo_suvinil": "N671",
             "hexadecimal": "#a2788b",
             "pantone": {
-                "pantone": "17-3410",
+                "codigo": "17-3410",
                 "name": "valerian",
                 "hex": "#9f7a93"
             },
@@ -3734,7 +3734,7 @@
             "codigo_suvinil": "E110",
             "hexadecimal": "#cc827f",
             "pantone": {
-                "pantone": "16-1431",
+                "codigo": "16-1431",
                 "name": "canyon-clay",
                 "hex": "#ce8477"
             },
@@ -3751,7 +3751,7 @@
             "codigo_suvinil": "D248",
             "hexadecimal": "#a67d74",
             "pantone": {
-                "pantone": "16-1414",
+                "codigo": "16-1414",
                 "name": "chanterelle",
                 "hex": "#a28776"
             },
@@ -3768,7 +3768,7 @@
             "codigo_suvinil": "P237",
             "hexadecimal": "#9d6c75",
             "pantone": {
-                "pantone": "17-1511",
+                "codigo": "17-1511",
                 "name": "wistful-mauve",
                 "hex": "#946c74"
             },
@@ -3785,7 +3785,7 @@
             "codigo_suvinil": "E253",
             "hexadecimal": "#bb7561",
             "pantone": {
-                "pantone": "18-1537",
+                "codigo": "18-1537",
                 "name": "copper-coin",
                 "hex": "#ba6b57"
             },
@@ -3802,7 +3802,7 @@
             "codigo_suvinil": "N629",
             "hexadecimal": "#896758",
             "pantone": {
-                "pantone": "18-1421",
+                "codigo": "18-1421",
                 "name": "cognac",
                 "hex": "#8b645a"
             },
@@ -3819,7 +3819,7 @@
             "codigo_suvinil": "N676",
             "hexadecimal": "#9d5e76",
             "pantone": {
-                "pantone": "17-1612",
+                "codigo": "17-1612",
                 "name": "mellow-mauve",
                 "hex": "#996378"
             },
@@ -3836,7 +3836,7 @@
             "codigo_suvinil": "N689",
             "hexadecimal": "#8a5f70",
             "pantone": {
-                "pantone": "18-1710",
+                "codigo": "18-1710",
                 "name": "grape-nectar",
                 "hex": "#8d5c74"
             },
@@ -3853,7 +3853,7 @@
             "codigo_suvinil": "P243",
             "hexadecimal": "#9f5d59",
             "pantone": {
-                "pantone": "17-1525",
+                "codigo": "17-1525",
                 "name": "cedar-wood",
                 "hex": "#a1655b"
             },
@@ -3870,7 +3870,7 @@
             "codigo_suvinil": "P107",
             "hexadecimal": "#915852",
             "pantone": {
-                "pantone": "18-1235",
+                "codigo": "18-1235",
                 "name": "russet",
                 "hex": "#8f5f50"
             },
@@ -3887,7 +3887,7 @@
             "codigo_suvinil": "N636",
             "hexadecimal": "#815443",
             "pantone": {
-                "pantone": "18-1238",
+                "codigo": "18-1238",
                 "name": "rustic-brown",
                 "hex": "#855141"
             },
@@ -3904,7 +3904,7 @@
             "codigo_suvinil": "R103",
             "hexadecimal": "#a04f58",
             "pantone": {
-                "pantone": "17-1723",
+                "codigo": "17-1723",
                 "name": "malaga",
                 "hex": "#9f5069"
             },
@@ -3921,7 +3921,7 @@
             "codigo_suvinil": "R237",
             "hexadecimal": "#844955",
             "pantone": {
-                "pantone": "18-1619",
+                "codigo": "18-1619",
                 "name": "maroon",
                 "hex": "#834655"
             },
@@ -3938,7 +3938,7 @@
             "codigo_suvinil": "R104",
             "hexadecimal": "#914356",
             "pantone": {
-                "pantone": "18-1725",
+                "codigo": "18-1725",
                 "name": "dry-rose",
                 "hex": "#8c4759"
             },
@@ -3955,7 +3955,7 @@
             "codigo_suvinil": "R109",
             "hexadecimal": "#91444c",
             "pantone": {
-                "pantone": "18-1631",
+                "codigo": "18-1631",
                 "name": "earth-red",
                 "hex": "#95424e"
             },
@@ -3972,7 +3972,7 @@
             "codigo_suvinil": "R116",
             "hexadecimal": "#8f4c41",
             "pantone": {
-                "pantone": "18-1238",
+                "codigo": "18-1238",
                 "name": "rustic-brown",
                 "hex": "#855141"
             },
@@ -3989,7 +3989,7 @@
             "codigo_suvinil": "R571",
             "hexadecimal": "#843038",
             "pantone": {
-                "pantone": "19-1532",
+                "codigo": "19-1532",
                 "name": "rosewood",
                 "hex": "#813639"
             },
@@ -4006,7 +4006,7 @@
             "codigo_suvinil": "R570",
             "hexadecimal": "#7d2732",
             "pantone": {
-                "pantone": "19-1940",
+                "codigo": "19-1940",
                 "name": "rumba-red",
                 "hex": "#7c2439"
             },
@@ -4023,7 +4023,7 @@
             "codigo_suvinil": "E170",
             "hexadecimal": "#927c72",
             "pantone": {
-                "pantone": "17-0808",
+                "codigo": "17-0808",
                 "name": "taupe-gray",
                 "hex": "#8e7c71"
             },
@@ -4040,7 +4040,7 @@
             "codigo_suvinil": "E406",
             "hexadecimal": "#7c7074",
             "pantone": {
-                "pantone": "18-4016",
+                "codigo": "18-4016",
                 "name": "december-sky",
                 "hex": "#767275"
             },
@@ -4057,7 +4057,7 @@
             "codigo_suvinil": "P231",
             "hexadecimal": "#896872",
             "pantone": {
-                "pantone": "18-2109",
+                "codigo": "18-2109",
                 "name": "grape-shake",
                 "hex": "#886971"
             },
@@ -4074,7 +4074,7 @@
             "codigo_suvinil": "P584",
             "hexadecimal": "#725e54",
             "pantone": {
-                "pantone": "18-1015",
+                "codigo": "18-1015",
                 "name": "shitake",
                 "hex": "#736253"
             },
@@ -4091,7 +4091,7 @@
             "codigo_suvinil": "P406",
             "hexadecimal": "#6a6063",
             "pantone": {
-                "pantone": "18-3905",
+                "codigo": "18-3905",
                 "name": "excalibur",
                 "hex": "#676168"
             },
@@ -4108,7 +4108,7 @@
             "codigo_suvinil": "N889",
             "hexadecimal": "#56443c",
             "pantone": {
-                "pantone": "19-1012",
+                "codigo": "19-1012",
                 "name": "french-roast",
                 "hex": "#58423f"
             },
@@ -4125,7 +4125,7 @@
             "codigo_suvinil": "P370",
             "hexadecimal": "#534c49",
             "pantone": {
-                "pantone": "19-3900",
+                "codigo": "19-3900",
                 "name": "pavement",
                 "hex": "#524d50"
             },
@@ -4142,7 +4142,7 @@
             "codigo_suvinil": "R175",
             "hexadecimal": "#614f48",
             "pantone": {
-                "pantone": "19-0823",
+                "codigo": "19-0823",
                 "name": "crocodile",
                 "hex": "#5d5348"
             },
@@ -4159,7 +4159,7 @@
             "codigo_suvinil": "R406",
             "hexadecimal": "#52494c",
             "pantone": {
-                "pantone": "19-3900",
+                "codigo": "19-3900",
                 "name": "pavement",
                 "hex": "#524d50"
             },
@@ -4176,7 +4176,7 @@
             "codigo_suvinil": "M167",
             "hexadecimal": "#4d4a49",
             "pantone": {
-                "pantone": "19-3901",
+                "codigo": "19-3901",
                 "name": "magnet",
                 "hex": "#4d4b4f"
             },
@@ -4193,7 +4193,7 @@
             "codigo_suvinil": "A226",
             "hexadecimal": "#f2d5e4",
             "pantone": {
-                "pantone": "13-2807",
+                "codigo": "13-2807",
                 "name": "ballerina",
                 "hex": "#f2cfdc"
             },
@@ -4210,7 +4210,7 @@
             "codigo_suvinil": "B354",
             "hexadecimal": "#decfe5",
             "pantone": {
-                "pantone": "13-3406",
+                "codigo": "13-3406",
                 "name": "orchid-ice",
                 "hex": "#e0d0db"
             },
@@ -4227,7 +4227,7 @@
             "codigo_suvinil": "B361",
             "hexadecimal": "#efcde4",
             "pantone": {
-                "pantone": "12-2905",
+                "codigo": "12-2905",
                 "name": "cradle-pink",
                 "hex": "#edd0dd"
             },
@@ -4244,7 +4244,7 @@
             "codigo_suvinil": "N530",
             "hexadecimal": "#f4f3f8",
             "pantone": {
-                "pantone": "11-0601",
+                "codigo": "11-0601",
                 "name": "bright-white",
                 "hex": "#f4f5f0"
             },
@@ -4261,7 +4261,7 @@
             "codigo_suvinil": "A354",
             "hexadecimal": "#e8e1ea",
             "pantone": {
-                "pantone": "11-4800",
+                "codigo": "11-4800",
                 "name": "blanc-de-blanc",
                 "hex": "#e7e9e7"
             },
@@ -4278,7 +4278,7 @@
             "codigo_suvinil": "A553",
             "hexadecimal": "#ede4eb",
             "pantone": {
-                "pantone": "11-1001",
+                "codigo": "11-1001",
                 "name": "white-alyssum",
                 "hex": "#efebe7"
             },
@@ -4295,7 +4295,7 @@
             "codigo_suvinil": "A360",
             "hexadecimal": "#ebdaea",
             "pantone": {
-                "pantone": "11-2511",
+                "codigo": "11-2511",
                 "name": "shrinking-violet",
                 "hex": "#f4e1e6"
             },
@@ -4312,7 +4312,7 @@
             "codigo_suvinil": "A348",
             "hexadecimal": "#dbd9eb",
             "pantone": {
-                "pantone": "11-4604",
+                "codigo": "11-4604",
                 "name": "billowing-sail",
                 "hex": "#d8e7e7"
             },
@@ -4329,7 +4329,7 @@
             "codigo_suvinil": "D549",
             "hexadecimal": "#cccedb",
             "pantone": {
-                "pantone": "13-4105",
+                "codigo": "13-4105",
                 "name": "lilac-hint",
                 "hex": "#d0d0da"
             },
@@ -4346,7 +4346,7 @@
             "codigo_suvinil": "D152",
             "hexadecimal": "#caccd1",
             "pantone": {
-                "pantone": "13-4303",
+                "codigo": "13-4303",
                 "name": "dawn-blue",
                 "hex": "#cacccb"
             },
@@ -4363,7 +4363,7 @@
             "codigo_suvinil": "B347",
             "hexadecimal": "#cac8cd",
             "pantone": {
-                "pantone": "13-4303",
+                "codigo": "13-4303",
                 "name": "dawn-blue",
                 "hex": "#cacccb"
             },
@@ -4380,7 +4380,7 @@
             "codigo_suvinil": "N660",
             "hexadecimal": "#c5c5cd",
             "pantone": {
-                "pantone": "14-4102",
+                "codigo": "14-4102",
                 "name": "glacier-gray",
                 "hex": "#c5c6c7"
             },
@@ -4397,7 +4397,7 @@
             "codigo_suvinil": "N738",
             "hexadecimal": "#bcc0d0",
             "pantone": {
-                "pantone": "14-4106",
+                "codigo": "14-4106",
                 "name": "gray-dawn",
                 "hex": "#bbc1cc"
             },
@@ -4414,7 +4414,7 @@
             "codigo_suvinil": "C227",
             "hexadecimal": "#efbcd5",
             "pantone": {
-                "pantone": "13-2806",
+                "codigo": "13-2806",
                 "name": "pink-lady",
                 "hex": "#efc1d6"
             },
@@ -4431,7 +4431,7 @@
             "codigo_suvinil": "N646",
             "hexadecimal": "#e8aed4",
             "pantone": {
-                "pantone": "14-2710",
+                "codigo": "14-2710",
                 "name": "lilac-sachet",
                 "hex": "#e9adca"
             },
@@ -4448,7 +4448,7 @@
             "codigo_suvinil": "N661",
             "hexadecimal": "#c197b0",
             "pantone": {
-                "pantone": "15-2205",
+                "codigo": "15-2205",
                 "name": "dawn-pink",
                 "hex": "#bfa3af"
             },
@@ -4465,7 +4465,7 @@
             "codigo_suvinil": "D354",
             "hexadecimal": "#c6a3d5",
             "pantone": {
-                "pantone": "15-3207",
+                "codigo": "15-3207",
                 "name": "mauve-mist",
                 "hex": "#c49bd4"
             },
@@ -4482,7 +4482,7 @@
             "codigo_suvinil": "C355",
             "hexadecimal": "#e0c4df",
             "pantone": {
-                "pantone": "13-3405",
+                "codigo": "13-3405",
                 "name": "lilac-snow",
                 "hex": "#e0c7d7"
             },
@@ -4499,7 +4499,7 @@
             "codigo_suvinil": "B357",
             "hexadecimal": "#c2b7c2",
             "pantone": {
-                "pantone": "14-3903",
+                "codigo": "14-3903",
                 "name": "lilac-marble",
                 "hex": "#c3babf"
             },
@@ -4516,7 +4516,7 @@
             "codigo_suvinil": "B351",
             "hexadecimal": "#b9b5c2",
             "pantone": {
-                "pantone": "14-3907",
+                "codigo": "14-3907",
                 "name": "thistle",
                 "hex": "#b9b3c5"
             },
@@ -4533,7 +4533,7 @@
             "codigo_suvinil": "C354",
             "hexadecimal": "#d7bde1",
             "pantone": {
-                "pantone": "13-3820",
+                "codigo": "13-3820",
                 "name": "lavender-fog",
                 "hex": "#d2c4d6"
             },
@@ -4550,7 +4550,7 @@
             "codigo_suvinil": "S145",
             "hexadecimal": "#ceb2bf",
             "pantone": {
-                "pantone": "14-3204",
+                "codigo": "14-3204",
                 "name": "fragrant-lilac",
                 "hex": "#ceadbe"
             },
@@ -4567,7 +4567,7 @@
             "codigo_suvinil": "D356",
             "hexadecimal": "#c4b1c2",
             "pantone": {
-                "pantone": "14-3903",
+                "codigo": "14-3903",
                 "name": "lilac-marble",
                 "hex": "#c3babf"
             },
@@ -4584,7 +4584,7 @@
             "codigo_suvinil": "C348",
             "hexadecimal": "#bcb9d5",
             "pantone": {
-                "pantone": "14-3911",
+                "codigo": "14-3911",
                 "name": "purple-heather",
                 "hex": "#bab8d3"
             },
@@ -4601,7 +4601,7 @@
             "codigo_suvinil": "C093",
             "hexadecimal": "#bcabb6",
             "pantone": {
-                "pantone": "15-3507",
+                "codigo": "15-3507",
                 "name": "lavender-frost",
                 "hex": "#bdabbe"
             },
@@ -4618,7 +4618,7 @@
             "codigo_suvinil": "H023",
             "hexadecimal": "#bcbedf",
             "pantone": {
-                "pantone": "13-3920",
+                "codigo": "13-3920",
                 "name": "halogen-blue",
                 "hex": "#bdc6dc"
             },
@@ -4635,7 +4635,7 @@
             "codigo_suvinil": "B683",
             "hexadecimal": "#afabc8",
             "pantone": {
-                "pantone": "15-3909",
+                "codigo": "15-3909",
                 "name": "cosmic-sky",
                 "hex": "#aaaac4"
             },
@@ -4652,7 +4652,7 @@
             "codigo_suvinil": "C343",
             "hexadecimal": "#a7aec7",
             "pantone": {
-                "pantone": "15-3908",
+                "codigo": "15-3908",
                 "name": "icelandic-blue",
                 "hex": "#a9adc2"
             },
@@ -4669,7 +4669,7 @@
             "codigo_suvinil": "B666",
             "hexadecimal": "#a7b3d5",
             "pantone": {
-                "pantone": "15-3915",
+                "codigo": "15-3915",
                 "name": "kentucky-blue",
                 "hex": "#a5b3cc"
             },
@@ -4686,7 +4686,7 @@
             "codigo_suvinil": "C403",
             "hexadecimal": "#aca1ab",
             "pantone": {
-                "pantone": "15-4704",
+                "codigo": "15-4704",
                 "name": "pigeon",
                 "hex": "#a9afaa"
             },
@@ -4703,7 +4703,7 @@
             "codigo_suvinil": "K149",
             "hexadecimal": "#a293a6",
             "pantone": {
-                "pantone": "16-3911",
+                "codigo": "16-3911",
                 "name": "lavender-aura",
                 "hex": "#9f99aa"
             },
@@ -4720,7 +4720,7 @@
             "codigo_suvinil": "E094",
             "hexadecimal": "#ab95a6",
             "pantone": {
-                "pantone": "16-3307",
+                "codigo": "16-3307",
                 "name": "lavender-mist",
                 "hex": "#ae90a7"
             },
@@ -4737,7 +4737,7 @@
             "codigo_suvinil": "D092",
             "hexadecimal": "#a396a7",
             "pantone": {
-                "pantone": "16-3911",
+                "codigo": "16-3911",
                 "name": "lavender-aura",
                 "hex": "#9f99aa"
             },
@@ -4754,7 +4754,7 @@
             "codigo_suvinil": "D090",
             "hexadecimal": "#a096b1",
             "pantone": {
-                "pantone": "16-3812",
+                "codigo": "16-3812",
                 "name": "heirloom-lilac",
                 "hex": "#9d96b2"
             },
@@ -4771,7 +4771,7 @@
             "codigo_suvinil": "P227",
             "hexadecimal": "#cd659f",
             "pantone": {
-                "pantone": "17-2625",
+                "codigo": "17-2625",
                 "name": "super-pink",
                 "hex": "#ce6ba4"
             },
@@ -4788,7 +4788,7 @@
             "codigo_suvinil": "E355",
             "hexadecimal": "#c28dc0",
             "pantone": {
-                "pantone": "16-3416",
+                "codigo": "16-3416",
                 "name": "violet-tulle",
                 "hex": "#c193c0"
             },
@@ -4805,7 +4805,7 @@
             "codigo_suvinil": "D349",
             "hexadecimal": "#919dd1",
             "pantone": {
-                "pantone": "16-3925",
+                "codigo": "16-3925",
                 "name": "easter-egg",
                 "hex": "#919bc9"
             },
@@ -4822,7 +4822,7 @@
             "codigo_suvinil": "N665",
             "hexadecimal": "#b57da0",
             "pantone": {
-                "pantone": "16-2111",
+                "codigo": "16-2111",
                 "name": "mauve-orchid",
                 "hex": "#b58299"
             },
@@ -4839,7 +4839,7 @@
             "codigo_suvinil": "N779",
             "hexadecimal": "#767a88",
             "pantone": {
-                "pantone": "17-3907",
+                "codigo": "17-3907",
                 "name": "quicksilver",
                 "hex": "#7e7d88"
             },
@@ -4856,7 +4856,7 @@
             "codigo_suvinil": "E359",
             "hexadecimal": "#a681a0",
             "pantone": {
-                "pantone": "16-3304",
+                "codigo": "16-3304",
                 "name": "sea-fog",
                 "hex": "#a5929d"
             },
@@ -4873,7 +4873,7 @@
             "codigo_suvinil": "P094",
             "hexadecimal": "#987c92",
             "pantone": {
-                "pantone": "17-3410",
+                "codigo": "17-3410",
                 "name": "valerian",
                 "hex": "#9f7a93"
             },
@@ -4890,7 +4890,7 @@
             "codigo_suvinil": "E354",
             "hexadecimal": "#a782b7",
             "pantone": {
-                "pantone": "16-3520",
+                "codigo": "16-3520",
                 "name": "african-violet",
                 "hex": "#b085b7"
             },
@@ -4907,7 +4907,7 @@
             "codigo_suvinil": "E226",
             "hexadecimal": "#c0719e",
             "pantone": {
-                "pantone": "17-3020",
+                "codigo": "17-3020",
                 "name": "spring-crocus",
                 "hex": "#ba69a1"
             },
@@ -4924,7 +4924,7 @@
             "codigo_suvinil": "D681",
             "hexadecimal": "#9183c5",
             "pantone": {
-                "pantone": "17-3725",
+                "codigo": "17-3725",
                 "name": "bougainvillea",
                 "hex": "#9884b9"
             },
@@ -4941,7 +4941,7 @@
             "codigo_suvinil": "E351",
             "hexadecimal": "#797196",
             "pantone": {
-                "pantone": "18-3718",
+                "codigo": "18-3718",
                 "name": "purple-haze",
                 "hex": "#807396"
             },
@@ -4958,7 +4958,7 @@
             "codigo_suvinil": "E096",
             "hexadecimal": "#976a8d",
             "pantone": {
-                "pantone": "18-3530",
+                "codigo": "18-3530",
                 "name": "lavender-crystal",
                 "hex": "#936a98"
             },
@@ -4975,7 +4975,7 @@
             "codigo_suvinil": "P353",
             "hexadecimal": "#816c99",
             "pantone": {
-                "pantone": "18-3718",
+                "codigo": "18-3718",
                 "name": "purple-haze",
                 "hex": "#807396"
             },
@@ -4992,7 +4992,7 @@
             "codigo_suvinil": "P687",
             "hexadecimal": "#8b538f",
             "pantone": {
-                "pantone": "18-3533",
+                "codigo": "18-3533",
                 "name": "dewberry",
                 "hex": "#8b5987"
             },
@@ -5009,7 +5009,7 @@
             "codigo_suvinil": "R096",
             "hexadecimal": "#7c436a",
             "pantone": {
-                "pantone": "18-3014",
+                "codigo": "18-3014",
                 "name": "grape-kiss",
                 "hex": "#7b4368"
             },
@@ -5026,7 +5026,7 @@
             "codigo_suvinil": "R681",
             "hexadecimal": "#47346a",
             "pantone": {
-                "pantone": "19-3632",
+                "codigo": "19-3632",
                 "name": "petunia",
                 "hex": "#4f3466"
             },
@@ -5043,7 +5043,7 @@
             "codigo_suvinil": "P152",
             "hexadecimal": "#6d7181",
             "pantone": {
-                "pantone": "18-3916",
+                "codigo": "18-3916",
                 "name": "flint-stone",
                 "hex": "#677283"
             },
@@ -5060,7 +5060,7 @@
             "codigo_suvinil": "N883",
             "hexadecimal": "#474c6b",
             "pantone": {
-                "pantone": "19-3926",
+                "codigo": "19-3926",
                 "name": "crown-blue",
                 "hex": "#464b65"
             },
@@ -5077,7 +5077,7 @@
             "codigo_suvinil": "R085",
             "hexadecimal": "#3d415f",
             "pantone": {
-                "pantone": "19-3839",
+                "codigo": "19-3839",
                 "name": "blue-ribbon",
                 "hex": "#3a395f"
             },
@@ -5094,7 +5094,7 @@
             "codigo_suvinil": "A659",
             "hexadecimal": "#c7e2ed",
             "pantone": {
-                "pantone": "12-5206",
+                "codigo": "12-5206",
                 "name": "blue-glass",
                 "hex": "#c6e3e1"
             },
@@ -5111,7 +5111,7 @@
             "codigo_suvinil": "E520",
             "hexadecimal": "#cadfec",
             "pantone": {
-                "pantone": "12-4604",
+                "codigo": "12-4604",
                 "name": "skylight",
                 "hex": "#c8e0e0"
             },
@@ -5128,7 +5128,7 @@
             "codigo_suvinil": "N716",
             "hexadecimal": "#cde7f6",
             "pantone": {
-                "pantone": "11-4604",
+                "codigo": "11-4604",
                 "name": "billowing-sail",
                 "hex": "#d8e7e7"
             },
@@ -5145,7 +5145,7 @@
             "codigo_suvinil": "B070",
             "hexadecimal": "#bbd8dd",
             "pantone": {
-                "pantone": "13-4409",
+                "codigo": "13-4409",
                 "name": "blue-glow",
                 "hex": "#b2d4dd"
             },
@@ -5162,7 +5162,7 @@
             "codigo_suvinil": "B664",
             "hexadecimal": "#bfd5e8",
             "pantone": {
-                "pantone": "13-4304",
+                "codigo": "13-4304",
                 "name": "ballad-blue",
                 "hex": "#c0ceda"
             },
@@ -5179,7 +5179,7 @@
             "codigo_suvinil": "B334",
             "hexadecimal": "#b7d5e5",
             "pantone": {
-                "pantone": "13-4409",
+                "codigo": "13-4409",
                 "name": "blue-glow",
                 "hex": "#b2d4dd"
             },
@@ -5196,7 +5196,7 @@
             "codigo_suvinil": "B521",
             "hexadecimal": "#e4e8eb",
             "pantone": {
-                "pantone": "11-4601",
+                "codigo": "11-4601",
                 "name": "bit-of-blue",
                 "hex": "#e2eaeb"
             },
@@ -5213,7 +5213,7 @@
             "codigo_suvinil": "N538",
             "hexadecimal": "#ecf6f9",
             "pantone": {
-                "pantone": "11-4001",
+                "codigo": "11-4001",
                 "name": "brilliant-white",
                 "hex": "#edf1fe"
             },
@@ -5230,7 +5230,7 @@
             "codigo_suvinil": "R207",
             "hexadecimal": "#e2e6ec",
             "pantone": {
-                "pantone": "11-4601",
+                "codigo": "11-4601",
                 "name": "bit-of-blue",
                 "hex": "#e2eaeb"
             },
@@ -5247,7 +5247,7 @@
             "codigo_suvinil": "N709",
             "hexadecimal": "#e9f5f8",
             "pantone": {
-                "pantone": "11-4001",
+                "codigo": "11-4001",
                 "name": "brilliant-white",
                 "hex": "#edf1fe"
             },
@@ -5264,7 +5264,7 @@
             "codigo_suvinil": "A657",
             "hexadecimal": "#d5e9ec",
             "pantone": {
-                "pantone": "11-4604",
+                "codigo": "11-4604",
                 "name": "billowing-sail",
                 "hex": "#d8e7e7"
             },
@@ -5281,7 +5281,7 @@
             "codigo_suvinil": "N539",
             "hexadecimal": "#dbe8eb",
             "pantone": {
-                "pantone": "11-4604",
+                "codigo": "11-4604",
                 "name": "billowing-sail",
                 "hex": "#d8e7e7"
             },
@@ -5298,7 +5298,7 @@
             "codigo_suvinil": "A756",
             "hexadecimal": "#d0d4d6",
             "pantone": {
-                "pantone": "12-5403",
+                "codigo": "12-5403",
                 "name": "blue-flower",
                 "hex": "#d0d9d4"
             },
@@ -5315,7 +5315,7 @@
             "codigo_suvinil": "N713",
             "hexadecimal": "#d3ebf1",
             "pantone": {
-                "pantone": "11-4604",
+                "codigo": "11-4604",
                 "name": "billowing-sail",
                 "hex": "#d8e7e7"
             },
@@ -5332,7 +5332,7 @@
             "codigo_suvinil": "R251",
             "hexadecimal": "#cbd6e0",
             "pantone": {
-                "pantone": "12-4805",
+                "codigo": "12-4805",
                 "name": "wan-blue",
                 "hex": "#cbdcdf"
             },
@@ -5349,7 +5349,7 @@
             "codigo_suvinil": "B082",
             "hexadecimal": "#c5d1dc",
             "pantone": {
-                "pantone": "13-4103",
+                "codigo": "13-4103",
                 "name": "illusion-blue",
                 "hex": "#c9d3dc"
             },
@@ -5366,7 +5366,7 @@
             "codigo_suvinil": "A338",
             "hexadecimal": "#c6d7e5",
             "pantone": {
-                "pantone": "12-4805",
+                "codigo": "12-4805",
                 "name": "wan-blue",
                 "hex": "#cbdcdf"
             },
@@ -5383,7 +5383,7 @@
             "codigo_suvinil": "B330",
             "hexadecimal": "#bdd1d6",
             "pantone": {
-                "pantone": "12-4607",
+                "codigo": "12-4607",
                 "name": "pastel-blue",
                 "hex": "#bcd3d5"
             },
@@ -5400,7 +5400,7 @@
             "codigo_suvinil": "N731",
             "hexadecimal": "#bdc9dc",
             "pantone": {
-                "pantone": "13-3920",
+                "codigo": "13-3920",
                 "name": "halogen-blue",
                 "hex": "#bdc6dc"
             },
@@ -5417,7 +5417,7 @@
             "codigo_suvinil": "B086",
             "hexadecimal": "#c5cad1",
             "pantone": {
-                "pantone": "13-4404",
+                "codigo": "13-4404",
                 "name": "ice-flow",
                 "hex": "#c6d2d2"
             },
@@ -5434,7 +5434,7 @@
             "codigo_suvinil": "B756",
             "hexadecimal": "#bdc3c7",
             "pantone": {
-                "pantone": "14-4504",
+                "codigo": "14-4504",
                 "name": "sky-gray",
                 "hex": "#bcc8c6"
             },
@@ -5451,7 +5451,7 @@
             "codigo_suvinil": "B397",
             "hexadecimal": "#bfc4c8",
             "pantone": {
-                "pantone": "13-4201",
+                "codigo": "13-4201",
                 "name": "oyster-mushroom",
                 "hex": "#c3c6c8"
             },
@@ -5468,7 +5468,7 @@
             "codigo_suvinil": "V027",
             "hexadecimal": "#bac0c4",
             "pantone": {
-                "pantone": "14-4105",
+                "codigo": "14-4105",
                 "name": "micro-chip",
                 "hex": "#babcc0"
             },
@@ -5485,7 +5485,7 @@
             "codigo_suvinil": "B336",
             "hexadecimal": "#b8c3cc",
             "pantone": {
-                "pantone": "14-4106",
+                "codigo": "14-4106",
                 "name": "gray-dawn",
                 "hex": "#bbc1cc"
             },
@@ -5502,7 +5502,7 @@
             "codigo_suvinil": "N739",
             "hexadecimal": "#b7bfcd",
             "pantone": {
-                "pantone": "14-4106",
+                "codigo": "14-4106",
                 "name": "gray-dawn",
                 "hex": "#bbc1cc"
             },
@@ -5519,7 +5519,7 @@
             "codigo_suvinil": "B661",
             "hexadecimal": "#9fcfe9",
             "pantone": {
-                "pantone": "13-4411",
+                "codigo": "13-4411",
                 "name": "crystal-blue",
                 "hex": "#a1c8db"
             },
@@ -5536,7 +5536,7 @@
             "codigo_suvinil": "C664",
             "hexadecimal": "#91bbdf",
             "pantone": {
-                "pantone": "14-4122",
+                "codigo": "14-4122",
                 "name": "airy-blue",
                 "hex": "#92b6d5"
             },
@@ -5553,7 +5553,7 @@
             "codigo_suvinil": "B665",
             "hexadecimal": "#93b4d7",
             "pantone": {
-                "pantone": "14-4121",
+                "codigo": "14-4121",
                 "name": "blue-bell",
                 "hex": "#93b4d7"
             },
@@ -5570,7 +5570,7 @@
             "codigo_suvinil": "C344",
             "hexadecimal": "#94b1da",
             "pantone": {
-                "pantone": "14-4121",
+                "codigo": "14-4121",
                 "name": "blue-bell",
                 "hex": "#93b4d7"
             },
@@ -5587,7 +5587,7 @@
             "codigo_suvinil": "A701",
             "hexadecimal": "#82d0f0",
             "pantone": {
-                "pantone": "13-4720",
+                "codigo": "13-4720",
                 "name": "tanager-turquoise",
                 "hex": "#91dce8"
             },
@@ -5604,7 +5604,7 @@
             "codigo_suvinil": "C659",
             "hexadecimal": "#75bce1",
             "pantone": {
-                "pantone": "14-4320",
+                "codigo": "14-4320",
                 "name": "baltic-sea",
                 "hex": "#79b5db"
             },
@@ -5621,7 +5621,7 @@
             "codigo_suvinil": "D334",
             "hexadecimal": "#7eafc9",
             "pantone": {
-                "pantone": "15-4319",
+                "codigo": "15-4319",
                 "name": "air-blue",
                 "hex": "#77acc7"
             },
@@ -5638,7 +5638,7 @@
             "codigo_suvinil": "C333",
             "hexadecimal": "#aedbeb",
             "pantone": {
-                "pantone": "13-4909",
+                "codigo": "13-4909",
                 "name": "blue-light",
                 "hex": "#acdfdd"
             },
@@ -5655,7 +5655,7 @@
             "codigo_suvinil": "C331",
             "hexadecimal": "#afc7d2",
             "pantone": {
-                "pantone": "13-4308",
+                "codigo": "13-4308",
                 "name": "baby-blue",
                 "hex": "#b5c7d3"
             },
@@ -5672,7 +5672,7 @@
             "codigo_suvinil": "B344",
             "hexadecimal": "#becae4",
             "pantone": {
-                "pantone": "13-3920",
+                "codigo": "13-3920",
                 "name": "halogen-blue",
                 "hex": "#bdc6dc"
             },
@@ -5689,7 +5689,7 @@
             "codigo_suvinil": "Z037",
             "hexadecimal": "#aad0e8",
             "pantone": {
-                "pantone": "13-5410",
+                "codigo": "13-5410",
                 "name": "iced-aqua",
                 "hex": "#abd3db"
             },
@@ -5706,7 +5706,7 @@
             "codigo_suvinil": "C151",
             "hexadecimal": "#a5b5c5",
             "pantone": {
-                "pantone": "14-4210",
+                "codigo": "14-4210",
                 "name": "celestial-blue",
                 "hex": "#a3b4c4"
             },
@@ -5723,7 +5723,7 @@
             "codigo_suvinil": "C073",
             "hexadecimal": "#a4c2d7",
             "pantone": {
-                "pantone": "14-4317",
+                "codigo": "14-4317",
                 "name": "cool-blue",
                 "hex": "#a5c5d9"
             },
@@ -5740,7 +5740,7 @@
             "codigo_suvinil": "D331",
             "hexadecimal": "#92b6c1",
             "pantone": {
-                "pantone": "15-4312",
+                "codigo": "15-4312",
                 "name": "forget-me-not",
                 "hex": "#8fadbd"
             },
@@ -5757,7 +5757,7 @@
             "codigo_suvinil": "C337",
             "hexadecimal": "#9bafbf",
             "pantone": {
-                "pantone": "15-4008",
+                "codigo": "15-4008",
                 "name": "blue-fog",
                 "hex": "#9babbb"
             },
@@ -5774,7 +5774,7 @@
             "codigo_suvinil": "RM014",
             "hexadecimal": "#7d88bb",
             "pantone": {
-                "pantone": "17-3932",
+                "codigo": "17-3932",
                 "name": "deep-periwinkle",
                 "hex": "#7c83bc"
             },
@@ -5791,7 +5791,7 @@
             "codigo_suvinil": "C398",
             "hexadecimal": "#adafb4",
             "pantone": {
-                "pantone": "14-4202",
+                "codigo": "14-4202",
                 "name": "harbor-mist",
                 "hex": "#afb1b4"
             },
@@ -5808,7 +5808,7 @@
             "codigo_suvinil": "C395",
             "hexadecimal": "#a3aeb0",
             "pantone": {
-                "pantone": "15-4702",
+                "codigo": "15-4702",
                 "name": "puritan-gray",
                 "hex": "#a8b0ae"
             },
@@ -5825,7 +5825,7 @@
             "codigo_suvinil": "C756",
             "hexadecimal": "#979da3",
             "pantone": {
-                "pantone": "15-4305",
+                "codigo": "15-4305",
                 "name": "quarry",
                 "hex": "#98a0a5"
             },
@@ -5842,7 +5842,7 @@
             "codigo_suvinil": "C336",
             "hexadecimal": "#909ea8",
             "pantone": {
-                "pantone": "16-4010",
+                "codigo": "16-4010",
                 "name": "dusty-blue",
                 "hex": "#8c9dad"
             },
@@ -5859,7 +5859,7 @@
             "codigo_suvinil": "D330",
             "hexadecimal": "#85a4ad",
             "pantone": {
-                "pantone": "16-4411",
+                "codigo": "16-4411",
                 "name": "tourmaline",
                 "hex": "#86a1a9"
             },
@@ -5876,7 +5876,7 @@
             "codigo_suvinil": "D395",
             "hexadecimal": "#80898b",
             "pantone": {
-                "pantone": "17-4405",
+                "codigo": "17-4405",
                 "name": "monument",
                 "hex": "#84898c"
             },
@@ -5893,7 +5893,7 @@
             "codigo_suvinil": "D339",
             "hexadecimal": "#62abdb",
             "pantone": {
-                "pantone": "15-4421",
+                "codigo": "15-4421",
                 "name": "blue-grotto",
                 "hex": "#5cacce"
             },
@@ -5910,7 +5910,7 @@
             "codigo_suvinil": "D659",
             "hexadecimal": "#329fce",
             "pantone": {
-                "pantone": "15-4720",
+                "codigo": "15-4720",
                 "name": "river-blue",
                 "hex": "#38afcd"
             },
@@ -5927,7 +5927,7 @@
             "codigo_suvinil": "P333",
             "hexadecimal": "#20a5d6",
             "pantone": {
-                "pantone": "16-4529",
+                "codigo": "16-4529",
                 "name": "cyan-blue",
                 "hex": "#14a3c7"
             },
@@ -5944,7 +5944,7 @@
             "codigo_suvinil": "D079",
             "hexadecimal": "#3d8bc4",
             "pantone": {
-                "pantone": "17-4139",
+                "codigo": "17-4139",
                 "name": "azure-blue",
                 "hex": "#4d91c6"
             },
@@ -5961,7 +5961,7 @@
             "codigo_suvinil": "R339",
             "hexadecimal": "#205d91",
             "pantone": {
-                "pantone": "18-4032",
+                "codigo": "18-4032",
                 "name": "deep-water",
                 "hex": "#266691"
             },
@@ -5978,7 +5978,7 @@
             "codigo_suvinil": "D657",
             "hexadecimal": "#4eb1cd",
             "pantone": {
-                "pantone": "15-4428",
+                "codigo": "15-4428",
                 "name": "crystal-seas",
                 "hex": "#5dafce"
             },
@@ -5995,7 +5995,7 @@
             "codigo_suvinil": "L002",
             "hexadecimal": "#7591a6",
             "pantone": {
-                "pantone": "17-4021",
+                "codigo": "17-4021",
                 "name": "faded-denim",
                 "hex": "#798ea4"
             },
@@ -6012,7 +6012,7 @@
             "codigo_suvinil": "E152",
             "hexadecimal": "#7f889c",
             "pantone": {
-                "pantone": "17-3933",
+                "codigo": "17-3933",
                 "name": "silver-bullet",
                 "hex": "#81839a"
             },
@@ -6029,7 +6029,7 @@
             "codigo_suvinil": "E330",
             "hexadecimal": "#63858e",
             "pantone": {
-                "pantone": "17-4911",
+                "codigo": "17-4911",
                 "name": "arctic",
                 "hex": "#648589"
             },
@@ -6046,7 +6046,7 @@
             "codigo_suvinil": "E343",
             "hexadecimal": "#6e7da1",
             "pantone": {
-                "pantone": "17-4015",
+                "codigo": "17-4015",
                 "name": "infinity",
                 "hex": "#6e7e99"
             },
@@ -6063,7 +6063,7 @@
             "codigo_suvinil": "D078",
             "hexadecimal": "#6590ca",
             "pantone": {
-                "pantone": "16-4032",
+                "codigo": "16-4032",
                 "name": "provence",
                 "hex": "#658dc6"
             },
@@ -6080,7 +6080,7 @@
             "codigo_suvinil": "D080",
             "hexadecimal": "#558ebb",
             "pantone": {
-                "pantone": "16-4127",
+                "codigo": "16-4127",
                 "name": "heritage-blue",
                 "hex": "#5d96bc"
             },
@@ -6097,7 +6097,7 @@
             "codigo_suvinil": "P074",
             "hexadecimal": "#5e7d99",
             "pantone": {
-                "pantone": "17-4023",
+                "codigo": "17-4023",
                 "name": "blue-heaven",
                 "hex": "#5b7e98"
             },
@@ -6114,7 +6114,7 @@
             "codigo_suvinil": "P070",
             "hexadecimal": "#3194ae",
             "pantone": {
-                "pantone": "17-4429",
+                "codigo": "17-4429",
                 "name": "navagio-bay",
                 "hex": "#3183a0"
             },
@@ -6131,7 +6131,7 @@
             "codigo_suvinil": "R656",
             "hexadecimal": "#006e8a",
             "pantone": {
-                "pantone": "18-4432",
+                "codigo": "18-4432",
                 "name": "turkish-tile",
                 "hex": "#00698b"
             },
@@ -6148,7 +6148,7 @@
             "codigo_suvinil": "R664",
             "hexadecimal": "#113c75",
             "pantone": {
-                "pantone": "19-3864",
+                "codigo": "19-3864",
                 "name": "mazarine-blue",
                 "hex": "#273c76"
             },
@@ -6165,7 +6165,7 @@
             "codigo_suvinil": "E756",
             "hexadecimal": "#6c737b",
             "pantone": {
-                "pantone": "18-4510",
+                "codigo": "18-4510",
                 "name": "trooper",
                 "hex": "#697a7e"
             },
@@ -6182,7 +6182,7 @@
             "codigo_suvinil": "E395",
             "hexadecimal": "#6e7678",
             "pantone": {
-                "pantone": "18-4510",
+                "codigo": "18-4510",
                 "name": "trooper",
                 "hex": "#697a7e"
             },
@@ -6199,7 +6199,7 @@
             "codigo_suvinil": "P075",
             "hexadecimal": "#5e6979",
             "pantone": {
-                "pantone": "18-3910",
+                "codigo": "18-3910",
                 "name": "folkstone-gray",
                 "hex": "#626879"
             },
@@ -6216,7 +6216,7 @@
             "codigo_suvinil": "PR074",
             "hexadecimal": "#4e6982",
             "pantone": {
-                "pantone": "18-3929",
+                "codigo": "18-3929",
                 "name": "blue-horizon",
                 "hex": "#4e6482"
             },
@@ -6233,7 +6233,7 @@
             "codigo_suvinil": "R399",
             "hexadecimal": "#414555",
             "pantone": {
-                "pantone": "19-3930",
+                "codigo": "19-3930",
                 "name": "odyssey-gray",
                 "hex": "#434452"
             },
@@ -6250,7 +6250,7 @@
             "codigo_suvinil": "R397",
             "hexadecimal": "#3d434e",
             "pantone": {
-                "pantone": "19-4019",
+                "codigo": "19-4019",
                 "name": "india-ink",
                 "hex": "#3c3f4a"
             },
@@ -6267,7 +6267,7 @@
             "codigo_suvinil": "R756",
             "hexadecimal": "#28282b",
             "pantone": {
-                "pantone": "19-4007",
+                "codigo": "19-4007",
                 "name": "anthracite",
                 "hex": "#28282d"
             },
@@ -6284,7 +6284,7 @@
             "codigo_suvinil": "R076",
             "hexadecimal": "#3c485c",
             "pantone": {
-                "pantone": "19-4229",
+                "codigo": "19-4229",
                 "name": "orion-blue",
                 "hex": "#3e4f5c"
             },
@@ -6301,7 +6301,7 @@
             "codigo_suvinil": "R079",
             "hexadecimal": "#2b4f70",
             "pantone": {
-                "pantone": "19-4055",
+                "codigo": "19-4055",
                 "name": "galaxy-blue",
                 "hex": "#2a4b7c"
             },
@@ -6318,7 +6318,7 @@
             "codigo_suvinil": "R543",
             "hexadecimal": "#c8e9e7",
             "pantone": {
-                "pantone": "12-5209",
+                "codigo": "12-5209",
                 "name": "soothing-sea",
                 "hex": "#c3e9e4"
             },
@@ -6335,7 +6335,7 @@
             "codigo_suvinil": "N717",
             "hexadecimal": "#cdeeec",
             "pantone": {
-                "pantone": "11-4604",
+                "codigo": "11-4604",
                 "name": "billowing-sail",
                 "hex": "#d8e7e7"
             },
@@ -6352,7 +6352,7 @@
             "codigo_suvinil": "B516",
             "hexadecimal": "#e5eaec",
             "pantone": {
-                "pantone": "11-4601",
+                "codigo": "11-4601",
                 "name": "bit-of-blue",
                 "hex": "#e2eaeb"
             },
@@ -6369,7 +6369,7 @@
             "codigo_suvinil": "F015",
             "hexadecimal": "#c6dcde",
             "pantone": {
-                "pantone": "12-4610",
+                "codigo": "12-4610",
                 "name": "whispering-blue",
                 "hex": "#c9dcdc"
             },
@@ -6386,7 +6386,7 @@
             "codigo_suvinil": "V028",
             "hexadecimal": "#bcc7c6",
             "pantone": {
-                "pantone": "14-4504",
+                "codigo": "14-4504",
                 "name": "sky-gray",
                 "hex": "#bcc8c6"
             },
@@ -6403,7 +6403,7 @@
             "codigo_suvinil": "C326",
             "hexadecimal": "#90cfcd",
             "pantone": {
-                "pantone": "14-4812",
+                "codigo": "14-4812",
                 "name": "aqua-splash",
                 "hex": "#85ced1"
             },
@@ -6420,7 +6420,7 @@
             "codigo_suvinil": "C323",
             "hexadecimal": "#79b8b3",
             "pantone": {
-                "pantone": "14-5713",
+                "codigo": "14-5713",
                 "name": "cascade",
                 "hex": "#76c1b2"
             },
@@ -6437,7 +6437,7 @@
             "codigo_suvinil": "B767",
             "hexadecimal": "#a3bab7",
             "pantone": {
-                "pantone": "14-4306",
+                "codigo": "14-4306",
                 "name": "cloud-blue",
                 "hex": "#a2b6b9"
             },
@@ -6454,7 +6454,7 @@
             "codigo_suvinil": "D060",
             "hexadecimal": "#a5cbc7",
             "pantone": {
-                "pantone": "14-4809",
+                "codigo": "14-4809",
                 "name": "eggshell-blue",
                 "hex": "#a3ccc9"
             },
@@ -6471,7 +6471,7 @@
             "codigo_suvinil": "C320",
             "hexadecimal": "#93bfb8",
             "pantone": {
-                "pantone": "14-5711",
+                "codigo": "14-5711",
                 "name": "ocean-wave",
                 "hex": "#8ec5b6"
             },
@@ -6488,7 +6488,7 @@
             "codigo_suvinil": "C767",
             "hexadecimal": "#96a8a7",
             "pantone": {
-                "pantone": "16-5106",
+                "codigo": "16-5106",
                 "name": "blue-surf",
                 "hex": "#90a8a4"
             },
@@ -6505,7 +6505,7 @@
             "codigo_suvinil": "E060",
             "hexadecimal": "#79a8a1",
             "pantone": {
-                "pantone": "16-5109",
+                "codigo": "16-5109",
                 "name": "wasabi",
                 "hex": "#73a89e"
             },
@@ -6522,7 +6522,7 @@
             "codigo_suvinil": "P327",
             "hexadecimal": "#0096a3",
             "pantone": {
-                "pantone": "17-5122",
+                "codigo": "17-5122",
                 "name": "latigo-bay",
                 "hex": "#379190"
             },
@@ -6539,7 +6539,7 @@
             "codigo_suvinil": "R327",
             "hexadecimal": "#00818f",
             "pantone": {
-                "pantone": "17-4724",
+                "codigo": "17-4724",
                 "name": "pagoda-blue",
                 "hex": "#1a7f8e"
             },
@@ -6556,7 +6556,7 @@
             "codigo_suvinil": "R632",
             "hexadecimal": "#00796f",
             "pantone": {
-                "pantone": "18-5020",
+                "codigo": "18-5020",
                 "name": "parasailing",
                 "hex": "#00736c"
             },
@@ -6573,7 +6573,7 @@
             "codigo_suvinil": "N746",
             "hexadecimal": "#75b1b0",
             "pantone": {
-                "pantone": "15-4712",
+                "codigo": "15-4712",
                 "name": "marine-blue",
                 "hex": "#76afb6"
             },
@@ -6590,7 +6590,7 @@
             "codigo_suvinil": "D323",
             "hexadecimal": "#64a09c",
             "pantone": {
-                "pantone": "16-5114",
+                "codigo": "16-5114",
                 "name": "dusty-turquoise",
                 "hex": "#649b9e"
             },
@@ -6607,7 +6607,7 @@
             "codigo_suvinil": "N767",
             "hexadecimal": "#5c9a95",
             "pantone": {
-                "pantone": "16-5412",
+                "codigo": "16-5412",
                 "name": "agate-green",
                 "hex": "#599f99"
             },
@@ -6624,7 +6624,7 @@
             "codigo_suvinil": "P067",
             "hexadecimal": "#0a747c",
             "pantone": {
-                "pantone": "18-4733",
+                "codigo": "18-4733",
                 "name": "enamel-blue",
                 "hex": "#007a8e"
             },
@@ -6641,7 +6641,7 @@
             "codigo_suvinil": "C542",
             "hexadecimal": "#caeedd",
             "pantone": {
-                "pantone": "12-5408",
+                "codigo": "12-5408",
                 "name": "moonlight-jade",
                 "hex": "#c7e5df"
             },
@@ -6658,7 +6658,7 @@
             "codigo_suvinil": "C058",
             "hexadecimal": "#cadec4",
             "pantone": {
-                "pantone": "12-0106",
+                "codigo": "12-0106",
                 "name": "meadow-mist",
                 "hex": "#d3dec4"
             },
@@ -6675,7 +6675,7 @@
             "codigo_suvinil": "P543",
             "hexadecimal": "#bdeae0",
             "pantone": {
-                "pantone": "12-5410",
+                "codigo": "12-5410",
                 "name": "bleached-aqua",
                 "hex": "#bce3df"
             },
@@ -6692,7 +6692,7 @@
             "codigo_suvinil": "C047",
             "hexadecimal": "#d4e2bf",
             "pantone": {
-                "pantone": "12-0106",
+                "codigo": "12-0106",
                 "name": "meadow-mist",
                 "hex": "#d3dec4"
             },
@@ -6709,7 +6709,7 @@
             "codigo_suvinil": "B313",
             "hexadecimal": "#caebcd",
             "pantone": {
-                "pantone": "12-0109",
+                "codigo": "12-0109",
                 "name": "ambrosia",
                 "hex": "#d2e7ca"
             },
@@ -6726,7 +6726,7 @@
             "codigo_suvinil": "B314",
             "hexadecimal": "#c1e9d7",
             "pantone": {
-                "pantone": "12-5507",
+                "codigo": "12-5507",
                 "name": "bay",
                 "hex": "#bae5d6"
             },
@@ -6743,7 +6743,7 @@
             "codigo_suvinil": "Z052",
             "hexadecimal": "#b9e7dc",
             "pantone": {
-                "pantone": "12-5409",
+                "codigo": "12-5409",
                 "name": "fair-aqua",
                 "hex": "#b8e2dc"
             },
@@ -6760,7 +6760,7 @@
             "codigo_suvinil": "B630",
             "hexadecimal": "#bbe7cf",
             "pantone": {
-                "pantone": "12-5507",
+                "codigo": "12-5507",
                 "name": "bay",
                 "hex": "#bae5d6"
             },
@@ -6777,7 +6777,7 @@
             "codigo_suvinil": "N554",
             "hexadecimal": "#f5f6f6",
             "pantone": {
-                "pantone": "11-0601",
+                "codigo": "11-0601",
                 "name": "bright-white",
                 "hex": "#f4f5f0"
             },
@@ -6794,7 +6794,7 @@
             "codigo_suvinil": "A521",
             "hexadecimal": "#e9ebe8",
             "pantone": {
-                "pantone": "11-4800",
+                "codigo": "11-4800",
                 "name": "blanc-de-blanc",
                 "hex": "#e7e9e7"
             },
@@ -6811,7 +6811,7 @@
             "codigo_suvinil": "D517",
             "hexadecimal": "#e3eae7",
             "pantone": {
-                "pantone": "11-4601",
+                "codigo": "11-4601",
                 "name": "bit-of-blue",
                 "hex": "#e2eaeb"
             },
@@ -6828,7 +6828,7 @@
             "codigo_suvinil": "N562",
             "hexadecimal": "#f1f6ed",
             "pantone": {
-                "pantone": "11-0601",
+                "codigo": "11-0601",
                 "name": "bright-white",
                 "hex": "#f4f5f0"
             },
@@ -6845,7 +6845,7 @@
             "codigo_suvinil": "R204",
             "hexadecimal": "#e5e9e5",
             "pantone": {
-                "pantone": "11-4802",
+                "codigo": "11-4802",
                 "name": "summer-shower",
                 "hex": "#e5ebe3"
             },
@@ -6862,7 +6862,7 @@
             "codigo_suvinil": "N796",
             "hexadecimal": "#dfe6e1",
             "pantone": {
-                "pantone": "12-4304",
+                "codigo": "12-4304",
                 "name": "bluewash",
                 "hex": "#e2e6e0"
             },
@@ -6879,7 +6879,7 @@
             "codigo_suvinil": "RM029",
             "hexadecimal": "#d7e7d7",
             "pantone": {
-                "pantone": "12-6206",
+                "codigo": "12-6206",
                 "name": "fairest-jade",
                 "hex": "#d8e3d7"
             },
@@ -6896,7 +6896,7 @@
             "codigo_suvinil": "A058",
             "hexadecimal": "#dfe7d2",
             "pantone": {
-                "pantone": "12-5404",
+                "codigo": "12-5404",
                 "name": "whisper-green",
                 "hex": "#e0e6d7"
             },
@@ -6913,7 +6913,7 @@
             "codigo_suvinil": "A066",
             "hexadecimal": "#d4e4da",
             "pantone": {
-                "pantone": "12-6206",
+                "codigo": "12-6206",
                 "name": "fairest-jade",
                 "hex": "#d8e3d7"
             },
@@ -6930,7 +6930,7 @@
             "codigo_suvinil": "F050",
             "hexadecimal": "#d8e1d6",
             "pantone": {
-                "pantone": "12-6206",
+                "codigo": "12-6206",
                 "name": "fairest-jade",
                 "hex": "#d8e3d7"
             },
@@ -6947,7 +6947,7 @@
             "codigo_suvinil": "FB055",
             "hexadecimal": "#d9e1ce",
             "pantone": {
-                "pantone": "12-5201",
+                "codigo": "12-5201",
                 "name": "icicle",
                 "hex": "#dadcd0"
             },
@@ -6964,7 +6964,7 @@
             "codigo_suvinil": "A048",
             "hexadecimal": "#d7e8d4",
             "pantone": {
-                "pantone": "12-6206",
+                "codigo": "12-6206",
                 "name": "fairest-jade",
                 "hex": "#d8e3d7"
             },
@@ -6981,7 +6981,7 @@
             "codigo_suvinil": "B061",
             "hexadecimal": "#d1e1d4",
             "pantone": {
-                "pantone": "12-5504",
+                "codigo": "12-5504",
                 "name": "clearly-aqua",
                 "hex": "#cee1d4"
             },
@@ -6998,7 +6998,7 @@
             "codigo_suvinil": "N799",
             "hexadecimal": "#d9e4d2",
             "pantone": {
-                "pantone": "12-6206",
+                "codigo": "12-6206",
                 "name": "fairest-jade",
                 "hex": "#d8e3d7"
             },
@@ -7015,7 +7015,7 @@
             "codigo_suvinil": "A767",
             "hexadecimal": "#c0d0cf",
             "pantone": {
-                "pantone": "13-4405",
+                "codigo": "13-4405",
                 "name": "misty-blue",
                 "hex": "#bfcdcc"
             },
@@ -7032,7 +7032,7 @@
             "codigo_suvinil": "P024",
             "hexadecimal": "#cfdbc3",
             "pantone": {
-                "pantone": "12-0106",
+                "codigo": "12-0106",
                 "name": "meadow-mist",
                 "hex": "#d3dec4"
             },
@@ -7049,7 +7049,7 @@
             "codigo_suvinil": "C061",
             "hexadecimal": "#b8d1c3",
             "pantone": {
-                "pantone": "13-0107",
+                "codigo": "13-0107",
                 "name": "dewkist",
                 "hex": "#c4d1c2"
             },
@@ -7066,7 +7066,7 @@
             "codigo_suvinil": "B159",
             "hexadecimal": "#c3c8c6",
             "pantone": {
-                "pantone": "13-4201",
+                "codigo": "13-4201",
                 "name": "oyster-mushroom",
                 "hex": "#c3c6c8"
             },
@@ -7083,7 +7083,7 @@
             "codigo_suvinil": "N814",
             "hexadecimal": "#c1c8c3",
             "pantone": {
-                "pantone": "14-4505",
+                "codigo": "14-4505",
                 "name": "smoke",
                 "hex": "#bfc8c3"
             },
@@ -7100,7 +7100,7 @@
             "codigo_suvinil": "N822",
             "hexadecimal": "#b9c7bb",
             "pantone": {
-                "pantone": "14-4502",
+                "codigo": "14-4502",
                 "name": "mercury",
                 "hex": "#bac2ba"
             },
@@ -7117,7 +7117,7 @@
             "codigo_suvinil": "C048",
             "hexadecimal": "#b5e1b3",
             "pantone": {
-                "pantone": "12-0225",
+                "codigo": "12-0225",
                 "name": "patina-green",
                 "hex": "#b9eab3"
             },
@@ -7134,7 +7134,7 @@
             "codigo_suvinil": "B628",
             "hexadecimal": "#9bdeb6",
             "pantone": {
-                "pantone": "13-0117",
+                "codigo": "13-0117",
                 "name": "green-ash",
                 "hex": "#a0daa9"
             },
@@ -7151,7 +7151,7 @@
             "codigo_suvinil": "C630",
             "hexadecimal": "#94dab6",
             "pantone": {
-                "pantone": "13-5714",
+                "codigo": "13-5714",
                 "name": "cabbage",
                 "hex": "#87d7be"
             },
@@ -7168,7 +7168,7 @@
             "codigo_suvinil": "N790",
             "hexadecimal": "#b6e6af",
             "pantone": {
-                "pantone": "12-0225",
+                "codigo": "12-0225",
                 "name": "patina-green",
                 "hex": "#b9eab3"
             },
@@ -7185,7 +7185,7 @@
             "codigo_suvinil": "N791",
             "hexadecimal": "#bce8a8",
             "pantone": {
-                "pantone": "12-0225",
+                "codigo": "12-0225",
                 "name": "patina-green",
                 "hex": "#b9eab3"
             },
@@ -7202,7 +7202,7 @@
             "codigo_suvinil": "D311",
             "hexadecimal": "#a0c89a",
             "pantone": {
-                "pantone": "14-0123",
+                "codigo": "14-0123",
                 "name": "arcadian-green",
                 "hex": "#a3c893"
             },
@@ -7219,7 +7219,7 @@
             "codigo_suvinil": "C050",
             "hexadecimal": "#afdf9a",
             "pantone": {
-                "pantone": "13-0220",
+                "codigo": "13-0220",
                 "name": "paradise-green",
                 "hex": "#b2e79f"
             },
@@ -7236,7 +7236,7 @@
             "codigo_suvinil": "D062",
             "hexadecimal": "#80cab6",
             "pantone": {
-                "pantone": "14-5714",
+                "codigo": "14-5714",
                 "name": "beveled-glass",
                 "hex": "#7accb8"
             },
@@ -7253,7 +7253,7 @@
             "codigo_suvinil": "C315",
             "hexadecimal": "#83b99c",
             "pantone": {
-                "pantone": "14-6017",
+                "codigo": "14-6017",
                 "name": "neptune-green",
                 "hex": "#7fbb9e"
             },
@@ -7270,7 +7270,7 @@
             "codigo_suvinil": "H044",
             "hexadecimal": "#b2cfc5",
             "pantone": {
-                "pantone": "13-5907",
+                "codigo": "13-5907",
                 "name": "gossamer-green",
                 "hex": "#b2cfbe"
             },
@@ -7287,7 +7287,7 @@
             "codigo_suvinil": "B644",
             "hexadecimal": "#b8cdb5",
             "pantone": {
-                "pantone": "13-6108",
+                "codigo": "13-6108",
                 "name": "celadon",
                 "hex": "#b8ccba"
             },
@@ -7304,7 +7304,7 @@
             "codigo_suvinil": "D056",
             "hexadecimal": "#bdc5b1",
             "pantone": {
-                "pantone": "13-6208",
+                "codigo": "13-6208",
                 "name": "bok-choy",
                 "hex": "#bccab3"
             },
@@ -7321,7 +7321,7 @@
             "codigo_suvinil": "B315",
             "hexadecimal": "#b1d6c0",
             "pantone": {
-                "pantone": "13-5907",
+                "codigo": "13-5907",
                 "name": "gossamer-green",
                 "hex": "#b2cfbe"
             },
@@ -7338,7 +7338,7 @@
             "codigo_suvinil": "C062",
             "hexadecimal": "#b0e1d2",
             "pantone": {
-                "pantone": "12-5808",
+                "codigo": "12-5808",
                 "name": "honeydew",
                 "hex": "#bae1d3"
             },
@@ -7355,7 +7355,7 @@
             "codigo_suvinil": "A628",
             "hexadecimal": "#b0e5c3",
             "pantone": {
-                "pantone": "13-6009",
+                "codigo": "13-6009",
                 "name": "brook-green",
                 "hex": "#afddcc"
             },
@@ -7372,7 +7372,7 @@
             "codigo_suvinil": "C059",
             "hexadecimal": "#ade0c8",
             "pantone": {
-                "pantone": "13-6009",
+                "codigo": "13-6009",
                 "name": "brook-green",
                 "hex": "#afddcc"
             },
@@ -7389,7 +7389,7 @@
             "codigo_suvinil": "R543",
             "hexadecimal": "#a4e2d3",
             "pantone": {
-                "pantone": "13-4910",
+                "codigo": "13-4910",
                 "name": "blue-tint",
                 "hex": "#9fd9d7"
             },
@@ -7406,7 +7406,7 @@
             "codigo_suvinil": "C637",
             "hexadecimal": "#cedda0",
             "pantone": {
-                "pantone": "13-0319",
+                "codigo": "13-0319",
                 "name": "shadow-lime",
                 "hex": "#cfe09d"
             },
@@ -7423,7 +7423,7 @@
             "codigo_suvinil": "C310",
             "hexadecimal": "#aac5a6",
             "pantone": {
-                "pantone": "14-6312",
+                "codigo": "14-6312",
                 "name": "cameo-green",
                 "hex": "#aac0ad"
             },
@@ -7440,7 +7440,7 @@
             "codigo_suvinil": "C051",
             "hexadecimal": "#bcd3a4",
             "pantone": {
-                "pantone": "13-0215",
+                "codigo": "13-0215",
                 "name": "reed",
                 "hex": "#c3d3a8"
             },
@@ -7457,7 +7457,7 @@
             "codigo_suvinil": "E058",
             "hexadecimal": "#9fb79c",
             "pantone": {
-                "pantone": "14-6316",
+                "codigo": "14-6316",
                 "name": "sprucestone",
                 "hex": "#9fc09c"
             },
@@ -7474,7 +7474,7 @@
             "codigo_suvinil": "N563",
             "hexadecimal": "#abb2a9",
             "pantone": {
-                "pantone": "15-4704",
+                "codigo": "15-4704",
                 "name": "pigeon",
                 "hex": "#a9afaa"
             },
@@ -7491,7 +7491,7 @@
             "codigo_suvinil": "C388",
             "hexadecimal": "#a6aaa5",
             "pantone": {
-                "pantone": "15-4306",
+                "codigo": "15-4306",
                 "name": "belgian-block",
                 "hex": "#a3a9a6"
             },
@@ -7508,7 +7508,7 @@
             "codigo_suvinil": "N838",
             "hexadecimal": "#a3ae9f",
             "pantone": {
-                "pantone": "16-0110",
+                "codigo": "16-0110",
                 "name": "desert-sage",
                 "hex": "#a7ae9e"
             },
@@ -7525,7 +7525,7 @@
             "codigo_suvinil": "N053",
             "hexadecimal": "#9faf96",
             "pantone": {
-                "pantone": "15-6414",
+                "codigo": "15-6414",
                 "name": "reseda",
                 "hex": "#a1ad92"
             },
@@ -7542,7 +7542,7 @@
             "codigo_suvinil": "E056",
             "hexadecimal": "#98a68b",
             "pantone": {
-                "pantone": "15-6316",
+                "codigo": "15-6316",
                 "name": "fair-green",
                 "hex": "#92af88"
             },
@@ -7559,7 +7559,7 @@
             "codigo_suvinil": "E161",
             "hexadecimal": "#898b88",
             "pantone": {
-                "pantone": "17-1501",
+                "codigo": "17-1501",
                 "name": "wild-dove",
                 "hex": "#8b8c89"
             },
@@ -7576,7 +7576,7 @@
             "codigo_suvinil": "P058",
             "hexadecimal": "#85a485",
             "pantone": {
-                "pantone": "16-6216",
+                "codigo": "16-6216",
                 "name": "basil",
                 "hex": "#879f84"
             },
@@ -7593,7 +7593,7 @@
             "codigo_suvinil": "E620",
             "hexadecimal": "#bdd057",
             "pantone": {
-                "pantone": "13-0540",
+                "codigo": "13-0540",
                 "name": "wild-lime",
                 "hex": "#c3d363"
             },
@@ -7610,7 +7610,7 @@
             "codigo_suvinil": "D049",
             "hexadecimal": "#65b475",
             "pantone": {
-                "pantone": "14-6329",
+                "codigo": "14-6329",
                 "name": "absinthe-green",
                 "hex": "#76b583"
             },
@@ -7627,7 +7627,7 @@
             "codigo_suvinil": "R299",
             "hexadecimal": "#a7c643",
             "pantone": {
-                "pantone": "14-0446",
+                "codigo": "14-0446",
                 "name": "tender-shoots",
                 "hex": "#b5cc39"
             },
@@ -7644,7 +7644,7 @@
             "codigo_suvinil": "P621",
             "hexadecimal": "#a9bd36",
             "pantone": {
-                "pantone": "14-0452",
+                "codigo": "14-0452",
                 "name": "lime-green",
                 "hex": "#9fc131"
             },
@@ -7661,7 +7661,7 @@
             "codigo_suvinil": "R620",
             "hexadecimal": "#a2bb25",
             "pantone": {
-                "pantone": "14-0452",
+                "codigo": "14-0452",
                 "name": "lime-green",
                 "hex": "#9fc131"
             },
@@ -7678,7 +7678,7 @@
             "codigo_suvinil": "R623",
             "hexadecimal": "#5d883c",
             "pantone": {
-                "pantone": "17-0145",
+                "codigo": "17-0145",
                 "name": "online-lime",
                 "hex": "#44883c"
             },
@@ -7695,7 +7695,7 @@
             "codigo_suvinil": "D620",
             "hexadecimal": "#c4d66b",
             "pantone": {
-                "pantone": "13-0540",
+                "codigo": "13-0540",
                 "name": "wild-lime",
                 "hex": "#c3d363"
             },
@@ -7712,7 +7712,7 @@
             "codigo_suvinil": "E055",
             "hexadecimal": "#899c78",
             "pantone": {
-                "pantone": "17-0215",
+                "codigo": "17-0215",
                 "name": "aspen-green",
                 "hex": "#7e9b76"
             },
@@ -7729,7 +7729,7 @@
             "codigo_suvinil": "N850",
             "hexadecimal": "#84a279",
             "pantone": {
-                "pantone": "16-0220",
+                "codigo": "16-0220",
                 "name": "mistletoe",
                 "hex": "#8aa282"
             },
@@ -7746,7 +7746,7 @@
             "codigo_suvinil": "N873",
             "hexadecimal": "#7a8374",
             "pantone": {
-                "pantone": "17-6323",
+                "codigo": "17-6323",
                 "name": "hedge-green",
                 "hex": "#768a75"
             },
@@ -7763,7 +7763,7 @@
             "codigo_suvinil": "N874",
             "hexadecimal": "#6d7c5f",
             "pantone": {
-                "pantone": "18-0108",
+                "codigo": "18-0108",
                 "name": "dill",
                 "hex": "#6f7755"
             },
@@ -7780,7 +7780,7 @@
             "codigo_suvinil": "P055",
             "hexadecimal": "#687c58",
             "pantone": {
-                "pantone": "18-0108",
+                "codigo": "18-0108",
                 "name": "dill",
                 "hex": "#6f7755"
             },
@@ -7797,7 +7797,7 @@
             "codigo_suvinil": "P388",
             "hexadecimal": "#525d50",
             "pantone": {
-                "pantone": "18-0317",
+                "codigo": "18-0317",
                 "name": "bronze-green",
                 "hex": "#525f48"
             },
@@ -7814,7 +7814,7 @@
             "codigo_suvinil": "R385",
             "hexadecimal": "#50514f",
             "pantone": {
-                "pantone": "19-3900",
+                "codigo": "19-3900",
                 "name": "pavement",
                 "hex": "#524d50"
             },
@@ -7831,7 +7831,7 @@
             "codigo_suvinil": "V058",
             "hexadecimal": "#dfe7c1",
             "pantone": {
-                "pantone": "12-0312",
+                "codigo": "12-0312",
                 "name": "lime-cream",
                 "hex": "#d7e8bc"
             },
@@ -7848,7 +7848,7 @@
             "codigo_suvinil": "A206",
             "hexadecimal": "#ecebe5",
             "pantone": {
-                "pantone": "11-1001",
+                "codigo": "11-1001",
                 "name": "white-alyssum",
                 "hex": "#efebe7"
             },
@@ -7865,7 +7865,7 @@
             "codigo_suvinil": "C208",
             "hexadecimal": "#e6e6e1",
             "pantone": {
-                "pantone": "12-4304",
+                "codigo": "12-4304",
                 "name": "bluewash",
                 "hex": "#e2e6e0"
             },
@@ -7882,7 +7882,7 @@
             "codigo_suvinil": "RM008",
             "hexadecimal": "#ebeada",
             "pantone": {
-                "pantone": "11-0104",
+                "codigo": "11-0104",
                 "name": "vanilla-ice",
                 "hex": "#f0eada"
             },
@@ -7899,7 +7899,7 @@
             "codigo_suvinil": "D019",
             "hexadecimal": "#e1e0cd",
             "pantone": {
-                "pantone": "12-0104",
+                "codigo": "12-0104",
                 "name": "white-asparagus",
                 "hex": "#e1dbc8"
             },
@@ -7916,7 +7916,7 @@
             "codigo_suvinil": "C539",
             "hexadecimal": "#f0ecc0",
             "pantone": {
-                "pantone": "11-0617",
+                "codigo": "11-0617",
                 "name": "transparent-yellow",
                 "hex": "#f4ecc2"
             },
@@ -7933,7 +7933,7 @@
             "codigo_suvinil": "C053",
             "hexadecimal": "#e7e6c0",
             "pantone": {
-                "pantone": "12-0607",
+                "codigo": "12-0607",
                 "name": "green-essence",
                 "hex": "#e9eac8"
             },
@@ -7950,7 +7950,7 @@
             "codigo_suvinil": "G064",
             "hexadecimal": "#e5e3bf",
             "pantone": {
-                "pantone": "12-0804",
+                "codigo": "12-0804",
                 "name": "cloud-cream",
                 "hex": "#e6ddc5"
             },
@@ -7967,7 +7967,7 @@
             "codigo_suvinil": "N812",
             "hexadecimal": "#d4d7bd",
             "pantone": {
-                "pantone": "12-4301",
+                "codigo": "12-4301",
                 "name": "almond-milk",
                 "hex": "#d6cebe"
             },
@@ -7984,7 +7984,7 @@
             "codigo_suvinil": "C300",
             "hexadecimal": "#ccd1ae",
             "pantone": {
-                "pantone": "12-0313",
+                "codigo": "12-0313",
                 "name": "seafoam-green",
                 "hex": "#cbd5b1"
             },
@@ -8001,7 +8001,7 @@
             "codigo_suvinil": "B146",
             "hexadecimal": "#d1d2c7",
             "pantone": {
-                "pantone": "13-4403",
+                "codigo": "13-4403",
                 "name": "silver-birch",
                 "hex": "#d2cfc4"
             },
@@ -8018,7 +8018,7 @@
             "codigo_suvinil": "Z062",
             "hexadecimal": "#b8b874",
             "pantone": {
-                "pantone": "14-0434",
+                "codigo": "14-0434",
                 "name": "green-banana",
                 "hex": "#babc72"
             },
@@ -8035,7 +8035,7 @@
             "codigo_suvinil": "C301",
             "hexadecimal": "#bec1a6",
             "pantone": {
-                "pantone": "14-0114",
+                "codigo": "14-0114",
                 "name": "celadon-green",
                 "hex": "#b5c1a5"
             },
@@ -8052,7 +8052,7 @@
             "codigo_suvinil": "Z061",
             "hexadecimal": "#cbcd96",
             "pantone": {
-                "pantone": "13-0522",
+                "codigo": "13-0522",
                 "name": "pale-green",
                 "hex": "#cbce91"
             },
@@ -8069,7 +8069,7 @@
             "codigo_suvinil": "D052",
             "hexadecimal": "#b1b17d",
             "pantone": {
-                "pantone": "15-0525",
+                "codigo": "15-0525",
                 "name": "weeping-willow",
                 "hex": "#b3b17b"
             },
@@ -8086,7 +8086,7 @@
             "codigo_suvinil": "D386",
             "hexadecimal": "#b2b2a8",
             "pantone": {
-                "pantone": "15-0000",
+                "codigo": "15-0000",
                 "name": "dove",
                 "hex": "#b3ada7"
             },
@@ -8103,7 +8103,7 @@
             "codigo_suvinil": "C295",
             "hexadecimal": "#b0af9a",
             "pantone": {
-                "pantone": "15-6307",
+                "codigo": "15-6307",
                 "name": "agate-gray",
                 "hex": "#b1b09f"
             },
@@ -8120,7 +8120,7 @@
             "codigo_suvinil": "D161",
             "hexadecimal": "#a2a29d",
             "pantone": {
-                "pantone": "14-5002",
+                "codigo": "14-5002",
                 "name": "silver",
                 "hex": "#a2a2a1"
             },
@@ -8137,7 +8137,7 @@
             "codigo_suvinil": "D145",
             "hexadecimal": "#a3a390",
             "pantone": {
-                "pantone": "16-0207",
+                "codigo": "16-0207",
                 "name": "london-fog",
                 "hex": "#a29e92"
             },
@@ -8154,7 +8154,7 @@
             "codigo_suvinil": "N848",
             "hexadecimal": "#a9aa80",
             "pantone": {
-                "pantone": "15-0326",
+                "codigo": "15-0326",
                 "name": "tarragon",
                 "hex": "#a4ae77"
             },
@@ -8171,7 +8171,7 @@
             "codigo_suvinil": "N867",
             "hexadecimal": "#999a83",
             "pantone": {
-                "pantone": "16-0213",
+                "codigo": "16-0213",
                 "name": "tea",
                 "hex": "#999b85"
             },
@@ -8188,7 +8188,7 @@
             "codigo_suvinil": "D295",
             "hexadecimal": "#9d9a83",
             "pantone": {
-                "pantone": "16-0213",
+                "codigo": "16-0213",
                 "name": "tea",
                 "hex": "#999b85"
             },
@@ -8205,7 +8205,7 @@
             "codigo_suvinil": "N066",
             "hexadecimal": "#b5ab7a",
             "pantone": {
-                "pantone": "15-0628",
+                "codigo": "15-0628",
                 "name": "leek-green",
                 "hex": "#b7b17a"
             },
@@ -8222,7 +8222,7 @@
             "codigo_suvinil": "E053",
             "hexadecimal": "#b3a870",
             "pantone": {
-                "pantone": "15-0730",
+                "codigo": "15-0730",
                 "name": "southern-moss",
                 "hex": "#bca66a"
             },
@@ -8239,7 +8239,7 @@
             "codigo_suvinil": "D619",
             "hexadecimal": "#d3d56a",
             "pantone": {
-                "pantone": "13-0645",
+                "codigo": "13-0645",
                 "name": "limeade",
                 "hex": "#d3d95f"
             },
@@ -8256,7 +8256,7 @@
             "codigo_suvinil": "E295",
             "hexadecimal": "#8e8c74",
             "pantone": {
-                "pantone": "17-0510",
+                "codigo": "17-0510",
                 "name": "silver-sage",
                 "hex": "#938b78"
             },
@@ -8273,7 +8273,7 @@
             "codigo_suvinil": "Z063",
             "hexadecimal": "#a4a45b",
             "pantone": {
-                "pantone": "16-0532",
+                "codigo": "16-0532",
                 "name": "moss",
                 "hex": "#a09d59"
             },
@@ -8290,7 +8290,7 @@
             "codigo_suvinil": "P635",
             "hexadecimal": "#9b9842",
             "pantone": {
-                "pantone": "16-0545",
+                "codigo": "16-0545",
                 "name": "split-pea",
                 "hex": "#9c9a40"
             },
@@ -8307,7 +8307,7 @@
             "codigo_suvinil": "P295",
             "hexadecimal": "#7c785a",
             "pantone": {
-                "pantone": "18-0617",
+                "codigo": "18-0617",
                 "name": "covert-green",
                 "hex": "#80765f"
             },
@@ -8324,7 +8324,7 @@
             "codigo_suvinil": "N501",
             "hexadecimal": "#faf9f7",
             "pantone": {
-                "pantone": "11-0601",
+                "codigo": "11-0601",
                 "name": "bright-white",
                 "hex": "#f4f5f0"
             },
@@ -8341,7 +8341,7 @@
             "codigo_suvinil": "N502",
             "hexadecimal": "#e9e9e8",
             "pantone": {
-                "pantone": "11-4800",
+                "codigo": "11-4800",
                 "name": "blanc-de-blanc",
                 "hex": "#e7e9e7"
             },
@@ -8358,7 +8358,7 @@
             "codigo_suvinil": "A012",
             "hexadecimal": "#dbdadb",
             "pantone": {
-                "pantone": "12-4705",
+                "codigo": "12-4705",
                 "name": "blue-blush",
                 "hex": "#d6dbd9"
             },
@@ -8375,7 +8375,7 @@
             "codigo_suvinil": "N503",
             "hexadecimal": "#cdccca",
             "pantone": {
-                "pantone": "13-4303",
+                "codigo": "13-4303",
                 "name": "dawn-blue",
                 "hex": "#cacccb"
             },
@@ -8392,7 +8392,7 @@
             "codigo_suvinil": "N504",
             "hexadecimal": "#bfc0be",
             "pantone": {
-                "pantone": "14-4203",
+                "codigo": "14-4203",
                 "name": "vapor-blue",
                 "hex": "#bebdbd"
             },
@@ -8409,7 +8409,7 @@
             "codigo_suvinil": "N505",
             "hexadecimal": "#b6b6b5",
             "pantone": {
-                "pantone": "15-4003",
+                "codigo": "15-4003",
                 "name": "storm-gray",
                 "hex": "#b5bab6"
             },
@@ -8426,7 +8426,7 @@
             "codigo_suvinil": "N506",
             "hexadecimal": "#a9a9a7",
             "pantone": {
-                "pantone": "15-4306",
+                "codigo": "15-4306",
                 "name": "belgian-block",
                 "hex": "#a3a9a6"
             },
@@ -8443,7 +8443,7 @@
             "codigo_suvinil": "N507",
             "hexadecimal": "#9c9c9c",
             "pantone": {
-                "pantone": "16-4703",
+                "codigo": "16-4703",
                 "name": "ghost-gray",
                 "hex": "#9c9b98"
             },
@@ -8460,7 +8460,7 @@
             "codigo_suvinil": "N508",
             "hexadecimal": "#929191",
             "pantone": {
-                "pantone": "16-5101",
+                "codigo": "16-5101",
                 "name": "wet-weather",
                 "hex": "#929090"
             },
@@ -8477,7 +8477,7 @@
             "codigo_suvinil": "N509",
             "hexadecimal": "#878788",
             "pantone": {
-                "pantone": "17-3914",
+                "codigo": "17-3914",
                 "name": "sharkskin",
                 "hex": "#838487"
             },
@@ -8494,7 +8494,7 @@
             "codigo_suvinil": "N510",
             "hexadecimal": "#7d7d7c",
             "pantone": {
-                "pantone": "17-4014",
+                "codigo": "17-4014",
                 "name": "titanium",
                 "hex": "#807d7f"
             },
@@ -8511,7 +8511,7 @@
             "codigo_suvinil": "N512",
             "hexadecimal": "#686867",
             "pantone": {
-                "pantone": "18-0503",
+                "codigo": "18-0503",
                 "name": "gargoyle",
                 "hex": "#686767"
             },
@@ -8528,7 +8528,7 @@
             "codigo_suvinil": "N514",
             "hexadecimal": "#515151",
             "pantone": {
-                "pantone": "19-3900",
+                "codigo": "19-3900",
                 "name": "pavement",
                 "hex": "#524d50"
             },
@@ -8545,7 +8545,7 @@
             "codigo_suvinil": "N516",
             "hexadecimal": "#303030",
             "pantone": {
-                "pantone": "19-4203",
+                "codigo": "19-4203",
                 "name": "moonless-night",
                 "hex": "#2f2d30"
             },
@@ -8562,7 +8562,7 @@
             "codigo_suvinil": "N530",
             "hexadecimal": "#f4f3f8",
             "pantone": {
-                "pantone": "11-0601",
+                "codigo": "11-0601",
                 "name": "bright-white",
                 "hex": "#f4f5f0"
             },
@@ -8579,7 +8579,7 @@
             "codigo_suvinil": "N521",
             "hexadecimal": "#e9ebe8",
             "pantone": {
-                "pantone": "11-4800",
+                "codigo": "11-4800",
                 "name": "blanc-de-blanc",
                 "hex": "#e7e9e7"
             },
@@ -8596,7 +8596,7 @@
             "codigo_suvinil": "B521",
             "hexadecimal": "#e4e8eb",
             "pantone": {
-                "pantone": "11-4601",
+                "codigo": "11-4601",
                 "name": "bit-of-blue",
                 "hex": "#e2eaeb"
             },
@@ -8613,7 +8613,7 @@
             "codigo_suvinil": "N562",
             "hexadecimal": "#f1f6ed",
             "pantone": {
-                "pantone": "11-0601",
+                "codigo": "11-0601",
                 "name": "bright-white",
                 "hex": "#f4f5f0"
             },
@@ -8630,7 +8630,7 @@
             "codigo_suvinil": "R204",
             "hexadecimal": "#e5e9e5",
             "pantone": {
-                "pantone": "11-4802",
+                "codigo": "11-4802",
                 "name": "summer-shower",
                 "hex": "#e5ebe3"
             },
@@ -8647,7 +8647,7 @@
             "codigo_suvinil": "R207",
             "hexadecimal": "#e2e6ec",
             "pantone": {
-                "pantone": "11-4601",
+                "codigo": "11-4601",
                 "name": "bit-of-blue",
                 "hex": "#e2eaeb"
             },
@@ -8664,7 +8664,7 @@
             "codigo_suvinil": "A756",
             "hexadecimal": "#d0d4d6",
             "pantone": {
-                "pantone": "12-5403",
+                "codigo": "12-5403",
                 "name": "blue-flower",
                 "hex": "#d0d9d4"
             },
@@ -8681,7 +8681,7 @@
             "codigo_suvinil": "B152",
             "hexadecimal": "#caccd1",
             "pantone": {
-                "pantone": "13-4303",
+                "codigo": "13-4303",
                 "name": "dawn-blue",
                 "hex": "#cacccb"
             },
@@ -8698,7 +8698,7 @@
             "codigo_suvinil": "B347",
             "hexadecimal": "#cac8cd",
             "pantone": {
-                "pantone": "13-4303",
+                "codigo": "13-4303",
                 "name": "dawn-blue",
                 "hex": "#cacccb"
             },
@@ -8715,7 +8715,7 @@
             "codigo_suvinil": "B756",
             "hexadecimal": "#bdc3c7",
             "pantone": {
-                "pantone": "14-4504",
+                "codigo": "14-4504",
                 "name": "sky-gray",
                 "hex": "#bcc8c6"
             },
@@ -8732,7 +8732,7 @@
             "codigo_suvinil": "N660",
             "hexadecimal": "#c5c5cd",
             "pantone": {
-                "pantone": "14-4102",
+                "codigo": "14-4102",
                 "name": "glacier-gray",
                 "hex": "#c5c6c7"
             },
@@ -8749,7 +8749,7 @@
             "codigo_suvinil": "B397",
             "hexadecimal": "#bfc4c8",
             "pantone": {
-                "pantone": "13-4201",
+                "codigo": "13-4201",
                 "name": "oyster-mushroom",
                 "hex": "#c3c6c8"
             },
@@ -8766,7 +8766,7 @@
             "codigo_suvinil": "V027",
             "hexadecimal": "#bac0c4",
             "pantone": {
-                "pantone": "14-4105",
+                "codigo": "14-4105",
                 "name": "micro-chip",
                 "hex": "#babcc0"
             },
@@ -8783,7 +8783,7 @@
             "codigo_suvinil": "C398",
             "hexadecimal": "#adafb4",
             "pantone": {
-                "pantone": "14-4202",
+                "codigo": "14-4202",
                 "name": "harbor-mist",
                 "hex": "#afb1b4"
             },
@@ -8800,7 +8800,7 @@
             "codigo_suvinil": "N563",
             "hexadecimal": "#abb2a9",
             "pantone": {
-                "pantone": "15-4704",
+                "codigo": "15-4704",
                 "name": "pigeon",
                 "hex": "#a9afaa"
             },
@@ -8817,7 +8817,7 @@
             "codigo_suvinil": "C388",
             "hexadecimal": "#a6aaa5",
             "pantone": {
-                "pantone": "15-4306",
+                "codigo": "15-4306",
                 "name": "belgian-block",
                 "hex": "#a3a9a6"
             },
@@ -8834,7 +8834,7 @@
             "codigo_suvinil": "C756",
             "hexadecimal": "#979da3",
             "pantone": {
-                "pantone": "15-4305",
+                "codigo": "15-4305",
                 "name": "quarry",
                 "hex": "#98a0a5"
             },
@@ -8851,7 +8851,7 @@
             "codigo_suvinil": "E161",
             "hexadecimal": "#898b88",
             "pantone": {
-                "pantone": "17-1501",
+                "codigo": "17-1501",
                 "name": "wild-dove",
                 "hex": "#8b8c89"
             },
@@ -8868,7 +8868,7 @@
             "codigo_suvinil": "R756",
             "hexadecimal": "#28292b",
             "pantone": {
-                "pantone": "19-4007",
+                "codigo": "19-4007",
                 "name": "anthracite",
                 "hex": "#28282d"
             },
@@ -8885,7 +8885,7 @@
             "codigo_suvinil": "B508",
             "hexadecimal": "#f3f1e5",
             "pantone": {
-                "pantone": "11-0607",
+                "codigo": "11-0607",
                 "name": "sugar-swizzle",
                 "hex": "#f3eee7"
             },
@@ -8902,7 +8902,7 @@
             "codigo_suvinil": "N522",
             "hexadecimal": "#f5f5f5",
             "pantone": {
-                "pantone": "11-0601",
+                "codigo": "11-0601",
                 "name": "bright-white",
                 "hex": "#f4f5f0"
             },
@@ -8919,7 +8919,7 @@
             "codigo_suvinil": "A208",
             "hexadecimal": "#edece3",
             "pantone": {
-                "pantone": "11-0608",
+                "codigo": "11-0608",
                 "name": "coconut-milk",
                 "hex": "#f0ede5"
             },
@@ -8936,7 +8936,7 @@
             "codigo_suvinil": "B208",
             "hexadecimal": "#eae9e2",
             "pantone": {
-                "pantone": "11-4802",
+                "codigo": "11-4802",
                 "name": "summer-shower",
                 "hex": "#e5ebe3"
             },
@@ -8953,7 +8953,7 @@
             "codigo_suvinil": "E204",
             "hexadecimal": "#f1e9e1",
             "pantone": {
-                "pantone": "11-0604",
+                "codigo": "11-0604",
                 "name": "gardenia",
                 "hex": "#f1e8df"
             },
@@ -8970,7 +8970,7 @@
             "codigo_suvinil": "A204",
             "hexadecimal": "#eae8e3",
             "pantone": {
-                "pantone": "11-4802",
+                "codigo": "11-4802",
                 "name": "summer-shower",
                 "hex": "#e5ebe3"
             },
@@ -8987,7 +8987,7 @@
             "codigo_suvinil": "C523",
             "hexadecimal": "#eae8e7",
             "pantone": {
-                "pantone": "11-4800",
+                "codigo": "11-4800",
                 "name": "blanc-de-blanc",
                 "hex": "#e7e9e7"
             },
@@ -9004,7 +9004,7 @@
             "codigo_suvinil": "D524",
             "hexadecimal": "#f2e9e7",
             "pantone": {
-                "pantone": "11-1001",
+                "codigo": "11-1001",
                 "name": "white-alyssum",
                 "hex": "#efebe7"
             },
@@ -9021,7 +9021,7 @@
             "codigo_suvinil": "A175",
             "hexadecimal": "#e6e1db",
             "pantone": {
-                "pantone": "11-4301",
+                "codigo": "11-4301",
                 "name": "lily-white",
                 "hex": "#e2e2da"
             },
@@ -9038,7 +9038,7 @@
             "codigo_suvinil": "A154",
             "hexadecimal": "#e5e2db",
             "pantone": {
-                "pantone": "11-4301",
+                "codigo": "11-4301",
                 "name": "lily-white",
                 "hex": "#e2e2da"
             },
@@ -9055,7 +9055,7 @@
             "codigo_suvinil": "F100",
             "hexadecimal": "#eae3d5",
             "pantone": {
-                "pantone": "12-0601",
+                "codigo": "12-0601",
                 "name": "eggnog",
                 "hex": "#ece1d3"
             },
@@ -9072,7 +9072,7 @@
             "codigo_suvinil": "F064",
             "hexadecimal": "#eae7d5",
             "pantone": {
-                "pantone": "12-0601",
+                "codigo": "12-0601",
                 "name": "eggnog",
                 "hex": "#ece1d3"
             },
@@ -9089,7 +9089,7 @@
             "codigo_suvinil": "A092",
             "hexadecimal": "#e2dcd6",
             "pantone": {
-                "pantone": "12-4302",
+                "codigo": "12-4302",
                 "name": "vaporous-gray",
                 "hex": "#dfddd7"
             },
@@ -9106,7 +9106,7 @@
             "codigo_suvinil": "RM012",
             "hexadecimal": "#e6eae1",
             "pantone": {
-                "pantone": "11-4804",
+                "codigo": "11-4804",
                 "name": "lightest-sky",
                 "hex": "#e4eadf"
             },
@@ -9123,7 +9123,7 @@
             "codigo_suvinil": "A014",
             "hexadecimal": "#dbdad7",
             "pantone": {
-                "pantone": "12-4302",
+                "codigo": "12-4302",
                 "name": "vaporous-gray",
                 "hex": "#dfddd7"
             },
@@ -9140,7 +9140,7 @@
             "codigo_suvinil": "Z076",
             "hexadecimal": "#e0dcd2",
             "pantone": {
-                "pantone": "12-4302",
+                "codigo": "12-4302",
                 "name": "vaporous-gray",
                 "hex": "#dfddd7"
             },
@@ -9157,7 +9157,7 @@
             "codigo_suvinil": "A162",
             "hexadecimal": "#dad8d0",
             "pantone": {
-                "pantone": "12-5201",
+                "codigo": "12-5201",
                 "name": "icicle",
                 "hex": "#dadcd0"
             },
@@ -9174,7 +9174,7 @@
             "codigo_suvinil": "F104",
             "hexadecimal": "#e5dccc",
             "pantone": {
-                "pantone": "12-0104",
+                "codigo": "12-0104",
                 "name": "white-asparagus",
                 "hex": "#e1dbc8"
             },
@@ -9191,7 +9191,7 @@
             "codigo_suvinil": "B166",
             "hexadecimal": "#e3dacd",
             "pantone": {
-                "pantone": "12-0104",
+                "codigo": "12-0104",
                 "name": "white-asparagus",
                 "hex": "#e1dbc8"
             },
@@ -9208,7 +9208,7 @@
             "codigo_suvinil": "C010",
             "hexadecimal": "#e0d7d7",
             "pantone": {
-                "pantone": "12-4302",
+                "codigo": "12-4302",
                 "name": "vaporous-gray",
                 "hex": "#dfddd7"
             },
@@ -9225,7 +9225,7 @@
             "codigo_suvinil": "A146",
             "hexadecimal": "#d9d8cf",
             "pantone": {
-                "pantone": "12-5201",
+                "codigo": "12-5201",
                 "name": "icicle",
                 "hex": "#dadcd0"
             },
@@ -9242,7 +9242,7 @@
             "codigo_suvinil": "B148",
             "hexadecimal": "#d8d3ca",
             "pantone": {
-                "pantone": "12-6204",
+                "codigo": "12-6204",
                 "name": "silver-green",
                 "hex": "#d7d7c7"
             },
@@ -9259,7 +9259,7 @@
             "codigo_suvinil": "N575",
             "hexadecimal": "#dcd9c6",
             "pantone": {
-                "pantone": "12-0404",
+                "codigo": "12-0404",
                 "name": "light-gray",
                 "hex": "#dad8c9"
             },
@@ -9276,7 +9276,7 @@
             "codigo_suvinil": "B161",
             "hexadecimal": "#d1d0ca",
             "pantone": {
-                "pantone": "13-4403",
+                "codigo": "13-4403",
                 "name": "silver-birch",
                 "hex": "#d2cfc4"
             },
@@ -9293,7 +9293,7 @@
             "codigo_suvinil": "C147",
             "hexadecimal": "#d5cec2",
             "pantone": {
-                "pantone": "12-4301",
+                "codigo": "12-4301",
                 "name": "almond-milk",
                 "hex": "#d6cebe"
             },
@@ -9310,7 +9310,7 @@
             "codigo_suvinil": "B154",
             "hexadecimal": "#cfc9c5",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -9327,7 +9327,7 @@
             "codigo_suvinil": "B373",
             "hexadecimal": "#d6cdc7",
             "pantone": {
-                "pantone": "13-3801",
+                "codigo": "13-3801",
                 "name": "crystal-gray",
                 "hex": "#d7cbc4"
             },
@@ -9344,7 +9344,7 @@
             "codigo_suvinil": "B711",
             "hexadecimal": "#d3c9bb",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -9361,7 +9361,7 @@
             "codigo_suvinil": "B165",
             "hexadecimal": "#d0cac1",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -9378,7 +9378,7 @@
             "codigo_suvinil": "R526",
             "hexadecimal": "#c7c7c4",
             "pantone": {
-                "pantone": "14-4201",
+                "codigo": "14-4201",
                 "name": "lunar-rock",
                 "hex": "#c5c5c5"
             },
@@ -9395,7 +9395,7 @@
             "codigo_suvinil": "B729",
             "hexadecimal": "#d1c9b9",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -9412,7 +9412,7 @@
             "codigo_suvinil": "C124",
             "hexadecimal": "#cfc8b7",
             "pantone": {
-                "pantone": "13-5304",
+                "codigo": "13-5304",
                 "name": "rainy-day",
                 "hex": "#cfc8bd"
             },
@@ -9429,7 +9429,7 @@
             "codigo_suvinil": "B163",
             "hexadecimal": "#c8c5ba",
             "pantone": {
-                "pantone": "14-0002",
+                "codigo": "14-0002",
                 "name": "pumice-stone",
                 "hex": "#cac2b9"
             },
@@ -9446,7 +9446,7 @@
             "codigo_suvinil": "C373",
             "hexadecimal": "#cac1b8",
             "pantone": {
-                "pantone": "14-0002",
+                "codigo": "14-0002",
                 "name": "pumice-stone",
                 "hex": "#cac2b9"
             },
@@ -9463,7 +9463,7 @@
             "codigo_suvinil": "C161",
             "hexadecimal": "#c0c0ba",
             "pantone": {
-                "pantone": "14-4203",
+                "codigo": "14-4203",
                 "name": "vapor-blue",
                 "hex": "#bebdbd"
             },
@@ -9480,7 +9480,7 @@
             "codigo_suvinil": "C164",
             "hexadecimal": "#c5bfb3",
             "pantone": {
-                "pantone": "14-4500",
+                "codigo": "14-4500",
                 "name": "moonstruck",
                 "hex": "#c2beb6"
             },
@@ -9497,7 +9497,7 @@
             "codigo_suvinil": "C163",
             "hexadecimal": "#b9b6ac",
             "pantone": {
-                "pantone": "14-4501",
+                "codigo": "14-4501",
                 "name": "silver-lining",
                 "hex": "#bdb6ab"
             },
@@ -9514,7 +9514,7 @@
             "codigo_suvinil": "C380",
             "hexadecimal": "#b6b2ad",
             "pantone": {
-                "pantone": "15-5704",
+                "codigo": "15-5704",
                 "name": "mineral-gray",
                 "hex": "#b2b6ac"
             },
@@ -9531,7 +9531,7 @@
             "codigo_suvinil": "D164",
             "hexadecimal": "#9f998d",
             "pantone": {
-                "pantone": "16-1407",
+                "codigo": "16-1407",
                 "name": "cobblestone",
                 "hex": "#a89a8e"
             },
@@ -9548,7 +9548,7 @@
             "codigo_suvinil": "C406",
             "hexadecimal": "#9d9497",
             "pantone": {
-                "pantone": "16-4703",
+                "codigo": "16-4703",
                 "name": "ghost-gray",
                 "hex": "#9c9b98"
             },
@@ -9565,7 +9565,7 @@
             "codigo_suvinil": "E380",
             "hexadecimal": "#847f77",
             "pantone": {
-                "pantone": "18-1210",
+                "codigo": "18-1210",
                 "name": "driftwood",
                 "hex": "#847a75"
             },
@@ -9582,7 +9582,7 @@
             "codigo_suvinil": "Y090",
             "hexadecimal": "#817c74",
             "pantone": {
-                "pantone": "18-1210",
+                "codigo": "18-1210",
                 "name": "driftwood",
                 "hex": "#847a75"
             },
@@ -9599,7 +9599,7 @@
             "codigo_suvinil": "P406",
             "hexadecimal": "#6a6063",
             "pantone": {
-                "pantone": "18-3905",
+                "codigo": "18-3905",
                 "name": "excalibur",
                 "hex": "#676168"
             },
@@ -9616,7 +9616,7 @@
             "codigo_suvinil": "R147",
             "hexadecimal": "#6c655b",
             "pantone": {
-                "pantone": "18-1304",
+                "codigo": "18-1304",
                 "name": "falcon",
                 "hex": "#6d625b"
             },
@@ -9633,7 +9633,7 @@
             "codigo_suvinil": "P370",
             "hexadecimal": "#534c49",
             "pantone": {
-                "pantone": "19-3900",
+                "codigo": "19-3900",
                 "name": "pavement",
                 "hex": "#524d50"
             },
@@ -9650,7 +9650,7 @@
             "codigo_suvinil": "R406",
             "hexadecimal": "#52494c",
             "pantone": {
-                "pantone": "19-3900",
+                "codigo": "19-3900",
                 "name": "pavement",
                 "hex": "#524d50"
             },
@@ -9667,7 +9667,7 @@
             "codigo_suvinil": "M167",
             "hexadecimal": "#4d4a49",
             "pantone": {
-                "pantone": "19-3901",
+                "codigo": "19-3901",
                 "name": "magnet",
                 "hex": "#4d4b4f"
             },
