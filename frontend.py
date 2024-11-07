@@ -1,4 +1,4 @@
-from colorthief import ColorThief
+import colorthief
 import streamlit as st
 from streamlit_extras.stylable_container import stylable_container
 import numpy as np
@@ -47,7 +47,7 @@ def findrgb():
     if  procura is not None or upload is not None:
         if upload is not None:
             st.session_state.cliked = True
-            ct = ColorThief(upload)
+            ct = colorthief.ColorThief(upload)
             cor = ct.get_color(quality=1)
             json_procura = {'cor': cor,'fornecedores':opcao_fornecedores}
             response = requests.post("http://localhost:5555/suvinil/",json=json_procura)

@@ -1,14 +1,17 @@
 import os, json
 import pandas as pd
 import sqlalchemy
+import streamlit as st
 from flask import Flask, request
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+
+DATABASE_URL = st.secrets["DATABASE_URL"]
 engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
 lista_complementos = []
 
 
 def generate_pandas_table(segundo_query, primeiro_query):
+    #  essa função pega os dados e gera um pandas dataframe para uso futuro
     lista_pandas = []
 
     def getting_data():
@@ -19,6 +22,7 @@ def generate_pandas_table(segundo_query, primeiro_query):
         dataframes = {}
 
         def convert_to_float(value):
+            # substitui vírgula por ponto
             value = str(value).replace(",", "")  # Substituir vírgula por ponto
             try:
                 return float(value)
