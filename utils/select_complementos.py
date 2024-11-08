@@ -353,6 +353,8 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
         primeira = ""
         segunda = ""
+        primeira_menor = ""
+        segunda_menor = ""
 
         if maior_analoga == red:
             if fornecedores != "todos":
@@ -378,7 +380,18 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             else:
                 primeira = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_menor_analoga} AND red <= {maior_valor_de_menor_analoga}  AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_menor_analoga} AND red <= {maior_valor_de_menor_analoga} AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} "
                 segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_meio_analoga} AND red <= {maior_valor_de_meio_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_meio_analoga} AND red <= {maior_valor_de_meio_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga}"
-
+        
+        if maior_analoga == red:
+            primeira_menor = "blue"
+            segunda_menor = "green"
+        if maior_analoga == green:
+            primeira_menor = "blue"
+            segunda_menor = "red"
+        if maior_analoga == blue:
+            primeira_menor = "red"
+            segunda_menor = "green"
+            
+        
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
         if resultado1.empty and resultado2.empty:
@@ -411,8 +424,18 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
                 if distancia_atual != 0:
-                    menor_distancia_1 = c
-                    distancia = distancia_atual
+                    if primeira_menor == "red":
+                        if atual_red < atual_blue and atual_red < atual_green:
+                            menor_distancia_1 = c
+                            distancia = distancia_atual
+                    if primeira_menor == "green":
+                        if atual_green < atual_blue and atual_green < atual_red:
+                            menor_distancia_1 = c
+                            distancia = distancia_atual
+                    if primeira_menor == "blue":
+                        if atual_blue < atual_green and atual_blue < atual_red:
+                            menor_distancia_1 = c
+                            distancia = distancia_atual
             c += 1
 
         while x < len(resultado2):
@@ -429,8 +452,18 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
                 if distancia_atual != 0:
-                    menor_distancia_2 = x
-                    distancia = distancia_atual
+                    if segunda_menor == "red":
+                        if atual_red < atual_blue and atual_red < atual_green:
+                            menor_distancia_2 = x
+                            distancia = distancia_atual
+                    if segunda_menor == "green":
+                        if atual_green < atual_blue and atual_green < atual_red:
+                            menor_distancia_2 = x
+                            distancia = distancia_atual
+                    if segunda_menor == "blue":
+                        if atual_blue < atual_green and atual_blue < atual_red:
+                            menor_distancia_2 = x
+                            distancia = distancia_atual
             x += 1
 
         if complemento1 == True and complemento2 == True:
