@@ -6,7 +6,7 @@ import pandas as pd
 import requests
 import json
 import time
-from utils.rgb_to_cmyk import rgb_to_cmyk
+
 
 if "count" not in st.session_state:
     st.session_state.count = '0'
@@ -19,7 +19,29 @@ visibility:hidden
 
 </style>
 """, unsafe_allow_html=True)
+
+RGB_SCALE = 255
+CMYK_SCALE = 100
 query = True
+def rgb_to_cmyk(r, g, b):
+    if (r, g, b) == (0, 0, 0):
+        # black
+        return 0, 0, 0, CMYK_SCALE
+
+    # rgb [0,255] -> cmy [0,1]
+    c = 1 - r / RGB_SCALE
+    m = 1 - g / RGB_SCALE
+    y = 1 - b / RGB_SCALE
+
+    # extract out k [0, 1]
+    min_cmy = min(c, m, y)
+    c = (c - min_cmy) / (1 - min_cmy)
+    m = (m - min_cmy) / (1 - min_cmy)
+    y = (y - min_cmy) / (1 - min_cmy)
+    k = min_cmy
+
+    # rescale to the range [0,CMYK_SCALE]
+    return c * CMYK_SCALE, m * CMYK_SCALE, y * CMYK_SCALE, k * CMYK_SCALE
 
 def findrgb():
     if  procura is not None or upload is not None:
@@ -28,7 +50,7 @@ def findrgb():
             ct = colorthief.ColorThief(upload)
             cor = ct.get_color(quality=1)
             json_procura = {'cor': cor,'fornecedores':opcao_fornecedores}
-            response = requests.post("http://localhost:5555/colors/",json=json_procura)
+            response = requests.post("http://localhost:5555/suvinil/",json=json_procura)
         elif procura != '':
             if procura[0].isalpha():
                 st.session_state.cliked = True
@@ -45,21 +67,20 @@ def findrgb():
         st.text('Por favor coloque uma imagem para verificar a cor')
 
      
-def receivecolors():
-    response = requests.get("http://localhost:5555/colors/",headers={'Content-Type': 'application/json',"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0'})
+def receivesuvinil():
+    response = requests.get("http://localhost:5555/suvinil/", headers={'Content-Type': 'application/json', "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.207.132.170 Safari/537.36"})
     data = response.json()
     cores_df = pd.DataFrame(data).filter(['id','nome','red','green','blue','hexadecimal','pantone_código','pantone_name','pantone_hex','fornecedores']) 
     container = st.container()
     st.toast('loading...')
     time.sleep(1.5)
     try:
-
         hexadecimal,fornecedores = (data[0]['hexadecimal']), data[0]['fornecedores']
         nome,pantone_codigo = data[0]['nome'],data[0] ['pantone_código']
         red,green,blue = data[0]['red'],data[0]['green'],data[0]['blue']
         c,y,m,k = rgb_to_cmyk(data[0]['red'],data[0]['green'],data[0]['blue'])
-
-        response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta,'fornecedores':opcao_fornecedores}) 
+        
+        response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta, 'fornecedores':opcao_fornecedores}) 
         complementos = requests.get("http://localhost:5555/complementos/",headers={'Content-Type': 'application/json'})
         complementos = complementos.json()
         hexadecimalc1,fornecedoresc1 = (complementos[0]['hexadecimal']), complementos[0]['fornecedores']
@@ -89,6 +110,6 @@ procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o h
 
 button = st.button('Procurar', on_click=findrgb)
 
-receivecolors()
+receivesuvinil()
 
 

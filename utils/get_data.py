@@ -2,10 +2,11 @@ import pandas as pd
 import sqlalchemy
 import os
 from dotenv import load_dotenv
+from utils.conect_to_engine import conect_to_engine_developer
 load_dotenv()
 
-DATABASE_URL = st.secrets["DATABASE_URL"]
-engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
+engine = conect_to_engine_developer()
+
 
 def getting_data():
     queries = {

@@ -1,4 +1,6 @@
 def rgb_to_cmyk(r, g, b):
+    RGB_SCALE = 255
+    CMYK_SCALE = 100
     if (r, g, b) == (0, 0, 0):
         # black
         return 0, 0, 0, CMYK_SCALE

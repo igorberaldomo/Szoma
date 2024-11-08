@@ -5,11 +5,13 @@ import json
 from sqlalchemy import MetaData
 from sqlalchemy.dialects.mysql import DATETIME as DATE
 from dotenv import load_dotenv
+from utils.conect_to_engine import conect_to_engine_developer
 load_dotenv()
 newdict = dict()
 
-DATABASE_URL = st.secrets["DATABASE_URL"]
-engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
+
+engine = conect_to_engine_developer()
+
 
 search_string = f"SELECT nome , id FROM suvinil"
 resultset = pd.read_sql(search_string, engine)
