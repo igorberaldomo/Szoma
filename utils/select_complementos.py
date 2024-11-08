@@ -1,11 +1,11 @@
 import os, json
 import pandas as pd
 import sqlalchemy
-from utils.conect_to_engine import conect_to_engine
+from utils.conect_to_engine_developer import conect_to_engine_developer
 from utils.create_pandas_table import generate_pandas_table
 from utils.filter_lines import filter_lines
 
-engine = conect_to_engine()
+engine = conect_to_engine_developer()
 
 def select_complementos(red, green, blue, palheta, fornecedores):
     if palheta == "triade":
