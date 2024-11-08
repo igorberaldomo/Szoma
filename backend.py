@@ -566,7 +566,7 @@ def infopage():
     return "<h1>Colors API</h1><p>This api will request a picture or RGB, and will return a product (paint, tiles, fabrics) </p> "
 
 
-@app.route("/suvinil/", methods=["GET", "POST"])
+@app.route("/colors/", methods=["GET", "POST"])
 def getsuvinilColors():
     if request.method == "POST":
         req = request.get_json()

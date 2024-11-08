@@ -27,9 +27,9 @@ def filter_lines(table):
                 "hexadecimal": table[i]["hexadecimal"],
                 "fornecedores": table[i]["fornecedores"],
                 "pantone_código": table[i]["pantone_código"],
-                "red": table[i]["red"],
-                "green": table[i]["green"],
-                "blue": table[i]["blue"],
+                "red": table[i]["rgb"][0],
+                "green": table[i]["rgb"][1],
+                "blue": table[i]["rgb"][2],
             }
         )
         i += 1
@@ -38,7 +38,7 @@ def filter_lines(table):
 
 def select_complementos(red, green, blue, palheta, fornecedores):
     if palheta == "triade":
-        lista_complementos.clear()
+
         desvio_maior = 70
         desvio_menor = 80
         maior = max(red, green, blue)
@@ -52,7 +52,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             meio = green
         if blue != maior and blue != menor:
             meio = blue
-
+        print(red, green, blue)
         menor_valor_de_meio = meio - desvio_maior
         maior_valor_de_meio = meio + desvio_maior
         menor_valor_de_menor = menor - desvio_menor
@@ -83,32 +83,36 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 if fornecedores == "suvinil":
                     posição = 0
                     while posição < len(suvinil):
-                        if suvinil[posição]["red"] >= menor_valor_de_menor and suvinil[posição]["red"] <= maior_valor_de_menor and suvinil[posição]["green"] >= menor_valor_de_maior and suvinil[posição]["green"] <= maior_valor_de_maior and suvinil[posição]["blue"] >= menor_valor_de_meio and suvinil[posição]["blue"] <= maior_valor_de_meio:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_menor and suvinil[posição]["rgb"][0] <= maior_valor_de_menor and suvinil[posição]["rgb"][1] >= menor_valor_de_maior and suvinil[posição]["rgb"][1] <= maior_valor_de_maior and suvinil[posição]["rgb"][2] >= menor_valor_de_meio and suvinil[posição]["rgb"][2] <= maior_valor_de_meio:
                             lista_de_complementos_1.append(suvinil[posição])
 
-                        if suvinil[posição]["red"] >= menor_valor_de_meio and suvinil[posição]["red"] <= maior_valor_de_meio and suvinil[posição]["green"] >= menor_valor_de_menor and suvinil[posição]["green"] <= maior_valor_de_menor and suvinil[posição]["blue"] >= menor_valor_de_maior and suvinil[posição]["blue"] <= maior_valor_de_maior:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_meio and suvinil[posição]["rgb"][0] <= maior_valor_de_meio and suvinil[posição]["rgb"][1] >= menor_valor_de_menor and suvinil[posição]["rgb"][1] <= maior_valor_de_menor and suvinil[posição]["rgb"][2] >= menor_valor_de_maior and suvinil[posição]["rgb"][2] <= maior_valor_de_maior:
                             lista_de_complementos_2.append(suvinil[posição])
                         posição += 1
                 if fornecedores == "coral":
                     posição = 0
                     while posição < len(coral):
-                        if coral[posição]["red"] >= menor_valor_de_menor and coral[posição]["red"] <= maior_valor_de_menor and coral[posição]["green"] >= menor_valor_de_maior and coral[posição]["green"] <= maior_valor_de_maior and coral[posição]["blue"] >= menor_valor_de_meio and coral[posição]["blue"] <= maior_valor_de_meio:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_menor and coral[posição]["rgb"][0] <= maior_valor_de_menor and coral[posição]["rgb"][1] >= menor_valor_de_maior and coral[posição]["rgb"][1] <= maior_valor_de_maior and coral[posição]["rgb"][2] >= menor_valor_de_meio and coral[posição]["rgb"][2] <= maior_valor_de_meio:
                             lista_de_complementos_1.append(coral[posição])
 
-                        if coral[posição]["red"] >= menor_valor_de_meio and coral[posição]["red"] <= maior_valor_de_meio and coral[posição]["green"] >= menor_valor_de_menor and coral[posição]["green"] <= maior_valor_de_menor and coral[posição]["blue"] >= menor_valor_de_maior and coral[posição]["blue"] <= maior_valor_de_maior:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_meio and coral[posição]["rgb"][0] <= maior_valor_de_meio and coral[posição]["rgb"][1] >= menor_valor_de_menor and coral[posição]["rgb"][1] <= maior_valor_de_menor and coral[posição]["rgb"][2] >= menor_valor_de_maior and coral[posição]["rgb"][2] <= maior_valor_de_maior:
                             lista_de_complementos_2.append(coral[posição])
                         posição += 1
             else:
                 posição = 0
                 while posição < len(suvinil):
-                    if suvinil[posição]["red"] >= menor_valor_de_menor and suvinil[posição]["red"] <= maior_valor_de_menor and suvinil[posição]["green"] >= menor_valor_de_maior and suvinil[posição]["green"] <= maior_valor_de_maior and suvinil[posição]["blue"] >= menor_valor_de_meio and suvinil[posição]["blue"] <= maior_valor_de_meio:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_menor and suvinil[posição]["rgb"][0] <= maior_valor_de_menor and suvinil[posição]["rgb"][1] >= menor_valor_de_maior and suvinil[posição]["rgb"][1] <= maior_valor_de_maior and suvinil[posição]["rgb"][2] >= menor_valor_de_meio and suvinil[posição]["rgb"][2] <= maior_valor_de_meio:
                         lista_de_complementos_1.append(suvinil[posição])
-                    if coral[posição]["red"] >= menor_valor_de_menor and coral[posição]["red"] <= maior_valor_de_menor and coral[posição]["green"] >= menor_valor_de_maior and coral[posição]["green"] <= maior_valor_de_maior and coral[posição]["blue"] >= menor_valor_de_meio and coral[posição]["blue"] <= maior_valor_de_meio:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_meio and suvinil[posição]["rgb"][0] <= maior_valor_de_meio and suvinil[posição]["rgb"][1] >= menor_valor_de_menor and suvinil[posição]["rgb"][1] <= maior_valor_de_menor and suvinil[posição]["rgb"][2] >= menor_valor_de_maior and suvinil[posição]["rgb"][2] <= maior_valor_de_maior:
+                        lista_de_complementos_2.append(suvinil[posição])
+                    posição += 1
+                    
+                posição = 0
+                while posição < len(coral):
+                    if coral[posição]["rgb"][0] >= menor_valor_de_menor and coral[posição]["rgb"][0] <= maior_valor_de_menor and coral[posição]["rgb"][1] >= menor_valor_de_maior and coral[posição]["rgb"][1] <= maior_valor_de_maior and coral[posição]["rgb"][2] >= menor_valor_de_meio and coral[posição]["rgb"][2] <= maior_valor_de_meio:
                             lista_de_complementos_1.append(coral[posição])
 
-                    if suvinil[posição]["red"] >= menor_valor_de_meio and suvinil[posição]["red"] <= maior_valor_de_meio and suvinil[posição]["green"] >= menor_valor_de_menor and suvinil[posição]["green"] <= maior_valor_de_menor and suvinil[posição]["blue"] >= menor_valor_de_maior and suvinil[posição]["blue"] <= maior_valor_de_maior:
-                        lista_de_complementos_2.append(suvinil[posição])
-                    if coral[posição]["red"] >= menor_valor_de_meio and coral[posição]["red"] <= maior_valor_de_meio and coral[posição]["green"] >= menor_valor_de_menor and coral[posição]["green"] <= maior_valor_de_menor and coral[posição]["blue"] >= menor_valor_de_maior and coral[posição]["blue"] <= maior_valor_de_maior:
+                    if coral[posição]["rgb"][0] >= menor_valor_de_meio and coral[posição]["rgb"][0] <= maior_valor_de_meio and coral[posição]["rgb"][1] >= menor_valor_de_menor and coral[posição]["rgb"][1] <= maior_valor_de_menor and coral[posição]["rgb"][2] >= menor_valor_de_maior and coral[posição]["rgb"][2] <= maior_valor_de_maior:
                             lista_de_complementos_2.append(coral[posição])
                     posição += 1
 
@@ -117,34 +121,36 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 if fornecedores == "suvinil":
                     posição = 0
                     while posição < len(suvinil):
-                        if suvinil[posição]["red"] >= menor_valor_de_meio and suvinil[posição]["red"] <= maior_valor_de_meio and suvinil[posição]["green"] >= menor_valor_de_menor and suvinil[posição]["green"] <= maior_valor_de_menor and suvinil[posição]["blue"] >= menor_valor_de_maior and suvinil[posição]["blue"] <= maior_valor_de_maior:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_meio and suvinil[posição]["rgb"][0] <= maior_valor_de_meio and suvinil[posição]["rgb"][1] >= menor_valor_de_menor and suvinil[posição]["rgb"][1] <= maior_valor_de_menor and suvinil[posição]["rgb"][2] >= menor_valor_de_maior and suvinil[posição]["rgb"][2] <= maior_valor_de_maior:
                             lista_de_complementos_1.append(suvinil[posição])
 
-                        if suvinil[posição]["red"] >= menor_valor_de_maior and suvinil[posição]["red"] <= maior_valor_de_maior and suvinil[posição]["green"] >= menor_valor_de_meio and suvinil[posição]["green"] <= maior_valor_de_meio and suvinil[posição]["blue"] >= menor_valor_de_menor and suvinil[posição]["blue"] <= maior_valor_de_menor:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_maior and suvinil[posição]["rgb"][0] <= maior_valor_de_maior and suvinil[posição]["rgb"][1] >= menor_valor_de_meio and suvinil[posição]["rgb"][1] <= maior_valor_de_meio and suvinil[posição]["rgb"][2] >= menor_valor_de_menor and suvinil[posição]["rgb"][2] <= maior_valor_de_menor:
                             lista_de_complementos_2.append(suvinil[posição])
                         posição += 1
                 if fornecedores == "coral":
                     posição = 0
                     while posição < len(coral):
-                        if coral[posição]["red"] >= menor_valor_de_meio and coral[posição]["red"] <= maior_valor_de_meio and coral[posição]["green"] >= menor_valor_de_menor and coral[posição]["green"] <= maior_valor_de_menor and coral[posição]["blue"] >= menor_valor_de_maior and coral[posição]["blue"] <= maior_valor_de_maior:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_meio and coral[posição]["rgb"][0] <= maior_valor_de_meio and coral[posição]["rgb"][1] >= menor_valor_de_menor and coral[posição]["rgb"][1] <= maior_valor_de_menor and coral[posição]["rgb"][2] >= menor_valor_de_maior and coral[posição]["rgb"][2] <= maior_valor_de_maior:
                             lista_de_complementos_1.append(coral[posição])
 
-                        if coral[posição]["red"] >= menor_valor_de_maior and coral[posição]["red"] <= maior_valor_de_maior and coral[posição]["green"] >= menor_valor_de_meio and coral[posição]["green"] <= maior_valor_de_meio and coral[posição]["blue"] >= menor_valor_de_menor and coral[posição]["blue"] <= maior_valor_de_menor:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_maior and coral[posição]["rgb"][0] <= maior_valor_de_maior and coral[posição]["rgb"][1] >= menor_valor_de_meio and coral[posição]["rgb"][1] <= maior_valor_de_meio and coral[posição]["rgb"][2] >= menor_valor_de_menor and coral[posição]["rgb"][2] <= maior_valor_de_menor:
                             lista_de_complementos_2.append(coral[posição])
                         posição += 1
             else:
                 posição = 0
                 while posição < len(suvinil):
-                    if suvinil[posição]["red"] >= menor_valor_de_meio and suvinil[posição]["red"] <= maior_valor_de_meio and suvinil[posição]["green"] >= menor_valor_de_menor and suvinil[posição]["green"] <= maior_valor_de_menor and suvinil[posição]["blue"] >= menor_valor_de_maior and suvinil[posição]["blue"] <= maior_valor_de_maior:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_meio and suvinil[posição]["rgb"][0] <= maior_valor_de_meio and suvinil[posição]["rgb"][1] >= menor_valor_de_menor and suvinil[posição]["rgb"][1] <= maior_valor_de_menor and suvinil[posição]["rgb"][2] >= menor_valor_de_maior and suvinil[posição]["rgb"][2] <= maior_valor_de_maior:
                         lista_de_complementos_1.append(suvinil[posição])
-                    if coral[posição]["red"] >= menor_valor_de_meio and coral[posição]["red"] <= maior_valor_de_meio and coral[posição]["green"] >= menor_valor_de_menor and coral[posição]["green"] <= maior_valor_de_menor and coral[posição]["blue"] >= menor_valor_de_maior and coral[posição]["blue"] <= maior_valor_de_maior:
-                            lista_de_complementos_1.append(coral[posição])
-
-
-                    if suvinil[posição]["red"] >= menor_valor_de_maior and suvinil[posição]["red"] <= maior_valor_de_maior and suvinil[posição]["green"] >= menor_valor_de_meio and suvinil[posição]["green"] <= maior_valor_de_meio and suvinil[posição]["blue"] >= menor_valor_de_menor and suvinil[posição]["blue"] <= maior_valor_de_menor:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_maior and suvinil[posição]["rgb"][0] <= maior_valor_de_maior and suvinil[posição]["rgb"][1] >= menor_valor_de_meio and suvinil[posição]["rgb"][1] <= maior_valor_de_meio and suvinil[posição]["rgb"][2] >= menor_valor_de_menor and suvinil[posição]["rgb"][2] <= maior_valor_de_menor:
                         lista_de_complementos_2.append(suvinil[posição])
-                    if coral[posição]["red"] >= menor_valor_de_maior and coral[posição]["red"] <= maior_valor_de_maior and coral[posição]["green"] >= menor_valor_de_meio and coral[posição]["green"] <= maior_valor_de_meio and coral[posição]["blue"] >= menor_valor_de_menor and coral[posição]["blue"] <= maior_valor_de_menor:
-                            lista_de_complementos_2.append(coral[posição])
+                    posição += 1
+                    
+                posição = 0
+                while posicion < len(coral):
+                    if coral[posição]["rgb"][0] >= menor_valor_de_meio and coral[posição]["rgb"][0] <= maior_valor_de_meio and coral[posição]["rgb"][1] >= menor_valor_de_menor and coral[posição]["rgb"][1] <= maior_valor_de_menor and coral[posição]["rgb"][2] >= menor_valor_de_maior and coral[posição]["rgb"][2] <= maior_valor_de_maior:
+                        lista_de_complementos_1.append(coral[posição])
+                    if coral[posição]["rgb"][0] >= menor_valor_de_maior and coral[posição]["rgb"][0] <= maior_valor_de_maior and coral[posição]["rgb"][1] >= menor_valor_de_meio and coral[posição]["rgb"][1] <= maior_valor_de_meio and coral[posição]["rgb"][2] >= menor_valor_de_menor and coral[posição]["rgb"][2] <= maior_valor_de_menor:
+                        lista_de_complementos_2.append(coral[posição])
                     posição += 1
 
         if maior == blue:
@@ -152,44 +158,43 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 if fornecedores == "suvinil":
                     posição = 0
                     while posição < len(suvinil):
-                        if suvinil[posição]["red"] >= menor_valor_de_menor and suvinil[posição]["red"] <= maior_valor_de_menor and suvinil[posição]["green"] >= menor_valor_de_maior and suvinil[posição]["green"] <= maior_valor_de_maior and suvinil[posição]["blue"] >= menor_valor_de_meio and suvinil[posição]["blue"] <= maior_valor_de_meio:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_menor and suvinil[posição]["rgb"][0] <= maior_valor_de_menor and suvinil[posição]["rgb"][1] >= menor_valor_de_maior and suvinil[posição]["rgb"][1] <= maior_valor_de_maior and suvinil[posição]["rgb"][2] >= menor_valor_de_meio and suvinil[posição]["rgb"][2] <= maior_valor_de_meio:
                             lista_de_complementos_1.append(suvinil[posição])
 
-                        if suvinil[posição]["red"] >= menor_valor_de_maior and suvinil[posição]["red"] <= maior_valor_de_maior and suvinil[posição]["green"] >= menor_valor_de_meio and suvinil[posição]["green"] <= maior_valor_de_meio and suvinil[posição]["blue"] >= menor_valor_de_menor and suvinil[posição]["blue"] <= maior_valor_de_menor:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_maior and suvinil[posição]["rgb"][0] <= maior_valor_de_maior and suvinil[posição]["rgb"][1] >= menor_valor_de_meio and suvinil[posição]["rgb"][1] <= maior_valor_de_meio and suvinil[posição]["rgb"][2] >= menor_valor_de_menor and suvinil[posição]["rgb"][2] <= maior_valor_de_menor:
                             lista_de_complementos_2.append(suvinil[posição])
                         posição += 1
                 if fornecedores == "coral":
                     posição = 0
                     while posição < len(coral):
-                        if coral[posição]["red"] >= menor_valor_de_menor and coral[posição]["red"] <= maior_valor_de_menor and coral[posição]["green"] >= menor_valor_de_maior and coral[posição]["green"] <= maior_valor_de_maior and coral[posição]["blue"] >= menor_valor_de_meio and coral[posição]["blue"] <= maior_valor_de_meio:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_menor and coral[posição]["rgb"][0] <= maior_valor_de_menor and coral[posição]["rgb"][1] >= menor_valor_de_maior and coral[posição]["rgb"][1] <= maior_valor_de_maior and coral[posição]["rgb"][2] >= menor_valor_de_meio and coral[posição]["rgb"][2] <= maior_valor_de_meio:
                             lista_de_complementos_1.append(coral[posição])
 
-                        if coral[posição]["red"] >= menor_valor_de_maior and coral[posição]["red"] <= maior_valor_de_maior and coral[posição]["green"] >= menor_valor_de_meio and coral[posição]["green"] <= maior_valor_de_meio and coral[posição]["blue"] >= menor_valor_de_menor and coral[posição]["blue"] <= maior_valor_de_menor:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_maior and coral[posição]["rgb"][0] <= maior_valor_de_maior and coral[posição]["rgb"][1] >= menor_valor_de_meio and coral[posição]["rgb"][1] <= maior_valor_de_meio and coral[posição]["rgb"][2] >= menor_valor_de_menor and coral[posição]["rgb"][2] <= maior_valor_de_menor:
                             lista_de_complementos_2.append(coral[posição])
                         posição += 1
 
             else:
                 posição = 0
                 while posição < len(suvinil):
-                    if suvinil[posição]["red"] >= menor_valor_de_menor and suvinil[posição]["red"] <= maior_valor_de_menor and suvinil[posição]["green"] >= menor_valor_de_maior and suvinil[posição]["green"] <= maior_valor_de_maior and suvinil[posição]["blue"] >= menor_valor_de_meio and suvinil[posição]["blue"] <= maior_valor_de_meio:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_menor and suvinil[posição]["rgb"][0] <= maior_valor_de_menor and suvinil[posição]["rgb"][1] >= menor_valor_de_maior and suvinil[posição]["rgb"][1] <= maior_valor_de_maior and suvinil[posição]["rgb"][2] >= menor_valor_de_meio and suvinil[posição]["rgb"][2] <= maior_valor_de_meio:
                         lista_de_complementos_1.append(suvinil[posição])
-                    if coral[posição]["red"] >= menor_valor_de_menor and coral[posição]["red"] <= maior_valor_de_menor and coral[posição]["green"] >= menor_valor_de_maior and coral[posição]["green"] <= maior_valor_de_maior and coral[posição]["blue"] >= menor_valor_de_meio and coral[posição]["blue"] <= maior_valor_de_meio:
-                        lista_de_complementos_1.append(coral[posição])
-
-                    if suvinil[posição]["red"] >= menor_valor_de_maior and suvinil[posição]["red"] <= maior_valor_de_maior and suvinil[posição]["green"] >= menor_valor_de_meio and suvinil[posição]["green"] <= maior_valor_de_meio and suvinil[posição]["blue"] >= menor_valor_de_menor and suvinil[posição]["blue"] <= maior_valor_de_menor:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_maior and suvinil[posição]["rgb"][0] <= maior_valor_de_maior and suvinil[posição]["rgb"][1] >= menor_valor_de_meio and suvinil[posição]["rgb"][1] <= maior_valor_de_meio and suvinil[posição]["rgb"][2] >= menor_valor_de_menor and suvinil[posição]["rgb"][2] <= maior_valor_de_menor:
                         lista_de_complementos_2.append(suvinil[posição])
-                    if coral[posição]["red"] >= menor_valor_de_maior and coral[posição]["red"] <= maior_valor_de_maior and coral[posição]["green"] >= menor_valor_de_meio and coral[posição]["green"] <= maior_valor_de_meio and coral[posição]["blue"] >= menor_valor_de_menor and coral[posição]["blue"] <= maior_valor_de_menor:
-                            lista_de_complementos_2.append(coral[posição])
+                        posição += 1
+                posição = 0
+                while posicao < len(coral):
+                    if coral[posição]["rgb"][0] >= menor_valor_de_menor and coral[posição]["rgb"][0] <= maior_valor_de_menor and coral[posição]["rgb"][1] >= menor_valor_de_maior and coral[posição]["rgb"][1] <= maior_valor_de_maior and coral[posição]["rgb"][2] >= menor_valor_de_meio and coral[posição]["rgb"][2] <= maior_valor_de_meio:
+                        lista_de_complementos_1.append(coral[posição])
+                    if coral[posição]["rgb"][0] >= menor_valor_de_maior and coral[posição]["rgb"][0] <= maior_valor_de_maior and coral[posição]["rgb"][1] >= menor_valor_de_meio and coral[posição]["rgb"][1] <= maior_valor_de_meio and coral[posição]["rgb"][2] >= menor_valor_de_menor and coral[posição]["rgb"][2] <= maior_valor_de_menor:
+                        lista_de_complementos_2.append(coral[posição])
                     posição += 1
-
-        generate_pandas_table(lista_de_complementos_1, lista_de_complementos_2)
-
-        if lista_de_complementos_1.empty and lista_de_complementos_2.empty:
+        if len(lista_de_complementos_1) == 0 and len(lista_de_complementos_2) == 0:
             complemento1 = False
             complemento2 = False
-        elif lista_de_complementos_1.empty:
+        elif len(lista_de_complementos_1) == 0 :
             complemento1 = False
-        elif lista_de_complementos_2.empty:
+        elif len(lista_de_complementos_2) == 0:
             complemento2 = False
         else:
             print(" ")
@@ -200,9 +205,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         menor_distancia_1 = 0
         menor_distancia_2 = 0
         while c < len(lista_de_complementos_1):
-            atual_red = lista_de_complementos_1[c]["red"] - red
-            atual_green = lista_de_complementos_1[c]["green"] - green
-            atual_blue = lista_de_complementos_1[c]["blue"] - blue
+            atual_red = lista_de_complementos_1[c]["rgb"][0] - red
+            atual_green = lista_de_complementos_1[c]["rgb"][1] - green
+            atual_blue = lista_de_complementos_1[c]["rgb"][2] - blue
 
             if atual_red < 0:
                 atual_red = atual_red * -1
@@ -219,9 +224,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             c += 1
 
         while x < len(lista_de_complementos_2):
-            atual_red = lista_de_complementos_2[x]["red"] - red
-            atual_green = lista_de_complementos_2[x]["green"] - green
-            atual_blue = lista_de_complementos_2[x]["blue"] - blue
+            atual_red = lista_de_complementos_2[x]["rgb"][0] - red
+            atual_green = lista_de_complementos_2[x]["rgb"][1] - green
+            atual_blue = lista_de_complementos_2[x]["rgb"][2] - blue
 
             if atual_red < 0:
                 atual_red = atual_red * -1
@@ -301,32 +306,35 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             if fornecedores == "suvinil":
                     posição = 0
                     while posição < len(suvinil):
-                        if suvinil[posição]["red"] >= cr_inter_min and suvinil[posição]["red"] <= cr_inter_max and suvinil[posição]["green"] >= cg_inter_min and suvinil[posição]["green"] <= cg_inter_max and suvinil[posição]["blue"] >= cb_inter_min and suvinil[posição]["blue"] <= cb_inter_max:
+                        if suvinil[posição]["rgb"][0] >= cr_inter_min and suvinil[posição]["rgb"][0] <= cr_inter_max and suvinil[posição]["rgb"][1] >= cg_inter_min and suvinil[posição]["rgb"][1] <= cg_inter_max and suvinil[posição]["rgb"][2] >= cb_inter_min and suvinil[posição]["rgb"][2] <= cb_inter_max:
                             intermediaria.append(suvinil[posição])
 
-                        if suvinil[posição]["red"] >= cr_min and suvinil[posição]["red"] <= cr_max and suvinil[posição]["green"] >= cg_inter_min and suvinil[posição]["green"] <= cg_max and suvinil[posição]["blue"] >= cb_inter_min and suvinil[posição]["blue"] <= cb_inter_max:
+                        if suvinil[posição]["rgb"][0] >= cr_min and suvinil[posição]["rgb"][0] <= cr_max and suvinil[posição]["rgb"][1] >= cg_inter_min and suvinil[posição]["rgb"][1] <= cg_max and suvinil[posição]["rgb"][2] >= cb_inter_min and suvinil[posição]["rgb"][2] <= cb_inter_max:
                             complementar.append(suvinil[posição])
                         posição += 1
             if fornecedores == "coral":
                 posição = 0
                 while posição < len(coral):
-                    if coral[posição]["red"] >= cr_inter_min and coral[posição]["red"] <= cr_inter_max and coral[posição]["green"] >= cg_inter_min and coral[posição]["green"] <= cg_inter_max and coral[posição]["blue"] >= cb_inter_min and coral[posição]["blue"] <= cb_inter_max:
+                    if coral[posição]["rgb"][0] >= cr_inter_min and coral[posição]["rgb"][0] <= cr_inter_max and coral[posição]["rgb"][1] >= cg_inter_min and coral[posição]["rgb"][1] <= cg_inter_max and coral[posição]["rgb"][2] >= cb_inter_min and coral[posição]["rgb"][2] <= cb_inter_max:
                         intermediaria.append(coral[posição])
 
-                    if coral[posição]["red"] >= cr_min and coral[posição]["red"] <= cr_max and coral[posição]["green"] >= cg_min and coral[posição]["green"] <= cg_max and coral[posição]["blue"] >= cb_min and coral[posição]["blue"] <= cb_max:
+                    if coral[posição]["rgb"][0] >= cr_min and coral[posição]["rgb"][0] <= cr_max and coral[posição]["rgb"][1] >= cg_min and coral[posição]["rgb"][1] <= cg_max and coral[posição]["rgb"][2] >= cb_min and coral[posição]["rgb"][2] <= cb_max:
                         complementar.append(coral[posição])
                     posição += 1
         else:
             posição = 0
             while posição < len(suvinil):
-                if suvinil[posição]["red"] >= cr_inter_min and suvinil[posição]["red"] <= cr_inter_max and suvinil[posição]["green"] >= cg_inter_min and suvinil[posição]["green"] <= cg_inter_max and suvinil[posição]["blue"] >= cb_inter_min and suvinil[posição]["blue"] <= cb_inter_max:
+                if suvinil[posição]["rgb"][0] >= cr_inter_min and suvinil[posição]["rgb"][0] <= cr_inter_max and suvinil[posição]["rgb"][1] >= cg_inter_min and suvinil[posição]["rgb"][1] <= cg_inter_max and suvinil[posição]["rgb"][2] >= cb_inter_min and suvinil[posição]["rgb"][2] <= cb_inter_max:
                     intermediaria.append(suvinil[posição])
-                if coral[posição]["red"] >= cr_inter_min and coral[posição]["red"] <= cr_inter_max and coral[posição]["green"] >= cg_inter_min and coral[posição]["green"] <= cg_inter_max and coral[posição]["blue"] >= cb_inter_min and coral[posição]["blue"] <= cb_inter_max:
-                    intermediaria.append(coral[posição])
-
-                if suvinil[posição]["red"] >= cr_min and suvinil[posição]["red"] <= cr_max and suvinil[posição]["green"] >= cg_inter_min and suvinil[posição]["green"] <= cg_max and suvinil[posição]["blue"] >= cb_inter_min and suvinil[posição]["blue"] <= cb_inter_max:
+                if suvinil[posição]["rgb"][0] >= cr_min and suvinil[posição]["rgb"][0] <= cr_max and suvinil[posição]["rgb"][1] >= cg_inter_min and suvinil[posição]["rgb"][1] <= cg_max and suvinil[posição]["rgb"][2] >= cb_inter_min and suvinil[posição]["rgb"][2] <= cb_inter_max:
                     complementar.append(suvinil[posição])
-                if coral[posição]["red"] >= cr_min and coral[posição]["red"] <= cr_max and coral[posição]["green"] >= cg_min and coral[posição]["green"] <= cg_max and coral[posição]["blue"] >= cb_min and coral[posição]["blue"] <= cb_max:
+                posição += 1
+                
+            posição = 0
+            while posição < len(coral):                    
+                if coral[posição]["rgb"][0] >= cr_inter_min and coral[posição]["rgb"][0] <= cr_inter_max and coral[posição]["rgb"][1] >= cg_inter_min and coral[posição]["rgb"][1] <= cg_inter_max and coral[posição]["rgb"][2] >= cb_inter_min and coral[posição]["rgb"][2] <= cb_inter_max:
+                    intermediaria.append(coral[posição])
+                if coral[posição]["rgb"][0] >= cr_min and coral[posição]["rgb"][0] <= cr_max and coral[posição]["rgb"][1] >= cg_min and coral[posição]["rgb"][1] <= cg_max and coral[posição]["rgb"][2] >= cb_min and coral[posição]["rgb"][2] <= cb_max:
                     complementar.append(coral[posição])
                 posição += 1
 
@@ -346,9 +354,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         menor_distancia_2 = 0
 
         while c < len(intermediaria):
-            atual_red = intermediaria[c]["red"] - cr_inter
-            atual_green = intermediaria[c]["green"] - cg_inter
-            atual_blue = intermediaria[c]["blue"] - cb_inter
+            atual_red = intermediaria[c]["rgb"][0] - cr_inter
+            atual_green = intermediaria[c]["rgb"][1] - cg_inter
+            atual_blue = intermediaria[c]["rgb"][2] - cb_inter
 
             if atual_red < 0:
                 atual_red = atual_red * -1
@@ -365,9 +373,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             c += 1
 
         while x < len(complementar):
-            atual_red = complementar[x]["red"] - cr
-            atual_green = complementar[x]["green"] - cg
-            atual_blue = complementar[x]["blue"] - cb
+            atual_red = complementar[x]["rgb"][0] - cr
+            atual_green = complementar[x]["rgb"][1] - cg
+            atual_blue = complementar[x]["rgb"][2] - cb
 
             if atual_red < 0:
                 atual_red = atual_red * -1
@@ -454,32 +462,35 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 if fornecedores == "suvinil":
                     posição = 0
                     while posição < len(suvinil):
-                        if suvinil[posição]["red"] >= menor_valor_de_maior_analoga and suvinil[posição]["red"] <= maior_valor_de_maior_analoga and suvinil[posição]["green"] >= menor_valor_de_meio_analoga and suvinil[posição]["green"] <= maior_valor_de_meio_analoga and suvinil[posição]["blue"] >= menor_valor_de_menor_analoga and suvinil[posição]["blue"] <= maior_valor_de_menor_analoga:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_maior_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_meio_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_menor_analoga:
                             primeira_analoga.append(suvinil[posição])
 
-                        if suvinil[posição]["red"] >= menor_valor_de_maior_analoga and suvinil[posição]["red"] <= maior_valor_de_maior_analoga and suvinil[posição]["green"] >= menor_valor_de_menor_analoga and suvinil[posição]["green"] <= maior_valor_de_menor_analoga and suvinil[posição]["blue"] >= menor_valor_de_meio_analoga and suvinil[posição]["blue"] <= maior_valor_de_meio_analoga:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_maior_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_menor_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_meio_analoga:
                             segunda_analoga.append(suvinil[posição])
                         posição += 1
                 if fornecedores == "coral":
                     posição = 0
                     while posição < len(coral):
-                        if coral[posição]["red"] >= menor_valor_de_maior_analoga and coral[posição]["red"] <= maior_valor_de_maior_analoga and coral[posição]["green"] >= menor_valor_de_meio_analoga and coral[posição]["green"] <= maior_valor_de_meio_analoga and coral[posição]["blue"] >= menor_valor_de_menor_analoga and coral[posição]["blue"] <= maior_valor_de_menor_analoga:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][0] <= maior_valor_de_maior_analoga and coral[posição]["rgb"][1] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][1] <= maior_valor_de_meio_analoga and coral[posição]["rgb"][2] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][2] <= maior_valor_de_menor_analoga:
                             primeira_analoga.append(coral[posição])
 
-                        if coral[posição]["red"] >= menor_valor_de_maior_analoga and coral[posição]["red"] <= maior_valor_de_maior_analoga and coral[posição]["green"] >= menor_valor_de_menor_analoga and coral[posição]["green"] <= maior_valor_de_menor_analoga and coral[posição]["blue"] >= menor_valor_de_meio_analoga and coral[posição]["blue"] <= maior_valor_de_meio_analoga:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][0] <= maior_valor_de_maior_analoga and coral[posição]["rgb"][1] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][1] <= maior_valor_de_menor_analoga and coral[posição]["rgb"][2] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][2] <= maior_valor_de_meio_analoga:
                             segunda_analoga.append(coral[posição])
                         posição += 1
             else:
                 posição = 0
                 while posição < len(suvinil):
-                    if suvinil[posição]["red"] >= menor_valor_de_maior_analoga and suvinil[posição]["red"] <= maior_valor_de_maior_analoga and suvinil[posição]["green"] >= menor_valor_de_meio_analoga and suvinil[posição]["green"] <= maior_valor_de_meio_analoga and suvinil[posição]["blue"] >= menor_valor_de_menor_analoga and suvinil[posição]["blue"] <= maior_valor_de_menor_analoga:
-                        primeira_analoga.append(suvinil[posição])
-                    if coral[posição]["red"] >= menor_valor_de_maior_analoga and coral[posição]["red"] <= maior_valor_de_maior_analoga and coral[posição]["green"] >= menor_valor_de_meio_analoga and coral[posição]["green"] <= maior_valor_de_meio_analoga and coral[posição]["blue"] >= menor_valor_de_menor_analoga and coral[posição]["blue"] <= maior_valor_de_menor_analoga:
-                        primeira_analoga.append(coral[posição])
-
-                    if suvinil[posição]["red"] >= menor_valor_de_maior_analoga and suvinil[posição]["red"] <= maior_valor_de_maior_analoga and suvinil[posição]["green"] >= menor_valor_de_menor_analoga and suvinil[posição]["green"] <= maior_valor_de_menor_analoga and suvinil[posição]["blue"] >= menor_valor_de_meio_analoga and suvinil[posição]["blue"] <= maior_valor_de_meio_analoga:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_maior_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_meio_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_menor_analoga:
+                        primeira_analoga.append(suvinil[posição])  
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_maior_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_menor_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_meio_analoga:
                         segunda_analoga.append(suvinil[posição])
-                    if coral[posição]["red"] >= menor_valor_de_maior_analoga and coral[posição]["red"] <= maior_valor_de_maior_analoga and coral[posição]["green"] >= menor_valor_de_menor_analoga and coral[posição]["green"] <= maior_valor_de_menor_analoga and coral[posição]["blue"] >= menor_valor_de_meio_analoga and coral[posição]["blue"] <= maior_valor_de_meio_analoga:
+                    posição += 1
+                    
+                posição = 0
+                while posicao < len(coral):  
+                    if coral[posição]["rgb"][0] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][0] <= maior_valor_de_maior_analoga and coral[posição]["rgb"][1] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][1] <= maior_valor_de_meio_analoga and coral[posição]["rgb"][2] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][2] <= maior_valor_de_menor_analoga:
+                        primeira_analoga.append(coral[posição])
+                    if coral[posição]["rgb"][0] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][0] <= maior_valor_de_maior_analoga and coral[posição]["rgb"][1] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][1] <= maior_valor_de_menor_analoga and coral[posição]["rgb"][2] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][2] <= maior_valor_de_meio_analoga:
                         segunda_analoga.append(coral[posição])
                     posição += 1
 
@@ -488,36 +499,36 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 if fornecedores == "suvinil":
                     posição = 0
                     while posição < len(suvinil):
-                        if suvinil[posição]["red"] >= menor_valor_de_meio_analoga and suvinil[posição]["red"] <= maior_valor_de_meio_analoga and suvinil[posição]["green"] >= menor_valor_de_maior_analoga and suvinil[posição]["green"] <= maior_valor_de_maior_analoga and suvinil[posição]["blue"] >= menor_valor_de_menor_analoga and suvinil[posição]["blue"] <= maior_valor_de_menor_analoga:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_meio_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_maior_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_menor_analoga:
                             primeira_analoga.append(suvinil[posição])
 
-                        if suvinil[posição]["red"] >= menor_valor_de_menor_analoga and suvinil[posição]["red"] <= maior_valor_de_menor_analoga and suvinil[posição]["green"] >= menor_valor_de_maior_analoga and suvinil[posição]["green"] <= maior_valor_de_maior_analoga and suvinil[posição]["blue"] >= menor_valor_de_meio_analoga and suvinil[posição]["blue"] <= maior_valor_de_meio_analoga:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_menor_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_maior_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_meio_analoga:
                             segunda_analoga.append(suvinil[posição])
                         posição += 1
                 if fornecedores == "coral":
                     posição = 0
                     while posição < len(coral):
-                        if coral[posição]["red"] >= menor_valor_de_meio_analoga and coral[posição]["red"] <= maior_valor_de_meio_analoga and coral[posição]["green"] >= menor_valor_de_maior_analoga and coral[posição]["green"] <= maior_valor_de_maior_analoga and coral[posição]["blue"] >= menor_valor_de_menor_analoga and coral[posição]["blue"] <= maior_valor_de_menor_analoga:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][0] <= maior_valor_de_meio_analoga and coral[posição]["rgb"][1] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][1] <= maior_valor_de_maior_analoga and coral[posição]["rgb"][2] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][2] <= maior_valor_de_menor_analoga:
                             primeira_analoga.append(coral[posição])
 
-                        if coral[posição]["red"] >= menor_valor_de_menor_analoga and coral[posição]["red"] <= maior_valor_de_menor_analoga and coral[posição]["green"] >= menor_valor_de_maior_analoga and coral[posição]["green"] <= maior_valor_de_maior_analoga and coral[posição]["blue"] >= menor_valor_de_meio_analoga and coral[posição]["blue"] <= maior_valor_de_meio_analoga:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][0] <= maior_valor_de_menor_analoga and coral[posição]["rgb"][1] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][1] <= maior_valor_de_maior_analoga and coral[posição]["rgb"][2] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][2] <= maior_valor_de_meio_analoga:
                             segunda_analoga.append(coral[posição])
                         posição += 1
             else:
                 posição = 0
                 while posição < len(suvinil):
-                    if suvinil[posição]["red"] >= menor_valor_de_meio_analoga and suvinil[posição]["red"] <= maior_valor_de_meio_analoga and suvinil[posição]["green"] >= menor_valor_de_maior_analoga and suvinil[posição]["green"] <= maior_valor_de_maior_analoga and suvinil[posição]["blue"] >= menor_valor_de_menor_analoga and suvinil[posição]["blue"] <= maior_valor_de_menor_analoga:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_meio_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_maior_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_menor_analoga:
                         primeira_analoga.append(suvinil[posição])
-                    if suvinil[posição]["red"] >= menor_valor_de_menor_analoga and suvinil[posição]["red"] <= maior_valor_de_menor_analoga and suvinil[posição]["green"] >= menor_valor_de_maior_analoga and suvinil[posição]["green"] <= maior_valor_de_maior_analoga and suvinil[posição]["blue"] >= menor_valor_de_meio_analoga and suvinil[posição]["blue"] <= maior_valor_de_meio_analoga:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_menor_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_maior_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_meio_analoga:
                         segunda_analoga.append(suvinil[posição])
                     posição += 1
                     
                 posição = 0        
                 while posicao < len(coral):        
-                    if coral[posição]["red"] >= menor_valor_de_meio_analoga and coral[posição]["red"] <= maior_valor_de_meio_analoga and coral[posição]["green"] >= menor_valor_de_maior_analoga and coral[posição]["green"] <= maior_valor_de_maior_analoga and coral[posição]["blue"] >= menor_valor_de_menor_analoga and coral[posição]["blue"] <= maior_valor_de_menor_analoga:
+                    if coral[posição]["rgb"][0] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][0] <= maior_valor_de_meio_analoga and coral[posição]["rgb"][1] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][1] <= maior_valor_de_maior_analoga and coral[posição]["rgb"][2] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][2] <= maior_valor_de_menor_analoga:
                         primeira_analoga.append(coral[posição])
 
-                    if coral[posição]["red"] >= menor_valor_de_menor_analoga and coral[posição]["red"] <= maior_valor_de_menor_analoga and coral[posição]["green"] >= menor_valor_de_maior_analoga and coral[posição]["green"] <= maior_valor_de_maior_analoga and coral[posição]["blue"] >= menor_valor_de_meio_analoga and coral[posição]["blue"] <= maior_valor_de_meio_analoga:
+                    if coral[posição]["rgb"][0] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][0] <= maior_valor_de_menor_analoga and coral[posição]["rgb"][1] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][1] <= maior_valor_de_maior_analoga and coral[posição]["rgb"][2] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][2] <= maior_valor_de_meio_analoga:
                         segunda_analoga.append(coral[posição])
                     posição += 1
 
@@ -526,35 +537,35 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 if fornecedores == "suvinil":
                     posição = 0
                     while posição < len(suvinil):
-                        if suvinil[posição]["red"] >= menor_valor_de_menor_analoga and suvinil[posição]["red"] <= maior_valor_de_menor_analoga and suvinil[posição]["green"] >= menor_valor_de_meio_analoga and suvinil[posição]["green"] <= maior_valor_de_meio_analoga and suvinil[posição]["blue"] >= menor_valor_de_maior_analoga and suvinil[posição]["blue"] <= maior_valor_de_maior_analoga:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_menor_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_meio_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_maior_analoga:
                             primeira_analoga.append(suvinil[posição])
 
-                        if suvinil[posição]["red"] >= menor_valor_de_meio_analoga and suvinil[posição]["red"] <= maior_valor_de_meio_analoga and suvinil[posição]["green"] >= menor_valor_de_menor_analoga and suvinil[posição]["green"] <= maior_valor_de_menor_analoga and suvinil[posição]["blue"] >= menor_valor_de_maior_analoga and suvinil[posição]["blue"] <= maior_valor_de_maior_analoga:
+                        if suvinil[posição]["rgb"][0] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_meio_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_menor_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_maior_analoga:
                             segunda_analoga.append(suvinil[posição])
                         posição += 1
                 if fornecedores == "coral":
                     posição = 0
                     while posição < len(coral):
-                        if coral[posição]["red"] >= menor_valor_de_menor_analoga and coral[posição]["red"] <= maior_valor_de_menor_analoga and coral[posição]["green"] >= menor_valor_de_meio_analoga and coral[posição]["green"] <= maior_valor_de_meio_analoga and coral[posição]["blue"] >= menor_valor_de_maior_analoga and coral[posição]["blue"] <= maior_valor_de_maior_analoga:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][0] <= maior_valor_de_menor_analoga and coral[posição]["rgb"][1] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][1] <= maior_valor_de_meio_analoga and coral[posição]["rgb"][2] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][2] <= maior_valor_de_maior_analoga:
                             primeira_analoga.append(coral[posição])
 
-                        if coral[posição]["red"] >= menor_valor_de_meio_analoga and coral[posição]["red"] <= maior_valor_de_meio_analoga and coral[posição]["green"] >= menor_valor_de_menor_analoga and coral[posição]["green"] <= maior_valor_de_menor_analoga and coral[posição]["blue"] >= menor_valor_de_maior_analoga and coral[posição]["blue"] <= maior_valor_de_maior_analoga:
+                        if coral[posição]["rgb"][0] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][0] <= maior_valor_de_meio_analoga and coral[posição]["rgb"][1] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][1] <= maior_valor_de_menor_analoga and coral[posição]["rgb"][2] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][2] <= maior_valor_de_maior_analoga:
                             segunda_analoga.append(coral[posição])
                         posição += 1
             else:
                 posição = 0
                 while posição < len(suvinil):
-                    if suvinil[posição]["red"] >= menor_valor_de_menor_analoga and suvinil[posição]["red"] <= maior_valor_de_menor_analoga and suvinil[posição]["green"] >= menor_valor_de_meio_analoga and suvinil[posição]["green"] <= maior_valor_de_meio_analoga and suvinil[posição]["blue"] >= menor_valor_de_maior_analoga and suvinil[posição]["blue"] <= maior_valor_de_maior_analoga:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_menor_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_meio_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_maior_analoga:
                         primeira_analoga.append(suvinil[posição])
-                    if suvinil[posição]["red"] >= menor_valor_de_meio_analoga and suvinil[posição]["red"] <= maior_valor_de_meio_analoga and suvinil[posição]["green"] >= menor_valor_de_menor_analoga and suvinil[posição]["green"] <= maior_valor_de_menor_analoga and suvinil[posição]["blue"] >= menor_valor_de_maior_analoga and suvinil[posição]["blue"] <= maior_valor_de_maior_analoga:
+                    if suvinil[posição]["rgb"][0] >= menor_valor_de_meio_analoga and suvinil[posição]["rgb"][0] <= maior_valor_de_meio_analoga and suvinil[posição]["rgb"][1] >= menor_valor_de_menor_analoga and suvinil[posição]["rgb"][1] <= maior_valor_de_menor_analoga and suvinil[posição]["rgb"][2] >= menor_valor_de_maior_analoga and suvinil[posição]["rgb"][2] <= maior_valor_de_maior_analoga:
                         segunda_analoga.append(suvinil[posição])
                     posição += 1
                     
                 posição = 0
                 while posição < len(suvinil):      
-                    if coral[posição]["red"] >= menor_valor_de_menor_analoga and coral[posição]["red"] <= maior_valor_de_menor_analoga and coral[posição]["green"] >= menor_valor_de_meio_analoga and coral[posição]["green"] <= maior_valor_de_meio_analoga and coral[posição]["blue"] >= menor_valor_de_maior_analoga and coral[posição]["blue"] <= maior_valor_de_maior_analoga:
+                    if coral[posição]["rgb"][0] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][0] <= maior_valor_de_menor_analoga and coral[posição]["rgb"][1] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][1] <= maior_valor_de_meio_analoga and coral[posição]["rgb"][2] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][2] <= maior_valor_de_maior_analoga:
                         primeira_analoga_analoga.append(coral[posição])
-                    if coral[posição]["red"] >= menor_valor_de_meio_analoga and coral[posição]["red"] <= maior_valor_de_meio_analoga and coral[posição]["green"] >= menor_valor_de_menor_analoga and coral[posição]["green"] <= maior_valor_de_menor_analoga and coral[posição]["blue"] >= menor_valor_de_maior_analoga and coral[posição]["blue"] <= maior_valor_de_maior_analoga:
+                    if coral[posição]["rgb"][0] >= menor_valor_de_meio_analoga and coral[posição]["rgb"][0] <= maior_valor_de_meio_analoga and coral[posição]["rgb"][1] >= menor_valor_de_menor_analoga and coral[posição]["rgb"][1] <= maior_valor_de_menor_analoga and coral[posição]["rgb"][2] >= menor_valor_de_maior_analoga and coral[posição]["rgb"][2] <= maior_valor_de_maior_analoga:
                         segunda_analoga.append(coral[posição])
                     posição += 1
 
@@ -572,9 +583,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         menor_distancia_2 = 0
 
         while c < len(primeira_analoga):
-            atual_red = primeira_analoga[c]["red"] - red
-            atual_green = primeira_analoga[c]["green"] - green
-            atual_blue = primeira_analoga[c]["blue"] - blue
+            atual_red = primeira_analoga[c]["rgb"][0] - red
+            atual_green = primeira_analoga[c]["rgb"][1] - green
+            atual_blue = primeira_analoga[c]["rgb"][2] - blue
 
             if atual_red < 0:
                 atual_red = atual_red * -1
@@ -591,9 +602,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
             c += 1
 
         while x < len(segunda_analoga):
-            atual_red = segunda_analoga[x]["red"] - red
-            atual_green = segunda_analoga[x]["green"] - green
-            atual_blue = segunda_analoga[x]["blue"] - blue
+            atual_red = segunda_analoga[x]["rgb"][0] - red
+            atual_green = segunda_analoga[x]["rgb"][1] - green
+            atual_blue = segunda_analoga[x]["rgb"][2] - blue
             if atual_red < 0:
                 atual_red = atual_red * -1
             if atual_green < 0:
@@ -653,8 +664,7 @@ def select_hexadecimal(hexadecimal, fornecedores):
                     hexadecimal_list.append(coral[posição])
             posição += 1
 
-    resultset = pd.read_sql(search_string, engine)
-    return resultset
+    return hexadecimal_list
 
 
 def select_códigos(codigo, fornecedores):
@@ -667,35 +677,44 @@ def select_códigos(codigo, fornecedores):
             for posição in range(len(suvinil["coressuvinil"])):
                 if suvinil["pantone"]["codigo"] == codigo:
                     codigo_list.append(suvinil)
-                posição += 1
-                
+                posição += 1     
         if fornecedores == "coral":
             posição = 0
             for posição in range(len(coral["corescoral"])):
                 if coral["pantone"]["codigo"] == codigo:
                     codigo_list.append(coral)
-                posição += 1
-                
+                posição += 1         
     else:
-        search_string = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE pantone_código = '{codigo}' union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE pantone_código = '{codigo}' "
-    resultset = pd.read_sql(search_string, engine)
-    return resultset
+        posição = 0
+        for posição in range(len(suvinil["coressuvinil"])):
+            if suvinil["pantone"]["codigo"] == codigo:
+                codigo_list.append(suvinil)
+            posição += 1
+        posição = 0
+        for posição in range(len(coral["corescoral"])):
+            if coral["pantone"]["codigo"] == codigo:
+                codigo_list.append(coral)
+            posição += 1
+            
+    return codigo_list
 
 
 def select_id(request_id, nome, fornecedores):
+    lista_id = []
+    lista_id.clear()
     if fornecedores != "todos":
-        seach_string = f"Select * from {fornecedores} WHERE id = {request_id}"
-        resultset = pd.read_sql(seach_string, engine)
+        if fornecedores == "suvinil":
+            lista_id.append(suvinil[request_id])
+        if fornecedores == "coral":
+            lista_id.append(coral[request_id])
+            
     else:
-        seach_string = f"Select * from suvinil WHERE id = {request_id} "
-        search_string_2 = f"Select * from coral WHERE id = {request_id}"
-        resultset_1 = pd.read_sql(seach_string, engine)
-        resultset_2 = pd.read_sql(search_string_2, engine)
-        if nome in resultset_1["nome"].values:
-            resultset = resultset_1
+        lista_id.append(suvinil[request_id])
+        lista_id.append(coral[request_id])
+        if nome == lista_id[0]["nome"]:
+            return lista_id[0]
         else:
-            resultset = resultset_2
-    return resultset
+            return lista_id[1]
 
 
 def search_name_for_id(nome):
@@ -732,18 +751,33 @@ def primary_select(red, green, blue, fornecedores):
         maxblue = 255
     if minblue < 0:
         minblue = 0
-    DATABASE_URL = os.getenv("DATABASE_URL")
-    engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
-    seach_string = ""
+    primary_color = []
     if fornecedores != "todos":
-        search_string = f"SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from {fornecedores} WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
+        if fornecedores == "suvinil":
+            posição = 0
+            for posição in range(len(suvinil)):
+                if suvinil[posição]['rgb'][0] >= minred and suvinil[posição]['rgb'][0] <= maxred and suvinil[posição]['rgb'][1] >= mingreen and suvinil[posição]['rgb'][1] <= maxgreen and suvinil[posição]['rgb'][2] >= minblue and suvinil[posição]['rgb'][2] <= maxblue:
+                    primary_color.append(suvinil[posição])
+                posição += 1
+        if fornecedores == "coral":
+            posição = 0
+            for posição in range(len(coral)):
+                if coral[posição]['rgb'][0] >= minred and coral[posição]['rgb'][0] <= maxred and coral[posição]['rgb'][1] >= mingreen and coral[posição]['rgb'][1] <= maxgreen and suvinil[posição]['rgb'][2] >= minblue and suvinil[posição]['rgb'][2] <= maxblue:
+                    primary_color.append(suvinil[posição])
+                posição += 1
     elif fornecedores == "todos":
-        search_string = f"SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
-    resultset = pd.read_sql(search_string, engine)
-    if resultset.empty:
-        return []
-    else:
-        return resultset
+        posição = 0
+        for posição in range(len(coral)):
+            if coral[posição]['rgb'][0] >= minred and coral[posição]['rgb'][0] <= maxred and coral[posição]['rgb'][1] >= mingreen and coral[posição]['rgb'][1] <= maxgreen and coral[posição]['rgb'][2] >= minblue and coral[posição]['rgb'][2] <= maxblue:
+                primary_color.append(coral[posição])
+            posição += 1
+        posição = 0
+        for posição in range(len(suvinil)):
+            if suvinil[posição]['rgb'][0] >= minred and suvinil[posição]['rgb'][0] <= maxred and suvinil[posição]['rgb'][1] >= mingreen and suvinil[posição]['rgb'][1] <= maxgreen and suvinil[posição]['rgb'][2] >= minblue and suvinil[posição]['rgb'][2] <= maxblue:
+                primary_color.append(suvinil[posição])
+            posição += 1
+
+    return primary_color
 
 
 app = Flask(__name__)
@@ -755,15 +789,14 @@ def infopage():
     return "<h1>Colors API</h1><p>This api will request a picture or RGB, and will return a product (paint, tiles, fabrics) </p> "
 
 
-@app.route("/suvinil/", methods=["GET", "POST"])
-def getsuvinilColors():
+@app.route("/colors/", methods=["GET", "POST"])
+def getColors():
     if request.method == "POST":
         req = request.get_json()
         red = req["cor"][0]
         green = req["cor"][1]
         blue = req["cor"][2]
         response = primary_select(red, green, blue, req["fornecedores"])
-        response = response.to_dict(orient="records")
         c = 0
         while c < len(response):
             lastQuery.append(response[c])
@@ -771,7 +804,6 @@ def getsuvinilColors():
         with open("response/response.json", "w+") as file:
             json.dump(lastQuery, file)
             lastQuery.clear()
-
         return response
     if request.method == "GET":
         with open("response/response.json", "r") as file:
@@ -828,6 +860,7 @@ def getComplementos():
         blue = complementos["blue"]
         palheta = complementos["palheta"]
         fornecedores = complementos["fornecedores"]
+
         lista = select_complementos(red, green, blue, palheta, fornecedores)
         c = 0
         while c < len(lista):

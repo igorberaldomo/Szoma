@@ -50,7 +50,7 @@ def findrgb():
             ct = colorthief.ColorThief(upload)
             cor = ct.get_color(quality=1)
             json_procura = {'cor': cor,'fornecedores':opcao_fornecedores}
-            response = requests.post("http://localhost:5555/suvinil/",json=json_procura)
+            response = requests.post("http://localhost:5555/colors/",json=json_procura)
         elif procura != '':
             if procura[0].isalpha():
                 st.session_state.cliked = True
@@ -67,8 +67,8 @@ def findrgb():
         st.text('Por favor coloque uma imagem para verificar a cor')
 
      
-def receivesuvinil():
-    response = requests.get("http://localhost:5555/suvinil/", headers={'Content-Type': 'application/json', "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.207.132.170 Safari/537.36"})
+def receivecolors():
+    response = requests.get("http://localhost:5555/colors/", headers={'Content-Type': 'application/json', "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.207.132.170 Safari/537.36"})
     data = response.json()
     cores_df = pd.DataFrame(data).filter(['id','nome','red','green','blue','hexadecimal','pantone_código','pantone_name','pantone_hex','fornecedores']) 
     container = st.container()
@@ -110,6 +110,6 @@ procura = st.text_input('Digite o nome da cor, o código pantone(00-0000) ou o h
 
 button = st.button('Procurar', on_click=findrgb)
 
-receivesuvinil()
+receivecolors()
 
 
