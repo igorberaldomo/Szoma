@@ -8,14 +8,16 @@ from utils.filter_lines import filter_lines
 engine = conect_to_engine_developer()
 
 def select_complementos(red, green, blue, palheta, fornecedores):
+    lista_complementos = []
     if palheta == "triade":
-        lista_complementos = []
         lista_complementos.clear()
         desvio_maior = 80
         desvio_menor = 70
         maior = max(red, green, blue)
         menor = min(red, green, blue)
         meio = 0
+        
+            
         complemento1 = True
         complemento2 = True
         if red != maior and red != menor:
@@ -47,17 +49,25 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
         primeira = ""
         segunda = ""
+        primeira_maior = ""
+        segunda_maior = ""
         if maior == red:
+            primeira_maior = "green"
+            segunda_maior = "blue"
             if fornecedores != "todos":
 
                 primeira = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <={maior_valor_de_meio} "
 
+
                 segunda = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
+
             else:
                 primeira = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <={maior_valor_de_meio} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM coral WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <={maior_valor_de_meio}"
                 segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM suvinil WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM coral WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior}" 
 
         if maior == green:
+            primeira_maior = "blue"
+            segunda_maior = "red"
             if fornecedores != "todos":
                 primeira = f"SELECT * from {fornecedores} WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
 
@@ -68,6 +78,8 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
 
         if maior == blue:
+            primeira_maior = "green"
+            segunda_maior = "red"
             if fornecedores != "todos":
                 primeira = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
                 segunda = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
@@ -96,8 +108,8 @@ def select_complementos(red, green, blue, palheta, fornecedores):
 
         c = 0
         x = 0
-        menor_distancia_1 = 0
-        menor_distancia_2 = 0
+        distancia_1 = 0
+        distancia_2 = 0
         while c < len(resultado1):
             atual_red = resultado1[c]["red"] - red
             atual_green = resultado1[c]["green"] - green
@@ -111,10 +123,21 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 atual_blue = atual_blue * -1
 
             distancia_atual = atual_red + atual_green + atual_blue
-            if c == 0 or distancia_atual < distancia:
+            
+            if c == 0 or distancia_atual < distancia_1:
                 if distancia_atual != 0:
-                    menor_distancia_1 = c
-                    distancia = distancia_atual
+                    if primeira_maior == "red":
+                        if atual_red > atual_blue and atual_red > atual_green:
+                            menor_distancia_1 = c
+                            distancia_1 = distancia_atual
+                    if primeira_maior == "green":
+                        if atual_green > atual_blue and atual_green > atual_red:
+                            menor_distancia_1 = c
+                            distancia_1 = distancia_atual
+                    if primeira_maior == "blue":
+                        if atual_blue > atual_green and atual_blue > atual_red:
+                            menor_distancia_1 = c
+                            distancia_1 = distancia_atual
             c += 1
 
         while x < len(resultado2):
@@ -130,21 +153,31 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 atual_blue = atual_blue * -1
 
             distancia_atual = atual_red + atual_green + atual_blue
-            if c == 0 or distancia_atual < distancia:
+            if c == 0 or distancia_atual < distancia_2:
                 if distancia_atual != 0:
-                    menor_distancia_2 = x
-                    distancia = distancia_atual
+                    if segunda_maior == "red":
+                        if atual_red > atual_blue and atual_red > atual_green:
+                            menor_distancia_2 = x
+                            distancia_2 = distancia_atual
+                    if segunda_maior == "green":
+                        if atual_green > atual_blue and atual_green > atual_red:
+                            menor_distancia_2 = x
+                            distancia_2 = distancia_atual
+                    if segunda_maior == "blue":
+                        if atual_blue > atual_green and atual_blue > atual_red:
+                            menor_distancia_2 = x
+                            distancia_2 = distancia_atual
             x += 1
         
         resultado1 = filter_lines(resultado1)
         resultado2 = filter_lines(resultado2)
         if complemento1 == True and complemento2 == True:
-            lista_complementos.append(resultado1[menor_distancia_1])
-            lista_complementos.append(resultado2[menor_distancia_2])
+            lista_complementos.append(resultado1[distancia_1])
+            lista_complementos.append(resultado2[distancia_2])
         elif complemento1 == False:
-            lista_complementos.append(resultado2[menor_distancia_2])
+            lista_complementos.append(resultado2[distancia_2])
         elif complemento2 == False:
-            lista_complementos.append(resultado1[menor_distancia_1])
+            lista_complementos.append(resultado1[distancia_1])
         elif complemento1 == False and complemento2 == False:
             return []
         return lista_complementos
