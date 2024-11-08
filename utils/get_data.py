@@ -4,7 +4,9 @@ import os
 from dotenv import load_dotenv
 from utils.conect_to_engine import conect_to_engine_developer
 load_dotenv()
+
 engine = conect_to_engine_developer()
+
 
 def getting_data():
     queries = {

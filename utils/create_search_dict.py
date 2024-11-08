@@ -12,6 +12,7 @@ newdict = dict()
 
 engine = conect_to_engine_developer()
 
+
 search_string = f"SELECT nome , id FROM suvinil"
 resultset = pd.read_sql(search_string, engine)
 resultset = resultset.to_dict(orient='records')
