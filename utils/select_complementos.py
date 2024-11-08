@@ -2,6 +2,8 @@ import os, json
 import pandas as pd
 import sqlalchemy
 from utils.conect_to_engine import conect_to_engine
+from utils.create_pandas_table import generate_pandas_table
+from utils.filter_lines import filter_lines
 
 engine = conect_to_engine()
 
@@ -77,7 +79,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         resultado1 = pd.read_sql(primeira, engine)
         resultado2 = pd.read_sql(segunda, engine)
 
-        generate_pandas_table(primeira, segunda)
+        # generate_pandas_table(primeira, segunda)
 
         
         if resultado1.empty and resultado2.empty:
