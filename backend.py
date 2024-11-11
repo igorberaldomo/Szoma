@@ -1,4 +1,4 @@
-import os, jso
+import os, json
 import pandas as pd
 import sqlalchemy
 import streamlit as st
