@@ -7,9 +7,9 @@ from sqlalchemy.dialects.mysql import DATETIME as DATE
 load_dotenv()
 
 # rode isso para criar o esqueleto da tabela usuarios
-
-DATABASE_URL = st.secrets["DATABASE_URL"]
-engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
+    # DATABASE_URL = st.secrets["AWS_URL"]
+DATABASE_URL = os.getenv("AWS_URL")
+engine = sqlalchemy.create_engine( DATABASE_URL , pool_size=5, max_overflow=10)
 
 nome_tabela = 'usuarios'
 metadata_obj = MetaData()

@@ -1,3 +1,6 @@
+from utils.conect_to_engine import conect_to_engine_developer
+
+engine = conect_to_engine_developer()
 def select_names(nome, fornecedores):
     seach_string = ""
     if fornecedores != "todos":

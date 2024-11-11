@@ -7,7 +7,8 @@ load_dotenv()
 
 # rode isso para criar o esqueleto da tabela suvinil
 
-DATABASE_URL = st.secrets["DATABASE_URL"]
+# DATABASE_URL = st.secrets["DATABASE_URL"]
+DATABASE_URL = os.getenv("AWS_URL")
 engine = sqlalchemy.create_engine( DATABASE_URL , pool_size=5, max_overflow=10)
 
 nome_tabela ='suvinil'
