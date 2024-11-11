@@ -2,7 +2,7 @@ import colorthief
 import streamlit as st
 from streamlit_extras.stylable_container import stylable_container
 import numpy as np
-import pandas as pd
+import pandas as p
 import requests
 import json
 import time
