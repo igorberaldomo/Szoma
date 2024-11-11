@@ -28,25 +28,25 @@ def findrgb():
             ct = colorthief.ColorThief(upload)
             cor = ct.get_color(quality=1)
             json_procura = {'cor': cor,'fornecedores':opcao_fornecedores}
-            response = requests.post("http://localhost:5555/colors/",json=json_procura)
+            response = requests.post("https://findme-backend.streamlit.app:5555/colors/",json=json_procura)
         elif procura != '':
             if procura[0].isalpha():
                 st.session_state.cliked = True
                 nome = {"nome":procura, "fornecedores":opcao_fornecedores}
-                response = requests.post("http://localhost:5555/names/",json=nome)
+                response = requests.post("https://findme-backend.streamlit.app:5555/names/",json=nome)
             elif procura[0].isnumeric():
                 codigo = {"codigo":procura, "fornecedores":opcao_fornecedores}
-                response = requests.post("http://localhost:5555/codigos/",json=codigo)
+                response = requests.post("https://findme-backend.streamlit.app:5555/codigos/",json=codigo)
             elif procura[0] == '#':
                 hexa = {"hexadecimal":procura, "fornecedores":opcao_fornecedores}
-                response = requests.post("http://localhost:5555/hex/",json=hexa)
+                response = requests.post("https://findme-backend.streamlit.app:5555/hex/",json=hexa)
             return response
     else:
         st.text('Por favor coloque uma imagem para verificar a cor')
 
      
 def receivecolors():
-    response = requests.get("http://localhost:5555/colors/",headers={'Content-Type': 'application/json',"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0'})
+    response = requests.get("https://findme-backend.streamlit.app:5555/colors/",headers={'Content-Type': 'application/json',"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0'})
     data = response.json()
     cores_df = pd.DataFrame(data).filter(['id','nome','red','green','blue','hexadecimal','pantone_código','pantone_name','pantone_hex','fornecedores']) 
     container = st.container()
@@ -59,8 +59,8 @@ def receivecolors():
         red,green,blue = data[0]['red'],data[0]['green'],data[0]['blue']
         c,y,m,k = rgb_to_cmyk(data[0]['red'],data[0]['green'],data[0]['blue'])
 
-        response_complementos = requests.post("http://localhost:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta,'fornecedores':opcao_fornecedores}) 
-        complementos = requests.get("http://localhost:5555/complementos/",headers={'Content-Type': 'application/json'})
+        response_complementos = requests.post("https://findme-backend.streamlit.app:5555/complementos/",json={'red': red, 'green': green, 'blue': blue,"palheta":tipo_de_palheta,'fornecedores':opcao_fornecedores}) 
+        complementos = requests.get("https://findme-backend.streamlit.app:5555/complementos/",headers={'Content-Type': 'application/json'})
         complementos = complementos.json()
         hexadecimalc1,fornecedoresc1 = (complementos[0]['hexadecimal']), complementos[0]['fornecedores']
         nomec1,pantone_codigoc1 = complementos[0]['nome'],complementos[0]['pantone_código']
