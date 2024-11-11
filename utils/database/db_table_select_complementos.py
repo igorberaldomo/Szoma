@@ -3,7 +3,8 @@ import pandas as pd
 import sqlalchemy
 from flask import Flask, request
 
-
+DATABASE_URL = os.getenv("AWS_URL")
+engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
 def select_complementos(red, green, blue, palheta):
     if palheta == "triade":
         lista_complementos.clear()

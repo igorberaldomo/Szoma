@@ -12,7 +12,8 @@ load_dotenv()
 
 # rode isso para criar o esqueleto da tabela coral
 def db_table_insertinto_coral():
-    DATABASE_URL = st.secrets["DATABASE_URL"]
+    # DATABASE_URL = st.secrets["AWS_URL"]
+    DATABASE_URL = os.getenv("AWS_URL")
     engine = sqlalchemy.create_engine( DATABASE_URL , pool_size=5, max_overflow=10)
 
     nome_tabela ='coral'
@@ -48,7 +49,7 @@ def db_table_insertinto_coral():
             g = file_data['corescoral'][c]['rgb'][1]
             b = file_data['corescoral'][c]['rgb'][2]
             hexadecimal = file_data['corescoral'][c]['hexadecimal']
-            pantone_codigo = file_data['corescoral'][c]['pantone']['pantone']
+            pantone_codigo = file_data['corescoral'][c]['pantone']['codigo']
             pantone_name = file_data['corescoral'][c]['pantone']['name']
             pantone_hex = file_data['corescoral'][c]['pantone']['hex']
             fornecedores = file_data['corescoral'][c]['fornecedores']
@@ -56,10 +57,11 @@ def db_table_insertinto_coral():
             updated_at = datetime.datetime.now()
             deleted_at = 0
 
-
-            stmt = insert(my_table).values( id = given_id,nome = nome, red = r, green = g, blue = b, hexadecimal = hexadecimal, pantone_código = pantone_codigo, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores, CREATED_AT = created_at, UPDATED_AT = updated_at, DELETED_AT = deleted_at)
-            compiled = stmt.compile()
-            
+            try:
+                stmt = insert(my_table).values( id = given_id,nome = nome, red = r, green = g, blue = b, hexadecimal = hexadecimal, pantone_código = pantone_codigo, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores, CREATED_AT = created_at, UPDATED_AT = updated_at, DELETED_AT = deleted_at)
+                compiled = stmt.compile()
+            except:
+                continue
             with engine.connect() as conn:
                 result = conn.execute(stmt)
                 conn.commit()

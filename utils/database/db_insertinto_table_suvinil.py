@@ -11,7 +11,8 @@ load_dotenv()
 # rode isso para criar o esqueleto da tabela suvinil e inserir os dados
 
 def db_table_insertinto_suvinil():
-    DATABASE_URL = st.secrets["DATABASE_URL"]
+    # DATABASE_URL = st.secrets["DATABASE_URL"]
+    DATABASE_URL = os.getenv("AWS_URL")
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
     
     nome_tabela ='suvinil'
@@ -53,7 +54,7 @@ def db_table_insertinto_suvinil():
             ncs = str(file_data['coressuvinil'][c]['ncs']) 
             codigo_suvinil = str(file_data['coressuvinil'][c]['codigo_suvinil'])
             hexadecimal = str(file_data['coressuvinil'][c]['hexadecimal'])
-            pantone_código = str(file_data['coressuvinil'][c]['pantone']['pantone'])
+            pantone_código = str(file_data['coressuvinil'][c]['pantone']['codigo'])
             pantone_name = str(file_data['coressuvinil'][c]['pantone']['name'])
             pantone_hex = str(file_data['coressuvinil'][c]['pantone']['hex'])
             fornecedores = str(file_data['coressuvinil'][c]['fornecedores'])
