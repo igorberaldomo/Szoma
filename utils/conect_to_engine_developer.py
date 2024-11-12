@@ -1,4 +1,6 @@
 import os, sqlalchemy
+from sqlalchemy import create_engine
+
 
 def conect_to_engine_developer():
     DATABASE_URL = os.getenv("DATABASE_URL")
