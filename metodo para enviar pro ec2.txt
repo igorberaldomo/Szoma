@@ -24,4 +24,14 @@
 
 10º de cd nome_da_pasta
 
+11º instale o venv com sudo apt install python3.12-venv
+
+12º execute com python3 -m venv home/ubuntu/Szoma
+
+13º inicie o venv com source Szoma/bin/activate
+
+14º sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
+
+15º no terminal export MYSQLCLIENT_CFLAGS=-I/usr/include/mysql  export MYSQLCLIENT_LDFLAGS=-L/usr/lib/x86_64-linux-gnu
+ 
 11º python3 -m pip install -r requirements.txt
