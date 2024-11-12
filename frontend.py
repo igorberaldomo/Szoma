@@ -10,7 +10,6 @@ from utils.search.search_codigos import select_códigos
 from utils.search.search_id import select_id
 from utils.search.search_name_for_id import search_name_for_id
 from utils.search.primary_select import primary_select
-from utils.conect_to_engine_developer import conect_to_engine_developer
 import MySQLdb
 
 # Inicializar o estado da sessão
