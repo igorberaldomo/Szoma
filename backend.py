@@ -1,3 +1,4 @@
+
 import os
 import json
 import pandas as pd
@@ -131,3 +132,4 @@ if __name__ == "__backend__":
     cores_complementares = get_complementos(red, green, blue, palheta, fornecedores)
     print("\nCores complementares encontradas:")
     print(cores_complementares)
+
