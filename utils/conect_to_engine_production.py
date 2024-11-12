@@ -1,7 +1,7 @@
 import sqlalchemy
 import streamlit as st
 import os
-import pymysql, MySQLdb
+import pymysql
 
 
 def conect_to_engine_production():
