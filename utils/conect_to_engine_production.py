@@ -1,6 +1,7 @@
 import sqlalchemy
 import streamlit as st
 from sqlalchemy import create_engine
+import pymysql
 
 def conect_to_engine_production():
     DATABASE_URL = st.secrets["AWS_URL"]

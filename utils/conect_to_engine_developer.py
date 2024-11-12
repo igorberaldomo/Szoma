@@ -1,5 +1,6 @@
 import os, sqlalchemy
 from sqlalchemy import create_engine
+import pymysql
 
 
 def conect_to_engine_developer():
