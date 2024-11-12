@@ -12,6 +12,7 @@ from utils.search.search_codigos import select_códigos
 from utils.search.search_id import select_id
 from utils.search.search_name_for_id import search_name_for_id
 from utils.search.primary_select import primary_select
+import MySQLdb
 
 
 engine = conect_to_engine_developer()

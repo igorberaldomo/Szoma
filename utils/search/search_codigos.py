@@ -2,8 +2,8 @@ from utils.conect_to_engine_developer import conect_to_engine_developer
 from utils.conect_to_engine_production import conect_to_engine_production
 import pandas as pd
 
-# engine = conect_to_engine_developer()
-engine = conect_to_engine_production()
+engine = conect_to_engine_developer()
+# engine = conect_to_engine_production()
 def select_códigos(codigo, fornecedores):
     seach_string = ""
     if fornecedores != "todos":
