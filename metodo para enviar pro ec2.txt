@@ -1,0 +1,27 @@
+1º cria uma instancia de ec2
+    -coloca um nome
+    - linux
+    - coloca o free elegible tier
+    - gera um key pair( coloque um nome, categoria rsa, formato .pem)
+    - auta asign public ip
+    - adiciona um inbount security group (no port da aplicação)
+
+2º pega o public id address: 44.202.103.124
+
+3º no instance id aba ssh client baixe o arquivo
+
+4º use chmod 400 keypair
+
+5º copie o comando para executar ssh -i "findme.pem" ubuntu@ec2-44-202-103-124.compute-1.amazonaws.com
+
+6º dowload git sudo apt install git
+    
+7º use git clone string do repositório
+
+8º rode sudo apt update e sudo apt upgrade
+
+9º instale pip com sudo apt install python3-pip
+
+10º de cd nome_da_pasta
+
+11º python3 -m pip install -r requirements.txt
