@@ -61,6 +61,7 @@ def receivecolors():
         container = st.container()
         st.toast('Carregando...')
         time.sleep(1.5)
+        data = data.to_json(orient='records')
         try:
             # Processar a cor principal
             cor_principal = data[0]
@@ -93,38 +94,38 @@ def receivecolors():
             hexadecimalc2 = complemento2['hexadecimal']
             pantone_codigoc2 = complemento2['pantone_código']
 
-            # with container:
-            #     script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 450px;'>"
-            #               "<div style='background-color: white ; width: 660px; height: 420px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
-            #               "<div><h5 style='margin: 0px; padding:0px; color:black;'><strong>Cor principal:</strong></h5>"
-            #               "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
-            #               "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
-            #               "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
-            #               "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
-            #               "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
-            #               "</div></div>"
-            #               "<div style='background-color: white ; width: 660px; height: 420px; padding: 10px;"
-            #               "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);'>"
-            #               "<div><h5 style='color:black;margin: 0px; padding:0px'>Cor secundária 1:</h5>"
-            #               "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
-            #               "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
-            #               "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
-            #               "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
-            #               "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
-            #               "</div></div>"
-            #               "<div style='background-color: white ; width: 660px; height: 420px; padding: 10px;"
-            #               "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 0px 10px 10px 0px;'>"
-            #               "<div><h5 style='margin: 0px; padding:0px; color:black;'>Cor secundária 2:</h5>"
-            #               "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
-            #               "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
-            #               "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
-            #               "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
-            #               "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
-            #               "</div></div></div>").format(
-            #         hexadecimal, fornecedores, nome, pantone_codigo, red, green, blue, c, m, y, k,
-            #         hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
-            #         hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
-            #     st.markdown(script, unsafe_allow_html=True)
+            with container:
+                script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 450px;'>"
+                          "<div style='background-color: white ; width: 660px; height: 420px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
+                          "<div><h5 style='margin: 0px; padding:0px; color:black;'><strong>Cor principal:</strong></h5>"
+                          "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
+                          "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
+                          "</div></div>"
+                          "<div style='background-color: white ; width: 660px; height: 420px; padding: 10px;"
+                          "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);'>"
+                          "<div><h5 style='color:black;margin: 0px; padding:0px'>Cor secundária 1:</h5>"
+                          "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
+                          "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
+                          "</div></div>"
+                          "<div style='background-color: white ; width: 660px; height: 420px; padding: 10px;"
+                          "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 0px 10px 10px 0px;'>"
+                          "<div><h5 style='margin: 0px; padding:0px; color:black;'>Cor secundária 2:</h5>"
+                          "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
+                          "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
+                          "</div></div></div>").format(
+                    hexadecimal, fornecedores, nome, pantone_codigo, red, green, blue, c, m, y, k,
+                    hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
+                    hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
+                st.markdown(script, unsafe_allow_html=True)
             st.write(complementos)
         except Exception as e:
             st.write("Nenhuma cor encontrada")
