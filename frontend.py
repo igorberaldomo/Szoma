@@ -61,8 +61,8 @@ def receivecolors():
         container = st.container()
         st.toast('Carregando...')
         time.sleep(1.5)
-        data_df = pd.DataFrame(data)
-        data = data_df.to_dict(orient='records')
+        data = data.to_dict(orient='records')
+
         try:
             # Processar a cor principal
             cor_principal = data[0]
