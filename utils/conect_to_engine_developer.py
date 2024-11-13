@@ -1,6 +1,5 @@
 import os, sqlalchemy
 from sqlalchemy import create_engine
-import dotenv
 import pymysql
 
 
