@@ -12,7 +12,6 @@ load_dotenv()
 
 # rode isso para criar o esqueleto da tabela coral
 def db_table_insertinto_coral():
-    # DATABASE_URL = st.secrets["AWS_URL"]
     DATABASE_URL = os.getenv("AWS_URL")
     engine = sqlalchemy.create_engine( DATABASE_URL , pool_size=5, max_overflow=10)
 
@@ -60,6 +59,7 @@ def db_table_insertinto_coral():
             try:
                 stmt = insert(my_table).values( id = given_id,nome = nome, red = r, green = g, blue = b, hexadecimal = hexadecimal, pantone_código = pantone_codigo, pantone_name = pantone_name, pantone_hex = pantone_hex, fornecedores = fornecedores, CREATED_AT = created_at, UPDATED_AT = updated_at, DELETED_AT = deleted_at)
                 compiled = stmt.compile()
+                print(compiled)
             except:
                 continue
             with engine.connect() as conn:

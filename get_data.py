@@ -2,8 +2,8 @@ import pandas as pd
 import sqlalchemy
 import os
 from dotenv import load_dotenv
-from utils.conect_to_engine import conect_to_engine_developer
-load_dotenv()
+from utils.conect_to_engine_developer import conect_to_engine_developer
+
 
 engine = conect_to_engine_developer()
 

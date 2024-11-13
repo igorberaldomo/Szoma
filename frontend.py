@@ -35,22 +35,22 @@ def findrgb():
             red, green, blue = cor
             fornecedores = opcao_fornecedores
             response_df = primary_select(red, green, blue, fornecedores)
-            st.session_state.resultados = response_df.to_dict(orient='records')
+            st.session_state.resultados = response_df
         elif procura != '':
             fornecedores = opcao_fornecedores
             if procura[0].isalpha():
                 nome = procura
                 request_id = search_name_for_id(nome)
                 response_df = select_id(request_id, nome, fornecedores)
-                st.session_state.resultados = response_df.to_dict(orient='records')
+                st.session_state.resultados = response_df
             elif procura[0].isnumeric():
                 codigo = procura
                 response_df = select_códigos(codigo, fornecedores)
-                st.session_state.resultados = response_df.to_dict(orient='records')
+                st.session_state.resultados = response_df
             elif procura[0] == '#':
                 hexadecimal = procura
                 response_df = select_hexadecimal(hexadecimal, fornecedores)
-                st.session_state.resultados = response_df.to_dict(orient='records')
+                st.session_state.resultados = response_df
     else:
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
