@@ -12,7 +12,6 @@ load_dotenv()
 # rode isso para criar o esqueleto da tabela padrao_cores e inserir os dados
 
 def db_table_insertinto_padrao_cores():
-    # DATABASE_URL = st.secrets["DATABASE_URL"]
     DATABASE_URL = os.getenv("AWS_URL")
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
     
@@ -47,7 +46,6 @@ def db_table_insertinto_padrao_cores():
             
             with engine.connect() as conn:
                 result = conn.execute(stmt)
-                print(c)
                 conn.commit()
             c+=1
 db_table_insertinto_padrao_cores()
