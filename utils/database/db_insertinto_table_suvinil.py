@@ -8,7 +8,7 @@ from sqlalchemy import MetaData
 from dotenv import load_dotenv
 load_dotenv()
 
-# rode isso para criar o esqueleto da tabela suvinil e inserir os dados
+
 
 def db_table_insertinto_suvinil():
     # DATABASE_URL = st.secrets["DATABASE_URL"]
