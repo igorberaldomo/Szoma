@@ -55,8 +55,7 @@ def findrgb():
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
 def receivecolors():
-    st.write(len(st.session_state.resultados))
-    if st.session_state.resultados:
+    if len(st.session_state.resultados) > 0:
         data = st.session_state.resultados
         cores_df = pd.DataFrame(data)
         container = st.container()
