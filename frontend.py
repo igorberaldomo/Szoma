@@ -128,6 +128,7 @@ def receivecolors():
         except Exception as e:
             st.write("Nenhuma cor encontrada")
             st.write(f"Erro: {e}")
+            st.write(len(complementos))
     else:
         st.write("Nenhuma cor encontrada")
 

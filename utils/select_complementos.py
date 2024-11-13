@@ -8,7 +8,7 @@ from utils.filter_lines import filter_lines
 
 # engine = conect_to_engine_developer()
 engine = conect_to_engine_production()
-print (engine)
+st.write(engine)
 def select_complementos(red, green, blue, palheta, fornecedores):
     lista_complementos = []
     if palheta == "triade":
@@ -19,7 +19,6 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         menor = min(red, green, blue)
         meio = 0
         
-            
         complemento1 = True
         complemento2 = True
         if red != maior and red != menor:
