@@ -14,8 +14,8 @@ def select_complementos(red, green, blue, palheta, fornecedores):
     lista_complementos = []
     if palheta == "triade":
         lista_complementos.clear()
-        desvio_maior = 80
-        desvio_menor = 70
+        desvio_maior = 100
+        desvio_menor = 100
         maior = max(red, green, blue)
         menor = min(red, green, blue)
         meio = 0
