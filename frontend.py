@@ -61,8 +61,6 @@ def receivecolors():
         container = st.container()
         st.toast('Carregando...')
         time.sleep(1.5)
-        data = data[0]
-        st.write(data)
         data_df = pd.DataFrame(data, index=[0])
         st.write(data_df)
         data = data_df.to_dict(orient='records')
