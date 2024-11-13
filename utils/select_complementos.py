@@ -8,7 +8,8 @@ from utils.filter_lines import filter_lines
 
 # engine = conect_to_engine_developer()
 engine = conect_to_engine_production()
-st.write(engine)
+
+
 def select_complementos(red, green, blue, palheta, fornecedores):
     lista_complementos = []
     if palheta == "triade":
