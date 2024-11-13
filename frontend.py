@@ -61,10 +61,10 @@ def receivecolors():
         container = st.container()
         st.toast('Carregando...')
         time.sleep(1.5)
-        data = data.to_dict(orient='records')
+        data = data.Dataframe.to_dict(orient='records')
         try:
             # Processar a cor principal
-            cor_principal = data[0]
+            cor_principal = data[0][0]
             red, green, blue = cor_principal['red'], cor_principal['green'], cor_principal['blue']
             c, m, y, k = rgb_to_cmyk(red, green, blue)
             fornecedores = cor_principal['fornecedores']
