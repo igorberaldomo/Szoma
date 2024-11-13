@@ -61,7 +61,7 @@ def receivecolors():
         container = st.container()
         st.toast('Carregando...')
         time.sleep(1.5)
-        st.write(type(data))
+        data = data.to_json(orient='records')
         try:
             # Processar a cor principal
             cor_principal = data[0]
