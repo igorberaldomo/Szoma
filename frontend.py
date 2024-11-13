@@ -62,7 +62,13 @@ def receivecolors():
         st.toast('Carregando...')
         time.sleep(1.5)
         data = data.to_dict(orient='records')
-
+        st.write(data)
+        data = data[0]
+        st.write(data)
+        data_df = pd.DataFrame(data, index=[0])
+        st.write(data_df)
+        data = data_df.to_dict(orient='records')
+        st.write(data)
         try:
             # Processar a cor principal
             cor_principal = data[0]
