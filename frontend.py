@@ -11,6 +11,7 @@ from utils.search.search_id import select_id
 from utils.search.search_name_for_id import search_name_for_id
 from utils.search.primary_select import primary_select
 
+
 # Inicializar o estado da sessão
 if "resultados" not in st.session_state:
     st.session_state.resultados = []
@@ -22,6 +23,9 @@ st.markdown("""
 <style>
 .st-emotion-cache-yfhhig.ef3psqc5{
 visibility:hidden
+}
+.stMainMenu.st-emotion-cache-hwawmg.e16jpq800{
+    visibility:hidden
 }
 </style>
 """, unsafe_allow_html=True)
