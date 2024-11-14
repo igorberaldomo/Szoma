@@ -32,7 +32,7 @@ visibility:hidden
 
 # Funções para processar as entradas do usuário
 
-@st.cache_data
+
 def findrgb():
     st.session_state.resultados = []
     if procura or upload:
@@ -61,7 +61,7 @@ def findrgb():
     else:
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
-@st.cache_data
+
 def receivecolors():
     if len(st.session_state.resultados) > 0:
         data = st.session_state.resultados
