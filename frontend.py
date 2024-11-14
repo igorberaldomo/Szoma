@@ -76,7 +76,7 @@ def receivecolors():
 
             # Calcular complementos
             complementos_df = select_complementos(red, green, blue, tipo_de_palheta, opcao_fornecedores)
-            complementos = complementos_df.to_dict(orient='records')
+            complementos = complementos_df
             st.session_state.complementos = complementos
 
             # Processar complementos
