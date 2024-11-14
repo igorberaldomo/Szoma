@@ -28,6 +28,7 @@ visibility:hidden
 
 # Funções para processar as entradas do usuário
 def findrgb():
+    st.session_state.resultados = []
     if procura or upload:
         if upload is not None:
             ct = ColorThief(upload)
@@ -61,8 +62,8 @@ def receivecolors():
         container = st.container()
         st.toast('Carregando...')
         time.sleep(1.5)
-        data = data.to_dict(orient='records')
-
+        data_df = pd.DataFrame(data, index=[0])
+        data = data_df.to_dict(orient='records')
         try:
             # Processar a cor principal
             cor_principal = data[0]
@@ -75,7 +76,7 @@ def receivecolors():
 
             # Calcular complementos
             complementos_df = select_complementos(red, green, blue, tipo_de_palheta, opcao_fornecedores)
-            complementos = complementos_df.to_dict(orient='records')
+            complementos = complementos_df
             st.session_state.complementos = complementos
 
             # Processar complementos
@@ -127,7 +128,6 @@ def receivecolors():
                     hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
                     hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
                 st.markdown(script, unsafe_allow_html=True)
-            st.write(complementos)
         except Exception as e:
             st.write("Nenhuma cor encontrada")
             st.write(f"Erro: {e}")
@@ -138,7 +138,7 @@ def receivecolors():
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 upload = st.file_uploader('Faça upload de uma imagem para verificar a cor', type=['png', 'jpg', 'jpeg'])
-opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil'))
+opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians'))
 tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
