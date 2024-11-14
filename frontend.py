@@ -63,7 +63,6 @@ def receivecolors():
         time.sleep(1.5)
         data_df = pd.DataFrame(data, index=[0])
         data = data_df.to_dict(orient='records')
-        st.write(data[0])
         try:
             # Processar a cor principal
             cor_principal = data[0]
@@ -128,7 +127,6 @@ def receivecolors():
                     hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
                     hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
                 st.markdown(script, unsafe_allow_html=True)
-            st.write(complementos)
         except Exception as e:
             st.write("Nenhuma cor encontrada")
             st.write(f"Erro: {e}")
