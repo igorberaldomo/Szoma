@@ -1,5 +1,5 @@
 import json
-import pandas
+import pandas as pd
 import sqlalchemy
 from utils.conect_to_engine_production import conect_to_engine_production
 
