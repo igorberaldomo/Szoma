@@ -2,7 +2,7 @@ import json
 
 def search_name_for_id(nome):
     with open("search/search_dict.json", "r") as file:
-        nome = nome
+        nome = f'{nome}'
         search_dict = json.load(file)
         select_id = None
         if nome in search_dict["quickSearch"][0]:
