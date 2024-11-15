@@ -1,4 +1,9 @@
 import json
+import pandas
+import sqlalchemy
+from utils.conect_to_engine_production import conect_to_engine_production
+
+engine = conect_to_engine_production()
 
 def search_name_for_id(nome, fornecedores):
     with open("search/search_dict.json", "r") as file:
