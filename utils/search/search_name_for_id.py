@@ -20,4 +20,6 @@ def search_name_for_id(nome):
             for keys in search_dict["coral"][0]:
                 if nome in keys:
                     name_id = search_dict["coral"][0][""+nome+""]
+        else:
+            break
 
