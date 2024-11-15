@@ -7,7 +7,6 @@ from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
 from utils.search.search_hexadecimal import select_hexadecimal
 from utils.search.search_codigos import select_códigos
-from utils.search.search_id import select_id
 from utils.search.search_name_for_id import search_name_for_id
 from utils.search.primary_select import primary_select
 
@@ -48,8 +47,7 @@ def findrgb():
             fornecedores = opcao_fornecedores
             if procura[0].isalpha():
                 nome = procura
-                request_id = search_name_for_id(nome)
-                response_df = select_id(request_id, nome, fornecedores)
+                response_df = search_name_for_id(nome, fornecedores)
                 st.session_state.resultados = response_df
             elif procura[0].isnumeric():
                 codigo = procura
