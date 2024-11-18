@@ -29,8 +29,6 @@ def search_name_for_id(nome, fornecedores):
                 if nome in keys:
                     name_id = search_dict["coral"][0][""+nome+""]
                     fornecedores = 'coral'
-        if fornecedores == 'sherwin-willians':
-            fornecedores = "sherwin_willians"
 
         seach_string = f"Select * from {fornecedores} WHERE id = {name_id}"
         resultset = pd.read_sql(seach_string, engine)
