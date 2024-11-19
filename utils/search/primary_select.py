@@ -3,9 +3,7 @@ import pandas as pd
 
 
 engine = conect_to_engine_production()
-def primary_select(red, green, blue, fornecedores):
-    if fornecedores == 'sherwin-willians':
-        fornecedores = 'sherwin_willians'
+def primary_select(red, green, blue, tabela):
     distancia = 18
     maxred = red + distancia
     minred = red - distancia
@@ -25,13 +23,7 @@ def primary_select(red, green, blue, fornecedores):
         maxblue = 255
     if minblue < 0:
         minblue = 0
-
-    seach_string = ""
-    if fornecedores != "todos":
-        search_string = f"SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from {fornecedores} WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
-    elif fornecedores == "todos":
-        search_string = f"SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from sherwin_willians WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
-    resultset = pd.read_sql(search_string, engine)
+    resultset = tabela[(tabela['red'] >= minred) & (tabela['red'] <= maxred) & (tabela['green'] >= mingreen) & (tabela['green'] <= maxgreen) & (tabela['blue'] >= minblue) & (tabela['blue'] <= maxblue)]
     if resultset.empty:
         return []
     else:
