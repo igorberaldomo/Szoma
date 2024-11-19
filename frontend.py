@@ -11,6 +11,7 @@ from utils.search.search_name_for_id import search_name_for_id
 from utils.search.primary_select import primary_select
 
 
+
 # Inicializar o estado da sessão
 if "resultados" not in st.session_state:
     st.session_state.resultados = []
@@ -31,6 +32,49 @@ visibility:hidden
 
 # Funções para processar as entradas do usuário
 
+
+def getting_data():
+    queries = {
+    "suvinil": "SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil",
+    "coral": "SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral",
+    # dentro so search parameters note que está escrito sherwin_wilians em vez de sherwin-willians, está correto o SQL não faz busca com o caractere '-' então foi substituido de propósito por '_'
+    "sherwin-willians": "SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians",
+    "todos":"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil UNION SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral UNION SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians"
+    }
+    
+    dataframes ={}    
+    
+    def convert_to_float(value):
+        value = str(value).replace(',', '')  # Substituir vírgula por ponto
+        try:
+            return float(value)
+        except ValueError:
+            return None
+    
+    for table_name, query in queries.items():
+        try:
+            df = pd.read_sql(query, engine)
+        except Exception as e:
+            print(f"Erro ao processar a tabela {table_name}: {e}")
+            continue
+        
+        try:
+            if table_name in ['suvinil', 'coral', 'sherwin-willians', 'todos']:
+                df['fornecedores'] = df['fornecedores'].astype(str)
+                df['hexadecimal'] = df['hexadecimal'].astype(str)
+                df['nome']  = df['nome'].astype(str)
+                df['ncs'] = df['ncs'].astype(str)
+                df['codigo_suvinil'] = df['codigo_suvinil'].astype(str)
+                df['pantone_código'] = df['pantone_código'].astype(str)
+                df['red'] = df['red'].astype(int)
+                df['green'] = df['green'].astype(int)
+                df['blue'] = df['blue'].astype(int)    
+            dataframes[table_name] = df
+        except Exception as e:
+            print(f"Erro ao processar a tabela {table_name}: {e}")
+    return dataframes
+# para acessar tabela use table['nome_da_tabela']
+table = getting_data()
 
 def findrgb():
     st.session_state.resultados = []
