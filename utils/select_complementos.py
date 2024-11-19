@@ -388,47 +388,30 @@ def select_complementos(red, green, blue, palheta, fornecedores, tabela):
         segunda_menor = ""
 
         if maior_analoga == red:
-            if fornecedores != "todos":
-                primeira = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_maior_analoga} AND red <= {maior_valor_de_maior_analoga} AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_menor_analoga} AND blue <={maior_valor_de_menor_analoga} "
-                segunda = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_maior_analoga} AND red <={maior_valor_de_maior_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_meio_analoga} AND blue <= {maior_valor_de_meio_analoga} "
-            else:
-                primeira = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_maior_analoga} AND red <= {maior_valor_de_maior_analoga} AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_menor_analoga} AND blue <={maior_valor_de_menor_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_maior_analoga} AND red <= {maior_valor_de_maior_analoga} AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_menor_analoga} AND blue <={maior_valor_de_menor_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >= {menor_valor_de_maior_analoga} AND red <= {maior_valor_de_maior_analoga} AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_menor_analoga} AND blue <={maior_valor_de_menor_analoga}"
-                
-                segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_maior_analoga} AND red <={maior_valor_de_maior_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_meio_analoga} AND blue <= {maior_valor_de_meio_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_maior_analoga} AND red <={maior_valor_de_maior_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_meio_analoga} AND blue <= {maior_valor_de_meio_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >= {menor_valor_de_maior_analoga} AND red <={maior_valor_de_maior_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_meio_analoga} AND blue <= {maior_valor_de_meio_analoga}"
-
-        if maior_analoga == green: 
-            if fornecedores != "todos":
-                primeira = f"SELECT * from {fornecedores} WHERE red >={menor_valor_de_meio_analoga} AND red <={maior_valor_de_meio_analoga} AND green >= {menor_valor_de_maior_analoga} AND green <= {maior_valor_de_maior_analoga} AND blue >= {menor_valor_de_menor_analoga} AND blue <= {maior_valor_de_menor_analoga} "
-                segunda = f"SELECT * from {fornecedores} WHERE red >={menor_valor_de_menor_analoga} AND red <={maior_valor_de_menor_analoga} AND green >= {menor_valor_de_maior_analoga} AND green <= {maior_valor_de_maior_analoga} AND blue >= {menor_valor_de_meio_analoga} AND blue <= {maior_valor_de_meio_analoga} "
-            else:
-                
-                primeira = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >={menor_valor_de_meio_analoga} AND red <={maior_valor_de_meio_analoga} AND green >= {menor_valor_de_maior_analoga} AND green <= {maior_valor_de_maior_analoga} AND blue >= {menor_valor_de_menor_analoga} AND blue <= {maior_valor_de_menor_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >={menor_valor_de_meio_analoga} AND red <={maior_valor_de_meio_analoga} AND green >= {menor_valor_de_maior_analoga} AND green <= {maior_valor_de_maior_analoga} AND blue >= {menor_valor_de_menor_analoga} AND blue <= {maior_valor_de_menor_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >={menor_valor_de_meio_analoga} AND red <={maior_valor_de_meio_analoga} AND green >= {menor_valor_de_maior_analoga} AND green <= {maior_valor_de_maior_analoga} AND blue >= {menor_valor_de_menor_analoga} AND blue <= {maior_valor_de_menor_analoga}"
-                
-                segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >={menor_valor_de_menor_analoga} AND red <={maior_valor_de_menor_analoga} AND green >= {menor_valor_de_maior_analoga} AND green <= {maior_valor_de_maior_analoga} AND blue >= {menor_valor_de_meio_analoga} AND blue <= {maior_valor_de_meio_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >={menor_valor_de_menor_analoga} AND red <={maior_valor_de_menor_analoga} AND green >= {menor_valor_de_maior_analoga} AND green <= {maior_valor_de_maior_analoga} AND blue >= {menor_valor_de_meio_analoga} AND blue <= {maior_valor_de_meio_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >={menor_valor_de_menor_analoga} AND red <={maior_valor_de_menor_analoga} AND green >= {menor_valor_de_maior_analoga} AND green <= {maior_valor_de_maior_analoga} AND blue >= {menor_valor_de_meio_analoga} AND blue <= {maior_valor_de_meio_analoga} "
-
-        if maior_analoga == blue:
-            if fornecedores != "todos":
-                primeira = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_menor_analoga} AND red <= {maior_valor_de_menor_analoga} AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} "
-                segunda = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_meio_analoga} AND red <= {maior_valor_de_meio_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} "
-            else:
-                primeira = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_menor_analoga} AND red <= {maior_valor_de_menor_analoga}  AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_menor_analoga} AND red <= {maior_valor_de_menor_analoga} AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >= {menor_valor_de_menor_analoga} AND red <= {maior_valor_de_menor_analoga} AND green >= {menor_valor_de_meio_analoga} AND green <= {maior_valor_de_meio_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga}"
-                
-                
-                segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_meio_analoga} AND red <= {maior_valor_de_meio_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_meio_analoga} AND red <= {maior_valor_de_meio_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >= {menor_valor_de_meio_analoga} AND red <= {maior_valor_de_meio_analoga} AND green >= {menor_valor_de_menor_analoga} AND green <= {maior_valor_de_menor_analoga} AND blue >= {menor_valor_de_maior_analoga} AND blue <={maior_valor_de_maior_analoga}"
-        
-        if maior_analoga == red:
             primeira_menor = "blue"
             segunda_menor = "green"
+            
+            primeira = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_maior_analoga and tabela[fornecedores]['red'] <= maior_valor_de_maior_analoga and tabela[fornecedores]['green'] >= menor_valor_de_meio_analoga and tabela[fornecedores]['green'] <= maior_valor_de_meio_analoga and tabela[fornecedores]['blue'] >= menor_valor_de_menor_analoga and tabela[fornecedores]['blue'] <= maior_valor_de_menor_analoga]
+
+            segunda = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_maior_analoga and tabela[fornecedores]['red'] <= maior_valor_de_maior_analoga and tabela[fornecedores]['green'] >= menor_valor_de_menor_analoga and tabela[fornecedores]['green'] <= maior_valor_de_menor_analoga and tabela[fornecedores]['blue'] >= menor_valor_de_meio_analoga and tabela[fornecedores]['blue'] <= maior_valor_de_meio_analoga]
+
         if maior_analoga == green:
             primeira_menor = "blue"
             segunda_menor = "red"
+            primeira = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_meio_analoga and tabela[fornecedores]['red'] <= maior_valor_de_meio_analoga and tabela[fornecedores]['green'] >= menor_valor_de_maior_analoga and tabela[fornecedores]['green'] <= maior_valor_de_maior_analoga and tabela[fornecedores]['blue'] >= menor_valor_de_menor_analoga and tabela[fornecedores]['blue'] <= maior_valor_de_menor_analoga]
+            
+            
+            segunda = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_menor_analoga and tabela[fornecedores]['red'] <= maior_valor_de_menor_analoga and tabela[fornecedores]['green'] >= menor_valor_de_maior_analoga and tabela[fornecedores]['green'] <= maior_valor_de_maior_analoga and tabela[fornecedores]['blue'] >= menor_valor_de_meio_analoga and tabela[fornecedores]['blue'] <= maior_valor_de_meio_analoga]
+
         if maior_analoga == blue:
             primeira_menor = "red"
             segunda_menor = "green"
+            primeira = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_menor_analoga and tabela[fornecedores]['red'] <= maior_valor_de_menor_analoga and tabela[fornecedores]['green'] >= menor_valor_de_meio_analoga and tabela[fornecedores]['green'] <= maior_valor_de_meio_analoga and tabela[fornecedores]['blue'] >= menor_valor_de_maior_analoga and tabela[fornecedores]['blue'] <= maior_valor_de_maior_analoga]
             
-        
-        resultado1 = pd.read_sql(primeira, engine)
-        resultado2 = pd.read_sql(segunda, engine)
+            
+            segunda = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_meio_analoga and tabela[fornecedores]['red'] <= maior_valor_de_meio_analoga and tabela[fornecedores]['green'] >= menor_valor_de_menor_analoga and tabela[fornecedores]['green'] <= maior_valor_de_menor_analoga and tabela[fornecedores]['blue'] >= menor_valor_de_maior_analoga and tabela[fornecedores]['blue'] <= maior_valor_de_maior_analoga]
+
+        # verifica se os complementos não estao vazios
         if resultado1.empty and resultado2.empty:
             complemento1 = False
             complemento2 = False
@@ -436,6 +419,7 @@ def select_complementos(red, green, blue, palheta, fornecedores, tabela):
             complemento1 = False
         elif resultado2.empty:
             complemento2 = False
+        # transforma em dicionario
         resultado1 = resultado1.to_dict(orient="records")
         resultado2 = resultado2.to_dict(orient="records")
 
@@ -444,6 +428,7 @@ def select_complementos(red, green, blue, palheta, fornecedores, tabela):
         menor_distancia_1 = 0
         menor_distancia_2 = 0
         distancia = 0
+        # pega o complemento mais perto do ideal
         while c < len(resultado1):
             atual_red = resultado1[c]["red"] - red
             atual_green = resultado1[c]["green"] - green
@@ -471,6 +456,10 @@ def select_complementos(red, green, blue, palheta, fornecedores, tabela):
                         if atual_blue < atual_green and atual_blue < atual_red:
                             menor_distancia_1 = c
                             distancia = distancia_atual
+                elif distancia_atual == 0:
+                    menor_distancia_1 = c
+                    distancia = distancia_atual
+                    break
             c += 1
 
         distancia = 0
@@ -500,8 +489,12 @@ def select_complementos(red, green, blue, palheta, fornecedores, tabela):
                         if atual_blue < atual_green and atual_blue < atual_red:
                             menor_distancia_2 = x
                             distancia = distancia_atual
+                elif distancia_atual == 0:
+                    menor_distancia_1 = c
+                    distancia = distancia_atual
+                    break
             x += 1
-
+        # coloca na lista de complementos
         if complemento1 == True and complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
             lista_complementos.append(resultado2[menor_distancia_2])

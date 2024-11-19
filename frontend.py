@@ -155,7 +155,7 @@ def receivecolors():
             nomec2 = complemento2['nome']
             hexadecimalc2 = complemento2['hexadecimal']
             pantone_codigoc2 = complemento2['pantone_código']
-
+            # renderizar complementos
             with container:
                 script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 450px;'>"
                           "<div style='background-color: white ; width: 660px; height: 450px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
