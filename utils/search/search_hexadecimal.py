@@ -5,6 +5,8 @@ import pandas as pd
 
 engine = conect_to_engine_production()
 def select_hexadecimal(hexadecimal, fornecedores):
+    if fornecedores == 'sherwin-willians':
+        fornecedores = 'sherwin_willians'
     seach_string = ""
     if fornecedores != "todos":
         search_string = f"SELECT * from {fornecedores} WHERE hexadecimal = '{hexadecimal}' or pantone_hex = '{hexadecimal}' "

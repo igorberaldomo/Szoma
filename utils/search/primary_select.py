@@ -4,7 +4,8 @@ import pandas as pd
 
 engine = conect_to_engine_production()
 def primary_select(red, green, blue, fornecedores):
-
+    if fornecedores == 'sherwin-willians':
+        fornecedores = 'sherwin_willians'
     distancia = 18
     maxred = red + distancia
     minred = red - distancia

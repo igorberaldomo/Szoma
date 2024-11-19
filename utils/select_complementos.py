@@ -12,7 +12,8 @@ engine = conect_to_engine_production()
 
 def select_complementos(red, green, blue, palheta, fornecedores):
     lista_complementos = []
-
+    if fornecedores == 'sherwin-willians':
+        fornecedores = 'sherwin_willians'
     if palheta == "triade":
         lista_complementos.clear()
         desvio_maior = 100
