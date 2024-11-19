@@ -101,9 +101,8 @@ def findrgb():
                 st.session_state.resultados = response_df
             elif procura[0].isnumeric():
                 codigo = procura
-                fornecedores = opcao_fornecedores
                 tabela = st.session_state.tables[fornecedores]
-                response_df = select_códigos(codigo,fornecedores, tabela)
+                response_df = select_códigos(codigo, tabela)
                 st.session_state.resultados = response_df
             elif procura[0] == '#':
                 hexadecimal = procura
