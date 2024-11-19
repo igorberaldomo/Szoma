@@ -82,28 +82,31 @@ st.session_state.tables = getting_data()
 
 def findrgb():
     st.session_state.resultados = []
-
     if procura or upload:
         if upload is not None:
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
             fornecedores = opcao_fornecedores
-            response_df = primary_select(red, green, blue, fornecedores)
+            tabela = st.session_state.tables[fornecedores]
+            response_df = primary_select(red, green, blue, tabela)
             st.session_state.resultados = response_df
         elif procura != '':
             fornecedores = opcao_fornecedores
             if procura[0].isalpha():
                 nome = procura
-                response_df = search_name_for_id(nome, fornecedores)
+                tabela = st.session_state.tables[fornecedores]
+                response_df = search_name_for_id(nome, tabela)
                 st.session_state.resultados = response_df
             elif procura[0].isnumeric():
                 codigo = procura
-                response_df = select_códigos(codigo, fornecedores)
+                tabela = st.session_state.tables[fornecedores]
+                response_df = select_códigos(codigo, tabela)
                 st.session_state.resultados = response_df
             elif procura[0] == '#':
                 hexadecimal = procura
-                response_df = select_hexadecimal(hexadecimal, fornecedores)
+                tabela = st.session_state.tables[fornecedores]
+                response_df = select_hexadecimal(hexadecimal, tabela)
                 st.session_state.resultados = response_df
     else:
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
@@ -118,6 +121,7 @@ def receivecolors():
         time.sleep(1.5)
         data_df = pd.DataFrame(data, index=[0])
         data = data_df.to_dict(orient='records')
+        tabela = st.session_state.tables[fornecedores]
         try:
             # Processar a cor principal
             cor_principal = data[0]
@@ -129,7 +133,7 @@ def receivecolors():
             pantone_codigo = cor_principal['pantone_código']
 
             # Calcular complementos
-            complementos_df = select_complementos(red, green, blue, tipo_de_palheta, opcao_fornecedores)
+            complementos_df = select_complementos(red, green, blue, tipo_de_palheta, tabela)
             complementos = complementos_df
             st.session_state.complementos = complementos
 
