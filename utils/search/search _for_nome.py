@@ -3,6 +3,8 @@ from utils.conect_to_engine_production import conect_to_engine_production
 
 engine = conect_to_engine_production()
 def select_names(nome, fornecedores):
+    if fornecedores == 'sherwin-willians':
+        fornecedores = 'sherwin_willians'
     seach_string = ""
     if fornecedores != "todos":
         search_string = f"SELECT * from {fornecedores} WHERE nome = '{nome}' or pantone_name = '{nome}' "
