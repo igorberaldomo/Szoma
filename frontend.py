@@ -95,7 +95,8 @@ def findrgb():
             fornecedores = opcao_fornecedores
             if procura[0].isalpha():
                 nome = procura
-                tabela = st.session_state.tables[fornecedores]
+                # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
+                tabela = st.session_state.tables
                 response_df = search_name_for_id(nome, tabela)
                 st.session_state.resultados = response_df
             elif procura[0].isnumeric():
