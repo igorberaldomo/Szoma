@@ -17,6 +17,8 @@ if "resultados" not in st.session_state:
     st.session_state.resultados = []
 if "complementos" not in st.session_state:
     st.session_state.complementos = []
+if "tables" not in st.session_state:
+    st.session_state.tables = []
 
 # Estilização personalizada
 st.markdown("""
@@ -69,12 +71,14 @@ def getting_data():
                 df['red'] = df['red'].astype(int)
                 df['green'] = df['green'].astype(int)
                 df['blue'] = df['blue'].astype(int)    
-            dataframes[table_name] = df
+            dataframes[table_name] = df.copy(deep=True)
         except Exception as e:
             print(f"Erro ao processar a tabela {table_name}: {e}")
     return dataframes
 # para acessar tabela use table['nome_da_tabela']
-table = getting_data()
+st.session_state.tables = getting_data()
+
+
 
 def findrgb():
     st.session_state.resultados = []
