@@ -267,7 +267,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         x = 0
         menor_distancia_1 = 0
         menor_distancia_2 = 0
-
+        distancia = 0
         while c < len(resultado1):
             atual_red = resultado1[c]["red"] - cr_inter
             atual_green = resultado1[c]["green"] - cg_inter
@@ -286,7 +286,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                     menor_distancia_1 = c
                     distancia = distancia_atual
             c += 1
-
+        distancia = 0
         while x < len(resultado2):
             atual_red = resultado2[x]["red"] - cr
             atual_green = resultado2[x]["green"] - cg
@@ -414,12 +414,12 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         x = 0
         menor_distancia_1 = 0
         menor_distancia_2 = 0
-
+        distancia = 0
         while c < len(resultado1):
             atual_red = resultado1[c]["red"] - red
             atual_green = resultado1[c]["green"] - green
             atual_blue = resultado1[c]["blue"] - blue
-
+            distancia = 0
             if atual_red < 0:
                 atual_red = atual_red * -1
             if atual_green < 0:
@@ -444,6 +444,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                             distancia = distancia_atual
             c += 1
 
+        distancia = 0
         while x < len(resultado2):
             atual_red = resultado2[x]["red"] - red
             atual_green = resultado2[x]["green"] - green
