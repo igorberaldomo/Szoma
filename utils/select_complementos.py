@@ -10,20 +10,23 @@ from utils.filter_lines import filter_lines
 engine = conect_to_engine_production()
 
 
-def select_complementos(red, green, blue, palheta, fornecedores):
+def select_complementos(red, green, blue, palheta, fornecedores, tabela):
     lista_complementos = []
-    if fornecedores == 'sherwin-willians':
-        fornecedores = 'sherwin_willians'
     if palheta == "triade":
         lista_complementos.clear()
-        desvio_maior = 100
-        desvio_menor = 100
+        # seleciona os desvios
+        desvio_maior = 30
+        desvio_menor = 20
+        # seleciona os maiores e menores valores
         maior = max(red, green, blue)
         menor = min(red, green, blue)
         meio = 0
         
+        # coloca o default dos complementos como true
         complemento1 = True
         complemento2 = True
+        
+        # descobre o valor do meio
         if red != maior and red != menor:
             meio = red
         if green != maior and green != menor:
@@ -31,6 +34,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         if blue != maior and blue != menor:
             meio = blue
 
+        # pega os limites da procura
         menor_valor_de_meio = meio - desvio_maior
         maior_valor_de_meio = meio + desvio_maior
         menor_valor_de_menor = menor - desvio_menor
@@ -38,6 +42,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         menor_valor_de_maior = maior - desvio_menor
         maior_valor_de_maior = maior + desvio_menor
 
+        # garante que os limites da procura estao entre 0 e 255 (limites do rgb)
         if menor_valor_de_maior < 0:
             menor_valor_de_maior = 0
         if maior_valor_de_maior > 255:
@@ -51,24 +56,23 @@ def select_complementos(red, green, blue, palheta, fornecedores):
         if maior_valor_de_meio > 255:
             maior_valor_de_meio = 255
 
+        # a primeira cor da triade a segunda cor da triade
         primeira = ""
         segunda = ""
+        
+        # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         primeira_maior = ""
         segunda_maior = ""
         if maior == red:
-            if fornecedores != "todos":
-                primeira = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <={maior_valor_de_meio} "
+            primeira_maior = "green"
+            segunda_maior = "blue"
+            primeira = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_menor and tabela[fornecedores]['red'] >= maior_valor_de_menor and tabela[fornecedores]['green'] >= menor_valor_de_maior and tabela[fornecedores]['green'] <= maior_valor_de_maior and tabela[fornecedores]['blue'] >= menor_valor_de_meio and tabela[fornecedores]['blue'] <= maior_valor_de_meio]
 
-
-                segunda = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
-
-            else:
-                primeira = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM suvinil WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <={maior_valor_de_meio} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM coral WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <={maior_valor_de_meio} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM sherwin_willians WHERE red >= {menor_valor_de_menor} AND red <= {maior_valor_de_menor} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_meio} AND blue <={maior_valor_de_meio}"
-                
-                
-                segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM suvinil WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM coral WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores FROM sherwin_willians WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <={maior_valor_de_maior}" 
-
+            segunda = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_meio and tabela[fornecedores]['red'] >= maior_valor_de_meio and tabela[fornecedores]['green'] >= menor_valor_de_menor and tabela[fornecedores]['green'] <= maior_valor_de_menor and tabela[fornecedores]['blue'] >= menor_valor_de_maior and tabela[fornecedores]['blue'] <= maior_valor_de_maior]
+            
         if maior == green:
+            primeira_maior = "blue"
+            segunda_maior = "red"
             if fornecedores != "todos":
                 primeira = f"SELECT * from {fornecedores} WHERE red >={menor_valor_de_meio} AND red <={maior_valor_de_meio} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_maior} AND blue <= {maior_valor_de_maior} "
 
@@ -79,6 +83,9 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >= {menor_valor_de_maior} AND red <= {maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
 
         if maior == blue:
+            segunda_maior = "green"
+            primeira_maior = "red"
+
             if fornecedores != "todos":
                 primeira = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} "
                 segunda = f"SELECT * from {fornecedores} WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_meio} AND green <= {maior_valor_de_meio} AND blue >= {menor_valor_de_menor} AND blue <= {maior_valor_de_menor} "
@@ -86,24 +93,7 @@ def select_complementos(red, green, blue, palheta, fornecedores):
                 primeira = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >= {menor_valor_de_meio} AND red <= {maior_valor_de_meio} AND green >= {menor_valor_de_maior} AND green <= {maior_valor_de_maior} AND blue >= {menor_valor_de_menor} AND blue <={maior_valor_de_menor}"
 
                 segunda = f"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians WHERE red >= {menor_valor_de_maior} AND red <={maior_valor_de_maior} AND green >= {menor_valor_de_menor} AND green <= {maior_valor_de_menor} AND blue >= {menor_valor_de_meio} AND blue <= {maior_valor_de_meio} "
-
-        resultado1 = pd.read_sql(primeira, engine)
-        resultado2 = pd.read_sql(segunda, engine)
-
-        # generate_pandas_table(primeira, segunda)
-        if maior == red:
-            primeira_maior = "green"
-            segunda_maior = "blue"
-
-        if maior == green:
-            primeira_maior = "blue"
-            segunda_maior = "red"
-
-        if maior == blue:
-            segunda_maior = "green"
-            primeira_maior = "red"
-
-        
+                
         if resultado1.empty and resultado2.empty:
             complemento1 = False
             complemento2 = False

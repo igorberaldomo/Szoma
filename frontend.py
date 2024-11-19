@@ -122,7 +122,8 @@ def receivecolors():
         time.sleep(1.5)
         data_df = pd.DataFrame(data, index=[0])
         data = data_df.to_dict(orient='records')
-        tabela = st.session_state.tables[fornecedores]
+        tabela = st.session_state.tables
+        fornecedores = opcao_fornecedores
         try:
             # Processar a cor principal
             cor_principal = data[0]
@@ -134,7 +135,7 @@ def receivecolors():
             pantone_codigo = cor_principal['pantone_código']
 
             # Calcular complementos
-            complementos_df = select_complementos(red, green, blue, tipo_de_palheta, tabela)
+            complementos_df = select_complementos(red, green, blue, tipo_de_palheta,fornecedores, tabela)
             complementos = complementos_df
             st.session_state.complementos = complementos
 
