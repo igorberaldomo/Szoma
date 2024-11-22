@@ -43,8 +43,5 @@ def primary_select(red, green, blue, tabela):
         if menor_diferência == 0:
             posição = c
             break
-    # retorna o resultado ou vazio
-    if resultset.empty:
-        return []
-    else:
-        return resultset[posição]
+        c += 1
+    return resultset[posição]
