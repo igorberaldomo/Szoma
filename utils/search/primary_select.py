@@ -33,6 +33,7 @@ def primary_select(red, green, blue, tabela):
     menor_diferência = 0
     posição = 0
     resultset = resultset.to_dict(orient="records")
+    print(resultset[0])
     for c in resultset:
         r = resultset[c]
         g = resultset[c]
