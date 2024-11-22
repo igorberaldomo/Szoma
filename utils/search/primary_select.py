@@ -32,9 +32,8 @@ def primary_select(red, green, blue, tabela):
     c = 0
     menor_diferência = 0
     posição = 0
-    # vai percorrer todos os resultados da procura e vai verificar qual tem a menor diferenca entre as cores pesquisadas e as cores da tabela
     resultset = resultset.to_json(orient="records")
-    for c in len(resultset):
+    for c in resultset:
         r = resultset[c]['red']
         g = resultset[c]['green']
         b = resultset[c]['blue']
