@@ -9,6 +9,7 @@ from utils.search.search_hexadecimal import select_hexadecimal
 from utils.search.search_codigos import select_códigos
 from utils.search.search_name_for_id import search_name_for_id
 from utils.search.primary_select import primary_select
+from utils.conect_to_engine_production import conect_to_engine_production
 
 
 
@@ -36,6 +37,7 @@ visibility:hidden
 
 
 def getting_data():
+    engine = conect_to_engine_production()
     queries = {
     "suvinil": "SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil",
     "coral": "SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral",
