@@ -33,11 +33,10 @@ def primary_select(red, green, blue, tabela):
     menor_diferência = 0
     posição = 0
     resultset = resultset.to_dict(orient="records")
-    print(resultset[0]['red'])
     for c in range(len(resultset)):
-        r = resultset[c]
-        g = resultset[c]
-        b = resultset[c]
+        r = resultset[c]['red']
+        g = resultset[c]['green']
+        b = resultset[c]['blue']
         diferença = abs(red - r) + abs(green - g) + abs(blue - b)
         if c == 0:
             menor_diferência = diferença
