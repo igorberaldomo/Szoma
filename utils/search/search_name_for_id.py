@@ -5,11 +5,12 @@ from utils.conect_to_engine_production import conect_to_engine_production
 
 engine = conect_to_engine_production()
 
-def search_name_for_id(nome, fornecedores):
-
+def search_name_for_id(nome, tabela):
     with open("search/search_dict.json", "r") as file:
         search_dict = json.load(file)
         name_id = -1
+        fornecedores = ""
+        # procura no json o id da cor que bate com o nome digitado assim como a tabela que ela pertence
         if name_id == -1:
             for keys in search_dict["quickSearch"][0]:
                 if nome in keys:
@@ -26,13 +27,15 @@ def search_name_for_id(nome, fornecedores):
                     name_id = search_dict["sherwin-willians"][0][""+nome+""]
                     fornecedores = 'sherwin-willians'
         if name_id == -1:
+            for keys in search_dict["anjo"][0]:
+                if nome in keys:
+                    name_id = search_dict["anjo"][0][""+nome+""]
+                    fornecedores = 'anjo'
+        if name_id == -1:
             for keys in search_dict["coral"][0]:
                 if nome in keys:
                     name_id = search_dict["coral"][0][""+nome+""]
                     fornecedores = 'coral'
-
-        seach_string = f"Select * from {fornecedores} WHERE id = {name_id}"
-        resultset = pd.read_sql(seach_string, engine)
-        resultset_df = pd.DataFrame(resultset)
-        resultset = resultset_df.copy()
-        return resultset, fornecedores
+        # seleciona a tabela de acordo com o id encontrado
+        resultset = tabela[fornecedores][tabela[fornecedores]['id'] == name_id]
+        return resultset

@@ -3,16 +3,17 @@ import pandas as pd
 
 
 engine = conect_to_engine_production()
-def primary_select(red, green, blue, fornecedores):
-    if fornecedores == 'sherwin-willians':
-        fornecedores = 'sherwin_willians'
+def primary_select(red, green, blue, tabela):
+    # distancia define o limite de busca para cima e para baixo
     distancia = 18
+    # min e max é os maiores e menores valores que um atributo pode ter
     maxred = red + distancia
     minred = red - distancia
     maxgreen = green + distancia
     mingreen = green - distancia
     maxblue = blue + distancia
     minblue = blue - distancia
+    # garanta que os valores estao entre 0 e 255 (limites do rgb)
     if maxred > 255:
         maxred = 255
     if minred < 0:
@@ -25,14 +26,25 @@ def primary_select(red, green, blue, fornecedores):
         maxblue = 255
     if minblue < 0:
         minblue = 0
-
-    seach_string = ""
-    if fornecedores != "todos":
-        search_string = f"SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from {fornecedores} WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
-    elif fornecedores == "todos":
-        search_string = f"SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from suvinil WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from coral WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue} union SELECT hexadecimal, fornecedores,nome, pantone_código,red,green,blue from sherwin_willians WHERE red >= {minred} AND  red <= {maxred} AND green >= {mingreen} AND green <= {maxgreen} AND blue >= {minblue} AND blue <= {maxblue}"
-    resultset = pd.read_sql(search_string, engine)
+    # aplica a procura na tabela
+    resultset = tabela[(tabela['red'] >= minred) & (tabela['red'] <= maxred) & (tabela['green'] >= mingreen) & (tabela['green'] <= maxgreen) & (tabela['blue'] >= minblue) & (tabela['blue'] <= maxblue)]
+    c = 0
+    menor_diferência = 0
+    posição = 0
+    # vai percorrer todos os resultados da procura e vai verificar qual tem a menor diferenca entre as cores pesquisadas e as cores da tabela
+    for c in resultset.index:  
+        diferença = abs(red - resultset['red'][c]) + abs(green - resultset['green'][c]) + abs(blue - resultset['blue'][c])
+        if c == 0:
+            menor_diferência = diferença
+            posição = c
+        if diferença < menor_diferência:
+            menor_diferência = diferença
+            posição = c
+        if menor_diferência == 0:
+            posição = c
+            break
+    # retorna o resultado ou vazio
     if resultset.empty:
         return []
     else:
-        return resultset
+        return resultset[posição]
