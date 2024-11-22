@@ -79,7 +79,7 @@ def getting_data():
             print(f"Erro ao processar a tabela {table_name}: {e}")
     return dataframes
 # para acessar tabela use table['nome_da_tabela']
-st.session_state.tables = getting_data()
+# st.session_state.tables = getting_data()
 
 
 
