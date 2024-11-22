@@ -34,7 +34,7 @@ def primary_select(red, green, blue, tabela):
     posição = 0
     resultset = resultset.to_dict(orient="records")
     print(resultset[0]['red'])
-    for c in len(resultset):
+    for c in range(len(resultset)):
         r = resultset[c]
         g = resultset[c]
         b = resultset[c]
