@@ -32,7 +32,7 @@ def primary_select(red, green, blue, tabela):
     menor_diferência = 0
     posição = 0
     # vai percorrer todos os resultados da procura e vai verificar qual tem a menor diferenca entre as cores pesquisadas e as cores da tabela
-    for c in resultset.index:  
+    for c in len(resultset):  
         diferença = abs(red - resultset['red'][c]) + abs(green - resultset['green'][c]) + abs(blue - resultset['blue'][c])
         if c == 0:
             menor_diferência = diferença
