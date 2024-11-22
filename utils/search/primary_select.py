@@ -33,18 +33,5 @@ def primary_select(red, green, blue, tabela):
     menor_diferência = 0
     posição = 0
     resultset = resultset.to_json(orient="records")
-    for c in resultset:
-        r = resultset[c]
-        g = resultset[c]
-        b = resultset[c]
-        diferença = abs(red - r) + abs(green - g) + abs(blue - b)
-        if c == 0:
-            menor_diferência = diferença
-            posição = c
-        if diferença < menor_diferência:
-            menor_diferência = diferença
-            posição = c
-        if menor_diferência == 0:
-            posição = c
-        c+= 1
+    console.log(resultset)
     return resultset[posição]
