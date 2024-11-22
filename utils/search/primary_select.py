@@ -33,5 +33,5 @@ def primary_select(red, green, blue, tabela):
     menor_diferência = 0
     posição = 0
     resultset = resultset.to_json(orient="records")
-    console.log(resultset)
+    print(resultset)
     return resultset[posição]
