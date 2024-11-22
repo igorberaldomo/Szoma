@@ -48,6 +48,6 @@ def primary_select(red, green, blue, tabela):
             posição = c
         c+= 1
         print(resultset[posição])
-        resultset_df = pd.DataFrame.from_dict (resultset[posição])
+        resultset_df = pd.DataFrame(resultset[posição])
 
     return resultset_df
