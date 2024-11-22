@@ -14,7 +14,7 @@ def db_table_insertinto_Sherwin_Willians():
     DATABASE_URL = os.getenv("AWS_URL")
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
     
-    nome_tabela = 'sherwin-willians'
+    nome_tabela = 'sherwin_willians'
     metadata_obj = MetaData()
 
     my_table = Table(
