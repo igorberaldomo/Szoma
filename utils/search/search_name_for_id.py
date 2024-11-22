@@ -27,6 +27,11 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["sherwin-willians"][0][""+nome+""]
                     fornecedores = 'sherwin-willians'
         if name_id == -1:
+            for keys in search_dict["anjo"][0]:
+                if nome in keys:
+                    name_id = search_dict["anjo"][0][""+nome+""]
+                    fornecedores = 'anjo'
+        if name_id == -1:
             for keys in search_dict["coral"][0]:
                 if nome in keys:
                     name_id = search_dict["coral"][0][""+nome+""]
