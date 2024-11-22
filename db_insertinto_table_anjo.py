@@ -14,7 +14,7 @@ def db_table_insertinto_Sherwin_Willians():
     DATABASE_URL = os.getenv("AWS_URL")
     engine = sqlalchemy.create_engine(DATABASE_URL, pool_size=5, max_overflow=10)
     
-    nome_tabela = 'sherwin_willians'
+    nome_tabela = 'anjo'
     metadata_obj = MetaData()
 
     my_table = Table(
@@ -39,20 +39,20 @@ def db_table_insertinto_Sherwin_Willians():
 
     metadata_obj.create_all(engine)
 
-    with open('sherwin/sherwin-willians.json','r+') as file:
+    with open('anjo/anjo.json','r+') as file:
         file_data = json.load(file)
         c = 0
-        while c < len(file_data["cores-sherwin-willians"]):
+        while c < len(file_data["anjocolors"]):
  
-            nome = str(file_data["cores-sherwin-willians"][c]['nome'])
-            red = int(file_data["cores-sherwin-willians"][c]['rgb'][0])
-            green= int(file_data["cores-sherwin-willians"][c]['rgb'][1])
-            blue = int(file_data["cores-sherwin-willians"][c]['rgb'][2])
-            hexadecimal = str(file_data["cores-sherwin-willians"][c]['hexadecimal'])
-            pantone_código = str(file_data["cores-sherwin-willians"][c]['pantone']['codigo'])
-            pantone_name = str(file_data["cores-sherwin-willians"][c]['pantone']['name'])
-            pantone_hex = str(file_data["cores-sherwin-willians"][c]['pantone']['hex'])
-            fornecedores = str(file_data["cores-sherwin-willians"][c]['fornecedor'])
+            nome = str(file_data["anjocolors"][c]['nome'])
+            red = int(file_data["anjocolors"][c]['rgb'][0])
+            green= int(file_data["anjocolors"][c]['rgb'][1])
+            blue = int(file_data["anjocolors"][c]['rgb'][2])
+            hexadecimal = str(file_data["anjocolors"][c]['hexadecimal'])
+            pantone_código = str(file_data["anjocolors"][c]['pantone']['codigo'])
+            pantone_name = str(file_data["anjocolors"][c]['pantone']['name'])
+            pantone_hex = str(file_data["anjocolors"][c]['pantone']['hex'])
+            fornecedores = str(file_data["anjocolors"][c]['fornecedores'])
             created_at = datetime.datetime.now()
             updated_at = datetime.datetime.now()
             deleted_at = 0
