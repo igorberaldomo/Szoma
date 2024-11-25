@@ -15,7 +15,7 @@ engine = conect_to_engine_production()
 def select_complementos(red, green, blue, palheta, tabela):
     lista_complementos = []
     if palheta == "triade":
-
+        st.write(red, green, blue)
         lista_complementos.clear()
         # seleciona os desvios
         desvio_maior = 30
