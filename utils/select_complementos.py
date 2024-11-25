@@ -423,8 +423,8 @@ def select_complementos(red, green, blue, palheta, tabela):
             complemento1 = False
         elif len(resultado2) == 0:
             complemento2 = False
-        # transforma em dicionario
-
+    
+        st.write(type(resultado1), resultado1)
         c = 0
         x = 0
         menor_distancia_1 = 0
