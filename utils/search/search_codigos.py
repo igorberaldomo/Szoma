@@ -10,6 +10,9 @@ def select_códigos(codigo, tabela):
             if row['pantone_código'] == codigo:
                 st.write(row)
                 resultset = row
+    for index, row in resultset.iterrows():
+        if index == 0:
+            resultset = row
     return resultset
 
 # dct = {'nome': resultset[posição]['nome'], 'red': resultset[posição]['red'], 'green': resultset[posição]['green'], 'blue': resultset[posição]['blue'], 'ncs': resultset[posição]['ncs'], 'codigo_suvinil': resultset[posição]['codigo_suvinil'], 'hexadecimal': resultset[posição]['hexadecimal'], 'pantone_código': resultset[posição]['pantone_código'], 'pantone_name': resultset[posição]['pantone_name'], 'pantone_hex': resultset[posição]['pantone_hex'], 'fornecedores': resultset[posição]['fornecedores']} 
