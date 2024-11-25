@@ -95,6 +95,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         resultado1 = primeira
         resultado2 = segunda
         
+        st.write(type(resultado1), resultado1)
+        
         # confirma se os complementos foram encontrados
         if len(resultado1) == 0 and len(resultado2) == 0:
             complemento1 = False
@@ -414,6 +416,7 @@ def select_complementos(red, green, blue, palheta, tabela):
             
             
             segunda = tabela[(tabela['red'] >= menor_valor_de_meio_analoga) and (tabela['red'] <= maior_valor_de_meio_analoga) and (tabela['green'] >= menor_valor_de_menor_analoga) and (tabela['green'] <= maior_valor_de_menor_analoga) and (tabela['blue'] >= menor_valor_de_maior_analoga) and (tabela['blue'] <= maior_valor_de_maior_analoga)]
+
 
         # verifica se os complementos não estao vazios
         if len(resultado1) == 0 and len(resultado2) == 0:
