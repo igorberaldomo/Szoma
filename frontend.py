@@ -127,7 +127,7 @@ def receivecolors():
         data = data_df.to_dict(orient='records')
         tabela = st.session_state.tables
         fornecedores = opcao_fornecedores
-        st.write(data)
+        st.write(data[0])
         try:
             # Processar a cor principal
             cor_principal = data[0]
