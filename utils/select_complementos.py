@@ -26,7 +26,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         meio = valores[1]
         menor = valores[0]
         
-        st.write(f"maior: {maior}, meio: {meio}, menor: {menor}")
+        st.write(maior,menor,meio)
         # coloca o default dos complementos como true
         complemento1 = True
         complemento2 = True
