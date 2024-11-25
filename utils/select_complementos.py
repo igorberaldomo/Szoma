@@ -29,11 +29,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         # coloca o default dos complementos como true
         complemento1 = True
         complemento2 = True
-        
-        # descobre o valor do meio
 
-            
-            
         # pega os limites da procura
         menor_valor_de_meio = meio - desvio_maior
         maior_valor_de_meio = meio + desvio_maior
@@ -139,7 +135,7 @@ def select_complementos(red, green, blue, palheta, tabela):
                                         segunda = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
                                         segunda = {k:[v] for k,v in segunda.items()}     
                                         segunda = pd.DataFrame(segunda)
-        st.write(segunda)
+        st.write('segunda')
         
         # confirma se os complementos foram encontrados
         if len(resultado1) == 0 & len(resultado2) == 0:
