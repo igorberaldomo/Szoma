@@ -107,8 +107,6 @@ def select_complementos(red, green, blue, palheta, tabela):
             print(" ")
             
         # converte para dicionário
-        resultado1 = resultado1.to_dict(orient="records")
-        resultado2 = resultado2.to_dict(orient="records")
 
         c = 0
         x = 0
@@ -208,8 +206,7 @@ def select_complementos(red, green, blue, palheta, tabela):
             lista_complementos.append(resultado1[menor_distancia_1])
         elif complemento1 == False and complemento2 == False:
             return []
-        # retorna as cores
-        
+        # retorna as cores 
         st.write( lista_complementos)
         return lista_complementos
     elif palheta == "complementar":
@@ -282,8 +279,6 @@ def select_complementos(red, green, blue, palheta, tabela):
             print(" ")
             
         # transforma as tabelas em dicionarios
-        resultado1 = resultado1.to_dict(orient="records")
-        resultado2 = resultado2.to_dict(orient="records")
         
         c = 0
         x = 0
@@ -429,8 +424,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         elif len(resultado2) == 0:
             complemento2 = False
         # transforma em dicionario
-        resultado1 = resultado1.to_dict(orient="records")
-        resultado2 = resultado2.to_dict(orient="records")
 
         c = 0
         x = 0
