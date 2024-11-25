@@ -12,7 +12,7 @@ from utils.filter_lines import filter_lines
 engine = conect_to_engine_production()
 
 
-def select_complementos(red, green, blue, palheta, fornecedores, tabela):
+def select_complementos(red, green, blue, palheta, tabela):
     lista_complementos = []
     if palheta == "triade":
         lista_complementos.clear()
