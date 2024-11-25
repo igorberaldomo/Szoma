@@ -142,10 +142,8 @@ def select_complementos(red, green, blue, palheta, tabela):
                                         segunda = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
                                         segunda = {k:[v] for k,v in segunda.items()}     
                                         segunda = pd.DataFrame(segunda)
+            st.write(segunda)
         
-        # adiciona os complementos
-        
-        st.write(primeira)
         # confirma se os complementos foram encontrados
         if len(resultado1) == 0 & len(resultado2) == 0:
             complemento1 = False
