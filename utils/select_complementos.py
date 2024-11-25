@@ -95,7 +95,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         resultado1 = primeira
         resultado2 = segunda
         
-        st.write(type(resultado1), resultado1)
+        st.write(resultado1)
         
         # confirma se os complementos foram encontrados
         if len(resultado1) == 0 and len(resultado2) == 0:
