@@ -208,8 +208,7 @@ def select_complementos(red, green, blue, palheta, tabela):
             lista_complementos.append(resultado1[menor_distancia_1])
         elif complemento1 == False and complemento2 == False:
             return []
-        # retorna as cores
-        
+        # retorna as cores 
         st.write( lista_complementos)
         return lista_complementos
     elif palheta == "complementar":
