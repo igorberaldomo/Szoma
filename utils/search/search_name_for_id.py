@@ -38,5 +38,5 @@ def search_name_for_id(nome, tabela):
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
         resultset = tabela[fornecedores]
-        print(resultset)
+       st.write(resultset)
         return resultset
