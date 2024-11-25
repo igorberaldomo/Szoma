@@ -20,21 +20,19 @@ def select_complementos(red, green, blue, palheta, tabela):
         desvio_maior = 30
         desvio_menor = 20
         # seleciona os maiores e menores valores
-        maior = max(red, green, blue)
-        menor = min(red, green, blue)
-        meio = 0
+        valores = [red, green, blue]
+        valores.sort()
+        maior = valores[2]
+        meio = valores[1]
+        menor = valores[0]
         
+        st.write(f"maior: {maior}, meio: {meio}, menor: {menor}")
         # coloca o default dos complementos como true
         complemento1 = True
         complemento2 = True
         
         # descobre o valor do meio
-        if red != maior & red != menor:
-            meio = red
-        if green != maior & green != menor:
-            meio = green
-        if blue != maior & blue != menor:
-            meio = blue
+
             
             
         # pega os limites da procura
