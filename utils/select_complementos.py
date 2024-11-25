@@ -60,6 +60,7 @@ def select_complementos(red, green, blue, palheta, fornecedores, tabela):
         primeira = ""
         segunda = ""
         
+        st.write(tabela)
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         primeira_maior = ""
         segunda_maior = ""
@@ -68,7 +69,8 @@ def select_complementos(red, green, blue, palheta, fornecedores, tabela):
         if maior == red:
             primeira_maior = "green"
             segunda_maior = "blue"
-            primeira = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_menor and tabela[fornecedores]['red'] >= maior_valor_de_menor and tabela[fornecedores]['green'] >= menor_valor_de_maior and tabela[fornecedores]['green'] <= maior_valor_de_maior and tabela[fornecedores]['blue'] >= menor_valor_de_meio and tabela[fornecedores]['blue'] <= maior_valor_de_meio]
+            
+            primeira =[tabela[fornecedores]['red'] >= menor_valor_de_menor and tabela[fornecedores]['red'] >= maior_valor_de_menor and tabela[fornecedores]['green'] >= menor_valor_de_maior and tabela[fornecedores]['green'] <= maior_valor_de_maior and tabela[fornecedores]['blue'] >= menor_valor_de_meio and tabela[fornecedores]['blue'] <= maior_valor_de_meio]
 
             segunda = tabela[fornecedores][tabela[fornecedores]['red'] >= menor_valor_de_meio and tabela[fornecedores]['red'] >= maior_valor_de_meio and tabela[fornecedores]['green'] >= menor_valor_de_menor and tabela[fornecedores]['green'] <= maior_valor_de_menor and tabela[fornecedores]['blue'] >= menor_valor_de_maior and tabela[fornecedores]['blue'] <= maior_valor_de_maior]
             
