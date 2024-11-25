@@ -9,5 +9,4 @@ def select_códigos(codigo, tabela):
     for index, row in tabela.iterrows():
             if row['pantone_código'] == codigo:
                 resultset = row
-    resultset = tabela['pantone_código'] == codigo
     return resultset
