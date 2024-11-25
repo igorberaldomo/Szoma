@@ -210,7 +210,7 @@ def select_complementos(red, green, blue, palheta, tabela):
             return []
         # retorna as cores
         
-        st.write = lista_complementos
+        st.write( lista_complementos)
         return lista_complementos
     elif palheta == "complementar":
         lista_complementos.clear()
