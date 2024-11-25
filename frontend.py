@@ -138,8 +138,7 @@ def receivecolors():
             pantone_codigo = cor_principal['pantone_código']
 
             # Calcular complementos
-            complementos_df = select_complementos(red, green, blue, tipo_de_palheta,fornecedores, tabela)
-            complementos = complementos_df
+            complementos = select_complementos(red, green, blue, tipo_de_palheta, tabela)
             st.session_state.complementos = complementos
 
             # Processar complementos
