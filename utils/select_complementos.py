@@ -59,7 +59,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         if maior_valor_de_meio > 255:
             maior_valor_de_meio = 255
 
-        st.write(menor_valor_de_maior, maior_valor_de_maior, menor_valor_de_menor, maior_valor_de_menor, menor_valor_de_meio, maior_valor_de_meio)
         # a primeira cor da triade a segunda cor da triade
         primeira = ""
         segunda = ""
@@ -73,8 +72,12 @@ def select_complementos(red, green, blue, palheta, tabela):
             primeira_maior = "green"
             segunda_maior = "blue"
             
-            primeira = [(tabela['red'] >= menor_valor_de_menor) and (tabela['red'] >= maior_valor_de_menor) and (tabela['green'] >= menor_valor_de_maior) and (tabela['green'] <= maior_valor_de_maior) and (tabela['blue'] >= menor_valor_de_meio) and (tabela['blue'] <= maior_valor_de_meio)]
-
+            for index, row in tabela.iterrows():
+                if (tabela['red'] >= menor_valor_de_menor) and (tabela['red'] >= maior_valor_de_menor) and (tabela['green'] >= menor_valor_de_maior) and (tabela['green'] <= maior_valor_de_maior) and (tabela['blue'] >= menor_valor_de_meio) and (tabela['blue'] <= maior_valor_de_meio):
+                    primeira = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
+                    primeira = {k:[v] for k,v in primeira.items()}     
+                    primeira = pd.DataFrame(primeira)
+            st.write(primeira)
             segunda = tabela[(tabela['red'] >= menor_valor_de_meio) and (tabela['red'] >= maior_valor_de_meio) and (tabela['green'] >= menor_valor_de_menor) and (tabela['green'] <= maior_valor_de_menor) and (tabela['blue'] >= menor_valor_de_maior) and (tabela['blue'] <= maior_valor_de_maior)]
             
         if maior == green:
