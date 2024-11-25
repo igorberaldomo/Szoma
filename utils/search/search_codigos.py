@@ -9,6 +9,6 @@ def select_códigos(codigo, tabela):
     resultset = []
     for index, row in tabela.iterrows():
             if row['pantone_código'] == codigo:
+                st.write(row)
                 resultset.append(row)
-        
     return resultset[0]
