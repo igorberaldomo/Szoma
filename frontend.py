@@ -64,7 +64,7 @@ def getting_data():
             continue
         
         try:
-            if table_name in ['suvinil', 'coral', 'sherwin-willians', 'todos']:
+            if table_name in ['suvinil', 'coral', 'sherwin-willians', 'anjo', 'todos']:
                 df['fornecedores'] = df['fornecedores'].astype(str)
                 df['hexadecimal'] = df['hexadecimal'].astype(str)
                 df['nome']  = df['nome'].astype(str)
