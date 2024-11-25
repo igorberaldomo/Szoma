@@ -96,12 +96,12 @@ def select_complementos(red, green, blue, palheta, tabela):
         resultado2 = segunda
         
         # confirma se os complementos foram encontrados
-        if resultado1.empty and resultado2.empty:
+        if len(resultado1) == 0 and len(resultado2) == 0:
             complemento1 = False
             complemento2 = False
-        elif resultado1.empty:
+        elif len(resultado1) == 0:
             complemento1 = False
-        elif resultado2.empty:
+        elif len(resultado2) == 0:
             complemento2 = False
         else:
             print(" ")
@@ -209,6 +209,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         elif complemento1 == False and complemento2 == False:
             return []
         # retorna as cores
+        
+        st.write = lista_complementos
         return lista_complementos
     elif palheta == "complementar":
         lista_complementos.clear()
@@ -269,12 +271,12 @@ def select_complementos(red, green, blue, palheta, tabela):
         complementar = tabela[(tabela['red'] >= cr_min) and (tabela['red'] >= cr_max) and (tabela['green'] >= cg_min) and (tabela['green'] <= cg_max) and (tabela['blue'] >= cb_min) and (tabela['blue'] <= cb_max)]
         
         # verifica se as tabelas estao vazias
-        if resultado1.empty and resultado2.empty:
+        if len(resultado1) == 0 and len(resultado2) == 0:
             complemento1 = False
             complemento2 = False
-        elif resultado1.empty:
+        elif len(resultado1) == 0:
             complemento1 = False
-        elif resultado2.empty:
+        elif len(resultado2) == 0:
             complemento2 = False
         else:
             print(" ")
@@ -419,12 +421,12 @@ def select_complementos(red, green, blue, palheta, tabela):
             segunda = tabela[(tabela['red'] >= menor_valor_de_meio_analoga) and (tabela['red'] <= maior_valor_de_meio_analoga) and (tabela['green'] >= menor_valor_de_menor_analoga) and (tabela['green'] <= maior_valor_de_menor_analoga) and (tabela['blue'] >= menor_valor_de_maior_analoga) and (tabela['blue'] <= maior_valor_de_maior_analoga)]
 
         # verifica se os complementos não estao vazios
-        if resultado1.empty and resultado2.empty:
+        if len(resultado1) == 0 and len(resultado2) == 0:
             complemento1 = False
             complemento2 = False
-        elif resultado1.empty:
+        elif len(resultado1) == 0:
             complemento1 = False
-        elif resultado2.empty:
+        elif len(resultado2) == 0:
             complemento2 = False
         # transforma em dicionario
         resultado1 = resultado1.to_dict(orient="records")
