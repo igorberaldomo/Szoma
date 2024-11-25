@@ -8,5 +8,6 @@ engine = conect_to_engine_production()
 def select_códigos(codigo, tabela):
     for index, row in tabela.iterrows():
             if row['pantone_código'] == codigo:
+                st.write(row)
                 resultset = row
     return resultset
