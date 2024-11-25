@@ -91,7 +91,8 @@ def findrgb():
             cor = ct.get_color(quality=1)
             red, green, blue = cor
             fornecedores = opcao_fornecedores
-            tabela = st.session_state.tables[fornecedores]
+            tabela = st.session_state.tables
+            tabela = tabela[fornecedores]
             response_df = primary_select(red, green, blue, tabela)
             st.session_state.resultados = response_df
         elif procura is not None:
@@ -104,12 +105,14 @@ def findrgb():
                 st.session_state.resultados = response_df
             if procura[0].isnumeric():
                 codigo = procura
-                tabela = st.session_state.tables[fornecedores]
+                tabela = st.session_state.tables
+                tabela = tabela[fornecedores]
                 response_df = select_códigos(codigo, tabela)
                 st.session_state.resultados = response_df
             if procura[0] == '#':
                 hexadecimal = procura
-                tabela = st.session_state.tables[fornecedores]
+                tabela = st.session_state.tables
+                tabela = tabela[fornecedores]
                 response_df = select_hexadecimal(hexadecimal, tabela)
                 st.session_state.resultados = response_df
     else:
