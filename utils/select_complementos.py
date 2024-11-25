@@ -16,6 +16,7 @@ def select_complementos(red, green, blue, palheta, tabela):
     lista_complementos = []
     if palheta == "triade":
 
+        st.write(type(red), type(green), type(blue))
         lista_complementos.clear()
         # seleciona os desvios
         desvio_maior = 30
