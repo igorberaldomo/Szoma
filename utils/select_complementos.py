@@ -59,7 +59,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         
-        primeira, segunda, primeira_maior ,segunda_maior = get_all_entries(red, green, blue, tabela, menor_valor_de_menor, maior_valor_de_menor,menor_valor_de_maior,maior_valor_de_maior,menor_valor_de_meio,maior_valor_de_meio)
+        primeira, segunda, primeira_maior ,segunda_maior = get_all_entries(red, green, blue, tabela, menor_valor_de_menor, maior_valor_de_menor, menor_valor_de_maior, maior_valor_de_maior, menor_valor_de_meio, maior_valor_de_meio)
 
         st.write('segunda')
         
