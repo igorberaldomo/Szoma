@@ -25,7 +25,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         menor = min(red, green, blue)
         meio = 0
         
-        st.write(maio, menor, meio)
+
         # coloca o default dos complementos como true
         complemento1 = True
         complemento2 = True
@@ -37,7 +37,9 @@ def select_complementos(red, green, blue, palheta, tabela):
             meio = green
         if blue != maior and blue != menor:
             meio = blue
-
+            
+            
+        st.write(maio, menor, meio)
         # pega os limites da procura
         menor_valor_de_meio = meio - desvio_maior
         maior_valor_de_meio = meio + desvio_maior
