@@ -49,6 +49,8 @@ def primary_select(red, green, blue, tabela):
         c+= 1
         print(resultset[posição])
         print(resultset[posição]['nome'])
-        resultset_df = pd.DataFrame(resultset[posição])
+        dct = {'nome': resultset[posição]['nome'], 'red': resultset[posição]['red'], 'green': resultset[posição]['green'], 'blue': resultset[posição]['blue'], 'ncs': resultset[posição]['ncs'], 'codigo_suvinil': resultset[posição]['codigo_suvinil'], 'hexadecimal': resultset[posição]['hexadecimal'], 'pantone_código': resultset[posição]['pantone_código'], 'pantone_name': resultset[posição]['pantone_name'], 'pantone_hex': resultset[posição]['pantone_hex'], 'fornecedores': resultset[posição]['fornecedores']}
+        
+        resultset_df = pd.DataFrame(dct)
 
     return resultset_df
