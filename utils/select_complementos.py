@@ -5,6 +5,7 @@ import streamlit as st
 from utils.conect_to_engine_developer import conect_to_engine_developer
 from utils.conect_to_engine_production import conect_to_engine_production
 from utils.create_pandas_table import generate_pandas_table
+from utils.get_all_entries import get_all_entries
 from utils.filter_lines import filter_lines
 
 
@@ -60,81 +61,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         primeira_maior = ""
         segunda_maior = ""
         
-        st.write()
-        # procura as cores que se enquadram na triade
-        if maior == red:
-            primeira_maior = "green"
-            segunda_maior = "blue"
-            for index, row in tabela.iterrows():
-                if row['red'] >= menor_valor_de_menor:
-                    if row['red'] <= maior_valor_de_menor:
-                        if row['green'] >= menor_valor_de_maior:
-                            if row['green'] <= maior_valor_de_maior: 
-                                if row['blue'] >= menor_valor_de_meio:
-                                    if row['blue'] <= maior_valor_de_meio:
-                                        primeira = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                                        primeira = {k:[v] for k,v in primeira.items()}     
-                                        primeira = pd.DataFrame(primeira)
-            
-            for index, row in tabela.iterrows():
-                if tabela['red'] >= menor_valor_de_meio:
-                    if tabela['red'] <= maior_valor_de_meio:
-                        if tabela['green'] >= menor_valor_de_menor:
-                            if tabela['green'] <= maior_valor_de_menor:
-                                if tabela['blue'] >= menor_valor_de_maior:
-                                    if tabela['blue'] <= maior_valor_de_maior:
-                                        segunda = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                                        segunda = {k:[v] for k,v in segunda.items()}     
-                                        segunda = pd.DataFrame(segunda)
-            
-        if maior == green:
-            primeira_maior = "blue"
-            segunda_maior = "red"
-            for index, row in tabela.iterrows():
-                if tabela['red'] >= menor_valor_de_meio:
-                    if tabela['red'] <= maior_valor_de_meio: 
-                        if tabela['green'] >= menor_valor_de_menor:
-                            if tabela['green'] <= maior_valor_de_menor:
-                                if tabela['blue'] >= menor_valor_de_maior:
-                                    if tabela['blue'] <= maior_valor_de_maior:
-                                        primeira = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                                        primeira = {k:[v] for k,v in primeira.items()}     
-                                        primeira = pd.DataFrame(primeira)
-            
-            for index, row in tabela.iterrows():
-                if tabela['red'] >= menor_valor_de_maior:
-                    if tabela['red'] <= maior_valor_de_maior:
-                        if tabela['green'] >= menor_valor_de_meio:
-                            if tabela['green'] <= maior_valor_de_meio:
-                                if tabela['blue'] >= menor_valor_de_menor:
-                                    if tabela['blue'] <= maior_valor_de_menor: 
-                                        segunda = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                                        segunda = {k:[v] for k,v in segunda.items()}     
-                                        segunda = pd.DataFrame(segunda)
-        if maior == blue:
-            segunda_maior = "green"
-            primeira_maior = "red"
-            for index, row in tabela.iterrows():
-                if tabela['red'] >= menor_valor_de_meio:
-                    if tabela['red'] <= maior_valor_de_meio:
-                        if tabela['green'] >= menor_valor_de_maior:
-                            if tabela['green'] <= maior_valor_de_maior:
-                                if tabela['blue'] >= menor_valor_de_menor:
-                                    if tabela['blue'] <= maior_valor_de_menor:
-                                        primeira = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                                        primeira = {k:[v] for k,v in primeira.items()}     
-                                        primeira = pd.DataFrame(primeira)
-                                        
-            for index, row in tabela.iterrows():
-                if tabela['red'] >= menor_valor_de_maior:
-                    if tabela['red'] <= maior_valor_de_maior:
-                        if tabela['green'] >= menor_valor_de_meio:
-                            if tabela['green'] <= maior_valor_de_meio:
-                                if tabela['blue'] >= menor_valor_de_menor:
-                                    if tabela['blue'] <= maior_valor_de_menor:
-                                        segunda = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                                        segunda = {k:[v] for k,v in segunda.items()}     
-                                        segunda = pd.DataFrame(segunda)
+        primeira, segunda = get_all_entries(red, green, blue, tabela)
+
         st.write('segunda')
         
         # confirma se os complementos foram encontrados
