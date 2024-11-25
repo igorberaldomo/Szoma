@@ -144,10 +144,8 @@ def select_complementos(red, green, blue, palheta, tabela):
                                         segunda = pd.DataFrame(segunda)
         
         # adiciona os complementos
-        resultado1 = primeira
-        resultado2 = segunda
         
-        st.write(resultado1)
+        st.write(primeira)
         # confirma se os complementos foram encontrados
         if len(resultado1) == 0 & len(resultado2) == 0:
             complemento1 = False
