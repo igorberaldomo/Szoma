@@ -15,7 +15,7 @@ engine = conect_to_engine_production()
 def select_complementos(red, green, blue, palheta, tabela):
     lista_complementos = []
     if palheta == "triade":
-        st.write(red,green,blue)
+
         lista_complementos.clear()
         # seleciona os desvios
         desvio_maior = 30
@@ -67,7 +67,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         primeira_maior = ""
         segunda_maior = ""
         
-        st.write(f"O maior valor da triade e {maior}")
         # procura as cores que se enquadram na triade
         if maior == red:
             primeira_maior = "green"
@@ -96,8 +95,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         # adiciona os complementos
         resultado1 = primeira
         resultado2 = segunda
-        
-        st.write(resultado1)
         
         # confirma se os complementos foram encontrados
         if len(resultado1) == 0 and len(resultado2) == 0:
@@ -211,7 +208,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         elif complemento1 == False and complemento2 == False:
             return []
         # retorna as cores 
-        st.write( lista_complementos)
         return lista_complementos
     elif palheta == "complementar":
         lista_complementos.clear()
@@ -270,6 +266,10 @@ def select_complementos(red, green, blue, palheta, tabela):
         intermediaria = tabela[(tabela['red'] >= cr_inter_min) and (tabela['red'] >= cr_inter_max) and (tabela['green'] >= cg_inter_min) and (tabela['green'] <= cg_inter_max) and (tabela['blue'] >= cb_inter_min) and (tabela['blue'] <= cb_inter_max)]
         
         complementar = tabela[(tabela['red'] >= cr_min) and (tabela['red'] >= cr_max) and (tabela['green'] >= cg_min) and (tabela['green'] <= cg_max) and (tabela['blue'] >= cb_min) and (tabela['blue'] <= cb_max)]
+        
+        
+        resultado1 = intermediaria
+        resultado2 = complementar
         
         # verifica se as tabelas estao vazias
         if len(resultado1) == 0 and len(resultado2) == 0:
@@ -419,7 +419,9 @@ def select_complementos(red, green, blue, palheta, tabela):
             
             segunda = tabela[(tabela['red'] >= menor_valor_de_meio_analoga) and (tabela['red'] <= maior_valor_de_meio_analoga) and (tabela['green'] >= menor_valor_de_menor_analoga) and (tabela['green'] <= maior_valor_de_menor_analoga) and (tabela['blue'] >= menor_valor_de_maior_analoga) and (tabela['blue'] <= maior_valor_de_maior_analoga)]
 
-
+        resultado1 = primeira
+        resultado2 = segunda
+        
         # verifica se os complementos não estao vazios
         if len(resultado1) == 0 and len(resultado2) == 0:
             complemento1 = False
@@ -429,7 +431,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         elif len(resultado2) == 0:
             complemento2 = False
     
-        st.write(type(resultado1), resultado1)
         c = 0
         x = 0
         menor_distancia_1 = 0
