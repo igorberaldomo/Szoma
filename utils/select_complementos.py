@@ -37,7 +37,6 @@ def select_complementos(red, green, blue, palheta, tabela):
             meio = blue
             
             
-        st.write(meio)
         # pega os limites da procura
         menor_valor_de_meio = meio - desvio_maior
         maior_valor_de_meio = meio + desvio_maior
@@ -60,6 +59,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         if maior_valor_de_meio > 255:
             maior_valor_de_meio = 255
 
+        st.write(menor_valor_de_maior, maior_valor_de_maior, menor_valor_de_menor, maior_valor_de_menor, menor_valor_de_meio, maior_valor_de_meio)
         # a primeira cor da triade a segunda cor da triade
         primeira = ""
         segunda = ""
