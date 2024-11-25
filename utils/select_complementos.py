@@ -67,6 +67,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         primeira_maior = ""
         segunda_maior = ""
         
+        st.write(tabela['red'])
         # procura as cores que se enquadram na triade
         if maior == red:
             primeira_maior = "green"
@@ -78,6 +79,7 @@ def select_complementos(red, green, blue, palheta, tabela):
                     primeira = {k:[v] for k,v in primeira.items()}     
                     primeira = pd.DataFrame(primeira)
             st.write(primeira)
+            
             segunda = tabela[(tabela['red'] >= menor_valor_de_meio) and (tabela['red'] >= maior_valor_de_meio) and (tabela['green'] >= menor_valor_de_menor) and (tabela['green'] <= maior_valor_de_menor) and (tabela['blue'] >= menor_valor_de_maior) and (tabela['blue'] <= maior_valor_de_maior)]
             
         if maior == green:
