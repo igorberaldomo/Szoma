@@ -64,7 +64,7 @@ def getting_data():
             continue
         
         try:
-            if table_name in ['suvinil', 'coral', 'sherwin-willians', 'todos']:
+            if table_name in ['suvinil', 'coral', 'sherwin-willians', 'anjo', 'todos']:
                 df['fornecedores'] = df['fornecedores'].astype(str)
                 df['hexadecimal'] = df['hexadecimal'].astype(str)
                 df['nome']  = df['nome'].astype(str)
@@ -91,10 +91,11 @@ def findrgb():
             cor = ct.get_color(quality=1)
             red, green, blue = cor
             fornecedores = opcao_fornecedores
-            tabela = st.session_state.tables[fornecedores]
+            tabela = st.session_state.tables
+            tabela = tabela[fornecedores]
             response_df = primary_select(red, green, blue, tabela)
             st.session_state.resultados = response_df
-        elif procura != '':
+        elif procura is not None:
             fornecedores = opcao_fornecedores
             if procura[0].isalpha():
                 nome = procura
@@ -102,14 +103,16 @@ def findrgb():
                 tabela = st.session_state.tables
                 response_df = search_name_for_id(nome, tabela)
                 st.session_state.resultados = response_df
-            elif procura[0].isnumeric():
+            if procura[0].isnumeric():
                 codigo = procura
-                tabela = st.session_state.tables[fornecedores]
+                tabela = st.session_state.tables
+                tabela = tabela[fornecedores]
                 response_df = select_códigos(codigo, tabela)
                 st.session_state.resultados = response_df
-            elif procura[0] == '#':
+            if procura[0] == '#':
                 hexadecimal = procura
-                tabela = st.session_state.tables[fornecedores]
+                tabela = st.session_state.tables
+                tabela = tabela[fornecedores]
                 response_df = select_hexadecimal(hexadecimal, tabela)
                 st.session_state.resultados = response_df
     else:
@@ -127,6 +130,7 @@ def receivecolors():
         data = data_df.to_dict(orient='records')
         tabela = st.session_state.tables
         fornecedores = opcao_fornecedores
+        st.write(data)
         try:
             # Processar a cor principal
             cor_principal = data[0]
@@ -138,8 +142,8 @@ def receivecolors():
             pantone_codigo = cor_principal['pantone_código']
 
             # Calcular complementos
-            complementos_df = select_complementos(red, green, blue, tipo_de_palheta,fornecedores, tabela)
-            complementos = complementos_df
+            tabela = tabela[fornecedores]
+            complementos = select_complementos(red, green, blue, tipo_de_palheta, tabela)
             st.session_state.complementos = complementos
 
             # Processar complementos

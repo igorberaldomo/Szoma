@@ -1,5 +1,6 @@
 from utils.conect_to_engine_production import conect_to_engine_production
 import pandas as pd
+import json
 
 
 engine = conect_to_engine_production()
@@ -31,9 +32,12 @@ def primary_select(red, green, blue, tabela):
     c = 0
     menor_diferência = 0
     posição = 0
-    # vai percorrer todos os resultados da procura e vai verificar qual tem a menor diferenca entre as cores pesquisadas e as cores da tabela
-    for c in len(resultset):  
-        diferença = abs(red - resultset['red'][c]) + abs(green - resultset['green'][c]) + abs(blue - resultset['blue'][c])
+    resultset = resultset.to_dict(orient="records")
+    for c in range(len(resultset)):
+        r = resultset[c]['red']
+        g = resultset[c]['green']
+        b = resultset[c]['blue']
+        diferença = abs(red - r) + abs(green - g) + abs(blue - b)
         if c == 0:
             menor_diferência = diferença
             posição = c
@@ -42,6 +46,8 @@ def primary_select(red, green, blue, tabela):
             posição = c
         if menor_diferência == 0:
             posição = c
-            break
-        c += 1
-    return resultset[posição]
+        c+= 1
+        dct = {'nome': resultset[posição]['nome'], 'red': resultset[posição]['red'], 'green': resultset[posição]['green'], 'blue': resultset[posição]['blue'], 'ncs': resultset[posição]['ncs'], 'codigo_suvinil': resultset[posição]['codigo_suvinil'], 'hexadecimal': resultset[posição]['hexadecimal'], 'pantone_código': resultset[posição]['pantone_código'], 'pantone_name': resultset[posição]['pantone_name'], 'pantone_hex': resultset[posição]['pantone_hex'], 'fornecedores': resultset[posição]['fornecedores']} 
+        dct = {k:[v] for k,v in dct.items()}     
+        resultset_df = pd.DataFrame(dct)
+    return resultset_df

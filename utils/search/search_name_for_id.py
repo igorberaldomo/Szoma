@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import sqlalchemy
+import streamlit as st
 from utils.conect_to_engine_production import conect_to_engine_production
 
 engine = conect_to_engine_production()
@@ -37,5 +38,7 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["coral"][0][""+nome+""]
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
-        resultset = tabela[fornecedores][tabela[fornecedores]['id'] == name_id]
+        for index, row in tabela[fornecedores].iterrows():
+            if index == name_id:
+                resultset = row
         return resultset
