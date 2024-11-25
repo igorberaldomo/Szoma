@@ -40,7 +40,5 @@ def search_name_for_id(nome, tabela):
         # seleciona a tabela de acordo com o id encontrado
         for index, row in tabela[fornecedores].iterrows():
             if index == name_id:
-                st.write(row)
                 resultset = row
-                st.write(resultset)
         return resultset
