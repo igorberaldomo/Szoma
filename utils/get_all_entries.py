@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-def get_all_entries(red, green,blue,tabela):
+def get_all_entries(red, green,blue,tabela,menor_valor_de_menor, maior_valor_de_menor,menor_valor_de_maior,maior_valor_de_maior,menor_valor_de_meio,maior_valor_de_meio):
     if maior == red:
             primeira_maior = "green"
             segunda_maior = "blue"
@@ -76,4 +76,4 @@ def get_all_entries(red, green,blue,tabela):
                                     segunda = {k:[v] for k,v in segunda.items()}     
                                     segunda = pd.DataFrame(segunda)
 
-    return primeira, segunda
+    return primeira, segunda, primeira_maior, segunda_maior
