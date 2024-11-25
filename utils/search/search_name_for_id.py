@@ -42,4 +42,5 @@ def search_name_for_id(nome, tabela):
             if index == name_id:
                 st.write(row)
                 resultset = row
+                st.write(resultset)
         return resultset
