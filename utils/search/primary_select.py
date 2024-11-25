@@ -47,6 +47,7 @@ def primary_select(red, green, blue, tabela):
         if menor_diferência == 0:
             posição = c
         c+= 1
+        print(resultset[posição])
         print(resultset[posição]['nome'])
         resultset_df = pd.DataFrame(resultset[posição])
 
