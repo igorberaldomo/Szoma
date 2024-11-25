@@ -91,6 +91,10 @@ def select_complementos(red, green, blue, palheta, tabela):
             
             segunda = tabela[(tabela['red'] >= menor_valor_de_maior) and (tabela['red'] >= maior_valor_de_maior) and (tabela['green'] >= menor_valor_de_meio) and (tabela['green'] <= maior_valor_de_meio) and (tabela['blue'] >= menor_valor_de_menor) and (tabela['blue'] <= maior_valor_de_menor)]
         
+        # adiciona os complementos
+        resultado1 = primeira
+        resultado2 = segunda
+        
         # confirma se os complementos foram encontrados
         if resultado1.empty and resultado2.empty:
             complemento1 = False
