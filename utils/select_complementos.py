@@ -62,7 +62,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         primeira = ""
         segunda = ""
         
-        st.write(tabela)
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         primeira_maior = ""
         segunda_maior = ""
@@ -72,25 +71,25 @@ def select_complementos(red, green, blue, palheta, tabela):
             primeira_maior = "green"
             segunda_maior = "blue"
             
-            primeira =[tabela['red'] >= menor_valor_de_menor and tabela['red'] >= maior_valor_de_menor and tabela['green'] >= menor_valor_de_maior and tabela['green'] <= maior_valor_de_maior and tabela['blue'] >= menor_valor_de_meio and tabela['blue'] <= maior_valor_de_meio]
+            primeira = [(tabela['red'] >= menor_valor_de_menor) and (tabela['red'] >= maior_valor_de_menor) and (tabela['green'] >= menor_valor_de_maior) and (tabela['green'] <= maior_valor_de_maior) and (tabela['blue'] >= menor_valor_de_meio) and (tabela['blue'] <= maior_valor_de_meio)]
 
-            segunda = tabela[tabela['red'] >= menor_valor_de_meio and tabela['red'] >= maior_valor_de_meio and tabela['green'] >= menor_valor_de_menor and tabela['green'] <= maior_valor_de_menor and tabela['blue'] >= menor_valor_de_maior and tabela['blue'] <= maior_valor_de_maior]
+            segunda = tabela[(tabela['red'] >= menor_valor_de_meio) and (tabela['red'] >= maior_valor_de_meio) and (tabela['green'] >= menor_valor_de_menor) and (tabela['green'] <= maior_valor_de_menor) and (tabela['blue'] >= menor_valor_de_maior) and (tabela['blue'] <= maior_valor_de_maior)]
             
         if maior == green:
             primeira_maior = "blue"
             segunda_maior = "red"
 
-            primeira = tabela[tabela['red'] >= menor_valor_de_meio and tabela['red'] >= maior_valor_de_meio and tabela['green'] >= menor_valor_de_menor and tabela['green'] <= maior_valor_de_menor and tabela['blue'] >= menor_valor_de_maior and tabela['blue'] <= maior_valor_de_maior]
+            primeira = tabela[(tabela['red'] >= menor_valor_de_meio) and (tabela['red'] >= maior_valor_de_meio) and (tabela['green'] >= menor_valor_de_menor) and (tabela['green'] <= maior_valor_de_menor) and (tabela['blue'] >= menor_valor_de_maior) and (tabela['blue'] <= maior_valor_de_maior)]
             
-            segunda = tabela[tabela['red'] >= menor_valor_de_maior and tabela['red'] >= maior_valor_de_maior and tabela['green'] >= menor_valor_de_meio and tabela['green'] <= maior_valor_de_meio and tabela['blue'] >= menor_valor_de_menor and tabela['blue'] <= maior_valor_de_menor]
+            segunda = tabela[(tabela['red'] >= menor_valor_de_maior) and (tabela['red'] >= maior_valor_de_maior) and (tabela['green'] >= menor_valor_de_meio) and (tabela['green'] <= maior_valor_de_meio) and (tabela['blue'] >= menor_valor_de_menor) and (tabela['blue'] <= maior_valor_de_menor)]
             
         if maior == blue:
             segunda_maior = "green"
             primeira_maior = "red"
 
-            primeira = tabela[tabela['red'] >= menor_valor_de_meio and tabela['red'] >= maior_valor_de_meio and tabela['green'] >= menor_valor_de_maior and tabela['green'] <= maior_valor_de_maior and tabela['blue'] >= menor_valor_de_menor and tabela['blue'] <= maior_valor_de_menor]
+            primeira = tabela[(tabela['red'] >= menor_valor_de_meio) and (tabela['red'] >= maior_valor_de_meio) and (tabela['green'] >= menor_valor_de_maior) and (tabela['green'] <= maior_valor_de_maior) and (tabela['blue'] >= menor_valor_de_menor) and (tabela['blue'] <= maior_valor_de_menor)]
             
-            segunda = tabela[tabela['red'] >= menor_valor_de_maior and tabela['red'] >= maior_valor_de_maior and tabela['green'] >= menor_valor_de_meio and tabela['green'] <= maior_valor_de_meio and tabela['blue'] >= menor_valor_de_menor and tabela['blue'] <= maior_valor_de_menor]
+            segunda = tabela[(tabela['red'] >= menor_valor_de_maior) and (tabela['red'] >= maior_valor_de_maior) and (tabela['green'] >= menor_valor_de_meio) and (tabela['green'] <= maior_valor_de_meio) and (tabela['blue'] >= menor_valor_de_menor) and (tabela['blue'] <= maior_valor_de_menor)]
         
         # confirma se os complementos foram encontrados
         if resultado1.empty and resultado2.empty:
@@ -261,9 +260,9 @@ def select_complementos(red, green, blue, palheta, tabela):
         cb_inter_min = int(cb_inter_min).__round__()
         
         # recebe a informação das tabelas
-        intermediaria = tabela[tabela['red'] >= cr_inter_min and tabela['red'] >= cr_inter_max and tabela['green'] >= cg_inter_min and tabela['green'] <= cg_inter_max and tabela['blue'] >= cb_inter_min and tabela['blue'] <= cb_inter_max]
+        intermediaria = tabela[(tabela['red'] >= cr_inter_min) and (tabela['red'] >= cr_inter_max) and (tabela['green'] >= cg_inter_min) and (tabela['green'] <= cg_inter_max) and (tabela['blue'] >= cb_inter_min) and (tabela['blue'] <= cb_inter_max)]
         
-        complementar = tabela[tabela['red'] >= cr_min and tabela['red'] >= cr_max and tabela['green'] >= cg_min and tabela['green'] <= cg_max and tabela['blue'] >= cb_min and tabela['blue'] <= cb_max]
+        complementar = tabela[(tabela['red'] >= cr_min) and (tabela['red'] >= cr_max) and (tabela['green'] >= cg_min) and (tabela['green'] <= cg_max) and (tabela['blue'] >= cb_min) and (tabela['blue'] <= cb_max)]
         
         # verifica se as tabelas estao vazias
         if resultado1.empty and resultado2.empty:
@@ -395,25 +394,25 @@ def select_complementos(red, green, blue, palheta, tabela):
             primeira_menor = "blue"
             segunda_menor = "green"
             
-            primeira = tabela[tabela['red'] >= menor_valor_de_maior_analoga and tabela['red'] <= maior_valor_de_maior_analoga and tabela['green'] >= menor_valor_de_meio_analoga and tabela['green'] <= maior_valor_de_meio_analoga and tabela['blue'] >= menor_valor_de_menor_analoga and tabela['blue'] <= maior_valor_de_menor_analoga]
+            primeira = tabela[(tabela['red'] >= menor_valor_de_maior_analoga) and (tabela['red'] <= maior_valor_de_maior_analoga) and (tabela['green'] >= menor_valor_de_meio_analoga) and (tabela['green'] <= maior_valor_de_meio_analoga) and (tabela['blue'] >= menor_valor_de_menor_analoga) and (tabela['blue'] <= maior_valor_de_menor_analoga)]
 
-            segunda = tabela[tabela['red'] >= menor_valor_de_maior_analoga and tabela['red'] <= maior_valor_de_maior_analoga and tabela['green'] >= menor_valor_de_menor_analoga and tabela['green'] <= maior_valor_de_menor_analoga and tabela['blue'] >= menor_valor_de_meio_analoga and tabela['blue'] <= maior_valor_de_meio_analoga]
+            segunda = tabela[(tabela['red'] >= menor_valor_de_maior_analoga) and (tabela['red'] <= maior_valor_de_maior_analoga) and (tabela['green'] >= menor_valor_de_menor_analoga) and (tabela['green'] <= maior_valor_de_menor_analoga) and (tabela['blue'] >= menor_valor_de_meio_analoga) and (tabela['blue'] <= maior_valor_de_meio_analoga)]
 
         if maior_analoga == green:
             primeira_menor = "blue"
             segunda_menor = "red"
-            primeira = tabela[tabela['red'] >= menor_valor_de_meio_analoga and tabela['red'] <= maior_valor_de_meio_analoga and tabela['green'] >= menor_valor_de_maior_analoga and tabela['green'] <= maior_valor_de_maior_analoga and tabela['blue'] >= menor_valor_de_menor_analoga and tabela['blue'] <= maior_valor_de_menor_analoga]
+            primeira = tabela[(tabela['red'] >= menor_valor_de_meio_analoga) and (tabela['red'] <= maior_valor_de_meio_analoga) and (tabela['green'] >= menor_valor_de_maior_analoga) and (tabela['green'] <= maior_valor_de_maior_analoga) and (tabela['blue'] >= menor_valor_de_menor_analoga) and (tabela['blue'] <= maior_valor_de_menor_analoga)]
             
             
-            segunda = tabela[tabela['red'] >= menor_valor_de_menor_analoga and tabela['red'] <= maior_valor_de_menor_analoga and tabela['green'] >= menor_valor_de_maior_analoga and tabela['green'] <= maior_valor_de_maior_analoga and tabela['blue'] >= menor_valor_de_meio_analoga and tabela['blue'] <= maior_valor_de_meio_analoga]
+            segunda = tabela[(tabela['red'] >= menor_valor_de_menor_analoga) and (tabela['red'] <= maior_valor_de_menor_analoga) and (tabela['green'] >= menor_valor_de_maior_analoga) and (tabela['green'] <= maior_valor_de_maior_analoga) and (tabela['blue'] >= menor_valor_de_meio_analoga) and (tabela['blue'] <= maior_valor_de_meio_analoga)]
 
         if maior_analoga == blue:
             primeira_menor = "red"
             segunda_menor = "green"
-            primeira = tabela[tabela['red'] >= menor_valor_de_menor_analoga and tabela['red'] <= maior_valor_de_menor_analoga and tabela['green'] >= menor_valor_de_meio_analoga and tabela['green'] <= maior_valor_de_meio_analoga and tabela['blue'] >= menor_valor_de_maior_analoga and tabela['blue'] <= maior_valor_de_maior_analoga]
+            primeira = tabela[(tabela['red'] >= menor_valor_de_menor_analoga) and (tabela['red'] <= maior_valor_de_menor_analoga) and (tabela['green'] >= menor_valor_de_meio_analoga) and (tabela['green'] <= maior_valor_de_meio_analoga) and (tabela['blue'] >= menor_valor_de_maior_analoga) and (tabela['blue'] <= maior_valor_de_maior_analoga)]
             
             
-            segunda = tabela[tabela['red'] >= menor_valor_de_meio_analoga and tabela['red'] <= maior_valor_de_meio_analoga and tabela['green'] >= menor_valor_de_menor_analoga and tabela['green'] <= maior_valor_de_menor_analoga and tabela['blue'] >= menor_valor_de_maior_analoga and tabela['blue'] <= maior_valor_de_maior_analoga]
+            segunda = tabela[(tabela['red'] >= menor_valor_de_meio_analoga) and (tabela['red'] <= maior_valor_de_meio_analoga) and (tabela['green'] >= menor_valor_de_menor_analoga) and (tabela['green'] <= maior_valor_de_menor_analoga) and (tabela['blue'] >= menor_valor_de_maior_analoga) and (tabela['blue'] <= maior_valor_de_maior_analoga)]
 
         # verifica se os complementos não estao vazios
         if resultado1.empty and resultado2.empty:
