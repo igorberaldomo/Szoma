@@ -26,7 +26,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         meio = valores[1]
         menor = valores[0]
         
-        st.write(maior,menor,meio)
         # coloca o default dos complementos como true
         complemento1 = True
         complemento2 = True
@@ -72,11 +71,16 @@ def select_complementos(red, green, blue, palheta, tabela):
             segunda_maior = "blue"
             
             for index, row in tabela.iterrows():
-                if tabela[(tabela['red'] >= menor_valor_de_menor) & (tabela['red'] <= maior_valor_de_menor) & (tabela['green'] >= menor_valor_de_maior) & (tabela['green'] <= maior_valor_de_maior) & (tabela['blue'] >= menor_valor_de_meio) & (tabela['blue'] <= maior_valor_de_meio)]:
-                    st.write(row)
-                    primeira = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                    primeira = {k:[v] for k,v in primeira.items()}     
-                    primeira = pd.DataFrame(primeira)
+                if row['red'] >= menor_valor_de_menor:
+                    if row['red'] <= maior_valor_de_menor:
+                        if row['green'] >= menor_valor_de_maior:
+                            if row['green'] <= maior_valor_de_maior: 
+                                if row['blue'] >= menor_valor_de_meio:
+                                    if row['blue'] <= maior_valor_de_meio:
+                                        st.write(row)
+                                        primeira = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
+                                        primeira = {k:[v] for k,v in primeira.items()}     
+                                        primeira = pd.DataFrame(primeira)
             st.write(primeira)
             
             segunda = tabela[(tabela['red'] >= menor_valor_de_meio) & (tabela['red'] <= maior_valor_de_meio) & (tabela['green'] >= menor_valor_de_menor) & (tabela['green'] <= maior_valor_de_menor) & (tabela['blue'] >= menor_valor_de_maior) & (tabela['blue'] <= maior_valor_de_maior)]
