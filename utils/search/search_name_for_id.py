@@ -38,6 +38,6 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["coral"][0][""+nome+""]
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
-        resultset = tabela[fornecedores]
+        resultset = tabela[fornecedores][0]
         st.write(resultset)
         return resultset
