@@ -15,7 +15,7 @@ engine = conect_to_engine_production()
 def select_complementos(red, green, blue, palheta, tabela):
     lista_complementos = []
     if palheta == "triade":
-        st.write(red, green, blue)
+
         lista_complementos.clear()
         # seleciona os desvios
         desvio_maior = 30
@@ -25,6 +25,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         menor = min(red, green, blue)
         meio = 0
         
+        st.write(maio, menor, meio)
         # coloca o default dos complementos como true
         complemento1 = True
         complemento2 = True
