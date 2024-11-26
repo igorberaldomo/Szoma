@@ -37,6 +37,10 @@ def search_name_for_id(nome, tabela):
                 if nome in keys:
                     name_id = search_dict["coral"][0][nome]
                     tabela_escolida = tabela["coral"]   
+        # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras
         resultset = tabela_escolida.iloc[[name_id]]
+        resultset = resultset.to_dict(orient='records')
+        resultset = {k:[v] for k,v in resultset[0].items()}
+        resultset_df = pd.DataFrame(resultset)
         st.write(resultset)
         return resultset
