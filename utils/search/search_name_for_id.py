@@ -46,4 +46,6 @@ def search_name_for_id(nome, tabela):
             if c == name_id:
                 resultset = tabela[c]
             c += 1
+            resultset = pd.DataFrame(resultset)
+            st.write(resultset)
         return resultset
