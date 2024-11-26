@@ -59,12 +59,13 @@ def select_complementos(red, green, blue, palheta, tabela):
         
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         tabela2 = tabela.to_json(orient='index')
-        st.write(tabela2[0][2]) 
+        st.write(tabela2[0]['red']) 
         
         c =0
         for c in range(len(tabela2)):
             if tabela2[c]['red'] >= menor_valor_de_meio and tabela2 <= maior_valor_de_meio:
                 st.write (tabela2[c]['red'])
+                c += 1
         if maior == red:
             primeira_maior = "green"
             segunda_maior = "blue"
