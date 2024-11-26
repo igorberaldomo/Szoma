@@ -368,22 +368,17 @@ def select_complementos(red, green, blue, palheta, tabela):
     elif palheta == "análoga":
         lista_complementos.clear()
         # seleciona os desvios
-        desvio_maior_analoga = 80
-        desvio_menor_analoga = 60
+        desvio_maior_analoga = 40
+        desvio_menor_analoga = 30
         # assume que os complementos existem
         complemento1 = True
         complemento2 = True
-        # encontra maior e menor
-        maior_analoga = max(red, green, blue)
-        menor_analoga = min(red, green, blue)
-        meio_analoga = 0
-        # encontra o meio
-        if blue == menor_analoga & green == maior_analoga or blue == maior_analoga & green == menor_analoga:
-            meio_analoga = red
-        if red == maior_analoga & blue == menor_analoga or red == menor_analoga & blue == maior_analoga:
-            meio_analoga = green
-        if red == maior_analoga & green == menor_analoga or red == menor_analoga & green == maior_analoga:
-            meio_analoga = blue
+        # encontra maior, meio e menor
+        valores = [red, green, blue]
+        valores.sort()
+        maior_analoga = valores[2]
+        meio_analoga = valores[1]
+        menor_analoga = valores[0]
 
         # pega os limites da procura
         menor_valor_de_maior_analoga = maior_analoga - desvio_menor_analoga
