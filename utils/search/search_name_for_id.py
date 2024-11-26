@@ -11,7 +11,7 @@ def search_name_for_id(nome, tabela):
         search_dict = json.load(file)
         name_id = -1
         fornecedores = ""
-        resultset = dict()
+        resultset = list()
         # procura no json o id da cor que bate com o nome digitado assim como a tabela que ela pertence
         if name_id == -1:
             for keys in search_dict["quickSearch"][0]:
@@ -43,7 +43,7 @@ def search_name_for_id(nome, tabela):
         c = 0
         for c in range(len(tabela)):
             if c == name_id:
-                resultset = tabela[c]
+                resultset.append(tabela[c])
             c += 1
         resultset = pd.read_dict(resultset)
         st.write(resultset)
