@@ -40,12 +40,9 @@ def search_name_for_id(nome, tabela):
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
         tabela = tabela[fornecedores].to_json(orient="records")
+        st.write(tabela)
         c = 0
         for c in range(len(tabela)):
-            if tabela[c]['name'] == name_id:
-                resultset = {row['nome'], row['red'], row['green'], row['blue'], row['ncs'], row['codigo_suvinil'], row['hexadecimal'], row['pantone_código'], row['pantone_name'], row['pantone_hex'], row['fornecedores']}
-                break
-            c += 1
-        resultset = {k:[v] for k,v in resultset.items()}
-        resultset = pd.DataFrame(resultset)
+            if tabela[c]['id'] == name_id:
+                resultset = tabela[c]
         return resultset
