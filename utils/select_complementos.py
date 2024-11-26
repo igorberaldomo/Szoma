@@ -18,8 +18,8 @@ def select_complementos(red, green, blue, palheta, tabela):
     if palheta == "triade":
         lista_complementos.clear()
         # seleciona os desvios
-        desvio_maior = 60
-        desvio_menor = 80
+        desvio_maior = 30
+        desvio_menor = 20
         # seleciona os maiores e menores valores
         valores = [red, green, blue]
         valores.sort()
@@ -85,7 +85,6 @@ def select_complementos(red, green, blue, palheta, tabela):
                     st.write(tabela[c])
                     primeira.append(tabela[c])
                 c += 1
-                
             
             x = 0
             for x in range(len(tabela)):
@@ -93,33 +92,26 @@ def select_complementos(red, green, blue, palheta, tabela):
                     st.write(tabela[x])
                     segunda.append(tabela[x])
                 x += 1
-
+                
         if maior == blue:
             segunda_maior = "green"
             primeira_maior = "red"
-            for index, row in tabela.itertuples():
-                if tabela['red'] >= menor_valor_de_meio:
-                    if tabela['red'] <= maior_valor_de_meio:
-                        if tabela['green'] >= menor_valor_de_maior:
-                            if tabela['green'] <= maior_valor_de_maior:
-                                if tabela['blue'] >= menor_valor_de_menor:
-                                    if tabela['blue'] <= maior_valor_de_menor:
-                                        primeira = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                                        primeira = {k:[v] for k,v in primeira.items()}     
-                                        primeira = pd.DataFrame(primeira)
-                                            
-            for index, row in tabela.itertuples():
-                if tabela['red'] >= menor_valor_de_maior:
-                    if tabela['red'] <= maior_valor_de_maior:
-                        if tabela['green'] >= menor_valor_de_meio:
-                            if tabela['green'] <= maior_valor_de_meio:
-                                if tabela['blue'] >= menor_valor_de_menor:
-                                    if tabela['blue'] <= maior_valor_de_menor:
-                                        segunda = {'nome': row['nome'], 'red': row['red'], 'green': row['green'], 'blue': row['blue'], 'ncs': row['ncs'], 'codigo_suvinil': row['codigo_suvinil'], 'hexadecimal': row['hexadecimal'], 'pantone_código': row['pantone_código'], 'pantone_name': row['pantone_name'], 'pantone_hex': row['pantone_hex'], 'fornecedores': row['fornecedores']}
-                                        segunda = {k:[v] for k,v in segunda.items()}     
-                                        segunda = pd.DataFrame(segunda)
+            c = 0
+            for c in range(len(tabela)):
+                if tabela[c]['red'] >= menor_valor_de_meio and tabela[c]['red'] <= maior_valor_de_meio and tabela[c]['green'] >= menor_valor_de_maior and tabela[c]['green'] <= maior_valor_de_maior and tabela[c]['blue'] >= menor_valor_de_menor and tabela[c]['blue'] <= maior_valor_de_menor: 
+                    st.write(tabela[c])
+                    primeira.append(tabela[c])
+                c += 1
 
-        st.write('segunda')
+            x = 0
+            for x in range(len(tabela)):
+                if tabela[x]['red'] >= menor_valor_de_maior and tabela[x]['red'] <= maior_valor_de_maior and tabela[x]['green'] >= menor_valor_de_meio and tabela[x]['green'] <= maior_valor_de_meio and tabela[x]['blue'] >= menor_valor_de_menor and tabela[x]['blue'] <= maior_valor_de_menor:
+                    st.write(tabela[x])
+                    segunda.append(tabela[x])
+                x += 1 
+
+        st.write(primeira)
+        st.write(segunda)
         
         # confirma se os complementos foram encontrados
         if len(resultado1) == 0 & len(resultado2) == 0:
