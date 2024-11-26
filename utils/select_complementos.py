@@ -231,6 +231,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         # assume que o complemento existe
         complemento1 = True
         complemento2 = True
+
         # calcula os limites do complemento
         cr_max = cr + desvio_complementar
         cr_min = cr - desvio_complementar
@@ -238,6 +239,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         cg_min = cg - desvio_complementar
         cb_max = cb + desvio_complementar
         cb_min = cb - desvio_complementar
+
         # garante que os limites estejam entre 0 e 255
         if cr_max > 255:
             cr_max = 255
@@ -273,8 +275,11 @@ def select_complementos(red, green, blue, palheta, tabela):
         cb_inter_max = int(cb_inter_max).__round__()
         cb_inter_min = int(cb_inter_min).__round__()
         
+    
         intermediaria = list()
         complementar = list()
+        
+        tabela = tabela.to_dict(orient='index')
         # recebe a informação das tabelas
         c = 0
         for c in range(len(tabela)):
@@ -291,8 +296,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         resultado1 = intermediaria
         resultado2 = complementar
         
-        st.write(resultado1)
-        st.write(resultado2)
         # verifica se as tabelas estao vazias
         if len(resultado1) == 0 & len(resultado2) == 0:
             complemento1 = False
@@ -411,7 +414,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         # será usado para pegar os complementos de acordo com a proporção
         primeira_menor = ""
         segunda_menor = ""
-
+        
+        tabela = tabela.to_dict(orient='index')
         if maior_analoga == red:
             primeira_menor = "blue"
             segunda_menor = "green"
