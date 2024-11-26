@@ -414,7 +414,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         # será usado para pegar os complementos de acordo com a proporção
         primeira_menor = ""
         segunda_menor = ""
-
+        
+        tabela = tabela.to_dict(orient='index')
         if maior_analoga == red:
             primeira_menor = "blue"
             segunda_menor = "green"
