@@ -445,20 +445,16 @@ def select_complementos(red, green, blue, palheta, tabela):
             segunda_menor = "green"
             c = 0
             for c in range(len(tabela)):
-                if tabela[c]['red'] >= menor_valor_de_meio_analoga and tabela[c]['red'] <= maior_valor_de_meio_analoga and tabela[c]['green'] >= menor_valor_de_maior_analoga and tabela[c]['green'] <= maior_valor_de_maior_analoga and tabela[c]['blue'] >= menor_valor_de_menor_analoga and tabela[c]['blue'] <= maior_valor_de_menor_analoga:
+                if tabela[c]['red'] >= menor_valor_de_menor_analoga and tabela[c]['red'] <= maior_valor_de_menor_analoga and tabela[c]['green'] >= menor_valor_de_meio_analoga and tabela[c]['green'] <= maior_valor_de_meio_analoga and tabela[c]['blue'] >= menor_valor_de_maior_analoga and tabela[c]['blue'] <= maior_valor_de_maior_analoga:
                     primeira.append(tabela[c])
                 c += 1
                 
             x = 0
             for x in range(len(tabela)):
-                if tabela[x]['red'] >= menor_valor_de_menor_analoga and tabela[x]['red'] <= maior_valor_de_menor_analoga and tabela[x]['green'] >= menor_valor_de_maior_analoga and tabela[x]['green'] <= maior_valor_de_maior_analoga and tabela[x]['blue'] >= menor_valor_de_meio_analoga and tabela[x]['blue'] <= maior_valor_de_meio_analoga:
+                if tabela[x]['red'] >= menor_valor_de_meio_analoga and tabela[x]['red'] <= maior_valor_de_meio_analoga and tabela[x]['green'] >= menor_valor_de_menor_analoga and tabela[x]['green'] <= maior_valor_de_menor_analoga and tabela[x]['blue'] >= menor_valor_de_maior_analoga and tabela[x]['blue'] <= maior_valor_de_maior_analoga:
                     segunda.append(tabela[x])
                 x += 1
-                
-            primeira = tabela[(tabela['red'] >= menor_valor_de_menor_analoga) & (tabela['red'] <= maior_valor_de_menor_analoga) & (tabela['green'] >= menor_valor_de_meio_analoga) & (tabela['green'] <= maior_valor_de_meio_analoga) & (tabela['blue'] >= menor_valor_de_maior_analoga) & (tabela['blue'] <= maior_valor_de_maior_analoga)]
-            
-            
-            segunda = tabela[(tabela['red'] >= menor_valor_de_meio_analoga) & (tabela['red'] <= maior_valor_de_meio_analoga) & (tabela['green'] >= menor_valor_de_menor_analoga) & (tabela['green'] <= maior_valor_de_menor_analoga) & (tabela['blue'] >= menor_valor_de_maior_analoga) & (tabela['blue'] <= maior_valor_de_maior_analoga)]
+
 
         resultado1 = primeira
         resultado2 = segunda
