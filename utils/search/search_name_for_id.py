@@ -11,6 +11,7 @@ def search_name_for_id(nome, tabela):
         search_dict = json.load(file)
         name_id = -1
         fornecedores = ""
+        resultset = dict()
         # procura no json o id da cor que bate com o nome digitado assim como a tabela que ela pertence
         if name_id == -1:
             for keys in search_dict["quickSearch"][0]:
