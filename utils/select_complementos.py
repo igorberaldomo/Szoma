@@ -18,8 +18,8 @@ def select_complementos(red, green, blue, palheta, tabela):
     if palheta == "triade":
         lista_complementos.clear()
         # seleciona os desvios
-        desvio_maior = 30
-        desvio_menor = 20
+        desvio_maior = 80
+        desvio_menor = 60
         # seleciona os maiores e menores valores
         valores = [red, green, blue]
         valores.sort()
@@ -291,6 +291,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         resultado1 = intermediaria
         resultado2 = complementar
         
+        st.write(resultado1)
+        st.write(resultado2)
         # verifica se as tabelas estao vazias
         if len(resultado1) == 0 & len(resultado2) == 0:
             complemento1 = False
