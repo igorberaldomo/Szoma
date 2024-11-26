@@ -64,8 +64,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         c =0
         for c in range(len(tabela2)):
             if tabela2[c]['red'] >= menor_valor_de_meio and tabela2 <= maior_valor_de_meio:
-                st.write (tabela2[c]['red'])
-                c += 1
+                st.write(tabela2[c])
+            c += 1
         if maior == red:
             primeira_maior = "green"
             segunda_maior = "blue"
