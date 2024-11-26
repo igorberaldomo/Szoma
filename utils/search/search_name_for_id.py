@@ -41,3 +41,4 @@ def search_name_for_id(nome, tabela):
         # seleciona a tabela de acordo com o id encontrado
         tabela = tabela[fornecedores].to_json(orient="records")
         st.write(tabela[0])
+        return 
