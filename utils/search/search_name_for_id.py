@@ -45,4 +45,5 @@ def search_name_for_id(nome, tabela):
         for c in range(len(tabela)):
             if tabela[c]['id'] == name_id:
                 resultset = tabela[c]
+                c += 1
         return resultset
