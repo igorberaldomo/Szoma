@@ -44,4 +44,5 @@ def search_name_for_id(nome, tabela):
             if c == name_id:
                 resultset.append(tabela[c])
             c+=1
-        return resultset
+            st.write(resultset[0])
+        return resultset[0]
