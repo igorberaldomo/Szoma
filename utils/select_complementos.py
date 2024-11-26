@@ -223,7 +223,7 @@ def select_complementos(red, green, blue, palheta, tabela):
     elif palheta == "complementar":
         lista_complementos.clear()
         # seleciona o desvio
-        desvio_complementar = 60
+        desvio_complementar = 30
         # calcula o complementar
         cr = 255 - red
         cg = 255 - green
