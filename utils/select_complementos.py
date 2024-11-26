@@ -231,6 +231,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         # assume que o complemento existe
         complemento1 = True
         complemento2 = True
+        
+        st.write(cr, cg, cb)
         # calcula os limites do complemento
         cr_max = cr + desvio_complementar
         cr_min = cr - desvio_complementar
@@ -238,6 +240,9 @@ def select_complementos(red, green, blue, palheta, tabela):
         cg_min = cg - desvio_complementar
         cb_max = cb + desvio_complementar
         cb_min = cb - desvio_complementar
+        
+        st.write(cr_min, cg_min, cb_min)
+        st.write(cr_max, cg_max, cb_max)
         # garante que os limites estejam entre 0 e 255
         if cr_max > 255:
             cr_max = 255
