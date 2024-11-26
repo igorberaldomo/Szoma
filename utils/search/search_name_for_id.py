@@ -37,6 +37,5 @@ def search_name_for_id(nome, tabela):
                 if nome in keys:
                     name_id = search_dict["coral"][0][nome]
                     tabela_escolida = tabela["coral"]   
-        # seleciona a tabela de acordo com o id encontrado
-            resultset = tabela_escolida.iloc[[name_id]]
+        resultset = tabela_escolida.iloc[[name_id]]
         return resultset
