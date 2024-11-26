@@ -284,7 +284,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         c = 0
         for c in range(len(tabela)):
             if tabela[c]['red'] >= cr_inter_min and tabela[c]['red'] <= cr_inter_max and tabela[c]['green'] >= cg_inter_min and tabela[c]['green'] <= cr_inter_max and tabela[c]['blue'] >= cb_inter_min and tabela[c]['blue'] <= cb_inter_max:
-
                 st.write(tabela[c])
 
                 intermediaria.append(tabela[c])
