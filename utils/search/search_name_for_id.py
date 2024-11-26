@@ -40,5 +40,5 @@ def search_name_for_id(nome, tabela):
         # seleciona a tabela de acordo com o id encontrado
         for index, row in tabela[fornecedores].iterrows():
             if index == name_id:
-                st.write(index,row)
+                resultset = {row['nome'], row['red'], row['green'], row['blue'], row['ncs'], row['codigo_suvinil'], row['hexadecimal'], row['pantone_código'], row['pantone_name'], row['pantone_hex'], row['fornecedores']}
         return resultset
