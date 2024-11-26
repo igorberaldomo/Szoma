@@ -38,10 +38,10 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["coral"][0][nome]
                     tabela_escolida = tabela["coral"]   
         # seleciona a tabela de acordo com o id encontrado
-        st.write(tabela_escolida.to_json(orient="records"))
+        tabela = tabela_escolida.to_json(orient="records")
         c= 0
-        for c in range(len(tabela_escolida)):
+        for c in range(len(tabela)):
             if c == name_id:
-                resultset.append(tabela_escolida[c])
+                resultset.append(tabela[c])
             c+=1
         return resultset
