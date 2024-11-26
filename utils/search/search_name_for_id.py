@@ -40,7 +40,7 @@ def search_name_for_id(nome, tabela):
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
         st.write(type(tabela[fornecedores]))
-        tabela[fornecedores]
+        tabela =tabela[fornecedores]
         result = tabela.to_json(orient="index")
         parsed = json.loads(tabela)
         tabela = json.dumps(parsed)
