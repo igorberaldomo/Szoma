@@ -45,6 +45,5 @@ def search_name_for_id(nome, tabela):
             if c == name_id:
                 resultset.append(tabela[c])
             c += 1
-        resultset = pd.read_json(resultset[0])
-        st.write(resultset)
+        st.write(resultset, type(resultset))
         return resultset
