@@ -278,6 +278,8 @@ def select_complementos(red, green, blue, palheta, tabela):
     
         intermediaria = list()
         complementar = list()
+        
+        tabela = tabela.to_dict(orient='index')
         # recebe a informação das tabelas
         c = 0
         for c in range(len(tabela)):
