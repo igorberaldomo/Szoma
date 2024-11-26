@@ -41,4 +41,6 @@ def search_name_for_id(nome, tabela):
         for index, row in tabela[fornecedores].iterrows():
             if index == name_id:
                 resultset = {row['nome'], row['red'], row['green'], row['blue'], row['ncs'], row['codigo_suvinil'], row['hexadecimal'], row['pantone_código'], row['pantone_name'], row['pantone_hex'], row['fornecedores']}
+                resultset = {k:[v] for k,v in resultset.items()}
+                resultset = pd.DataFrame(resultset)
         return resultset
