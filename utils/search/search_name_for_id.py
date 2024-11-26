@@ -40,7 +40,6 @@ def search_name_for_id(nome, tabela):
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
         tabela = tabela[fornecedores].to_json(orient="records")
-        st.write(tabela)
         c = 0
         for c in range(len(tabela)):
             if c == name_id:
