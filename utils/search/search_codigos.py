@@ -13,4 +13,5 @@ def select_códigos(codigo, tabela):
             break
     resultset = {k:[v] for k,v in resultset.items()}     
     resultset_df = pd.DataFrame(resultset)
+    st.write(resultset_df)
     return resultset_df
