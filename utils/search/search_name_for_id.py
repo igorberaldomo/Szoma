@@ -38,5 +38,8 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["coral"][0][nome]
                     tabela_escolida = tabela["coral"]   
         resultset = tabela_escolida.iloc[[name_id]]
+        resultset = resultset.to_dict(orient='records')
+        resultset = {k:[v] for k,v in resultset[0].items()}
+        resultset_df = pd.DataFrame(resultset)
         st.write(resultset)
         return resultset
