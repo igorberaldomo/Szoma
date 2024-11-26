@@ -231,7 +231,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         # assume que o complemento existe
         complemento1 = True
         complemento2 = True
-        
 
         # calcula os limites do complemento
         cr_max = cr + desvio_complementar
@@ -254,15 +253,12 @@ def select_complementos(red, green, blue, palheta, tabela):
             cb_max = 255
         if cb_min < 0:
             cb_min = 0
-        
-        st.write(cr_min, cg_min, cb_min)
-        st.write(cr_max, cg_max, cb_max)
+
         # calcula o complemento intermediario
         cr_inter = (cr + red) / 2
         cg_inter = (cg + green) / 2
         cb_inter = (cb + blue) / 2
-        
-        print(cr_inter, cg_inter, cb_inter)
+
         # calcula os limites do complemento intermediario
         cr_inter_max = cr_inter + (desvio_complementar/2)
         cr_inter_min = cr_inter - (desvio_complementar/2)
@@ -279,8 +275,10 @@ def select_complementos(red, green, blue, palheta, tabela):
         cb_inter_max = int(cb_inter_max).__round__()
         cb_inter_min = int(cb_inter_min).__round__()
         
-        st.write(cr_inter_min, cg_inter_min, cb_inter_min)
-        st.write(cr_inter_max, cg_inter_max, cb_inter_max)
+        
+        st.write(red, green, blue)
+        st.write(cr_inter, cg_inter, cb_inter)
+        st.write(cr, cg, cb)
         intermediaria = list()
         complementar = list()
         # recebe a informação das tabelas
@@ -299,8 +297,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         resultado1 = intermediaria
         resultado2 = complementar
         
-        st.write(resultado1)
-        st.write(resultado2)
         # verifica se as tabelas estao vazias
         if len(resultado1) == 0 & len(resultado2) == 0:
             complemento1 = False
