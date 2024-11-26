@@ -16,32 +16,32 @@ def search_name_for_id(nome, tabela):
             for keys in search_dict["quickSearch"][0]:
                 if nome in keys:
                     name_id = search_dict["quickSearch"][0][nome]
-                    tabela = tabela['coral']      
+                    tabela_escolida = tabela['coral']      
         if name_id == -1:
             for keys in search_dict["suvinil"][0]:
                 if nome in keys:
                     name_id = search_dict["suvinil"][0][nome]
-                    tabela = tabela["suvinil"]   
+                    tabela_escolida = tabela["suvinil"]   
         if name_id == -1:
             for keys in search_dict["sherwin-willians"][0]:
                 if nome in keys:
                     name_id = search_dict["sherwin-willians"][0][nome]
-                    tabela = tabela["sherwin-willians"]   
+                    tabela_escolida = tabela["sherwin-willians"]   
         if name_id == -1:
             for keys in search_dict["anjo"][0]:
                 if nome in keys:
                     name_id = search_dict["anjo"][0][nome]
-                    tabela = tabela["anjo"]   
+                    tabela_escolida = tabela["anjo"]   
         if name_id == -1:
             for keys in search_dict["coral"][0]:
                 if nome in keys:
                     name_id = search_dict["coral"][0][nome]
-                    tabela = tabela['coral']   
+                    tabela_escolida = tabela['coral']   
         # seleciona a tabela de acordo com o id encontrado
-        st.write(tabela[0])
+        st.write(tabela_escolida[0])
         c= 0
-        for c in range(len(tabela)):
+        for c in range(len(tabela_escolida)):
             if c == name_id:
-                resultset.append(tabela[c])
+                resultset.append(tabela_escolida[c])
             c+=1
         return resultset
