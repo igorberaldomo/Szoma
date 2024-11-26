@@ -261,14 +261,15 @@ def select_complementos(red, green, blue, palheta, tabela):
         cr_inter = (cr + red) / 2
         cg_inter = (cg + green) / 2
         cb_inter = (cb + blue) / 2
-
+        
+        print(cr_inter, cg_inter, cb_inter)
         # calcula os limites do complemento intermediario
-        cr_inter_max = cr_inter + desvio_complementar
-        cr_inter_min = cr_inter - desvio_complementar
-        cg_inter_max = cg_inter + desvio_complementar
-        cg_inter_min = cg_inter - desvio_complementar
-        cb_inter_max = cb_inter + desvio_complementar
-        cb_inter_min = cb_inter - desvio_complementar
+        cr_inter_max = cr_inter + (desvio_complementar/2)
+        cr_inter_min = cr_inter - (desvio_complementar/2)
+        cg_inter_max = cg_inter + (desvio_complementar/2)
+        cg_inter_min = cg_inter - (desvio_complementar/2)
+        cb_inter_max = cb_inter + (desvio_complementar/2)
+        cb_inter_min = cb_inter - (desvio_complementar/2)
         
         # aredonda os limites
         cr_inter_max = int(cr_inter_max).__round__()
