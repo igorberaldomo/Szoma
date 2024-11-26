@@ -39,12 +39,5 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["coral"][0][""+nome+""]
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
-        tabela = tabela[fornecedores]
-        tabela2 = tabela.to_json(orient="records")
-        tabela3 = tabela.to_dict(orient="records")
-        st.write(tabela2)
-        st.write(tabela2[0])
-        st.write(tabela3)
-        st.write(tabela3[0])
-        resultset = pd.DataFrame(tabela3)
+        resultset = tabela[fornecedores][name_id]
         return resultset
