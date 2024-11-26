@@ -109,9 +109,9 @@ def select_complementos(red, green, blue, palheta, tabela):
                     st.write(tabela[x])
                     segunda.append(tabela[x])
                 x += 1 
-
-        st.write(primeira)
-        st.write(segunda)
+                
+        resultado1 = primeira
+        resultado2 = segunda
         
         # confirma se os complementos foram encontrados
         if len(resultado1) == 0 & len(resultado2) == 0:
