@@ -39,7 +39,7 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["coral"][0][""+nome+""]
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
-        tabela = tabela[fornecedores].to_json(orient="records")
+        tabela = tabela[fornecedores].to_json(orient="index")
         c = 0
         for c in range(len(tabela)):
             if c == name_id:
