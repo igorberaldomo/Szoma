@@ -43,7 +43,7 @@ def search_name_for_id(nome, tabela):
         c = 0
         st.write(name_id)
         for c in range(len(tabela)):
-            if tabela[name_id]:
+            if tabela[c] == tabela[name_id]:
                 st.write(tabela[c])
                 resultset.append(tabela[c])
             c += 1
