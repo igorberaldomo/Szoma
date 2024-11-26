@@ -65,14 +65,12 @@ def select_complementos(red, green, blue, palheta, tabela):
             c = 0
             for c in range(len(tabela)):
                 if tabela[c]['red'] >= menor_valor_de_menor and tabela[c]['red'] <= maior_valor_de_menor and tabela[c]['green'] >= menor_valor_de_maior and tabela[c]['green'] <= maior_valor_de_maior and tabela[c]['blue'] >= menor_valor_de_meio and tabela[c]['blue'] <= maior_valor_de_meio: 
-                    st.write(tabela[c])
                     primeira.append(tabela[c])
                 c += 1
             
             x = 0
             for x in range(len(tabela)):
                 if tabela[x]['red'] >= menor_valor_de_meio and tabela[x]['red'] <= maior_valor_de_meio and tabela[x]['green'] >= menor_valor_de_menor and tabela[x]['green'] <= maior_valor_de_menor and tabela[x]['blue'] >= menor_valor_de_maior and tabela[x]['blue'] <= maior_valor_de_maior:
-                    st.write(tabela[x])
                     segunda.append(tabela[x])
                 x += 1
         
@@ -82,14 +80,12 @@ def select_complementos(red, green, blue, palheta, tabela):
             c = 0
             for c in range(len(tabela)):
                 if tabela[c]['red'] >= menor_valor_de_meio and tabela[c]['red'] <= maior_valor_de_meio and tabela[c]['green'] >= menor_valor_de_menor and tabela[c]['green'] <= maior_valor_de_menor and tabela[c]['blue'] >= menor_valor_de_maior and tabela[c]['blue'] <= maior_valor_de_maior:
-                    st.write(tabela[c])
                     primeira.append(tabela[c])
                 c += 1
             
             x = 0
             for x in range(len(tabela)):
                 if tabela[x]['red'] >= menor_valor_de_maior and tabela[x]['red'] <= maior_valor_de_maior and tabela[x]['green'] >= menor_valor_de_meio and tabela[x]['green'] <= maior_valor_de_meio and tabela[x]['blue'] >= menor_valor_de_menor and tabela[x]['blue'] <= maior_valor_de_menor:
-                    st.write(tabela[x])
                     segunda.append(tabela[x])
                 x += 1
                 
@@ -99,14 +95,12 @@ def select_complementos(red, green, blue, palheta, tabela):
             c = 0
             for c in range(len(tabela)):
                 if tabela[c]['red'] >= menor_valor_de_meio and tabela[c]['red'] <= maior_valor_de_meio and tabela[c]['green'] >= menor_valor_de_maior and tabela[c]['green'] <= maior_valor_de_maior and tabela[c]['blue'] >= menor_valor_de_menor and tabela[c]['blue'] <= maior_valor_de_menor: 
-                    st.write(tabela[c])
                     primeira.append(tabela[c])
                 c += 1
 
             x = 0
             for x in range(len(tabela)):
                 if tabela[x]['red'] >= menor_valor_de_maior and tabela[x]['red'] <= maior_valor_de_maior and tabela[x]['green'] >= menor_valor_de_meio and tabela[x]['green'] <= maior_valor_de_meio and tabela[x]['blue'] >= menor_valor_de_menor and tabela[x]['blue'] <= maior_valor_de_menor:
-                    st.write(tabela[x])
                     segunda.append(tabela[x])
                 x += 1 
                 
@@ -279,11 +273,20 @@ def select_complementos(red, green, blue, palheta, tabela):
         cb_inter_max = int(cb_inter_max).__round__()
         cb_inter_min = int(cb_inter_min).__round__()
         
+        intermediaria = list()
+        complementar = list()
         # recebe a informação das tabelas
-        intermediaria = tabela[(tabela['red'] >= cr_inter_min) & (tabela['red'] <= cr_inter_max) & (tabela['green'] >= cg_inter_min) & (tabela['green'] <= cg_inter_max) & (tabela['blue'] >= cb_inter_min) & (tabela['blue'] <= cb_inter_max)]
-        
-        complementar = tabela[(tabela['red'] >= cr_min) & (tabela['red'] <= cr_max) & (tabela['green'] >= cg_min) & (tabela['green'] <= cg_max) & (tabela['blue'] >= cb_min) & (tabela['blue'] <= cb_max)]
-        
+        c = 0
+        for c in range(len(tabela)):
+            if tabela[c]['red'] >= cr_inter_min and tabela[c]['red'] <= cr_inter_max and tabela[c]['green'] >= cg_inter_min and tabela[c]['green'] <= cr_inter_max and tabela[c]['blue'] >= cb_inter_min and tabela[c]['blue'] <= cb_inter_max:
+                intermediaria.append(tabela[c])
+            c += 1
+            
+        x = 0
+        for x in range(len(tabela)):
+            if tabela[x]['red'] >= cr_min and tabela[x]['red'] <= cr_max and tabela[x]['green'] >= cg_min and tabela[x]['green'] <= cg_max and tabela[x]['blue'] >= cb_min and tabela[x]['blue'] <= cb_max:
+                complementar.append(tabela[x])
+            x += 1 
         
         resultado1 = intermediaria
         resultado2 = complementar
@@ -365,22 +368,17 @@ def select_complementos(red, green, blue, palheta, tabela):
     elif palheta == "análoga":
         lista_complementos.clear()
         # seleciona os desvios
-        desvio_maior_analoga = 80
-        desvio_menor_analoga = 60
+        desvio_maior_analoga = 40
+        desvio_menor_analoga = 30
         # assume que os complementos existem
         complemento1 = True
         complemento2 = True
-        # encontra maior e menor
-        maior_analoga = max(red, green, blue)
-        menor_analoga = min(red, green, blue)
-        meio_analoga = 0
-        # encontra o meio
-        if blue == menor_analoga & green == maior_analoga or blue == maior_analoga & green == menor_analoga:
-            meio_analoga = red
-        if red == maior_analoga & blue == menor_analoga or red == menor_analoga & blue == maior_analoga:
-            meio_analoga = green
-        if red == maior_analoga & green == menor_analoga or red == menor_analoga & green == maior_analoga:
-            meio_analoga = blue
+        # encontra maior, meio e menor
+        valores = [red, green, blue]
+        valores.sort()
+        maior_analoga = valores[2]
+        meio_analoga = valores[1]
+        menor_analoga = valores[0]
 
         # pega os limites da procura
         menor_valor_de_maior_analoga = maior_analoga - desvio_menor_analoga
@@ -405,8 +403,8 @@ def select_complementos(red, green, blue, palheta, tabela):
             maior_valor_de_meio_analoga = 255
 
         # aonde a procura vai ser armazenada
-        primeira = ""
-        segunda = ""
+        primeira = list()
+        segunda = list()
         
         # será usado para pegar os complementos de acordo com a proporção
         primeira_menor = ""
@@ -415,26 +413,48 @@ def select_complementos(red, green, blue, palheta, tabela):
         if maior_analoga == red:
             primeira_menor = "blue"
             segunda_menor = "green"
-            
-            primeira = tabela[(tabela['red'] >= menor_valor_de_maior_analoga) & (tabela['red'] <= maior_valor_de_maior_analoga) & (tabela['green'] >= menor_valor_de_meio_analoga) & (tabela['green'] <= maior_valor_de_meio_analoga) & (tabela['blue'] >= menor_valor_de_menor_analoga) & (tabela['blue'] <= maior_valor_de_menor_analoga)]
-
-            segunda = tabela[(tabela['red'] >= menor_valor_de_maior_analoga) & (tabela['red'] <= maior_valor_de_maior_analoga) & (tabela['green'] >= menor_valor_de_menor_analoga) & (tabela['green'] <= maior_valor_de_menor_analoga) & (tabela['blue'] >= menor_valor_de_meio_analoga) & (tabela['blue'] <= maior_valor_de_meio_analoga)]
+            c = 0
+            for c in range(len(tabela)):
+                if tabela[c]['red'] >= menor_valor_de_maior_analoga and tabela[c]['red'] <= maior_valor_de_maior_analoga and tabela[c]['green'] >= menor_valor_de_meio_analoga and tabela[c]['green'] <= maior_valor_de_meio_analoga and tabela[c]['blue'] >= menor_valor_de_menor_analoga and tabela[c]['blue'] <= maior_valor_de_menor_analoga:
+                    primeira.append(tabela[c])
+                c += 1
+                
+            x = 0
+            for x in range(len(tabela)):
+                if tabela[x]['red'] >= menor_valor_de_maior_analoga and tabela[x]['red'] <= maior_valor_de_maior_analoga and tabela[x]['green'] >= menor_valor_de_menor_analoga and tabela[x]['green'] <= maior_valor_de_menor_analoga and tabela[x]['blue'] >= menor_valor_de_meio_analoga and tabela[x]['blue'] <= maior_valor_de_meio_analoga:
+                    segunda.append(tabela[x])
+                x += 1
 
         if maior_analoga == green:
             primeira_menor = "blue"
             segunda_menor = "red"
-            primeira = tabela[(tabela['red'] >= menor_valor_de_meio_analoga) & (tabela['red'] <= maior_valor_de_meio_analoga) & (tabela['green'] >= menor_valor_de_maior_analoga) & (tabela['green'] <= maior_valor_de_maior_analoga) & (tabela['blue'] >= menor_valor_de_menor_analoga) & (tabela['blue'] <= maior_valor_de_menor_analoga)]
-            
-            
-            segunda = tabela[(tabela['red'] >= menor_valor_de_menor_analoga) & (tabela['red'] <= maior_valor_de_menor_analoga) & (tabela['green'] >= menor_valor_de_maior_analoga) & (tabela['green'] <= maior_valor_de_maior_analoga) & (tabela['blue'] >= menor_valor_de_meio_analoga) & (tabela['blue'] <= maior_valor_de_meio_analoga)]
-
+            c = 0
+            for c in range(len(tabela)):
+                if tabela[c]['red'] >= menor_valor_de_meio_analoga and tabela[c]['red'] <= maior_valor_de_meio_analoga and tabela[c]['green'] >= menor_valor_de_maior_analoga and tabela[c]['green'] <= maior_valor_de_maior_analoga and tabela[c]['blue'] >= menor_valor_de_menor_analoga and tabela[c]['blue'] <= maior_valor_de_menor_analoga:
+                    primeira.append(tabela[c])
+                c += 1
+                
+            x = 0
+            for x in range(len(tabela)):
+                if tabela[x]['red'] >= menor_valor_de_menor_analoga and tabela[x]['red'] <= maior_valor_de_menor_analoga and tabela[x]['green'] >= menor_valor_de_maior_analoga and tabela[x]['green'] <= maior_valor_de_maior_analoga and tabela[x]['blue'] >= menor_valor_de_meio_analoga and tabela[x]['blue'] <= maior_valor_de_meio_analoga:
+                    segunda.append(tabela[x])
+                x += 1
+                
         if maior_analoga == blue:
             primeira_menor = "red"
             segunda_menor = "green"
-            primeira = tabela[(tabela['red'] >= menor_valor_de_menor_analoga) & (tabela['red'] <= maior_valor_de_menor_analoga) & (tabela['green'] >= menor_valor_de_meio_analoga) & (tabela['green'] <= maior_valor_de_meio_analoga) & (tabela['blue'] >= menor_valor_de_maior_analoga) & (tabela['blue'] <= maior_valor_de_maior_analoga)]
-            
-            
-            segunda = tabela[(tabela['red'] >= menor_valor_de_meio_analoga) & (tabela['red'] <= maior_valor_de_meio_analoga) & (tabela['green'] >= menor_valor_de_menor_analoga) & (tabela['green'] <= maior_valor_de_menor_analoga) & (tabela['blue'] >= menor_valor_de_maior_analoga) & (tabela['blue'] <= maior_valor_de_maior_analoga)]
+            c = 0
+            for c in range(len(tabela)):
+                if tabela[c]['red'] >= menor_valor_de_menor_analoga and tabela[c]['red'] <= maior_valor_de_menor_analoga and tabela[c]['green'] >= menor_valor_de_meio_analoga and tabela[c]['green'] <= maior_valor_de_meio_analoga and tabela[c]['blue'] >= menor_valor_de_maior_analoga and tabela[c]['blue'] <= maior_valor_de_maior_analoga:
+                    primeira.append(tabela[c])
+                c += 1
+                
+            x = 0
+            for x in range(len(tabela)):
+                if tabela[x]['red'] >= menor_valor_de_meio_analoga and tabela[x]['red'] <= maior_valor_de_meio_analoga and tabela[x]['green'] >= menor_valor_de_menor_analoga and tabela[x]['green'] <= maior_valor_de_menor_analoga and tabela[x]['blue'] >= menor_valor_de_maior_analoga and tabela[x]['blue'] <= maior_valor_de_maior_analoga:
+                    segunda.append(tabela[x])
+                x += 1
+
 
         resultado1 = primeira
         resultado2 = segunda
