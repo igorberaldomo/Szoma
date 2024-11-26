@@ -58,7 +58,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         segunda = ""
         
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
-        tabela2 = tabela.to_json(orient='index')
+        tabela2 = tabela.to_dict(orient='index')
         st.write(tabela2[0]['red']) 
         
         c =0
