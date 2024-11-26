@@ -54,8 +54,8 @@ def select_complementos(red, green, blue, palheta, tabela):
             maior_valor_de_meio = 255
 
         # a primeira cor da triade a segunda cor da triade
-        primeira = ""
-        segunda = ""
+        primeira = list()
+        segunda = list()
         
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         tabela = tabela.to_dict(orient='index')
