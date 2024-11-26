@@ -17,31 +17,28 @@ def search_name_for_id(nome, tabela):
             for keys in search_dict["quickSearch"][0]:
                 if nome in keys:
                     name_id = search_dict["quickSearch"][0][nome]
-                    fornecedores = 'coral'               
+                    tabela = tabela['coral'].to_json(orient="index")            
         if name_id == -1:
             for keys in search_dict["suvinil"][0]:
                 if nome in keys:
                     name_id = search_dict["suvinil"][0][nome]
-                    fornecedores = 'suvinil'
+                    tabela = tabela['suvinil'].to_json(orient="index")
         if name_id == -1:
             for keys in search_dict["sherwin-willians"][0]:
                 if nome in keys:
                     name_id = search_dict["sherwin-willians"][0][nome]
-                    fornecedores = 'sherwin-willians'
+                    tabela = tabela['sherwin-willians'].to_json(orient="index")
         if name_id == -1:
             for keys in search_dict["anjo"][0]:
                 if nome in keys:
                     name_id = search_dict["anjo"][0][nome]
-                    fornecedores = 'anjo'
+                    tabela = tabela['anjo'].to_json(orient="index")
         if name_id == -1:
             for keys in search_dict["coral"][0]:
                 if nome in keys:
                     name_id = search_dict["coral"][0][nome]
-                    fornecedores = 'coral'
+                    tabela = tabela['coral'].to_json(orient="index")
         # seleciona a tabela de acordo com o id encontrado
-        st.write(type(tabela[fornecedores]))
-        tabela =tabela[fornecedores]
-        result = tabela.to_json(orient="index")
         parsed = json.loads(tabela)
         tabela = json.dumps(parsed)
         c= 0
