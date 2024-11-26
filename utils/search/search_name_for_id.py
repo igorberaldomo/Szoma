@@ -46,5 +46,5 @@ def search_name_for_id(nome, tabela):
         st.write(tabela2[0])
         st.write(tabela3)
         st.write(tabela3[0])
-
-        return 
+        resultset = pd.DataFrame(tabela3)
+        return resultset
