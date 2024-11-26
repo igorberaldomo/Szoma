@@ -277,8 +277,8 @@ def select_complementos(red, green, blue, palheta, tabela):
         
         
         st.write(red, green, blue)
-        st.write(cr_inter, cg_inter, cb_inter)
-        st.write(cr, cg, cb)
+        st.write(cr_inter_min, cg_inter_min, cb_inter_min, cr_inter_max, cg_inter_max, cb_inter_max, cr_inter,)
+        st.write(cr_min, cg_min, cb_min, cr_max, cg_max, cb_max)
         intermediaria = list()
         complementar = list()
         # recebe a informação das tabelas
