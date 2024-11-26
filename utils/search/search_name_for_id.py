@@ -38,4 +38,5 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["coral"][0][nome]
                     tabela_escolida = tabela["coral"]   
         resultset = tabela_escolida.iloc[[name_id]]
+        st.write(resultset)
         return resultset
