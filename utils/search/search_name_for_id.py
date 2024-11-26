@@ -39,13 +39,5 @@ def search_name_for_id(nome, tabela):
                     name_id = search_dict["coral"][0][""+nome+""]
                     fornecedores = 'coral'
         # seleciona a tabela de acordo com o id encontrado
-        tabela = tabela[fornecedores].to_json(orient="index")
-        c = 0
-        st.write(name_id)
-        for c in range(len(tabela)):
-            if tabela[c] == tabela[name_id]:
-                st.write(tabela[c])
-                resultset.append(tabela[c])
-            c += 1
-        st.write(resultset, type(resultset))
-        return resultset
+        tabela = tabela[fornecedores].to_json(orient="records")
+        st.write(tabela[0])
