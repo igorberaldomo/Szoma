@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import cv2
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -82,6 +83,56 @@ def getting_data():
 tables = getting_data()
 st.session_state.tables = tables
 
+def crop_image(image):
+    # lê a imagem
+    full_image =  cv2.imread(image)
+    # pega o total de linhas e colunas da imagem
+    rows,cols, _ = full_image.shape
+    # abre a imagem inicial
+    cv2.waitKey(0)
+
+        
+    
+    # pega o centro da imagem
+    altura_do_ponto_central = cols / 2
+    largura_do_ponto_central = rows / 2
+    
+    # pega o ponto central da imagem
+    ponto_central = (altura_do_ponto_central, largura_do_ponto_central)
+    
+    # pega 20% da largura e altura da imagem
+    largura_crop_inicial = cols * 0.2
+    altura_crop_inicial = rows * 0.2
+    
+    # gera os vertices do quadrado crop
+    ponto_mais_baixo_do_crop = altura_do_ponto_central - largura_crop_inicial
+    ponto_mais_alto_do_crop = altura_do_ponto_central + largura_crop_inicial
+    ponto_mais_esquerdo_do_crop = largura_do_ponto_central - altura_crop_inicial
+    ponto_mais_direito_do_crop = largura_do_ponto_central + altura_crop_inicial
+    # ascii para seta esquerda
+    if key == 37:
+        ponto_mais_esquerdo_do_crop = ponto_mais_esquerdo_do_crop - 10
+        ponto_mais_direito_do_crop = ponto_mais_direito_do_crop - 10
+    # ascii para seta acima
+    if key == 38:
+        ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop - 10
+        ponto_mais_alto_do_crop = ponto_mais_alto_do_crop - 10
+    # ascii para seta direita
+    if key == 39:
+        ponto_mais_esquerdo_do_crop = ponto_mais_esquerdo_do_crop + 10
+        ponto_mais_direito_do_crop = ponto_mais_direito_do_crop + 10
+    # ascii para seta abaixo
+    if key == 40:
+        ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop + 10
+        ponto_mais_alto_do_crop = ponto_mais_alto_do_crop + 10
+        
+    # retangulo crop
+    croped_image = cv2.retangle(full_image, (ponto_mais_esquerdo_do_crop, ponto_mais_baixo_do_crop), (ponto_mais_direito_do_crop, ponto_mais_alto_do_crop), (0, 255, 0), 3)
+
+        
+    cv2.imshow("Imagem", full_image)
+    cv2.imshow("Crop", croped_image)
+    return croped_image
 
 def findrgb():
     st.session_state.resultados = []
@@ -204,6 +255,7 @@ def receivecolors():
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 upload = st.file_uploader('Faça upload de uma imagem para verificar a cor', type=['png', 'jpg', 'jpeg'])
+upload = crop_image(upload)
 opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
 tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
