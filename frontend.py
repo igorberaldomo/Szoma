@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import time
 import cv2
-from pil import Image
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -92,12 +91,16 @@ def rescaleFrame(frame):
         return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
 
 def save_image(image):
-    img = Image.open(image)
-    img.save("tempimage/image.jpg")
+    # Create a directory and save the uploaded image.
+    file_path = f"tempimage/{img.name}"
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    with open(file_path, "wb") as img_file:
+        img_file.write(img.getbuffer())
+    return file_path
     
-def crop_image():
+def crop_image(file_path):
     # lê a imagem
-    full_image =  cv2.imread("tempimage/image.jpg")
+    full_image =  cv2.imread(file_path)
     # faz escala da imagem
     full_image = rescaleFrame(full_image)
     # pega o total de linhas e colunas da imagem
@@ -274,8 +277,8 @@ with st.form("find_me_form", clear_on_submit=True):
 
     submitted = st.form_submit_button("Procurar")
     if submitted:
-        save_image(upload)
-        upload = crop_image()
+        file_path = save_image(upload)
+        upload = crop_image(file_path)
         findrgb(procura, upload, opcao_fornecedores, tipo_de_palheta)
 
 receivecolors()
