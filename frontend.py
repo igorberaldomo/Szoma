@@ -87,7 +87,7 @@ def crop_image(image):
     upload = image.read()
     cropped_pic = st_cropperjs(pic=upload, btn_text='Editar imagem', size=(1))
     return cropped_pic
-def findrgb(procura,upload,opcao_fornecedores):
+def findrgb():
     st.session_state.resultados = []
     if procura or upload:
         if upload is not None:
