@@ -129,11 +129,13 @@ def crop_image(file_path):
     end_point = (int(ponto_mais_direito_do_crop), int(ponto_mais_baixo_do_crop))
     color = (0, 255, 0)
     # inicia o loop até obter o crop desejado
+    # gera o crop
+    croped_image = cv2.rectangle(full_image, start_point , end_point, color , 3)
+
+    cv2.imshow("Crop", croped_image)
+        
     while True:
-        # gera o crop
-        croped_image = cv2.rectangle(full_image, start_point , end_point, color , 3)
-    
-        cv2.imshow("Crop", croped_image)
+
         k = cv2.waitKey(0) & 0xFF
 
         # o k usa o numero a tabela ascii para implementar as teclas 
