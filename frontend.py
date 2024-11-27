@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
-import cv2
+import opencv as cv2
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -125,6 +125,7 @@ def crop_image(image):
         cv2.imshow("Crop", croped_image)
         k = cv2.waitKey(0) & 0xFF
 
+        # o k usa o numero a tabela ascii para implementar as teclas 
         if k == 27 or k == 13 or k == 48: # ESC key ou enter ou numpad 0
             break
         elif k == 81 or k == 52: # left arrow key ou numpad 4
@@ -140,8 +141,6 @@ def crop_image(image):
             ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop + 10
             ponto_mais_alto_do_crop = ponto_mais_alto_do_crop + 10
         
-    
-    
     return croped_image
 
 def findrgb():
