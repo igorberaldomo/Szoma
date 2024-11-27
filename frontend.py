@@ -123,11 +123,15 @@ def crop_image(file_path):
     ponto_mais_alto_do_crop = altura_do_ponto_central + largura_crop_inicial
     ponto_mais_esquerdo_do_crop = largura_do_ponto_central - altura_crop_inicial
     ponto_mais_direito_do_crop = largura_do_ponto_central + altura_crop_inicial
-      
+    
+    # pontos inicial e final
+    start_point = (int(ponto_mais_esquerdo_do_crop),int( ponto_mais_alto_do_crop))
+    end_point = (int(ponto_mais_direito_do_crop), int(ponto_mais_baixo_do_crop))
+    color = (0, 255, 0)
     # inicia o loop até obter o crop desejado
     while True:
         # gera o crop
-        croped_image = cv2.rectangle(full_image, (ponto_mais_esquerdo_do_crop, ponto_mais_baixo_do_crop), (ponto_mais_direito_do_crop, ponto_mais_alto_do_crop), (0, 255, 0), 3)
+        croped_image = cv2.rectangle(full_image, start_point , end_point, color , 3)
     
         cv2.imshow("Crop", croped_image)
         k = cv2.waitKey(0) & 0xFF
