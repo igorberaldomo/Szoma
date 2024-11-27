@@ -127,7 +127,7 @@ def crop_image(file_path):
     # inicia o loop até obter o crop desejado
     while True:
         # gera o crop
-        croped_image = cv2.retangle(full_image, (ponto_mais_esquerdo_do_crop, ponto_mais_baixo_do_crop), (ponto_mais_direito_do_crop, ponto_mais_alto_do_crop), (0, 255, 0), 3)
+        croped_image = cv2.rectangle(full_image, (ponto_mais_esquerdo_do_crop, ponto_mais_baixo_do_crop), (ponto_mais_direito_do_crop, ponto_mais_alto_do_crop), (0, 255, 0), 3)
     
         cv2.imshow("Crop", croped_image)
         k = cv2.waitKey(0) & 0xFF
