@@ -82,17 +82,24 @@ def getting_data():
 # para acessar tabela use table['nome_da_tabela']
 tables = getting_data()
 st.session_state.tables = tables
-
+def rescaleFrame(frame):
+        total_width = 700
+        scale = total_width / frame.shape[1]
+        width = int(frame.shape[1] * scale)
+        height = int(frame.shape[0] * scale)
+        dimensions = (width, height)
+        return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
 def crop_image(image):
     # lê a imagem
     full_image =  cv2.imread(image)
+    
+    # faz escala da imagem
+    full_image = rescaleFrame(full_image)
     # pega o total de linhas e colunas da imagem
     rows,cols, _ = full_image.shape
-    # abre a imagem inicial
-    cv2.waitKey(0)
-
-        
     
+
+  
     # pega o centro da imagem
     altura_do_ponto_central = cols / 2
     largura_do_ponto_central = rows / 2
@@ -109,35 +116,39 @@ def crop_image(image):
     ponto_mais_alto_do_crop = altura_do_ponto_central + largura_crop_inicial
     ponto_mais_esquerdo_do_crop = largura_do_ponto_central - altura_crop_inicial
     ponto_mais_direito_do_crop = largura_do_ponto_central + altura_crop_inicial
-    # ascii para seta esquerda
-    if key == 37:
-        ponto_mais_esquerdo_do_crop = ponto_mais_esquerdo_do_crop - 10
-        ponto_mais_direito_do_crop = ponto_mais_direito_do_crop - 10
-    # ascii para seta acima
-    if key == 38:
-        ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop - 10
-        ponto_mais_alto_do_crop = ponto_mais_alto_do_crop - 10
-    # ascii para seta direita
-    if key == 39:
-        ponto_mais_esquerdo_do_crop = ponto_mais_esquerdo_do_crop + 10
-        ponto_mais_direito_do_crop = ponto_mais_direito_do_crop + 10
-    # ascii para seta abaixo
-    if key == 40:
-        ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop + 10
-        ponto_mais_alto_do_crop = ponto_mais_alto_do_crop + 10
-        
-    # retangulo crop
-    croped_image = cv2.retangle(full_image, (ponto_mais_esquerdo_do_crop, ponto_mais_baixo_do_crop), (ponto_mais_direito_do_crop, ponto_mais_alto_do_crop), (0, 255, 0), 3)
+      
+    # inicia o loop até obter o crop desejado
+    while True:
+        # gera o crop
+        croped_image = cv2.retangle(full_image, (ponto_mais_esquerdo_do_crop, ponto_mais_baixo_do_crop), (ponto_mais_direito_do_crop, ponto_mais_alto_do_crop), (0, 255, 0), 3)
+    
+        cv2.imshow("Crop", croped_image)
+        k = cv2.waitKey(0) & 0xFF
 
+        if k == 27 or k == 13 or k == 48: # ESC key ou enter ou numpad 0
+            break
+        elif k == 81 or k == 52: # left arrow key ou numpad 4
+            ponto_mais_esquerdo_do_crop = ponto_mais_esquerdo_do_crop - 10
+            ponto_mais_direito_do_crop = ponto_mais_direito_do_crop - 10
+        elif k == 82 or k == 56: # Up arrow key ou numpad 8
+            ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop + 10
+            ponto_mais_alto_do_crop = ponto_mais_alto_do_crop + 10  
+        elif k == 83 or k == 54: # right arrow key ou numpad 6
+            ponto_mais_esquerdo_do_crop = ponto_mais_esquerdo_do_crop + 10
+            ponto_mais_direito_do_crop = ponto_mais_direito_do_crop + 10
+        elif k == 84 or k == 50: # down arrow key ou numpad 2
+            ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop + 10
+            ponto_mais_alto_do_crop = ponto_mais_alto_do_crop + 10
         
-    cv2.imshow("Imagem", full_image)
-    cv2.imshow("Crop", croped_image)
+    
+    
     return croped_image
 
 def findrgb():
     st.session_state.resultados = []
     if procura or upload:
         if upload is not None:
+            upload = crop_image(upload)
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
@@ -255,7 +266,7 @@ def receivecolors():
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 upload = st.file_uploader('Faça upload de uma imagem para verificar a cor', type=['png', 'jpg', 'jpeg'])
-upload = crop_image(upload)
+
 opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
 tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
