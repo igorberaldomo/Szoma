@@ -207,7 +207,7 @@ st.subheader('Onde você acha sua cor')
 upload = st.file_uploader('Faça upload de uma imagem para verificar a cor', type=['png', 'jpg', 'jpeg'])
 if upload is not None:
     upload = upload.read()
-    cropped_pic = st_cropperjs(pic=upload, output_format='png', btn_text='Editar imagem')
+    cropped_pic = st_cropperjs(pic=upload, btn_text='Editar imagem')
     upload = cropped_pic
 opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
 tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
