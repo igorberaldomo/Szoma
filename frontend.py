@@ -92,7 +92,6 @@ def rescaleFrame(frame):
 def crop_image(image):
     # lê a imagem
     full_image =  cv2.imread(image)
-    
     # faz escala da imagem
     full_image = rescaleFrame(full_image)
     # pega o total de linhas e colunas da imagem
