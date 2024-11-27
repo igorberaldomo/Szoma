@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import time
 import cv2
+from pil import Image
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -89,15 +90,18 @@ def rescaleFrame(frame):
         height = int(frame.shape[0] * scale)
         dimensions = (width, height)
         return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
-def crop_image(image):
+
+def save_image(image):
+    img = Image.open(image)
+    img.save("tempimage/image.jpg")
+    
+def crop_image():
     # lê a imagem
-    full_image =  cv2.imread(image)
+    full_image =  cv2.imread("tempimage/image.jpg")
     # faz escala da imagem
     full_image = rescaleFrame(full_image)
     # pega o total de linhas e colunas da imagem
     rows,cols, _ = full_image.shape
-    
-
   
     # pega o centro da imagem
     altura_do_ponto_central = cols / 2
@@ -270,7 +274,8 @@ with st.form("find_me_form", clear_on_submit=True):
 
     submitted = st.form_submit_button("Procurar")
     if submitted:
-        upload = crop_image(upload)
+        save_image(upload)
+        upload = crop_image()
         findrgb(procura, upload, opcao_fornecedores, tipo_de_palheta)
 
 receivecolors()
