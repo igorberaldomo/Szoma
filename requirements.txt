@@ -6,4 +6,4 @@ sqlalchemy
 streamlit-extras
 pymysql
 opencv-contrib-python
-opencv-python
+opencv-python-headless
