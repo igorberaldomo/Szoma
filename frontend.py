@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import time
 import cv2
+import os
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
