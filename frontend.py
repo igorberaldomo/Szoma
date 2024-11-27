@@ -96,7 +96,7 @@ def save_image(image):
     file_path = f"tempimage/{image.name}"
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(file_path, "wb") as img_file:
-        img_file.write(img.getbuffer())
+        img_file.write(image.getbuffer())
     return file_path
     
 def crop_image(file_path):
