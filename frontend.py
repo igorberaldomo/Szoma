@@ -92,7 +92,6 @@ def rescaleFrame(frame):
 def crop_image(image):
     # lê a imagem
     full_image =  cv2.imread(image)
-    
     # faz escala da imagem
     full_image = rescaleFrame(full_image)
     # pega o total de linhas e colunas da imagem
@@ -269,6 +268,7 @@ opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', optio
 tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
-button = st.button('Procurar', on_click=findrgb(procura, upload, opcao_fornecedores))
+if upload is not None or procura is not None:
+    button = st.button('Procurar', on_click=findrgb(procura, upload, opcao_fornecedores))
 
 receivecolors()
