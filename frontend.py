@@ -143,7 +143,7 @@ def crop_image(image):
         
     return croped_image
 
-def findrgb():
+def findrgb(procura,upload,opcao_fornecedores):
     st.session_state.resultados = []
     if procura or upload:
         if upload is not None:
@@ -269,6 +269,6 @@ opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', optio
 tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
-button = st.button('Procurar', on_click=findrgb)
+button = st.button('Procurar', on_click=findrgb(procura, upload, opcao_fornecedores))
 
 receivecolors()
