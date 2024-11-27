@@ -146,7 +146,6 @@ def findrgb(procura,upload,opcao_fornecedores):
     st.session_state.resultados = []
     if procura or upload:
         if upload is not None:
-            upload = crop_image(upload)
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
@@ -263,12 +262,15 @@ def receivecolors():
 # Interface do usuário
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
-upload = st.file_uploader('Faça upload de uma imagem para verificar a cor', type=['png', 'jpg', 'jpeg'])
-opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
-tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
-procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
+with st.form("find_me_form", clear_on_submit=True):
+    upload = st.file_uploader('Faça upload de uma imagem para verificar a cor', type=['png', 'jpg', 'jpeg'])
+    opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+    tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
+    procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
-if upload is not None or procura is not None:
-    button = st.button('Procurar', on_click=findrgb(procura, upload, opcao_fornecedores))
+    submitted = st.form_submit_button("Procurar")
+    if submitted:
+        upload = crop_image(upload)
+        findrgb(procura, upload, opcao_fornecedores, tipo_de_palheta)
 
 receivecolors()
