@@ -206,7 +206,7 @@ def receivecolors():
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 
-img_file = st.file_uploader(label='coloque seu arquivo para dar crop ', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
+img_file = st.sidebar.file_uploader(label='coloque seu arquivo para dar crop ', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = st.sidebar.checkbox(label="update em tempo real", value=True)
 box_color = st.sidebar.color_picker(label="cor da caixa", value='#0000FF')
 aspect_choice = st.sidebar.radio(label="tamanho do corte", options=["1:1", "16:9", "4:3", "2:3", "Free"])
@@ -239,8 +239,5 @@ if img_file:
         if cropped_img:
             cropped_img.save("tempimage/cropped.png")
             findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
-
-        
-
-        
+    
 receivecolors()
