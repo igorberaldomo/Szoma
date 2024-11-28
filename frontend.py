@@ -12,7 +12,6 @@ from utils.search.search_codigos import select_códigos
 from utils.search.search_name_for_id import search_name_for_id
 from utils.search.primary_select import primary_select
 from utils.conect_to_engine_production import conect_to_engine_production
-st.set_option('deprecation.showfileUploaderEncoding', False)
 
 
 # Inicializar o estado da sessão
@@ -206,10 +205,10 @@ def receivecolors():
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 with st.form("find_me_form", clear_on_submit=True):
-    img_file = st.sidebar.file_uploader(label='Upload a file', type=['png', 'jpg'])
-    realtime_update = st.sidebar.checkbox(label="Update in Real Time", value=True)
-    box_color = st.sidebar.color_picker(label="Box Color", value='#0000FF')
-    aspect_choice = st.sidebar.radio(label="Aspect Ratio", options=["1:1", "16:9", "4:3", "2:3", "Free"])
+    img_file = st.file_uploader(label='Upload a file', type=['png', 'jpg'])
+    realtime_update = st.checkbox(label="Update in Real Time", value=True)
+    box_color = st.color_picker(label="Box Color", value='#0000FF')
+    aspect_choice = st.radio(label="Aspect Ratio", options=["1:1", "16:9", "4:3", "2:3", "Free"])
     aspect_dict = {
         "1:1": (1, 1),
         "16:9": (16, 9),
