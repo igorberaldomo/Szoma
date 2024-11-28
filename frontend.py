@@ -226,6 +226,8 @@ procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o 
 
 
 if img_file:
+    popup_window = True
+    if popup_window:
         img = image2.open(img_file)
         if not realtime_update:
             st.write("Double click to save crop")
@@ -236,8 +238,11 @@ if img_file:
         st.write("Preview")
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
-        cropped_img.save("tempimage/cropped.png")
-        findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
+        if cropped_img:
+            cropped_img.save("tempimage/cropped.png")
+            findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
+            popup_window = False
+        
 
         
 receivecolors()
