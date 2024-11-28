@@ -235,6 +235,7 @@ if img_file:
         st.write("Preview")
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
+        st.write(type(cropped_img))
         findrgb(procura, cropped_img, opcao_fornecedores)
 
         
