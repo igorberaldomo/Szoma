@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
-import cv2
-import os
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -83,78 +81,9 @@ def getting_data():
 # para acessar tabela use table['nome_da_tabela']
 tables = getting_data()
 st.session_state.tables = tables
-def rescaleFrame(frame):
-        total_width = 700
-        scale = total_width / frame.shape[1]
-        width = int(frame.shape[1] * scale)
-        height = int(frame.shape[0] * scale)
-        dimensions = (width, height)
-        return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
 
-def save_image(image):
-    # Create a directory and save the uploaded image.
-    file_path = f"tempimage/image.png"
-    os.makedirs(os.path.dirname(file_path), exist_ok=True)
-    with open(file_path, "wb") as img_file:
-        img_file.write(image.getbuffer())
-    return file_path
     
-def crop_image(file_path):
-    # lê a imagem
-    full_image =  cv2.imread(file_path)
-    # faz escala da imagem
-    full_image = rescaleFrame(full_image)
-    # pega o total de linhas e colunas da imagem
-    rows,cols, _ = full_image.shape
-  
-    # pega o centro da imagem
-    altura_do_ponto_central = cols / 2
-    largura_do_ponto_central = rows / 2
-    
-    # pega o ponto central da imagem
-    ponto_central = (altura_do_ponto_central, largura_do_ponto_central)
-    
-    # pega 20% da largura e altura da imagem
-    largura_crop_inicial = cols * 0.2
-    altura_crop_inicial = rows * 0.2
-    
-    # gera os vertices do quadrado crop
-    ponto_mais_baixo_do_crop = altura_do_ponto_central - largura_crop_inicial
-    ponto_mais_alto_do_crop = altura_do_ponto_central + largura_crop_inicial
-    ponto_mais_esquerdo_do_crop = largura_do_ponto_central - altura_crop_inicial
-    ponto_mais_direito_do_crop = largura_do_ponto_central + altura_crop_inicial
-    
-    # pontos inicial e final
-    start_point = (int(ponto_mais_esquerdo_do_crop),int( ponto_mais_alto_do_crop))
-    end_point = (int(ponto_mais_direito_do_crop), int(ponto_mais_baixo_do_crop))
-    color = (0, 255, 0)
-    # inicia o loop até obter o crop desejado
-    # gera o crop
-    croped_image = cv2.rectangle(full_image, start_point , end_point, color , 3)
 
-    cv2.imshow("Crop", croped_image)
-        
-    while True:
-
-        k = cv2.waitKey(0) & 0xFF
-
-        # o k usa o numero a tabela ascii para implementar as teclas 
-        if k == 27 or k == 13 or k == 48: # ESC key ou enter ou numpad 0
-            break
-        elif k == 81 or k == 52: # left arrow key ou numpad 4
-            ponto_mais_esquerdo_do_crop = ponto_mais_esquerdo_do_crop - 10
-            ponto_mais_direito_do_crop = ponto_mais_direito_do_crop - 10
-        elif k == 82 or k == 56: # Up arrow key ou numpad 8
-            ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop + 10
-            ponto_mais_alto_do_crop = ponto_mais_alto_do_crop + 10  
-        elif k == 83 or k == 54: # right arrow key ou numpad 6
-            ponto_mais_esquerdo_do_crop = ponto_mais_esquerdo_do_crop + 10
-            ponto_mais_direito_do_crop = ponto_mais_direito_do_crop + 10
-        elif k == 84 or k == 50: # down arrow key ou numpad 2
-            ponto_mais_baixo_do_crop = ponto_mais_baixo_do_crop + 10
-            ponto_mais_alto_do_crop = ponto_mais_alto_do_crop + 10
-        
-    return croped_image
 
 def findrgb(procura,upload,opcao_fornecedores):
     st.session_state.resultados = []
@@ -284,8 +213,6 @@ with st.form("find_me_form", clear_on_submit=True):
 
     submitted = st.form_submit_button("Procurar")
     if submitted:
-        # file_path = save_image(upload)
-        # upload = crop_image(file_path)
         findrgb(procura, upload, opcao_fornecedores)
 
 receivecolors()
