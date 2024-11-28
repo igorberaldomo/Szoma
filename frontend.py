@@ -284,8 +284,8 @@ with st.form("find_me_form", clear_on_submit=True):
 
     submitted = st.form_submit_button("Procurar")
     if submitted:
-        file_path = save_image(upload)
-        upload = crop_image(file_path)
+        # file_path = save_image(upload)
+        # upload = crop_image(file_path)
         findrgb(procura, upload, opcao_fornecedores, tipo_de_palheta)
 
 receivecolors()
