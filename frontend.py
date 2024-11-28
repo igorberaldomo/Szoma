@@ -207,7 +207,9 @@ st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 
 img_file = st.file_uploader(label='coloque seu arquivo para dar crop ', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
-aspect_choice = "1:1"
+realtime_update = st.sidebar.checkbox(label="update em tempo real", value=True)
+box_color = st.sidebar.color_picker(label="cor da caixa", value='#0000FF')
+aspect_choice = st.sidebar.radio(label="tamanho do corte", options=["1:1", "16:9", "4:3", "2:3", "Free"])
 aspect_dict = {
     "1:1": (1, 1),
     "16:9": (16, 9),
@@ -228,7 +230,7 @@ if img_file:
         if not realtime_update:
             st.write("Clique duas vezes para cortar a imagem")
         # Get a cropped image from the frontend
-        cropped_img = st_cropper(img, realtime_update=True, box_color="#0000FF",
+        cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
                                     aspect_ratio=aspect_ratio)    
         # Manipulate cropped image at will
         st.write("Prévia")
