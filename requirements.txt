@@ -5,7 +5,7 @@ colorthief
 sqlalchemy
 streamlit-extras
 pymysql
-opencv-python == 3.7
+opencv-python == 4.7
 matplotlib
 pkg-config
 libgtk2.0-dev
