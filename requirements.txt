@@ -5,5 +5,3 @@ colorthief
 sqlalchemy
 streamlit-extras
 pymysql
-opencv-python-headless
-matplotlib
