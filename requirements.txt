@@ -7,4 +7,4 @@ streamlit-extras
 pymysql
 opencv-python-headless
 matplotlib
-libgtk2.0-dev
+package-one @ github.com/genesi/gtk2.git/repo@master
