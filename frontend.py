@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import time
 from streamlit_cropper import st_cropper
-from PIL import Image
+from PIL import Image as image2
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -225,7 +225,7 @@ procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o 
 
 
 if img_file:
-        img = Image.open(img_file)
+        img = image2.open(img_file)
         if not realtime_update:
             st.write("Double click to save crop")
         # Get a cropped image from the frontend
