@@ -4,6 +4,7 @@ import json
 import pandas as pd
 import sqlalchemy
 import streamlit as st
+from streamlit_cropper import st_cropper
 from utils.select_complementos import select_complementos
 from utils.conect_to_engine_developer import conect_to_engine_developer
 from utils.create_pandas_table import generate_pandas_table
