@@ -205,38 +205,37 @@ def receivecolors():
 # Interface do usuário
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
-with st.form("find_me_form", clear_on_submit=True):
-    img_file = st.sidebar.file_uploader(label='Upload a file', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
-    realtime_update = st.sidebar.checkbox(label="Update in Real Time", value=True)
-    box_color = st.sidebar.color_picker(label="Box Color", value='#0000FF')
-    aspect_choice = st.sidebar.radio(label="Aspect Ratio", options=["1:1", "16:9", "4:3", "2:3", "Free"])
-    aspect_dict = {
-        "1:1": (1, 1),
-        "16:9": (16, 9),
-        "4:3": (4, 3),
-        "2:3": (2, 3),
-        "Free": None
-    }
-    aspect_ratio = aspect_dict[aspect_choice]
+img_file = st.sidebar.file_uploader(label='Upload a file', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
+realtime_update = st.sidebar.checkbox(label="Update in Real Time", value=True)
+box_color = st.sidebar.color_picker(label="Box Color", value='#0000FF')
+aspect_choice = st.sidebar.radio(label="Aspect Ratio", options=["1:1", "16:9", "4:3", "2:3", "Free"])
+aspect_dict = {
+    "1:1": (1, 1),
+    "16:9": (16, 9),
+    "4:3": (4, 3),
+    "2:3": (2, 3),
+    "Free": None
+}
+aspect_ratio = aspect_dict[aspect_choice]
 
-    
-    opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
-    tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
-    procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
-    submitted = st.form_submit_button("Procurar")
-    if submitted:
-        if img_file:
-            img = Image.open(img_file)
-            if not realtime_update:
-                st.write("Double click to save crop")
-            # Get a cropped image from the frontend
-            cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
-                                        aspect_ratio=aspect_ratio)    
-            # Manipulate cropped image at will
-            st.write("Preview")
-            _ = cropped_img.thumbnail((150,150))
-            st.image(cropped_img)
-            findrgb(procura, cropped_img, opcao_fornecedores)
+opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
+procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
+
+if img_file:
+        img = Image.open(img_file)
+        if not realtime_update:
+            st.write("Double click to save crop")
+        # Get a cropped image from the frontend
+        cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
+                                    aspect_ratio=aspect_ratio)    
+        # Manipulate cropped image at will
+        st.write("Preview")
+        _ = cropped_img.thumbnail((150,150))
+        st.image(cropped_img)
+        findrgb(procura, cropped_img, opcao_fornecedores)
+
+        
 receivecolors()
