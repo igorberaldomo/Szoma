@@ -207,7 +207,6 @@ st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 
 img_file = st.sidebar.file_uploader(label='Upload a file', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
-st.write(type(img_file))
 realtime_update = st.sidebar.checkbox(label="Update in Real Time", value=True)
 box_color = st.sidebar.color_picker(label="Box Color", value='#0000FF')
 aspect_choice = st.sidebar.radio(label="Aspect Ratio", options=["1:1", "16:9", "4:3", "2:3", "Free"])
@@ -237,8 +236,10 @@ if img_file:
         st.write("Preview")
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
-        st.write(type(cropped_img))
-        findrgb(procura, cropped_img, opcao_fornecedores)
+        cropped_img.save("tempimage/cropped.png")
+        upload = open("tempimage/cropped.png", "rb").read()
+        st.write(type(upload))
+        findrgb(procura, opcao_fornecedores)
 
         
 receivecolors()
