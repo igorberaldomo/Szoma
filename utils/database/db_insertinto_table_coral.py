@@ -51,7 +51,7 @@ def db_table_insertinto_coral():
             pantone_codigo = file_data['corescoral'][c]['pantone']['codigo']
             pantone_name = file_data['corescoral'][c]['pantone']['name']
             pantone_hex = file_data['corescoral'][c]['pantone']['hex']
-            fornecedores = file_data['corescoral'][c]['fornecedores']
+            fornecedores = file_data['corescoral'][c]['fornecedor']
             created_at = datetime.datetime.now()
             updated_at = datetime.datetime.now()
             deleted_at = 0
