@@ -7,3 +7,4 @@ streamlit-extras
 pymysql
 opencv-python-headless
 matplotlib
+libgtk2.0-dev
