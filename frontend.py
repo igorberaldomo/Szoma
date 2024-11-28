@@ -226,7 +226,6 @@ procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o 
 
 
 if img_file:
-    with st.popover():
         img = image2.open(img_file)
         if not realtime_update:
             st.write("Clique duas vezes para cortar a imagem")
