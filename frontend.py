@@ -206,10 +206,10 @@ def receivecolors():
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 
-img_file = st.sidebar.file_uploader(label='Upload a file', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
-realtime_update = st.sidebar.checkbox(label="Update in Real Time", value=True)
-box_color = st.sidebar.color_picker(label="Box Color", value='#0000FF')
-aspect_choice = st.sidebar.radio(label="Aspect Ratio", options=["1:1", "16:9", "4:3", "2:3", "Free"])
+img_file = st.sidebar.file_uploader(label='coloque seu arquivo para dar crop ', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
+realtime_update = st.sidebar.checkbox(label="update em tempo real", value=True)
+box_color = st.sidebar.color_picker(label="cor da caixa", value='#0000FF')
+aspect_choice = st.sidebar.radio(label="tamanho do corte", options=["1:1", "16:9", "4:3", "2:3", "Free"])
 aspect_dict = {
     "1:1": (1, 1),
     "16:9": (16, 9),
@@ -226,22 +226,21 @@ procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o 
 
 
 if img_file:
-    popup_window = True
-    if popup_window:
+    with st.popover():
         img = image2.open(img_file)
         if not realtime_update:
-            st.write("Double click to save crop")
+            st.write("Clique duas vezes para cortar a imagem")
         # Get a cropped image from the frontend
         cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
                                     aspect_ratio=aspect_ratio)    
         # Manipulate cropped image at will
-        st.write("Preview")
+        st.write("Prévia")
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
         if cropped_img:
             cropped_img.save("tempimage/cropped.png")
             findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
-            popup_window = False
+
         
 
         
