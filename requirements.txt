@@ -5,5 +5,6 @@ colorthief
 sqlalchemy
 streamlit-extras
 pymysql
-streamlit-cropperjs
-
+opencv-python-headless
+opencv-contrib-python
+matplotlib
