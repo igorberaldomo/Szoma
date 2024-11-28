@@ -239,7 +239,7 @@ if img_file:
         cropped_img.save("tempimage/cropped.png")
         upload = open("tempimage/cropped.png", "rb").read()
         st.write(type(upload))
-        findrgb(procura, opcao_fornecedores)
+        findrgb(procura,upload, opcao_fornecedores)
 
         
 receivecolors()
