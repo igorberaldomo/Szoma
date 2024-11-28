@@ -184,19 +184,21 @@ def select_complementos(red, green, blue, palheta, tabela):
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia_2:
                 if distancia_atual != 0:
+                    # garante cores diferentes para cores secundárias pŕoximas
+                    if resultado2[x] != resultado1[menor_distancia_1]:
                     # usa a primeira maior para garantir que a cor selecionada seja proporcional
-                    if segunda_maior == "red":
-                        if atual_red > atual_blue & atual_red > atual_green:
-                            menor_distancia_2 = x
-                            distancia_2 = distancia_atual
-                    if segunda_maior == "green":
-                        if atual_green > atual_blue & atual_green > atual_red:
-                            menor_distancia_2 = x
-                            distancia_2 = distancia_atual
-                    if segunda_maior == "blue":
-                        if atual_blue > atual_green & atual_blue > atual_red:
-                            menor_distancia_2 = x
-                            distancia_2 = distancia_atual
+                        if segunda_maior == "red":
+                            if atual_red > atual_blue & atual_red > atual_green:
+                                menor_distancia_2 = x
+                                distancia_2 = distancia_atual
+                        if segunda_maior == "green":
+                            if atual_green > atual_blue & atual_green > atual_red:
+                                menor_distancia_2 = x
+                                distancia_2 = distancia_atual
+                        if segunda_maior == "blue":
+                            if atual_blue > atual_green & atual_blue > atual_red:
+                                menor_distancia_2 = x
+                                distancia_2 = distancia_atual
                 # pega a cor ideal
                 elif distancia_atual == 0:
                     menor_distancia_2 = x
