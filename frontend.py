@@ -286,6 +286,6 @@ with st.form("find_me_form", clear_on_submit=True):
     if submitted:
         # file_path = save_image(upload)
         # upload = crop_image(file_path)
-        findrgb(procura, upload, opcao_fornecedores, tipo_de_palheta)
+        findrgb(procura, upload, opcao_fornecedores)
 
 receivecolors()
