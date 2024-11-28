@@ -4,6 +4,5 @@ numpy
 colorthief
 sqlalchemy
 streamlit-extras
-pymysql
-PYL
-streamlit_cropper
+pillow
+streamlit-cropper
