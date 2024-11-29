@@ -422,6 +422,11 @@ def select_complementos(red, green, blue, palheta, tabela):
         primeira_menor = ""
         segunda_menor = ""
         
+        if red > 130 and green > 130 and blue > 130 and red < 170 and green < 170 and blue < 170:
+            maior_valor_de_maior_analoga += 20
+            menor_valor_de_maior_analoga += 20
+            maior_valor_de_menor_analoga -= 20
+            menor_valor_de_menor_analoga -= 20
         tabela = tabela.to_dict(orient='index')
         if maior_analoga == red:
             primeira_menor = "blue"
