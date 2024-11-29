@@ -99,7 +99,7 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
             response_df = primary_select(red, green, blue, tabela)
             st.session_state.resultados = response_df
         elif camera is not None:
-            ct = ColorThief(upload)
+            ct = ColorThief(camera)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
             fornecedores = opcao_fornecedores
