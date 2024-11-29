@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import os
 from streamlit_cropper import st_cropper
 from PIL import Image as image2
 from colorthief import ColorThief
@@ -85,7 +86,7 @@ tables = getting_data()
 st.session_state.tables = tables 
 
 
-def findrgb(procura,upload,opcao_fornecedores):
+def findrgb(procura,upload,camera ,opcao_fornecedores):
     st.session_state.resultados = []
     if procura or upload or camera:
         if upload is not None:
@@ -129,7 +130,19 @@ def findrgb(procura,upload,opcao_fornecedores):
     else:
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
+def clear_images():
+    folder_path = "tempimage/"
 
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.png'):
+            os.remove(os.path.join(folder_path, filename))
+            print(f"Deleted: {filename}")
+        if filename.endswith('.jpg'):
+            os.remove(os.path.join(folder_path, filename))
+            print(f"Deleted: {filename}")
+        if filename.endswith('.jpeg'):
+            os.remove(os.path.join(folder_path, filename))
+            print(f"Deleted: {filename}")
 def receivecolors():
     if len(st.session_state.resultados) > 0:
         data = st.session_state.resultados
@@ -262,6 +275,8 @@ elif camera:
         st.image(edited_foto)
         if edited_foto:
             edited_foto.save("tempimage/cropped.png")
-            findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
+            findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
+            time.sleep(10)
+            clear_images()
     
 receivecolors()
