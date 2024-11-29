@@ -57,7 +57,7 @@ def db_table_insertinto_suvinil():
             pantone_código = str(file_data['coressuvinil'][c]['pantone']['codigo'])
             pantone_name = str(file_data['coressuvinil'][c]['pantone']['name'])
             pantone_hex = str(file_data['coressuvinil'][c]['pantone']['hex'])
-            fornecedores = str(file_data['coressuvinil'][c]['fornecedores'])
+            fornecedores = str(file_data['coressuvinil'][c]['fornecedor'])
             created_at = datetime.datetime.now()
             updated_at = datetime.datetime.now()
             deleted_at = 0

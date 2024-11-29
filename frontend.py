@@ -87,8 +87,17 @@ st.session_state.tables = tables
 
 def findrgb(procura,upload,opcao_fornecedores):
     st.session_state.resultados = []
-    if procura or upload:
+    if procura or upload or camera:
         if upload is not None:
+            ct = ColorThief(upload)
+            cor = ct.get_color(quality=1)
+            red, green, blue = cor
+            fornecedores = opcao_fornecedores
+            tabela = st.session_state.tables
+            tabela = tabela[fornecedores]
+            response_df = primary_select(red, green, blue, tabela)
+            st.session_state.resultados = response_df
+        elif camera is not None:
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
@@ -206,6 +215,7 @@ def receivecolors():
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 
+camera = st.camera_input(label = "Use a camera para capturar a cor")
 img_file = st.sidebar.file_uploader(label='Carregue sua imagem ', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = st.sidebar.checkbox(label="Update em tempo real", value=True)
 box_color = st.sidebar.color_picker(label="Cor da caixa", value='#0000FF')
@@ -238,6 +248,20 @@ if img_file:
         st.image(cropped_img)
         if cropped_img:
             cropped_img.save("tempimage/cropped.png")
+            findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
+elif camera:
+        foto = image2.open(camera)
+        if not realtime_update:
+            st.write("Clique duas vezes para cortar a imagem")
+        # Get a cropped image from the frontend
+        edited_foto = st_cropper(foto, realtime_update=realtime_update, box_color=box_color,
+                                    aspect_ratio=aspect_ratio)    
+        # Manipulate cropped image at will
+        st.write("Prévia")
+        _ = edited_foto.thumbnail((150,150))
+        st.image(edited_foto)
+        if edited_foto:
+            edited_foto.save("tempimage/cropped.png")
             findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
     
 receivecolors()
