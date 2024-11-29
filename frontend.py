@@ -276,7 +276,7 @@ elif camera:
         if edited_foto:
             edited_foto.save("tempimage/cropped.png")
             findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
-            time.sleep(10)
-            clear_images()
+         
+
     
 receivecolors()
