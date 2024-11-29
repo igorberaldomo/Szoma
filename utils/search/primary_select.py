@@ -1,7 +1,7 @@
 from utils.conect_to_engine_production import conect_to_engine_production
+import streamlit as st
 import pandas as pd
 import json
-
 
 engine = conect_to_engine_production()
 def primary_select(red, green, blue, tabela):
@@ -33,7 +33,8 @@ def primary_select(red, green, blue, tabela):
     menor_diferência = 0
     posição = 0
     resultset = resultset.to_dict(orient="records")
-    for c in range(len(resultset)):
+    st.write(resultset)  
+    for c in range(len(resultset[0])):
         r = resultset[c]['red']
         g = resultset[c]['green']
         b = resultset[c]['blue']
@@ -49,5 +50,5 @@ def primary_select(red, green, blue, tabela):
         c+= 1
         dct = {'nome': resultset[posição]['nome'], 'red': resultset[posição]['red'], 'green': resultset[posição]['green'], 'blue': resultset[posição]['blue'], 'ncs': resultset[posição]['ncs'], 'codigo_suvinil': resultset[posição]['codigo_suvinil'], 'hexadecimal': resultset[posição]['hexadecimal'], 'pantone_código': resultset[posição]['pantone_código'], 'pantone_name': resultset[posição]['pantone_name'], 'pantone_hex': resultset[posição]['pantone_hex'], 'fornecedores': resultset[posição]['fornecedores']} 
         dct = {k:[v] for k,v in dct.items()}     
-        resultset_df = pd.DataFrame(dct)
-    return resultset_df
+        resultset = pd.DataFrame(dct)
+    return resultset

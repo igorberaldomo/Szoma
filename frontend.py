@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import os
+from streamlit_cropper import st_cropper
+from PIL import Image as image2
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -80,13 +83,22 @@ def getting_data():
     return dataframes
 # para acessar tabela use table['nome_da_tabela']
 tables = getting_data()
-st.session_state.tables = tables
+st.session_state.tables = tables 
 
 
-def findrgb():
+def findrgb(procura,upload,camera ,opcao_fornecedores):
     st.session_state.resultados = []
-    if procura or upload:
+    if procura or upload or camera:
         if upload is not None:
+            ct = ColorThief(upload)
+            cor = ct.get_color(quality=1)
+            red, green, blue = cor
+            fornecedores = opcao_fornecedores
+            tabela = st.session_state.tables
+            tabela = tabela[fornecedores]
+            response_df = primary_select(red, green, blue, tabela)
+            st.session_state.resultados = response_df
+        elif camera is not None:
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
@@ -118,7 +130,19 @@ def findrgb():
     else:
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
+def clear_images():
+    folder_path = "tempimage/"
 
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.png'):
+            os.remove(os.path.join(folder_path, filename))
+            print(f"Deleted: {filename}")
+        if filename.endswith('.jpg'):
+            os.remove(os.path.join(folder_path, filename))
+            print(f"Deleted: {filename}")
+        if filename.endswith('.jpeg'):
+            os.remove(os.path.join(folder_path, filename))
+            print(f"Deleted: {filename}")
 def receivecolors():
     if len(st.session_state.resultados) > 0:
         data = st.session_state.resultados
@@ -203,11 +227,56 @@ def receivecolors():
 # Interface do usuário
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
-upload = st.file_uploader('Faça upload de uma imagem para verificar a cor', type=['png', 'jpg', 'jpeg'])
+
+camera = st.camera_input(label = "Use a camera para capturar a cor")
+img_file = st.sidebar.file_uploader(label='Carregue sua imagem ', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
+realtime_update = st.sidebar.checkbox(label="Update em tempo real", value=True)
+box_color = st.sidebar.color_picker(label="Cor da caixa", value='#0000FF')
+aspect_choice = st.sidebar.radio(label="Tamanho do corte", options=["1:1", "16:9", "4:3", "2:3", "Nenhum"])
+aspect_dict = {
+    "1:1": (1, 1),
+    "16:9": (16, 9),
+    "4:3": (4, 3),
+    "2:3": (2, 3),
+    "Nenhum": None
+}
+aspect_ratio = aspect_dict[aspect_choice]
+
+
 opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
 tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
-button = st.button('Procurar', on_click=findrgb)
 
+if img_file:
+        img = image2.open(img_file)
+        if not realtime_update:
+            st.write("Clique duas vezes para cortar a imagem")
+        # Get a cropped image from the frontend
+        cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
+                                    aspect_ratio=aspect_ratio)    
+        # Manipulate cropped image at will
+        st.write("Prévia")
+        _ = cropped_img.thumbnail((150,150))
+        st.image(cropped_img)
+        if cropped_img:
+            cropped_img.save("tempimage/cropped.png")
+            findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
+elif camera:
+        foto = image2.open(camera)
+        if not realtime_update:
+            st.write("Clique duas vezes para cortar a imagem")
+        # Get a cropped image from the frontend
+        edited_foto = st_cropper(foto, realtime_update=realtime_update, box_color=box_color,
+                                    aspect_ratio=aspect_ratio)    
+        # Manipulate cropped image at will
+        st.write("Prévia")
+        _ = edited_foto.thumbnail((150,150))
+        st.image(edited_foto)
+        if edited_foto:
+            edited_foto.save("tempimage/cropped.png")
+            findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
+            time.sleep(10)
+            clear_images()
+    
 receivecolors()

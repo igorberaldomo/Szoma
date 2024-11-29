@@ -10,42 +10,36 @@ def search_name_for_id(nome, tabela):
     with open("search/search_dict.json", "r") as file:
         search_dict = json.load(file)
         name_id = -1
-        fornecedores = ""
-        resultset = dict()
+        resultset = list()
         # procura no json o id da cor que bate com o nome digitado assim como a tabela que ela pertence
         if name_id == -1:
             for keys in search_dict["quickSearch"][0]:
                 if nome in keys:
-                    name_id = search_dict["quickSearch"][0][""+nome+""]
-                    fornecedores = 'coral'               
+                    name_id = search_dict["quickSearch"][0][nome]
+                    tabela_escolida = tabela["coral"]      
         if name_id == -1:
             for keys in search_dict["suvinil"][0]:
                 if nome in keys:
-                    name_id = search_dict["suvinil"][0][""+nome+""]
-                    fornecedores = 'suvinil'
+                    name_id = search_dict["suvinil"][0][nome]
+                    tabela_escolida = tabela["suvinil"]   
         if name_id == -1:
             for keys in search_dict["sherwin-willians"][0]:
                 if nome in keys:
-                    name_id = search_dict["sherwin-willians"][0][""+nome+""]
-                    fornecedores = 'sherwin-willians'
+                    name_id = search_dict["sherwin-willians"][0][nome]
+                    tabela_escolida = tabela["sherwin-willians"]   
         if name_id == -1:
             for keys in search_dict["anjo"][0]:
                 if nome in keys:
-                    name_id = search_dict["anjo"][0][""+nome+""]
-                    fornecedores = 'anjo'
+                    name_id = search_dict["anjo"][0][nome]
+                    tabela_escolida = tabela["anjo"]   
         if name_id == -1:
             for keys in search_dict["coral"][0]:
                 if nome in keys:
-                    name_id = search_dict["coral"][0][""+nome+""]
-                    fornecedores = 'coral'
-        # seleciona a tabela de acordo com o id encontrado
-        tabela = tabela[fornecedores].to_json(orient="index")
-        c = 0
-        for c in range(len(tabela)):
-            if tabela[c]['name'] == name_id:
-                resultset = {row['nome'], row['red'], row['green'], row['blue'], row['ncs'], row['codigo_suvinil'], row['hexadecimal'], row['pantone_código'], row['pantone_name'], row['pantone_hex'], row['fornecedores']}
-                break
-            c += 1
-        resultset = {k:[v] for k,v in resultset.items()}
-        resultset = pd.DataFrame(resultset)
+                    name_id = search_dict["coral"][0][nome]
+                    tabela_escolida = tabela["coral"]   
+        # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras
+        resultset = tabela_escolida.iloc[[name_id]]
+        resultset = resultset.to_dict(orient='records')
+        resultset = {k:[v] for k,v in resultset[0].items()}
+        resultset_df = pd.DataFrame(resultset)
         return resultset

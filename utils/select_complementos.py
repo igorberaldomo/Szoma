@@ -184,19 +184,21 @@ def select_complementos(red, green, blue, palheta, tabela):
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia_2:
                 if distancia_atual != 0:
+                    # garante cores diferentes para cores secundárias pŕoximas
+                     if resultado2[x]["red"] != resultado1[menor_distancia_1]["red"] and resultado2[x]["green"] != resultado1[menor_distancia_1]["green"] and resultado2[x]["blue"] != resultado1[menor_distancia_1]["blue"]:
                     # usa a primeira maior para garantir que a cor selecionada seja proporcional
-                    if segunda_maior == "red":
-                        if atual_red > atual_blue & atual_red > atual_green:
-                            menor_distancia_2 = x
-                            distancia_2 = distancia_atual
-                    if segunda_maior == "green":
-                        if atual_green > atual_blue & atual_green > atual_red:
-                            menor_distancia_2 = x
-                            distancia_2 = distancia_atual
-                    if segunda_maior == "blue":
-                        if atual_blue > atual_green & atual_blue > atual_red:
-                            menor_distancia_2 = x
-                            distancia_2 = distancia_atual
+                        if segunda_maior == "red":
+                            if atual_red > atual_blue & atual_red > atual_green:
+                                menor_distancia_2 = x
+                                distancia_2 = distancia_atual
+                        if segunda_maior == "green":
+                            if atual_green > atual_blue & atual_green > atual_red:
+                                menor_distancia_2 = x
+                                distancia_2 = distancia_atual
+                        if segunda_maior == "blue":
+                            if atual_blue > atual_green & atual_blue > atual_red:
+                                menor_distancia_2 = x
+                                distancia_2 = distancia_atual
                 # pega a cor ideal
                 elif distancia_atual == 0:
                     menor_distancia_2 = x
@@ -528,18 +530,20 @@ def select_complementos(red, green, blue, palheta, tabela):
             distancia_atual = atual_red + atual_green + atual_blue
             if c == 0 or distancia_atual < distancia:
                 if distancia_atual != 0:
-                    if segunda_menor == "red":
-                        if atual_red < atual_blue & atual_red < atual_green:
-                            menor_distancia_2 = x
-                            distancia = distancia_atual
-                    if segunda_menor == "green":
-                        if atual_green < atual_blue & atual_green < atual_red:
-                            menor_distancia_2 = x
-                            distancia = distancia_atual
-                    if segunda_menor == "blue":
-                        if atual_blue < atual_green & atual_blue < atual_red:
-                            menor_distancia_2 = x
-                            distancia = distancia_atual
+                    # verifica se o resultado selecionado nao e igual ao primeiro
+                    if resultado2[x]["red"] != resultado1[menor_distancia_1]["red"] and resultado2[x]["green"] != resultado1[menor_distancia_1]["green"] and resultado2[x]["blue"] != resultado1[menor_distancia_1]["blue"]:
+                        if segunda_menor == "red":
+                            if atual_red < atual_blue & atual_red < atual_green:
+                                menor_distancia_2 = x
+                                distancia = distancia_atual
+                        if segunda_menor == "green":
+                            if atual_green < atual_blue & atual_green < atual_red:
+                                menor_distancia_2 = x
+                                distancia = distancia_atual
+                        if segunda_menor == "blue":
+                            if atual_blue < atual_green & atual_blue < atual_red:
+                                menor_distancia_2 = x
+                                distancia = distancia_atual
                 elif distancia_atual == 0:
                     menor_distancia_1 = c
                     distancia = distancia_atual
