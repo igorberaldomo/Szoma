@@ -60,7 +60,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         if red > 130 and green > 130 and blue > 130 and red < 170 and green < 170 and blue < 170:
             maior_valor_de_maior += 20
             menor_valor_de_maior += 20
-            menor_valor_de_menor -= 20
+            maior_valor_de_menor -= 20
             menor_valor_de_menor -= 20
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         tabela = tabela.to_dict(orient='index')
