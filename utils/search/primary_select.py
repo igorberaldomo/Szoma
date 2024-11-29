@@ -37,14 +37,14 @@ def primary_select(red, green, blue, tabela):
         g = resultset[key]['green']
         b = resultset[key]['blue']
         diferença = abs(red - r) + abs(green - g) + abs(blue - b)
-        if c == 0:
+        if key == 0:
             menor_diferência = diferença
-            posição = c
+            posição = key
         if diferença < menor_diferência:
             menor_diferência = diferença
-            posição = c
+            posição = key
         if menor_diferência == 0:
-            posição = c
+            posição = key
         key += 1
     dct = {'nome': resultset[posição]['nome'], 'red': resultset[posição]['red'], 'green': resultset[posição]['green'], 'blue': resultset[posição]['blue'], 'ncs': resultset[posição]['ncs'], 'codigo_suvinil': resultset[posição]['codigo_suvinil'], 'hexadecimal': resultset[posição]['hexadecimal'], 'pantone_código': resultset[posição]['pantone_código'], 'pantone_name': resultset[posição]['pantone_name'], 'pantone_hex': resultset[posição]['pantone_hex'], 'fornecedores': resultset[posição]['fornecedores']} 
     dct = {k:[v] for k,v in dct.items()}     
