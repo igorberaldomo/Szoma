@@ -29,11 +29,11 @@ def primary_select(red, green, blue, tabela):
         minblue = 0
     # aplica a procura na tabela
     resultset = tabela[(tabela['red'] >= minred) & (tabela['red'] <= maxred) & (tabela['green'] >= mingreen) & (tabela['green'] <= maxgreen) & (tabela['blue'] >= minblue) & (tabela['blue'] <= maxblue)]
+    resultset = resultset.to_dict(orient='index')
     c = 0
     menor_diferência = 0
     posição = 0
-    resultset = resultset.to_dict(orient='records')  
-    while c <= len(resultset):
+    for c in range(len(resultset)): 
         r = resultset[c]['red']
         g = resultset[c]['green']
         b = resultset[c]['blue']
