@@ -99,7 +99,7 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
             response_df = primary_select(red, green, blue, tabela)
             st.session_state.resultados = response_df
         elif camera is not None:
-            ct = ColorThief(upload)
+            ct = ColorThief(camera)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
             fornecedores = opcao_fornecedores
@@ -261,7 +261,9 @@ if img_file:
         st.image(cropped_img)
         if cropped_img:
             cropped_img.save("tempimage/cropped.png")
-            findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
+            findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
+        time.sleep(10)
+        clear_images()
 elif camera:
         foto = image2.open(camera)
         if not realtime_update:
