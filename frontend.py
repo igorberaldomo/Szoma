@@ -86,7 +86,7 @@ tables = getting_data()
 st.session_state.tables = tables 
 
 
-def findrgb(procura,upload,opcao_fornecedores):
+def findrgb(procura,upload,camera ,opcao_fornecedores):
     st.session_state.resultados = []
     if procura or upload or camera:
         if upload is not None:
@@ -275,7 +275,7 @@ elif camera:
         st.image(edited_foto)
         if edited_foto:
             edited_foto.save("tempimage/cropped.png")
-            findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
+            findrgb(procura, "tempimage/cropped.png",camera , opcao_fornecedores)
             time.sleep(10)
             clear_images()
     
