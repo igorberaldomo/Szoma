@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import os
 from streamlit_cropper import st_cropper
 from PIL import Image as image2
 from colorthief import ColorThief
