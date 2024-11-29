@@ -261,7 +261,7 @@ if img_file:
         st.image(cropped_img)
         if cropped_img:
             cropped_img.save("tempimage/cropped.png")
-            findrgb(procura, "tempimage/cropped.png", opcao_fornecedores)
+            findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
 elif camera:
         foto = image2.open(camera)
         if not realtime_update:
