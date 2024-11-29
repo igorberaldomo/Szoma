@@ -29,19 +29,14 @@ def primary_select(red, green, blue, tabela):
         minblue = 0
     # aplica a procura na tabela
     resultset = tabela[(tabela['red'] >= minred) & (tabela['red'] <= maxred) & (tabela['green'] >= mingreen) & (tabela['green'] <= maxgreen) & (tabela['blue'] >= minblue) & (tabela['blue'] <= maxblue)]
+    resultset = resultset.to_dict(orient='index')
     c = 0
     menor_diferência = 0
     posição = 0
-    resultset_list = list()
-    a = 0
-    for a in range(len(resultset)):
-        resultset_list.append(resultset[a])
-        a+=1
-    
-    while c <= len(resultset_list):
-        r = resultset_list[c]['red']
-        g = resultset_list[c]['green']
-        b = resultset_list[c]['blue']
+    for c in range(len(resultset)): 
+        r = resultset[c]['red']
+        g = resultset[c]['green']
+        b = resultset[c]['blue']
         diferença = abs(red - r) + abs(green - g) + abs(blue - b)
         if c == 0:
             menor_diferência = diferença
@@ -52,7 +47,7 @@ def primary_select(red, green, blue, tabela):
         if menor_diferência == 0:
             posição = c
         c+= 1
-    dct = {'nome': resultset_list[posição]['nome'], 'red': resultset_list[posição]['red'], 'green': resultset_list[posição]['green'], 'blue': resultset_list[posição]['blue'], 'ncs': resultset_list[posição]['ncs'], 'codigo_suvinil': resultset_list[posição]['codigo_suvinil'], 'hexadecimal': resultset_list[posição]['hexadecimal'], 'pantone_código': resultset_list[posição]['pantone_código'], 'pantone_name': resultset_list[posição]['pantone_name'], 'pantone_hex': resultset_list[posição]['pantone_hex'], 'fornecedores': resultset_list[posição]['fornecedores']} 
+    dct = {'nome': resultset[posição]['nome'], 'red': resultset[posição]['red'], 'green': resultset[posição]['green'], 'blue': resultset[posição]['blue'], 'ncs': resultset[posição]['ncs'], 'codigo_suvinil': resultset[posição]['codigo_suvinil'], 'hexadecimal': resultset[posição]['hexadecimal'], 'pantone_código': resultset[posição]['pantone_código'], 'pantone_name': resultset[posição]['pantone_name'], 'pantone_hex': resultset[posição]['pantone_hex'], 'fornecedores': resultset[posição]['fornecedores']} 
     dct = {k:[v] for k,v in dct.items()}     
     resultset = pd.DataFrame(dct)
     return resultset
