@@ -2,7 +2,6 @@ from utils.conect_to_engine_production import conect_to_engine_production
 import pandas as pd
 import json
 
-
 engine = conect_to_engine_production()
 def primary_select(red, green, blue, tabela):
     # distancia define o limite de busca para cima e para baixo
@@ -33,6 +32,7 @@ def primary_select(red, green, blue, tabela):
     menor_diferência = 0
     posição = 0
     resultset = resultset.to_dict(orient="records")
+    st.write(resultset)
     for c in range(len(resultset)):
         r = resultset[c]['red']
         g = resultset[c]['green']
