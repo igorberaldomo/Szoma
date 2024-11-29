@@ -30,13 +30,12 @@ def primary_select(red, green, blue, tabela):
     # aplica a procura na tabela
     resultset = tabela[(tabela['red'] >= minred) & (tabela['red'] <= maxred) & (tabela['green'] >= mingreen) & (tabela['green'] <= maxgreen) & (tabela['blue'] >= minblue) & (tabela['blue'] <= maxblue)]
     resultset = resultset.to_dict(orient='index')
-    c = 0
     menor_diferência = 0
     posição = 0
-    for c in range(len(resultset)): 
-        r = resultset[c]['red']
-        g = resultset[c]['green']
-        b = resultset[c]['blue']
+    for key, value in resultset.items(): 
+        r = resultset[key]['red']
+        g = resultset[key]['green']
+        b = resultset[key]['blue']
         diferença = abs(red - r) + abs(green - g) + abs(blue - b)
         if c == 0:
             menor_diferência = diferença
@@ -46,7 +45,7 @@ def primary_select(red, green, blue, tabela):
             posição = c
         if menor_diferência == 0:
             posição = c
-        c+= 1
+        key += 1
     dct = {'nome': resultset[posição]['nome'], 'red': resultset[posição]['red'], 'green': resultset[posição]['green'], 'blue': resultset[posição]['blue'], 'ncs': resultset[posição]['ncs'], 'codigo_suvinil': resultset[posição]['codigo_suvinil'], 'hexadecimal': resultset[posição]['hexadecimal'], 'pantone_código': resultset[posição]['pantone_código'], 'pantone_name': resultset[posição]['pantone_name'], 'pantone_hex': resultset[posição]['pantone_hex'], 'fornecedores': resultset[posição]['fornecedores']} 
     dct = {k:[v] for k,v in dct.items()}     
     resultset = pd.DataFrame(dct)
