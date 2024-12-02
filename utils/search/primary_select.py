@@ -52,4 +52,4 @@ def primary_select(red, green, blue, tabela):
         resultset = pd.DataFrame(dct)
         return resultset
     except:
-        st.write("Erro imagem desfocada, tire outra foto")
+        return 

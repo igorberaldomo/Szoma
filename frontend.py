@@ -106,7 +106,10 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
             tabela = st.session_state.tables
             tabela = tabela[fornecedores]
             response_df = primary_select(red, green, blue, tabela)
-            st.session_state.resultados = response_df
+            if response_df.empty:
+                st.text('Erro imagem desfocada, tire outra foto')
+            else:
+                st.session_state.resultados = response_df
         elif procura is not None:
             fornecedores = opcao_fornecedores
             if procura[0].isalpha():
