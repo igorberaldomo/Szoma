@@ -244,8 +244,8 @@ aspect_dict = {
 aspect_ratio = aspect_dict[aspect_choice]
 
 
-opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
-tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
+opcao_fornecedores = st.selectbox('Categorias', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+tipo_de_palheta = st.selectbox('Palhetas?', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
 
