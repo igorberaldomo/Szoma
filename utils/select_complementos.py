@@ -56,7 +56,6 @@ def select_complementos(red, green, blue, palheta, tabela):
         # a primeira cor da triade a segunda cor da triade
         primeira = list()
         segunda = list()
-        
         if red > 130 and green > 130 and blue > 130 and red < 170 and green < 170 and blue < 170:
             maior_valor_de_maior += 20
             menor_valor_de_maior += 20
