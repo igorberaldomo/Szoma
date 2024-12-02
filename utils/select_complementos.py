@@ -467,25 +467,25 @@ def select_complementos(red, green, blue, palheta, tabela):
         if difRB < 3 and difRG < 3 and difGB < 3:
             # como precisamos de cores diferentes para os complementos 
             if red > 128 or green > 128 or blue > 128:
-                maior_valor  = [maior_valor_de_menor, maior_valor_de_maior, maior_valor_de_meio]
+                maior_valor  = [maior_valor_de_menor_analoga, maior_valor_de_maior_analoga, maior_valor_de_meio_analoga]
                 maior_valor.sort()
                 # para mais facil leitura leiase com base no maior valor rgb da triade , os limites são entre o 0 e -20, entre -20 e -40 e entre -40 e -60
-                maior_valor_de_maior = maior_valor[2]
-                menor_valor_de_maior = maior_valor[2] -20
-                maior_valor_de_meio = maior_valor[2] - 20
-                menor_valor_de_meio = maior_valor[2] - 40
-                maior_valor_de_menor = maior_valor[2] - 40
-                menor_valor_de_menor = maior_valor[2] - 60
+                maior_valor_de_maior_analoga = maior_valor[2]
+                menor_valor_de_maior_analoga = maior_valor[2] -20
+                maior_valor_de_meio_analoga = maior_valor[2] - 20
+                menor_valor_de_meio_analoga = maior_valor[2] - 40
+                maior_valor_de_menor_analoga = maior_valor[2] - 40
+                menor_valor_de_menor_analoga = maior_valor[2] - 60
             if red < 128 or green < 128 or blue < 128:
                 # para mais facil leitura leiase com base no menor valor rgb da triade, os limites são entre o 0 e +20, entre +20 e +40 e entre +40 e +60
-                menor_valor  = [maior_valor_de_menor, maior_valor_de_maior, maior_valor_de_meio]
+                menor_valor  = [maior_valor_de_menor_analoga, maior_valor_de_maior_analoga, maior_valor_de_meio_analoga]
                 menor_valor.sort()
-                maior_valor_de_maior = menor_valor[0]
-                menor_valor_de_maior = menor_valor[0] + 20
-                maior_valor_de_meio = menor_valor[0] + 20
-                menor_valor_de_meio = menor_valor[0] + 40
-                maior_valor_de_menor = menor_valor[0] + 40
-                menor_valor_de_menor = menor_valor[0] + 60
+                maior_valor_de_maior_analoga = menor_valor[0]
+                menor_valor_de_maior_analoga = menor_valor[0] + 20
+                maior_valor_de_meio_analoga = menor_valor[0] + 20
+                menor_valor_de_meio_analoga = menor_valor[0] + 40
+                maior_valor_de_menor_analoga = menor_valor[0] + 40
+                menor_valor_de_menor_analoga = menor_valor[0] + 60
         tabela = tabela.to_dict(orient='index')
         if maior_analoga == red:
             primeira_menor = "blue"
