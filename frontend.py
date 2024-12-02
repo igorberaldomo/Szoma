@@ -260,8 +260,8 @@ if img_file:
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
         if cropped_img:
-            cropped_img.save("tempimage/cropped.png")
-            findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
+            cropped_img.save("image/cropped.png")
+            findrgb(procura, "image/cropped.png", camera, opcao_fornecedores)
         time.sleep(10)
         clear_images()
 elif camera:
@@ -276,8 +276,8 @@ elif camera:
         _ = edited_foto.thumbnail((150,150))
         st.image(edited_foto)
         if edited_foto:
-            edited_foto.save("tempimage/cropped.png")
-            findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
+            edited_foto.save("image/cropped.png")
+            findrgb(procura, "image/cropped.png", camera, opcao_fornecedores)
             time.sleep(10)
             clear_images()
     
