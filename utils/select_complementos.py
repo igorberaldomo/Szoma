@@ -61,6 +61,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         difRG = red - green
         difGB = green - blue
         
+        st.write(difRB)
         if difRB < 0:
             difRB = difRB * -1
         if difRG < 0:
