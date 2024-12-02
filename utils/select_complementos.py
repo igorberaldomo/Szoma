@@ -85,10 +85,10 @@ def select_complementos(red, green, blue, palheta, tabela):
                 menor_valor  = [maior_valor_de_menor, maior_valor_de_maior, maior_valor_de_meio]
                 menor_valor.sort()
                 maior_valor_de_maior = menor_valor[0]
-                maior_valor_de_meio = menor_valor[0] + 20
-                maior_valor_de_menor = menor_valor[0] + 40
                 menor_valor_de_maior = menor_valor[0] + 20
+                maior_valor_de_meio = menor_valor[0] + 20
                 menor_valor_de_meio = menor_valor[0] + 40
+                maior_valor_de_menor = menor_valor[0] + 40
                 menor_valor_de_menor = menor_valor[0] + 60
             
             
