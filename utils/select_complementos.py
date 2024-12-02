@@ -82,7 +82,7 @@ def select_complementos(red, green, blue, palheta, tabela):
                 menor_valor_de_meio = maior_valor[2] - 40
                 maior_valor_de_menor = maior_valor[2] - 40
                 menor_valor_de_menor = maior_valor[2] - 60
-            elif red < 128 or green < 128 or blue < 128:
+            if red < 128 or green < 128 or blue < 128:
                 # para mais facil leitura leiase com base no menor valor rgb da triade, os limites são entre o 0 e +20, entre +20 e +40 e entre +40 e +60
                 menor_valor  = [maior_valor_de_menor, maior_valor_de_maior, maior_valor_de_meio]
                 menor_valor.sort()
@@ -93,7 +93,7 @@ def select_complementos(red, green, blue, palheta, tabela):
                 maior_valor_de_menor = menor_valor[0] + 40
                 menor_valor_de_menor = menor_valor[0] + 60
             
-            
+        st.write(maior_valor_de_maior, menor_valor_de_maior, maior_valor_de_meio, menor_valor_de_meio, maior_valor_de_menor, menor_valor_de_menor)
             
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         tabela = tabela.to_dict(orient='index')
