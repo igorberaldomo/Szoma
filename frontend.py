@@ -131,7 +131,7 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
 def clear_images():
-    folder_path = "tempimage/"
+    folder_path = "image/"
 
     for filename in os.listdir(folder_path):
         if filename.endswith('.png'):
