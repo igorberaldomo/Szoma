@@ -8,6 +8,8 @@ def filter_lines(table):
                 "hexadecimal": table[i]["hexadecimal"],
                 "fornecedores": table[i]["fornecedores"],
                 "pantone_código": table[i]["pantone_código"],
+                "pantone_name": table[i]["pantone_name"],
+                "pantone_hexadecimal": table[i]["pantone_hex"],
                 "red": table[i]["red"],
                 "green": table[i]["green"],
                 "blue": table[i]["blue"],
