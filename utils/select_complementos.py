@@ -82,7 +82,7 @@ def select_complementos(red, green, blue, palheta, tabela):
                 menor_valor_de_meio = maior_valor[2] - 40
                 maior_valor_de_menor = maior_valor[2] - 40
                 menor_valor_de_menor = maior_valor[2] - 60
-            elif red < 128 or green < 128 or blue < 128:
+            if red < 128 or green < 128 or blue < 128:
                 # para mais facil leitura leiase com base no menor valor rgb da triade, os limites são entre o 0 e +20, entre +20 e +40 e entre +40 e +60
                 menor_valor  = [maior_valor_de_menor, maior_valor_de_maior, maior_valor_de_meio]
                 menor_valor.sort()
