@@ -138,7 +138,6 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
 
 def clear_images():
     folder_path = "image/"
-
     for filename in os.listdir(folder_path):
         if filename.endswith('.png'):
             os.remove(os.path.join(folder_path, filename))
@@ -287,5 +286,7 @@ elif camera:
             findrgb(procura, "image/cropped.png", camera, opcao_fornecedores)
             time.sleep(10)
             clear_images()
+elif procura:
+        findrgb(procura, None, None, opcao_fornecedores)
     
 receivecolors()
