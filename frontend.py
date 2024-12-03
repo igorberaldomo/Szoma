@@ -96,7 +96,6 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
             fornecedores = opcao_fornecedores
             tabela = st.session_state.tables
             tabela = tabela[fornecedores]
-            st.write(fornecedores)
             response_df = primary_select(red, green, blue, tabela)
             if response_df.empty:
                 st.text('Erro imagem desfocada, selecione outra imagem')
@@ -109,7 +108,6 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
             fornecedores = opcao_fornecedores
             tabela = st.session_state.tables
             tabela = tabela[fornecedores]
-            st.write(fornecedores)
             response_df = primary_select(red, green, blue, tabela)
             if response_df.empty:
                 st.text('Erro imagem desfocada, tire outra foto')
@@ -121,8 +119,7 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
                 nome = procura
                 # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
                 tabela = st.session_state.tables
-                response_df = search_name_for_id(nome, tabela)
-                st.write(fornecedores)
+                response_df = search_name_for_id(nome, tabela, opcao_fornecedores)
                 st.session_state.resultados = response_df
             if procura[0].isnumeric():
                 codigo = procura
@@ -134,7 +131,6 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
                 hexadecimal = procura
                 tabela = st.session_state.tables
                 tabela = tabela[fornecedores]
-                st.write(fornecedores)
                 response_df = select_hexadecimal(hexadecimal, tabela)
                 st.session_state.resultados = response_df
     else:

@@ -1,6 +1,8 @@
 from colorthief import ColorThief
 import json
 
+
+fornecedores = 'anjo'
 def findrgb(hexadecimal):
     hexadecimal = hexadecimal.replace('#', '')
     r = int(hexadecimal[0:2], 16)
@@ -102,7 +104,7 @@ with open ("sherwin-williams.json", "r+") as file:
                                 
         pant = findpant(red, green, blue)
         data['pantone'] = pant
-        data['fornecedor'] = 'sherwin-willians'
+        data['fornecedor'] = fornecedores 
 
 
         def write_json(new_data, filename='sherwin-willians_2.json'):
