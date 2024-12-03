@@ -23,7 +23,7 @@ if "complementos" not in st.session_state:
     st.session_state.complementos = []
 if "tables" not in st.session_state:
     st.session_state.tables = []
-if "color" not in st.seesion_state:
+if "color" not in st.session_state:
     st.session_state.color = '#ffffff'
     
 
@@ -255,7 +255,6 @@ aspect_dict = {
     "Nenhum": None
 }
 aspect_ratio = aspect_dict[aspect_choice]
-
 
 opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
 tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
