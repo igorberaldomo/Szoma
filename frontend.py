@@ -172,7 +172,6 @@ def receivecolors():
             nome = cor_principal['nome']
             hexadecimal = cor_principal['hexadecimal']
             pantone_codigo = cor_principal['pantone_código']
-
             # Calcular complementos
             tabela = tabela[fornecedores]
             complementos = select_complementos(red, green, blue, tipo_de_palheta, tabela)
