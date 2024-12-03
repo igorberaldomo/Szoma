@@ -23,6 +23,9 @@ if "complementos" not in st.session_state:
     st.session_state.complementos = []
 if "tables" not in st.session_state:
     st.session_state.tables = []
+if "color" not in st.seesion_state:
+    st.session_state.color = '#ffffff'
+    
 
 # Estilização personalizada
 st.markdown("""
@@ -85,6 +88,11 @@ def getting_data():
 tables = getting_data()
 st.session_state.tables = tables 
 
+def change_box_color():
+    if st.session_state.color == '#ffffff':
+        st.session_state.color = '#000000'
+    else:
+        st.session_state.color = '#ffffff'
 
 def findrgb(procura,upload,camera ,opcao_fornecedores):
     st.session_state.resultados = []
@@ -236,8 +244,9 @@ with st.container():
     img_file = st.file_uploader("", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 st.sidebar.header("Configurações do cropper")
 realtime_update = st.sidebar.checkbox(label="Update em tempo real", value=True)
-box_color = st.sidebar.color_picker(label="Cor da caixa", value='#0000FF')
-aspect_choice = st.sidebar.radio(label="Tamanho do corte", options=["1:1", "16:9", "4:3", "2:3", "Nenhum"])
+change_color = st.button(label="Alterar cor da caixa" , onclick=change_box_color)
+box_color = st.session_state.color
+aspect_choice = "1:1"
 aspect_dict = {
     "1:1": (1, 1),
     "16:9": (16, 9),
