@@ -6,7 +6,7 @@ from utils.conect_to_engine_production import conect_to_engine_production
 
 engine = conect_to_engine_production()
 
-def search_name_for_id(nome, tabela):
+def search_name_for_id(nome, tabela, fornecedores = "todos"):
     with open("search/search_dict.json", "r") as file:
         search_dict = json.load(file)
         name_id = -1
@@ -17,23 +17,23 @@ def search_name_for_id(nome, tabela):
                 if nome in keys:
                     name_id = search_dict["quickSearch"][0][nome]
                     tabela_escolida = tabela["coral"]      
-        if name_id == -1:
+        if name_id == -1 or fornecedores == "suvinil":
             for keys in search_dict["suvinil"][0]:
                 if nome in keys:
                     name_id = search_dict["suvinil"][0][nome]
                     tabela_escolida = tabela["suvinil"]   
-        if name_id == -1:
+        if name_id == -1 or fornecedores == "sherwin-willians":
             for keys in search_dict["sherwin-willians"][0]:
                 if nome in keys:
                     name_id = search_dict["sherwin-willians"][0][nome]
                     tabela_escolida = tabela["sherwin-willians"]   
         if name_id == -1:
-            for keys in search_dict["anjo"][0]:
+            for keys in search_dict["anjo"][0] or fornecedores == "anjo":
                 if nome in keys:
                     name_id = search_dict["anjo"][0][nome]
                     tabela_escolida = tabela["anjo"]   
         if name_id == -1:
-            for keys in search_dict["coral"][0]:
+            for keys in search_dict["coral"][0] or fornecedores == "coral":
                 if nome in keys:
                     name_id = search_dict["coral"][0][nome]
                     tabela_escolida = tabela["coral"]   
