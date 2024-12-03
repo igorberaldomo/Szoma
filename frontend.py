@@ -243,7 +243,7 @@ with st.container():
     camera = st.camera_input(label = "Use a camera para capturar a cor ou carregue uma imagem abaixo")
     img_file = st.file_uploader("", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 st.sidebar.header("Configurações do cropper")
-realtime_update = st.sidebar.checkbox(label="Update em tempo real", value=True)
+realtime_update = True
 change_color = st.button("Alterar cor da caixa" , on_click=change_box_color)
 box_color = st.session_state.color
 aspect_choice = "1:1"
