@@ -394,6 +394,11 @@ def select_complementos(red, green, blue, palheta, tabela):
                     menor_distancia_2 = x
                     distancia = distancia_atual
             x += 1
+        
+        # filtra as linhas necessárias  
+        resultado1 = filter_lines(resultado1)
+        resultado2 = filter_lines(resultado2)
+        
         # coloca a cor na lista
         if complemento1 == True & complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
@@ -404,6 +409,7 @@ def select_complementos(red, green, blue, palheta, tabela):
             lista_complementos.append(resultado1[menor_distancia_1])
         elif complemento1 == False & complemento2 == False:
             return []
+        
 
         return lista_complementos
 
@@ -585,6 +591,11 @@ def select_complementos(red, green, blue, palheta, tabela):
                     distancia = distancia_atual
                     break
             x += 1
+            
+        # filtra as linhas necessárias  
+        resultado1 = filter_lines(resultado1)
+        resultado2 = filter_lines(resultado2)
+        
         # coloca na lista de complementos
         if complemento1 == True & complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
