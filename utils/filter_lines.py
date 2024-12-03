@@ -10,6 +10,7 @@ def filter_lines(table):
                 "pantone_código": table[i]["pantone_código"],
                 "pantone_name": table[i]["pantone_name"],
                 "pantone_hexadecimal": table[i]["pantone_hex"],
+                "ncs": table[i]["ncs"],
                 "red": table[i]["red"],
                 "green": table[i]["green"],
                 "blue": table[i]["blue"],

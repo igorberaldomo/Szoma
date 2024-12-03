@@ -176,6 +176,7 @@ def receivecolors():
             nome = cor_principal['nome']
             hexadecimal = cor_principal['hexadecimal']
             pantone_codigo = cor_principal['pantone_código']
+            ncs = cor_principal['ncs']
             # Calcular complementos
             tabela = tabela[fornecedores]
             complementos = select_complementos(red, green, blue, tipo_de_palheta, tabela)
@@ -189,6 +190,7 @@ def receivecolors():
             nomec1 = complemento1['nome']
             hexadecimalc1 = complemento1['hexadecimal']
             pantone_codigoc1 = complemento1['pantone_código']
+            ncs1 = complemento1['ncs']
 
             complemento2 = complementos[1]
             redc2, greenc2, bluec2 = complemento2['red'], complemento2['green'], complemento2['blue']
@@ -197,6 +199,7 @@ def receivecolors():
             nomec2 = complemento2['nome']
             hexadecimalc2 = complemento2['hexadecimal']
             pantone_codigoc2 = complemento2['pantone_código']
+            ncs2 = complemento2['ncs']
             # renderizar complementos
             with container:
                 script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 450px;'>"
@@ -205,6 +208,7 @@ def receivecolors():
                           "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
                           "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
                           "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
                           "</div></div>"
@@ -214,6 +218,7 @@ def receivecolors():
                           "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
                           "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
                           "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
                           "</div></div>"
@@ -223,12 +228,13 @@ def receivecolors():
                           "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
                           "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
                           "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
                           "</div></div></div>").format(
-                    hexadecimal, fornecedores, nome, pantone_codigo, red, green, blue, c, m, y, k,
-                    hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
-                    hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
+                    hexadecimal, fornecedores, nome, pantone_codigo, ncs, red, green, blue, c, m, y, k,
+                    hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1,ncs1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
+                    hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2,ncs2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
                 st.markdown(script, unsafe_allow_html=True)
         except Exception as e:
             st.write("Nenhuma cor encontrada")
