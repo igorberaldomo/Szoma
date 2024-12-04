@@ -265,6 +265,7 @@ aspect_ratio = aspect_dict[aspect_choice]
 opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
 tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
+iluminação = st.slider('Iluminação', min_value=0.0, max_value=2.0, value=1.0, step=0.1)
 
 
 if img_file:
@@ -276,7 +277,7 @@ if img_file:
                                     aspect_ratio=aspect_ratio)    
         # Manipulate cropped image at will
         st.write("Prévia")
-        cropped_img = cropped_img.ImageEnhance.brightness(cropped_img).enhance(0.95)
+        cropped_img = cropped_img.ImageEnhance.brightness(cropped_img).enhance(iluminação)
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
         if cropped_img:
