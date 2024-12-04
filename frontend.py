@@ -128,7 +128,8 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
                 nome = procura
                 # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
                 tabela = st.session_state.tables
-                response_df = search_name_for_id(nome, tabela, opcao_fornecedores)
+                tabela = tabela[fornecedores]
+                response_df = search_name_for_id(nome, tabela)
                 st.session_state.resultados = response_df
             if procura[0].isnumeric():
                 codigo = procura
