@@ -89,6 +89,9 @@ def getting_data():
 tables = getting_data()
 st.session_state.tables = tables 
 
+def findSimilar(image_path, procura):
+    
+
 def change_box_color():
     if st.session_state.color == '#ffffff':
         st.session_state.color = '#000000'
@@ -128,7 +131,8 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
                 nome = procura
                 # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
                 tabela = st.session_state.tables
-                response_df = search_name_for_id(nome, tabela, opcao_fornecedores)
+                tabela = tabela[fornecedores]
+                response_df = search_name_for_id(nome, tabela)
                 st.session_state.resultados = response_df
             if procura[0].isnumeric():
                 codigo = procura
@@ -262,45 +266,58 @@ aspect_dict = {
 }
 aspect_ratio = aspect_dict[aspect_choice]
 
-opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
-tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
-procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
-iluminação = st.slider('Iluminação', min_value=0.0, max_value=2.0, value=1.0, step=0.1)
+modo = st.selectbox('Modo', options=("Procura de palhetas"))
+if modo == "Procura de Palhetas":
+    opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+    tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
+    procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
+    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
+    if img_file:
+            img = image2.open(img_file)
+            # Get a cropped image from the frontend
+            cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
+                                        aspect_ratio=aspect_ratio)    
+            # Manipulate cropped image at will
+            st.write("Prévia")
 
+            _ = cropped_img.thumbnail((150,150))
+            st.image(cropped_img)
+            if cropped_img:
+                enhancer = ImageEnhance.Brightness(cropped_img)
+                enhancer.enhance(iluminação).save("image/cropped.png")
+                
+                findrgb(procura, "image/cropped.png", camera, opcao_fornecedores, modo)
 
-if img_file:
-        img = image2.open(img_file)
-        if not realtime_update:
-            st.write("Clique duas vezes para cortar a imagem")
-        # Get a cropped image from the frontend
-        cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
-                                    aspect_ratio=aspect_ratio)    
-        # Manipulate cropped image at will
-        st.write("Prévia")
-
-        _ = cropped_img.thumbnail((150,150))
-        st.image(cropped_img)
-        if cropped_img:
-            enhancer = ImageEnhance.Brightness(cropped_img)
-            enhancer.enhance(iluminação).save("image/cropped.png")
+    elif camera:
+            foto = image2.open(camera)
+            if not realtime_update:
+                st.write("Clique duas vezes para cortar a imagem")
+            # Get a cropped image from the frontend
+            edited_foto = st_cropper(foto, realtime_update=realtime_update, box_color=box_color,
+                                        aspect_ratio=aspect_ratio)    
+            # Manipulate cropped image at will
+            st.write("Prévia")
+            _ = edited_foto.thumbnail((150,150))
+            st.image(edited_foto)
+            if edited_foto:
+                enhancer = ImageEnhance.Brightness(edited_foto)
+                enhancer.enhance(iluminação).save("image/cropped.png")
+                findrgb(procura, "image/cropped.png", camera, opcao_fornecedores, modo)
+    elif procura:
+            findrgb(procura, None, None, opcao_fornecedores)
+if modo == "Comparação de Marcas":
+    procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
+    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
+    if img_file:
+            img = image2.open(img_file)
+            cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
+                                        aspect_ratio=aspect_ratio)    
             
-            findrgb(procura, "image/cropped.png", camera, opcao_fornecedores)
-
-elif camera:
-        foto = image2.open(camera)
-        if not realtime_update:
-            st.write("Clique duas vezes para cortar a imagem")
-        # Get a cropped image from the frontend
-        edited_foto = st_cropper(foto, realtime_update=realtime_update, box_color=box_color,
-                                    aspect_ratio=aspect_ratio)    
-        # Manipulate cropped image at will
-        st.write("Prévia")
-        _ = edited_foto.thumbnail((150,150))
-        st.image(edited_foto)
-        if edited_foto:
-            edited_foto.save("image/cropped.png")
-            findrgb(procura, "image/cropped.png", camera, opcao_fornecedores)
-elif procura:
-        findrgb(procura, None, None, opcao_fornecedores)
-    
+            st.write("Prévia")
+            _ = cropped_img.thumbnail((150,150))
+            st.image(cropped_img)
+            if cropped_img:
+                enhancer = ImageEnhance.Brightness(cropped_img)
+                enhancer.enhance(iluminação).save("image/cropped.png")
+                findSimilar("image/cropped.png", procura )
 receivecolors()
