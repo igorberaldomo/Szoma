@@ -265,7 +265,7 @@ aspect_ratio = aspect_dict[aspect_choice]
 opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
 tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
-iluminação = st.slider('Iluminação', min_value=0.0, max_value=2.0, value=1.0, step=0.1)
+iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
 
 
 if img_file:
