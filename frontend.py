@@ -89,7 +89,7 @@ def getting_data():
 tables = getting_data()
 st.session_state.tables = tables 
 
-def findSimilar(image_path, procura):
+# def findSimilar(image_path, procura):
     
 
 def change_box_color():
