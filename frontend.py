@@ -5,6 +5,7 @@ import time
 import os
 from streamlit_cropper import st_cropper
 from PIL import Image as image2
+from PIL import ImageEnhance
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -23,6 +24,9 @@ if "complementos" not in st.session_state:
     st.session_state.complementos = []
 if "tables" not in st.session_state:
     st.session_state.tables = []
+if "color" not in st.session_state:
+    st.session_state.color = '#ffffff'
+    
 
 # Estilização personalizada
 st.markdown("""
@@ -85,6 +89,11 @@ def getting_data():
 tables = getting_data()
 st.session_state.tables = tables 
 
+def change_box_color():
+    if st.session_state.color == '#ffffff':
+        st.session_state.color = '#000000'
+    else:
+        st.session_state.color = '#ffffff'
 
 def findrgb(procura,upload,camera ,opcao_fornecedores):
     st.session_state.resultados = []
@@ -97,7 +106,10 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
             tabela = st.session_state.tables
             tabela = tabela[fornecedores]
             response_df = primary_select(red, green, blue, tabela)
-            st.session_state.resultados = response_df
+            if response_df.empty:
+                st.text('Erro imagem desfocada, selecione outra imagem')
+            else:
+                st.session_state.resultados = response_df
         elif camera is not None:
             ct = ColorThief(camera)
             cor = ct.get_color(quality=1)
@@ -106,14 +118,17 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
             tabela = st.session_state.tables
             tabela = tabela[fornecedores]
             response_df = primary_select(red, green, blue, tabela)
-            st.session_state.resultados = response_df
+            if response_df.empty:
+                st.text('Erro imagem desfocada, tire outra foto')
+            else:
+                st.session_state.resultados = response_df
         elif procura is not None:
             fornecedores = opcao_fornecedores
             if procura[0].isalpha():
                 nome = procura
                 # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
                 tabela = st.session_state.tables
-                response_df = search_name_for_id(nome, tabela)
+                response_df = search_name_for_id(nome, tabela, opcao_fornecedores)
                 st.session_state.resultados = response_df
             if procura[0].isnumeric():
                 codigo = procura
@@ -131,8 +146,7 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
 def clear_images():
-    folder_path = "tempimage/"
-
+    folder_path = "image/"
     for filename in os.listdir(folder_path):
         if filename.endswith('.png'):
             os.remove(os.path.join(folder_path, filename))
@@ -163,7 +177,7 @@ def receivecolors():
             nome = cor_principal['nome']
             hexadecimal = cor_principal['hexadecimal']
             pantone_codigo = cor_principal['pantone_código']
-
+            ncs = cor_principal['ncs']
             # Calcular complementos
             tabela = tabela[fornecedores]
             complementos = select_complementos(red, green, blue, tipo_de_palheta, tabela)
@@ -177,6 +191,7 @@ def receivecolors():
             nomec1 = complemento1['nome']
             hexadecimalc1 = complemento1['hexadecimal']
             pantone_codigoc1 = complemento1['pantone_código']
+            ncs1 = complemento1['ncs']
 
             complemento2 = complementos[1]
             redc2, greenc2, bluec2 = complemento2['red'], complemento2['green'], complemento2['blue']
@@ -185,38 +200,42 @@ def receivecolors():
             nomec2 = complemento2['nome']
             hexadecimalc2 = complemento2['hexadecimal']
             pantone_codigoc2 = complemento2['pantone_código']
+            ncs2 = complemento2['ncs']
             # renderizar complementos
             with container:
-                script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 450px;'>"
-                          "<div style='background-color: white ; width: 660px; height: 450px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
+                script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 480px;'>"
+                          "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
                           "<div><h5 style='margin: 0px; padding:0px; color:black;'><strong>Cor principal:</strong></h5>"
                           "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
                           "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
                           "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
                           "</div></div>"
-                          "<div style='background-color: white ; width: 660px; height: 450px; padding: 10px;"
+                          "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;"
                           "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);'>"
                           "<div><h5 style='color:black;margin: 0px; padding:0px'>Cor secundária 1:</h5>"
                           "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
                           "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
                           "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
                           "</div></div>"
-                          "<div style='background-color: white ; width: 660px; height: 450px; padding: 10px;"
+                          "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;"
                           "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 0px 10px 10px 0px;'>"
                           "<div><h5 style='margin: 0px; padding:0px; color:black;'>Cor secundária 2:</h5>"
                           "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
                           "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
                           "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
                           "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
                           "</div></div></div>").format(
-                    hexadecimal, fornecedores, nome, pantone_codigo, red, green, blue, c, m, y, k,
-                    hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
-                    hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
+                    hexadecimal, fornecedores, nome, pantone_codigo, ncs, red, green, blue, c, m, y, k,
+                    hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1,ncs1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
+                    hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2,ncs2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
                 st.markdown(script, unsafe_allow_html=True)
         except Exception as e:
             st.write("Nenhuma cor encontrada")
@@ -227,12 +246,13 @@ def receivecolors():
 # Interface do usuário
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
-
-camera = st.camera_input(label = "Use a camera para capturar a cor")
-img_file = st.sidebar.file_uploader(label='Carregue sua imagem ', type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
-realtime_update = st.sidebar.checkbox(label="Update em tempo real", value=True)
-box_color = st.sidebar.color_picker(label="Cor da caixa", value='#0000FF')
-aspect_choice = st.sidebar.radio(label="Tamanho do corte", options=["1:1", "16:9", "4:3", "2:3", "Nenhum"])
+with st.container():
+    camera = st.camera_input(label = "Use a camera para capturar a cor ou carregue uma imagem abaixo")
+    img_file = st.file_uploader("", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
+realtime_update = True
+change_color = st.button("Alterar cor da caixa" , on_click=change_box_color)
+box_color = st.session_state.color
+aspect_choice = "1:1"
 aspect_dict = {
     "1:1": (1, 1),
     "16:9": (16, 9),
@@ -242,10 +262,10 @@ aspect_dict = {
 }
 aspect_ratio = aspect_dict[aspect_choice]
 
-
-opcao_fornecedores = st.selectbox('Em que categoria você quer procurar?', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
-tipo_de_palheta = st.selectbox('Quais opções de palheta você está procurando?', options=('triade', 'complementar', 'análoga'))
+opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
 procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
+iluminação = st.slider('Iluminação', min_value=0.0, max_value=2.0, value=1.0, step=0.1)
 
 
 if img_file:
@@ -257,13 +277,13 @@ if img_file:
                                     aspect_ratio=aspect_ratio)    
         # Manipulate cropped image at will
         st.write("Prévia")
+        cropped_img = cropped_img.ImageEnhance.brightness(cropped_img).enhance(iluminação)
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
         if cropped_img:
-            cropped_img.save("tempimage/cropped.png")
-            findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
-        time.sleep(10)
-        clear_images()
+            cropped_img.save("image/cropped.png")
+            findrgb(procura, "image/cropped.png", camera, opcao_fornecedores)
+
 elif camera:
         foto = image2.open(camera)
         if not realtime_update:
@@ -276,9 +296,9 @@ elif camera:
         _ = edited_foto.thumbnail((150,150))
         st.image(edited_foto)
         if edited_foto:
-            edited_foto.save("tempimage/cropped.png")
-            findrgb(procura, "tempimage/cropped.png", camera, opcao_fornecedores)
-            time.sleep(10)
-            clear_images()
+            edited_foto.save("image/cropped.png")
+            findrgb(procura, "image/cropped.png", camera, opcao_fornecedores)
+elif procura:
+        findrgb(procura, None, None, opcao_fornecedores)
     
 receivecolors()

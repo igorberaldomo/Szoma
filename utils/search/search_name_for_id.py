@@ -17,7 +17,7 @@ def search_name_for_id(nome, tabela):
                 if nome in keys:
                     name_id = search_dict["quickSearch"][0][nome]
                     tabela_escolida = tabela["coral"]      
-        if name_id == -1:
+        if name_id == -1 :
             for keys in search_dict["suvinil"][0]:
                 if nome in keys:
                     name_id = search_dict["suvinil"][0][nome]

@@ -4,7 +4,7 @@ import json
 cor = 'zimbro.png'
 data = dict()
 nome = ''
-
+fornecedores = 'anjo'
 
 def findpant(r,g,b):
     with open('pantone/pantone.json','r+') as file:
@@ -95,7 +95,7 @@ b = int(color[2])
 
 pant = findpant(r,g,b)
 data['pantone'] = pant
-data['fornecedores'] = 'anjo'
+data['fornecedores'] = fornecedores
 # fornecedor
 
 def write_json(new_data, filename='anjo.json'):

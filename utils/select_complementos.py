@@ -56,11 +56,42 @@ def select_complementos(red, green, blue, palheta, tabela):
         # a primeira cor da triade a segunda cor da triade
         primeira = list()
         segunda = list()
-        if red > 130 and green > 130 and blue > 130 and red < 170 and green < 170 and blue < 170:
-            maior_valor_de_maior += 20
-            menor_valor_de_maior += 20
-            maior_valor_de_menor -= 20
-            menor_valor_de_menor -= 20
+        # cores como branco preto ou cinza, mais especificamente aquelas cores que tem dois ou mais valores rgb iguais, não adequados para serem buscados por filtros complementares, pois o filtro precisa que os valores sejam diferentes para gerarem cores complementares
+        difRB = red - blue
+        difRG = red - green
+        difGB = green - blue
+        
+        if difRB < 0:
+            difRB = difRB * -1
+        if difRG < 0:
+            difRG = difRG * -1
+        if difGB < 0:
+            difGB = difGB * -1
+        # se a diferença entre as cores for menor ou igual a 3, ela tem dois ou mais valores próximos o suficiente para causar que duas cores do complemento sejam iguais
+        if difRB < 3 and difRG < 3 and difGB < 3:
+            # como precisamos de cores diferentes para os complementos 
+            if red > 128 or green > 128 or blue > 128:
+                maior_valor  = [maior_valor_de_menor, maior_valor_de_maior, maior_valor_de_meio]
+                maior_valor.sort()
+                # para mais facil leitura leiase com base no maior valor rgb da triade , os limites são entre o 0 e -20, entre -20 e -40 e entre -40 e -60
+                maior_valor_de_maior = maior_valor[2]
+                menor_valor_de_maior = maior_valor[2] -20
+                maior_valor_de_meio = maior_valor[2] - 20
+                menor_valor_de_meio = maior_valor[2] - 40
+                maior_valor_de_menor = maior_valor[2] - 40
+                menor_valor_de_menor = maior_valor[2] - 60
+            if red < 128 or green < 128 or blue < 128:
+                # para mais facil leitura leiase com base no menor valor rgb da triade, os limites são entre o 0 e +20, entre +20 e +40 e entre +40 e +60
+                menor_valor  = [maior_valor_de_menor, maior_valor_de_maior, maior_valor_de_meio]
+                menor_valor.sort()
+                maior_valor_de_maior = menor_valor[0]
+                menor_valor_de_maior = menor_valor[0] + 20
+                maior_valor_de_meio = menor_valor[0] + 20
+                menor_valor_de_meio = menor_valor[0] + 40
+                maior_valor_de_menor = menor_valor[0] + 40
+                menor_valor_de_menor = menor_valor[0] + 60
+
+            
         # qual das cores complementares da triade tem seu maior valor entre red, green e blue isso vai ser utilizado para filtrar os complementos no futuro para encontrar complementos proporcionais
         tabela = tabela.to_dict(orient='index')
         if maior == red:
@@ -210,7 +241,7 @@ def select_complementos(red, green, blue, palheta, tabela):
                     break
             x += 1
 
-        # a testar 
+        # filtra as linhas necessárias 
         resultado1 = filter_lines(resultado1)
         resultado2 = filter_lines(resultado2)
         
@@ -363,6 +394,11 @@ def select_complementos(red, green, blue, palheta, tabela):
                     menor_distancia_2 = x
                     distancia = distancia_atual
             x += 1
+        
+        # filtra as linhas necessárias  
+        resultado1 = filter_lines(resultado1)
+        resultado2 = filter_lines(resultado2)
+        
         # coloca a cor na lista
         if complemento1 == True & complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
@@ -373,6 +409,7 @@ def select_complementos(red, green, blue, palheta, tabela):
             lista_complementos.append(resultado1[menor_distancia_1])
         elif complemento1 == False & complemento2 == False:
             return []
+        
 
         return lista_complementos
 
@@ -421,11 +458,7 @@ def select_complementos(red, green, blue, palheta, tabela):
         primeira_menor = ""
         segunda_menor = ""
         
-        if red > 130 and green > 130 and blue > 130 and red < 170 and green < 170 and blue < 170:
-            maior_valor_de_maior_analoga += 20
-            menor_valor_de_maior_analoga += 20
-            maior_valor_de_menor_analoga -= 20
-            menor_valor_de_menor_analoga -= 20
+ 
         tabela = tabela.to_dict(orient='index')
         if maior_analoga == red:
             primeira_menor = "blue"
@@ -558,6 +591,11 @@ def select_complementos(red, green, blue, palheta, tabela):
                     distancia = distancia_atual
                     break
             x += 1
+            
+        # filtra as linhas necessárias  
+        resultado1 = filter_lines(resultado1)
+        resultado2 = filter_lines(resultado2)
+        
         # coloca na lista de complementos
         if complemento1 == True & complemento2 == True:
             lista_complementos.append(resultado1[menor_distancia_1])
