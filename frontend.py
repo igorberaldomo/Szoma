@@ -89,9 +89,40 @@ def getting_data():
 tables = getting_data()
 st.session_state.tables = tables 
 
-# def findSimilar(image_path, procura):
-    
-
+def findSimilar(image_path, procura):
+    if procura is not None:
+        fornecedores = opcao_fornecedores
+        if procura[0].isalpha():
+            nome = procura
+            # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
+            tabela = st.session_state.tables
+            tabela = tabela[fornecedores]
+            response_df = search_name_for_id(nome, tabela)
+            st.session_state.resultados = response_df
+        if procura[0].isnumeric():
+            codigo = procura
+            tabela = st.session_state.tables
+            tabela = tabela[fornecedores]
+            response_df = select_códigos(codigo, tabela)
+            st.session_state.resultados = response_df
+        if procura[0] == '#':
+            hexadecimal = procura
+            tabela = st.session_state.tables
+            tabela = tabela[fornecedores]
+            response_df = select_hexadecimal(hexadecimal, tabela)
+            st.session_state.resultados = response_df
+    elif image_path is not None:
+        ct = ColorThief(image_path)
+        cor = ct.get_color(quality=1)
+        red, green, blue = cor
+        fornecedores = opcao_fornecedores
+        tabela = st.session_state.tables
+        tabela = tabela[fornecedores]
+        response_df = primary_select(red, green, blue, tabela)
+        st.session_state.resultados = response_df
+    else:
+        st.write('Não foi conseguido pegar imagem')
+        
 def change_box_color():
     if st.session_state.color == '#ffffff':
         st.session_state.color = '#000000'
@@ -161,91 +192,95 @@ def clear_images():
         if filename.endswith('.jpeg'):
             os.remove(os.path.join(folder_path, filename))
             print(f"Deleted: {filename}")
-def receivecolors():
-    if len(st.session_state.resultados) > 0:
-        data = st.session_state.resultados
-        cores_df = pd.DataFrame(data)
-        container = st.container()
-        st.toast('Carregando...')
-        time.sleep(1.5)
-        data_df = pd.DataFrame(data, index=[0])
-        data = data_df.to_dict(orient='records')
-        tabela = st.session_state.tables
-        fornecedores = opcao_fornecedores
-        try:
-            # Processar a cor principal
-            cor_principal = data[0]
-            red, green, blue = cor_principal['red'], cor_principal['green'], cor_principal['blue']
-            c, m, y, k = rgb_to_cmyk(red, green, blue)
-            fornecedores = cor_principal['fornecedores']
-            nome = cor_principal['nome']
-            hexadecimal = cor_principal['hexadecimal']
-            pantone_codigo = cor_principal['pantone_código']
-            ncs = cor_principal['ncs']
-            # Calcular complementos
-            tabela = tabela[fornecedores]
-            complementos = select_complementos(red, green, blue, tipo_de_palheta, tabela)
-            st.session_state.complementos = complementos
+def receivecolors(modo):
+    if modo == 'Procura de palhetas':
+        if len(st.session_state.resultados) > 0:
+            data = st.session_state.resultados
+            cores_df = pd.DataFrame(data)
+            container = st.container()
+            st.toast('Carregando...')
+            time.sleep(1.5)
+            data_df = pd.DataFrame(data, index=[0])
+            data = data_df.to_dict(orient='records')
+            tabela = st.session_state.tables
+            fornecedores = opcao_fornecedores
+            try:
+                # Processar a cor principal
+                cor_principal = data[0]
+                red, green, blue = cor_principal['red'], cor_principal['green'], cor_principal['blue']
+                c, m, y, k = rgb_to_cmyk(red, green, blue)
+                fornecedores = cor_principal['fornecedores']
+                nome = cor_principal['nome']
+                hexadecimal = cor_principal['hexadecimal']
+                pantone_codigo = cor_principal['pantone_código']
+                ncs = cor_principal['ncs']
+                # Calcular complementos
+                tabela = tabela[fornecedores]
+                complementos = select_complementos(red, green, blue, tipo_de_palheta, tabela)
+                st.session_state.complementos = complementos
 
-            # Processar complementos
-            complemento1 = complementos[0]
-            redc1, greenc1, bluec1 = complemento1['red'], complemento1['green'], complemento1['blue']
-            cc1, mc1, yc1, kc1 = rgb_to_cmyk(redc1, greenc1, bluec1)
-            fornecedoresc1 = complemento1['fornecedores']
-            nomec1 = complemento1['nome']
-            hexadecimalc1 = complemento1['hexadecimal']
-            pantone_codigoc1 = complemento1['pantone_código']
-            ncs1 = complemento1['ncs']
+                # Processar complementos
+                complemento1 = complementos[0]
+                redc1, greenc1, bluec1 = complemento1['red'], complemento1['green'], complemento1['blue']
+                cc1, mc1, yc1, kc1 = rgb_to_cmyk(redc1, greenc1, bluec1)
+                fornecedoresc1 = complemento1['fornecedores']
+                nomec1 = complemento1['nome']
+                hexadecimalc1 = complemento1['hexadecimal']
+                pantone_codigoc1 = complemento1['pantone_código']
+                ncs1 = complemento1['ncs']
 
-            complemento2 = complementos[1]
-            redc2, greenc2, bluec2 = complemento2['red'], complemento2['green'], complemento2['blue']
-            cc2, mc2, yc2, kc2 = rgb_to_cmyk(redc2, greenc2, bluec2)
-            fornecedoresc2 = complemento2['fornecedores']
-            nomec2 = complemento2['nome']
-            hexadecimalc2 = complemento2['hexadecimal']
-            pantone_codigoc2 = complemento2['pantone_código']
-            ncs2 = complemento2['ncs']
-            # renderizar complementos
-            with container:
-                script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 480px;'>"
-                          "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
-                          "<div><h5 style='margin: 0px; padding:0px; color:black;'><strong>Cor principal:</strong></h5>"
-                          "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
-                          "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
-                          "</div></div>"
-                          "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;"
-                          "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);'>"
-                          "<div><h5 style='color:black;margin: 0px; padding:0px'>Cor secundária 1:</h5>"
-                          "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
-                          "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
-                          "</div></div>"
-                          "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;"
-                          "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 0px 10px 10px 0px;'>"
-                          "<div><h5 style='margin: 0px; padding:0px; color:black;'>Cor secundária 2:</h5>"
-                          "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
-                          "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
-                          "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
-                          "</div></div></div>").format(
-                    hexadecimal, fornecedores, nome, pantone_codigo, ncs, red, green, blue, c, m, y, k,
-                    hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1,ncs1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
-                    hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2,ncs2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
-                st.markdown(script, unsafe_allow_html=True)
-        except Exception as e:
+                complemento2 = complementos[1]
+                redc2, greenc2, bluec2 = complemento2['red'], complemento2['green'], complemento2['blue']
+                cc2, mc2, yc2, kc2 = rgb_to_cmyk(redc2, greenc2, bluec2)
+                fornecedoresc2 = complemento2['fornecedores']
+                nomec2 = complemento2['nome']
+                hexadecimalc2 = complemento2['hexadecimal']
+                pantone_codigoc2 = complemento2['pantone_código']
+                ncs2 = complemento2['ncs']
+                # renderizar complementos
+                with container:
+                    script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 480px;'>"
+                            "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
+                            "<div><h5 style='margin: 0px; padding:0px; color:black;'><strong>Cor principal:</strong></h5>"
+                            "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
+                            "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
+                            "</div></div>"
+                            "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;"
+                            "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);'>"
+                            "<div><h5 style='color:black;margin: 0px; padding:0px'>Cor secundária 1:</h5>"
+                            "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
+                            "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
+                            "</div></div>"
+                            "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;"
+                            "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 0px 10px 10px 0px;'>"
+                            "<div><h5 style='margin: 0px; padding:0px; color:black;'>Cor secundária 2:</h5>"
+                            "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
+                            "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px;'>Pantone: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>NCS: {}</p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
+                            "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
+                            "</div></div></div>").format(
+                        hexadecimal, fornecedores, nome, pantone_codigo, ncs, red, green, blue, c, m, y, k,
+                        hexadecimalc1, fornecedoresc1, nomec1, pantone_codigoc1,ncs1, redc1, greenc1, bluec1, cc1, mc1, yc1, kc1,
+                        hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2,ncs2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
+                    st.markdown(script, unsafe_allow_html=True)
+            except Exception as e:
+                st.write("Nenhuma cor encontrada")
+                st.write(f"Erro: {e}")
+        else:
             st.write("Nenhuma cor encontrada")
-            st.write(f"Erro: {e}")
-    else:
-        st.write("Nenhuma cor encontrada")
+    elif modo == "Comparação de Marcas":
+        
+
 
 # Interface do usuário
 st.title('Find Me')
@@ -320,4 +355,4 @@ if modo == "Comparação de Marcas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
                 findSimilar("image/cropped.png", procura )
-receivecolors()
+receivecolors(modo)
