@@ -277,11 +277,13 @@ if img_file:
                                     aspect_ratio=aspect_ratio)    
         # Manipulate cropped image at will
         st.write("Prévia")
-        cropped_img = cropped_img.ImageEnhance.brightness(cropped_img).enhance(iluminação)
+
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
         if cropped_img:
-            cropped_img.save("image/cropped.png")
+            enhancer = ImageEnhance.Brightness(cropped_img)
+            enhancer.enhance(iluminação).save("image/cropped.png")
+            
             findrgb(procura, "image/cropped.png", camera, opcao_fornecedores)
 
 elif camera:
