@@ -5,6 +5,7 @@ import time
 import os
 from streamlit_cropper import st_cropper
 from PIL import Image as image2
+from PIL import ImageEnhance
 from colorthief import ColorThief
 from utils.rgb_to_cmyk import rgb_to_cmyk
 from utils.select_complementos import select_complementos
@@ -275,6 +276,7 @@ if img_file:
                                     aspect_ratio=aspect_ratio)    
         # Manipulate cropped image at will
         st.write("Prévia")
+        cropped_img = cropped_img.ImageEnhance.brightness(cropped_img).enhance(0.95)
         _ = cropped_img.thumbnail((150,150))
         st.image(cropped_img)
         if cropped_img:
