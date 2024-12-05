@@ -164,7 +164,6 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
                 nome = procura
                 # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
                 tabela = st.session_state.tabelas
-                tabela = tabela["coral"]
                 dataframe_da_resposta = procurar_o_nome_para_obter_a_id(nome, tabela)
                 st.session_state.resultados = dataframe_da_resposta
             if procura[0].isnumeric():
