@@ -13,7 +13,7 @@ from utilidades.metodos_de_procura.procurar_hexadecimal import procurar_hexadeci
 from utilidades.metodos_de_procura.procurar_códigos import procurar_códigos
 from utilidades.metodos_de_procura.procurar_o_nome_para_obter_a_id import procurar_o_nome_para_obter_a_id
 from utilidades.metodos_de_procura.selecionar_cor_principal import selecionar_cor_principal
-from utilidades.conecções.metodo_de_conecção_produção import método_de_conecção_produção
+from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
 
 
 
