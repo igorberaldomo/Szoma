@@ -295,7 +295,7 @@ if modo == "Procura de Paletas":
     tipo_de_paleta = st.selectbox('Paletas', options=('triade', 'complementar', 'análoga'))
     filtros = st.selectbox('Filtros', options=("Luz Fria","Luz Neutra","Luz Quente"))
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
-    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
+    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=0.8, step=0.1)
     change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
     box_color = st.session_state.cor
     # luz quente 2700, luz neutra 4000, luz fria 6500, luz fria é branca
@@ -333,10 +333,24 @@ if modo == "Procura de Paletas":
     elif procura:
             encontrar_valor_rgb(procura, None, None, opcao_fornecedores,filtros)
     receivecolors()
+    
+    
 if modo == "Comparação de Marcas":
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
-    
+    realtime_update = True
+
+    aspect_choice = "1:1"
+    aspect_dict = {
+        "1:1": (1, 1), 
+        "16:9": (16, 9),
+        "4:3": (4, 3),
+        "2:3": (2, 3),
+        "Nenhum": None
+    }
+    aspect_ratio = aspect_dict[aspect_choice]
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
+    change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
+    box_color = st.session_state.cor
     if img_file:
             img = image2.open(img_file)
             cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
