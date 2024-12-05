@@ -130,7 +130,6 @@ def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores):
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
-            st.write(red,green,blue)
             fornecedores = opcao_fornecedores
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
@@ -177,7 +176,7 @@ def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores):
 
             
 def receivecolors(modo):
-    if modo == 'Procura de palhetas':
+    if modo == 'Procura de Palhetas':
         if len(st.session_state.resultados) > 0:
             data = st.session_state.resultados
             cores_df = pd.DataFrame(data)
