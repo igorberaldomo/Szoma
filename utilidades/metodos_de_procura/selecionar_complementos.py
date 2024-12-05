@@ -5,7 +5,6 @@ import streamlit as st
 from utilidades.conecções.método_de_conecção_local import método_de_conecção_local
 from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
 from utilidades.exemplos.tabela_pandas import tabela_pandas
-from utilidades.metodos_de_procura.procurar_todas_as_entradas import procurar_todas_as_entradas
 from utilidades.edição_de_linhas.filtrar_linhas_necessárias import filtrar_linhas_necessárias
 
 
