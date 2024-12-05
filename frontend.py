@@ -288,8 +288,8 @@ def receivecolors(modo):
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 with st.container():
-    camera = st.camera_input(label = "Use a camera para capturar a cor ou carregue uma imagem abaixo")
-    img_file = st.file_uploader(type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
+    camera = st.camera_input(label = "Use a camera para capturar a cor ")
+    img_file = st.file_uploader(label = "Carregue uma imagem", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = True
 change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
 box_color = st.session_state.cor
