@@ -283,7 +283,7 @@ with st.container():
     img_file = st.file_uploader("", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = True
 change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
-box_color = st.session_state.color
+box_color = st.session_state.cor
 aspect_choice = "1:1"
 aspect_dict = {
     "1:1": (1, 1),
