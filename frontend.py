@@ -185,7 +185,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
             
 def receivecolors(modo):
     if modo == 'Procura de Palhetas':
-        if len(st.session_state.resultados) > 0:
+        if st.session_state.resultados:
             data = st.session_state.resultados
             st.write(data)
             cores_df = pd.DataFrame(data)
