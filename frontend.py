@@ -97,6 +97,7 @@ def encontrar_cor_similar(caminho_para_imagem, procura):
             # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
             tabela = st.session_state.tabelas
             resultados = procurar_o_nome_para_obter_a_id(nome,tabela)
+            st.session_state.resultados = resultados
         if procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
