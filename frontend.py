@@ -303,9 +303,9 @@ aspect_dict = {
 aspect_ratio = aspect_dict[aspect_choice]
 
 modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
-if modo == "Procura de Palhetas":
+if modo == "Procura de Paletas":
     opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
-    tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
+    tipo_de_paleta = st.selectbox('Paletas', options=('triade', 'complementar', 'análoga'))
     filtros = st.selectbox('Filtros', options=("Luz Fria","Luz Neutra","Luz Quente"))
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
