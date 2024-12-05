@@ -305,7 +305,7 @@ if modo == "Procura de Palhetas":
     # luz quente 2700, luz neutra 4000, luz fria 6500, luz fria é branca
     if img_file:
             img = image2.open(img_file)
-            if filtros:
+
                 
             # Get a cropped image from the frontend
             cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
