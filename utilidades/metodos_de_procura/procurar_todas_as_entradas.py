@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-def procurar_todas_as_entradas(red, green,blue,tabela,menor_valor_de_menor, maior_valor_de_menor,menor_valor_de_maior,maior_valor_de_maior,menor_valor_de_meio,maior_valor_de_meio):
+def procurar_todas_as_entrada(red, green,blue,tabela,menor_valor_de_menor, maior_valor_de_menor,menor_valor_de_maior,maior_valor_de_maior,menor_valor_de_meio,maior_valor_de_meio):
     if maior == red:
             primeira_maior = "green"
             segunda_maior = "blue"
