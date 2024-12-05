@@ -6,7 +6,7 @@ import pandas as pd
 import requests
 import json
 import time
-from utils.rgb_to_cmyk import rgb_to_cmyk
+from utilidades.rgb_to_cmyk import rgb_to_cmyk
 
 if "count" not in st.session_state:
     st.session_state.count = '0'
