@@ -187,6 +187,7 @@ def receivecolors(modo):
     if modo == 'Procura de Palhetas':
         if len(st.session_state.resultados) > 0:
             data = st.session_state.resultados
+            st.write(data)
             cores_df = pd.DataFrame(data)
             container = st.container()
             st.toast('Carregando...')
