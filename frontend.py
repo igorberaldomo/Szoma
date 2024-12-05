@@ -123,13 +123,17 @@ def mudar_cor_da_caixa():
     else:
         st.session_state.cor = '#ffffff'
 
-def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores):
+def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores,filtros):
     st.session_state.resultados = []
     if procura or upload or camera:
         if upload is not None:
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
+            if filtros =="Luz Quente":
+                red = red + 16
+                green = green + 16
+                blue = blue + 48
             fornecedores = opcao_fornecedores
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
@@ -142,6 +146,10 @@ def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores):
             ct = ColorThief(camera)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
+            if filtros =="Luz Quente":
+                red = red + 16
+                green = green + 16
+                blue = blue + 48
             fornecedores = opcao_fornecedores
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
@@ -298,8 +306,9 @@ modo = st.selectbox('Modo', options=("Procura de Palhetas","Comparação de Marc
 if modo == "Procura de Palhetas":
     opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
     tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
+    filtros = st.selectbox('Filtros', options=("Luz Fria", "Luz Quente"))
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
-    filtros = st.selectbox('Filtros', options=("luz quente", "luz neutra", "luz fria"))
+
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
     # luz quente 2700, luz neutra 4000, luz fria 6500, luz fria é branca
     if img_file:
@@ -316,7 +325,7 @@ if modo == "Procura de Palhetas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")    
                     
-                encontrar_valor_rgb(procura, "image/cropped.png", camera, opcao_fornecedores)
+                encontrar_valor_rgb(procura, "image/cropped.png", camera, opcao_fornecedores,filtros)
 
     elif camera:
             foto = image2.open(camera)
@@ -332,9 +341,9 @@ if modo == "Procura de Palhetas":
             if edited_foto:
                 enhancer = ImageEnhance.Brightness(edited_foto)
                 enhancer.enhance(iluminação).save("image/cropped.png")
-                encontrar_valor_rgb(procura, img_file, "image/cropped.png", opcao_fornecedores)
+                encontrar_valor_rgb(procura, img_file, "image/cropped.png", opcao_fornecedores,filtros)
     elif procura:
-            encontrar_valor_rgb(procura, None, None, opcao_fornecedores)
+            encontrar_valor_rgb(procura, None, None, opcao_fornecedores,filtros)
 if modo == "Comparação de Marcas":
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
