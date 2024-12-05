@@ -302,11 +302,9 @@ aspect_dict = {
     "Nenhum": None
 }
 aspect_ratio = aspect_dict[aspect_choice]
-st.write(st.session_state.resultados)
-st.write(len(st.session_state.resultados))
-if st.session_state.resultados:
-    st.write(true)
 
+data = st.session_state.resultados
+st.write(data)
 modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
 if modo == "Procura de Paletas":
     opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
