@@ -185,7 +185,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
             
 def receivecolors(modo):
     if modo == 'Procura de Palhetas':
-        if st.session_state.resultados:
+        if st.session_state.resultados is not None:
             data = st.session_state.resultados
             st.write(data)
             cores_df = pd.DataFrame(data)
@@ -289,7 +289,7 @@ st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 with st.container():
     camera = st.camera_input(label = "Use a camera para capturar a cor ou carregue uma imagem abaixo")
-    img_file = st.file_uploader("", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
+    img_file = st.file_uploader(type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = True
 change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
 box_color = st.session_state.cor
@@ -302,6 +302,10 @@ aspect_dict = {
     "Nenhum": None
 }
 aspect_ratio = aspect_dict[aspect_choice]
+st.write(st.session_state.resultados)
+st.write(len(st.session_state.resultados))
+if st.session_state.resultados:
+    st.write(true)
 
 modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
 if modo == "Procura de Paletas":
