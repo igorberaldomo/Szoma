@@ -130,6 +130,7 @@ def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores):
             ct = ColorThief(upload)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
+            st.write(red,green,blue)
             fornecedores = opcao_fornecedores
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
@@ -303,9 +304,7 @@ if modo == "Procura de Palhetas":
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
     # luz quente 2700, luz neutra 4000, luz fria 6500, luz fria é branca
     if img_file:
-            img = image2.open(img_file)
-
-                
+            img = image2.open(img_file)   
             # Get a cropped image from the frontend
             cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
                                         aspect_ratio=aspect_ratio)    
@@ -316,7 +315,8 @@ if modo == "Procura de Palhetas":
             st.image(cropped_img)
             if cropped_img:
                 enhancer = ImageEnhance.Brightness(cropped_img)
-                enhancer.enhance(iluminação).save("image/cropped.png")        
+                enhancer.enhance(iluminação).save("image/cropped.png")    
+                    
                 encontrar_valor_rgb(procura, "image/cropped.png", camera, opcao_fornecedores)
 
     elif camera:
