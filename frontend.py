@@ -316,10 +316,8 @@ if modo == "Procura de Palhetas":
             st.image(cropped_img)
             if cropped_img:
                 enhancer = ImageEnhance.Brightness(cropped_img)
-                enhancer.enhance(iluminação).save("image/cropped.png")
-                
-                encontrar_valor_rgb
-            (procura, "image/cropped.png", camera, opcao_fornecedores, modo)
+                enhancer.enhance(iluminação).save("image/cropped.png")        
+                encontrar_valor_rgb(procura, "image/cropped.png", camera, opcao_fornecedores, modo)
 
     elif camera:
             foto = image2.open(camera)
