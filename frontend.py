@@ -294,7 +294,8 @@ aspect_dict = {
 }
 aspect_ratio = aspect_dict[aspect_choice]
 
-modo = st.selectbox('Modo', options=("Procura de palhetas"))
+modo = st.selectbox('Modo', options=("Procura de palhetas","Comparação de Marcas"))
+st.write(modo)
 if modo == "Procura de Palhetas":
     opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
     tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
