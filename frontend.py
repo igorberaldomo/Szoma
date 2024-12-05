@@ -333,8 +333,7 @@ if modo == "Procura de Palhetas":
             if edited_foto:
                 enhancer = ImageEnhance.Brightness(edited_foto)
                 enhancer.enhance(iluminação).save("image/cropped.png")
-                encontrar_valor_rgb
-            (procura, img_file, "image/cropped.png", opcao_fornecedores, modo)
+                encontrar_valor_rgb(procura, img_file, "image/cropped.png", opcao_fornecedores, modo)
     elif procura:
             encontrar_valor_rgb(procura, None, None, opcao_fornecedores)
 if modo == "Comparação de Marcas":
