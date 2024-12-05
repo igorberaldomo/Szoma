@@ -42,4 +42,5 @@ def procurar_o_nome_para_obter_a_id(nome, tabela):
         resultset = resultset.to_dict(orient='records')
         resultset = {k:[v] for k,v in resultset[0].items()}
         resultset_df = pd.DataFrame(resultset)
+        st.write(resultset_df)
         return resultset
