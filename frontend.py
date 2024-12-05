@@ -184,7 +184,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
 
             
 def receivecolors():
-    if st.session_state.resultados:
+    if len(st.session_state.resultados) >0:
         data = st.session_state.resultados
         st.write(data)
         cores_df = pd.DataFrame(data)
