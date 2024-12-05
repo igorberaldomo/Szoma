@@ -183,7 +183,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
 
 
             
-def receivecolors():
+def receivecolors(modo):
     if modo == 'Procura de Palhetas':
         if st.session_state.resultados:
             data = st.session_state.resultados
@@ -362,4 +362,4 @@ if modo == "Comparação de Marcas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
                 encontrar_cor_similar("image/cropped.png", procura )
-receivecolors()
+receivecolors(modo)
