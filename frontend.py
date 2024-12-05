@@ -14,6 +14,7 @@ from utilidades.metodos_de_procura.procurar_códigos import procurar_códigos
 from utilidades.metodos_de_procura.procurar_o_nome_para_obter_a_id import procurar_o_nome_para_obter_a_id
 from utilidades.metodos_de_procura.selecionar_cor_principal import selecionar_cor_principal
 from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
+from utilidades.metodos_de_procura.procurar_o_codigo_para_obter_a_id import procurar_o_codigo_para_obter_a_id
 
 
 
@@ -87,11 +88,10 @@ def buscar_dados_do_banco():
     return dataframes
 # para acessar tabela use table['nome_da_tabela']
 tabelas = buscar_dados_do_banco()
-st.session_state.tabelas = tabelas 
+st.session_state.tabelas = tabelas
 
 def encontrar_cor_similar(caminho_para_imagem, procura):
     if procura is not None:
-        fornecedores = opcao_fornecedores
         if procura[0].isalpha():
             nome = procura
             # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
@@ -101,7 +101,7 @@ def encontrar_cor_similar(caminho_para_imagem, procura):
         if procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
-
+            resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
         if procura[0] == '#':
             hexadecimal = procura
             tabela = st.session_state.tabelas
@@ -116,7 +116,7 @@ def encontrar_cor_similar(caminho_para_imagem, procura):
         st.session_state.resultados = dataframe_da_resposta
     else:
         st.write('Não foi colocado uma imagem ou um valor para procurar a cor')
-        
+      
 def mudar_cor_da_caixa():
     if st.session_state.cor == '#ffffff':
         st.session_state.cor = '#000000'
@@ -348,14 +348,13 @@ if modo == "Comparação de Marcas":
         "Nenhum": None
     }
     aspect_ratio = aspect_dict[aspect_choice]
-    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
+    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=0.8, step=0.1)
     change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
     box_color = st.session_state.cor
     if img_file:
             img = image2.open(img_file)
             cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
-                                        aspect_ratio=aspect_ratio)    
-            
+                                        aspect_ratio=aspect_ratio)           
             st.write("Prévia")
             _ = cropped_img.thumbnail((150,150))
             st.image(cropped_img)
