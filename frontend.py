@@ -183,9 +183,9 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
 
 
             
-def receivecolors(modo):
+def receivecolors():
     if modo == 'Procura de Palhetas':
-        if st.session_state.resultados is not None:
+        if st.session_state.resultados:
             data = st.session_state.resultados
             st.write(data)
             cores_df = pd.DataFrame(data)
@@ -303,8 +303,7 @@ aspect_dict = {
 }
 aspect_ratio = aspect_dict[aspect_choice]
 
-data = st.session_state.resultados
-st.write(data)
+
 modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
 if modo == "Procura de Paletas":
     opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
@@ -363,4 +362,4 @@ if modo == "Comparação de Marcas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
                 encontrar_cor_similar("image/cropped.png", procura )
-receivecolors(modo)
+receivecolors()
