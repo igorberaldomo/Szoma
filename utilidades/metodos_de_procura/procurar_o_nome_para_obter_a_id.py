@@ -2,7 +2,7 @@ import json
 import pandas as pd
 import sqlalchemy
 import streamlit as st
-from utilidades.método_de_conecção_produção import método_de_conecção_produção
+from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
 
 engine = método_de_conecção_produção()
 

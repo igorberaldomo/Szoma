@@ -1,4 +1,4 @@
-from utilidades.método_de_conecção_produção import método_de_conecção_produção
+from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
 
 
 engine = método_de_conecção_produção()
