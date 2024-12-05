@@ -1,8 +1,9 @@
-from utils.conect_to_engine_production import conect_to_engine_production
+from utilidades.método_de_conecção_produção import método_de_conecção_produção
 
 
-engine = conect_to_engine_production()
-def select_names(nome, fornecedores):
+engine = método_de_conecção_produção()
+def procurar_tabelas_pelo_nomes(nome, fornecedores):
+    # metodo para procurar as tabelas pelo nome
     if fornecedores == 'sherwin-willians':
         fornecedores = 'sherwin_willians'
     seach_string = ""

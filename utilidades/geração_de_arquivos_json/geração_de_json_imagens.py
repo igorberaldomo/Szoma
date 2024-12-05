@@ -6,7 +6,7 @@ data = dict()
 nome = ''
 fornecedores = 'anjo'
 
-def findpant(r,g,b):
+def encontrar_pantone_em_intervalo(r,g,b):
     with open('pantone/pantone.json','r+') as file:
         file_data = json.load(file)
     nearest_pantone = list() 
@@ -93,7 +93,7 @@ r = int(color[0])
 g = int(color[1])
 b = int(color[2])
 
-pant = findpant(r,g,b)
+pant = encontrar_pantone_em_intervalo(r,g,b)
 data['pantone'] = pant
 data['fornecedores'] = fornecedores
 # fornecedor

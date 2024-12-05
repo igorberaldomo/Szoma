@@ -1,10 +1,10 @@
 
-from utils.conect_to_engine_production import conect_to_engine_production
+from utilidades.método_de_conecção_produção import método_de_conecção_produção
 import pandas as pd
 
 
-engine = conect_to_engine_production()
-def select_hexadecimal(hexadecimal, tabela):
+engine = método_de_conecção_produção()
+def procurar_hexadecimal(hexadecimal, tabela):
     resultset = dict()
     for index, row in tabela.iterrows():
         if row['hexadecimal'] == hexadecimal or row['pantone_hex'] == hexadecimal:

@@ -1,10 +1,10 @@
-from utils.conect_to_engine_production import conect_to_engine_production
+from utilidades.método_de_conecção_produção import método_de_conecção_produção
 import streamlit as st
 import pandas as pd
 import json
 
-engine = conect_to_engine_production()
-def primary_select(red, green, blue, tabela):
+engine = método_de_conecção_produção()
+def selecionar_cor_principal(red, green, blue, tabela):
     try:
         # distancia define o limite de busca para cima e para baixo
         distancia = 18

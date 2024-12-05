@@ -7,7 +7,7 @@ data['modificado'] = sem_acento
 data['original'] = acento
 
 print(data)
-def create_pontuation_list(data):
+def criação_de_json_para_acentuação(data):
     with open("lista_acentos_suvinil.json", "r+") as lista_acentos:
         lista = json.load(lista_acentos)
         
@@ -16,5 +16,5 @@ def create_pontuation_list(data):
         lista_acentos.seek(0)
         json.dump(lista, lista_acentos)
         
-create_pontuation_list(data)
+criação_de_json_para_acentuação(data)
 

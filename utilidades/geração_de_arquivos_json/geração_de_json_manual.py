@@ -3,7 +3,7 @@ import json
 
 
 fornecedores = 'anjo'
-def findrgb(hexadecimal):
+def encontrar_rgb(hexadecimal):
     hexadecimal = hexadecimal.replace('#', '')
     r = int(hexadecimal[0:2], 16)
     g = int(hexadecimal[2:4], 16)
@@ -18,7 +18,7 @@ with open ("sherwin-williams.json", "r+") as file:
 
         # ncs = '8301-Y97R'
         # código_suvinil = 'm167'
-        red,green,blue = findrgb(file_data[c]['hex'])
+        red,green,blue = encontrar_rgb(file_data[c]['hex'])
 
         data = dict()
 # function to add to JSON

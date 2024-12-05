@@ -5,12 +5,13 @@ import json
 from sqlalchemy import MetaData
 from sqlalchemy.dialects.mysql import DATETIME as DATE
 from dotenv import load_dotenv
-from utils.conect_to_engine_developer import conect_to_engine_developer
+from utilidades.método_de_conecção_local import método_de_conecção_local
 load_dotenv()
 newdict = dict()
 
 
-engine = conect_to_engine_developer()
+engine = método_de_conecção_local()
+# esse método é usado depois de ser inseridos os dados no banco de dados, para criar o json que ser usado pelo front-end para procurar as cores quando somente um nome for digitado, depois de criadoo json ele tem que ser movido para a pasta procura
 
 search_string = f"SELECT nome , id FROM suvinil"
 resultset = pd.read_sql(search_string, engine)

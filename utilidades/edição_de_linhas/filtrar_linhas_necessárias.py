@@ -1,4 +1,4 @@
-def filter_lines(table):
+def filtrar_linhas_necessárias(table):
     data = []
     i = 0
     for i in range(len(table)):

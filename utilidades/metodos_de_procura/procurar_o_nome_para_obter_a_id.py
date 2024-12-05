@@ -2,12 +2,12 @@ import json
 import pandas as pd
 import sqlalchemy
 import streamlit as st
-from utils.conect_to_engine_production import conect_to_engine_production
+from utilidades.método_de_conecção_produção import método_de_conecção_produção
 
-engine = conect_to_engine_production()
+engine = método_de_conecção_produção()
 
-def search_name_for_id(nome, tabela):
-    with open("search/search_dict.json", "r") as file:
+def procurar_o_nome_para_obter_a_id(nome, tabela):
+    with open("procura/dicionário_procura.json", "r") as file:
         search_dict = json.load(file)
         name_id = -1
         resultset = list()
@@ -37,7 +37,7 @@ def search_name_for_id(nome, tabela):
                 if nome in keys:
                     name_id = search_dict["coral"][0][nome]
                     tabela_escolida = tabela["coral"]   
-        # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras
+        # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras, então desfazemos as posições pegamos os dados e refazemos a tabela
         resultset = tabela_escolida.iloc[[name_id]]
         resultset = resultset.to_dict(orient='records')
         resultset = {k:[v] for k,v in resultset[0].items()}

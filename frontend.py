@@ -7,13 +7,13 @@ from streamlit_cropper import st_cropper
 from PIL import Image as image2
 from PIL import ImageEnhance
 from colorthief import ColorThief
-from utils.rgb_to_cmyk import rgb_to_cmyk
-from utils.select_complementos import select_complementos
-from utils.search.search_hexadecimal import select_hexadecimal
-from utils.search.search_codigos import select_códigos
-from utils.search.search_name_for_id import search_name_for_id
-from utils.search.primary_select import primary_select
-from utils.conect_to_engine_production import conect_to_engine_production
+from utilidades.edição_de_linhas.rgb_para_cmyk import rgb_para_cmyk
+from utilidades.metodos_de_procura.selecionar_complementos import selecionar_complementos
+from utilidades.metodos_de_procura.procurar_hexadecimal import procurar_hexadecimal
+from utilidades.metodos_de_procura.procurar_códigos import procurar_códigos
+from utilidades.metodos_de_procura.procurar_o_nome_para_obter_a_id import procurar_o_nome_para_obter_a_id
+from utilidades.metodos_de_procura.selecionar_cor_principal import selecionar_cor_principal
+from utilidades.método_de_conecção_local import método_de_conecção_local
 
 
 
@@ -22,10 +22,10 @@ if "resultados" not in st.session_state:
     st.session_state.resultados = []
 if "complementos" not in st.session_state:
     st.session_state.complementos = []
-if "tables" not in st.session_state:
-    st.session_state.tables = []
-if "color" not in st.session_state:
-    st.session_state.color = '#ffffff'
+if "tabelas" not in st.session_state:
+    st.session_state.tabelas = []
+if "cor" not in st.session_state:
+    st.session_state.cor = '#ffffff'
     
 
 # Estilização personalizada
@@ -43,12 +43,12 @@ visibility:hidden
 # Funções para processar as entradas do usuário
 
 @st.cache_data
-def getting_data():
-    engine = conect_to_engine_production()
-    queries = {
+def buscar_dados_do_banco():
+    engine = método_de_conecção_local()
+    procuras = {
     "suvinil": "SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil",
     "coral": "SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral",
-    # dentro so search parameters note que está escrito sherwin_wilians em vez de sherwin-willians, está correto o SQL não faz busca com o caractere '-' então foi substituido de propósito por '_'
+    # dentro so metodos_de_procura parameters note que está escrito sherwin_wilians em vez de sherwin-willians, está correto o SQL não faz busca com o caractere '-' então foi substituido de propósito por '_'
     "sherwin-willians": "SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians",
     "anjo": "SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from anjo",
     "todos":"SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil UNION SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral UNION SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from sherwin_willians union SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from anjo"
@@ -56,22 +56,22 @@ def getting_data():
     
     dataframes ={}    
     
-    def convert_to_float(value):
+    def converter_str_para_float(value):
         value = str(value).replace(',', '')  # Substituir vírgula por ponto
         try:
             return float(value)
         except ValueError:
             return None
     
-    for table_name, query in queries.items():
+    for nome_tabela, procura in procuras.items():
         try:
-            df = pd.read_sql(query, engine)
+            df = pd.read_sql(procura, engine)
         except Exception as e:
-            print(f"Erro ao processar a tabela {table_name}: {e}")
+            print(f"Erro ao processar a tabela {nome_tabela}: {e}")
             continue
         
         try:
-            if table_name in ['suvinil', 'coral', 'sherwin-willians', 'anjo', 'todos']:
+            if nome_tabela in ['suvinil', 'coral', 'sherwin-willians', 'anjo', 'todos']:
                 df['fornecedores'] = df['fornecedores'].astype(str)
                 df['hexadecimal'] = df['hexadecimal'].astype(str)
                 df['nome']  = df['nome'].astype(str)
@@ -81,55 +81,48 @@ def getting_data():
                 df['red'] = df['red'].astype(int)
                 df['green'] = df['green'].astype(int)
                 df['blue'] = df['blue'].astype(int)    
-            dataframes[table_name] = df.copy(deep=True)
+            dataframes[nome_tabela] = df.copy(deep=True)
         except Exception as e:
-            print(f"Erro ao processar a tabela {table_name}: {e}")
+            print(f"Erro ao processar a tabela {nome_tabela}: {e}")
     return dataframes
 # para acessar tabela use table['nome_da_tabela']
-tables = getting_data()
-st.session_state.tables = tables 
+tabelas = buscar_dados_do_banco()
+st.session_state.tabelas = tabelas 
 
-def findSimilar(image_path, procura):
+def encontrar_cor_similar(caminho_para_imagem, procura):
     if procura is not None:
         fornecedores = opcao_fornecedores
         if procura[0].isalpha():
             nome = procura
             # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
-            tabela = st.session_state.tables
-            tabela = tabela[fornecedores]
-            response_df = search_name_for_id(nome, tabela)
-            st.session_state.resultados = response_df
+            tabela = st.session_state.tabelas
+            
         if procura[0].isnumeric():
             codigo = procura
-            tabela = st.session_state.tables
-            tabela = tabela[fornecedores]
-            response_df = select_códigos(codigo, tabela)
-            st.session_state.resultados = response_df
+            tabela = st.session_state.tabelas
+
         if procura[0] == '#':
             hexadecimal = procura
-            tabela = st.session_state.tables
-            tabela = tabela[fornecedores]
-            response_df = select_hexadecimal(hexadecimal, tabela)
-            st.session_state.resultados = response_df
-    elif image_path is not None:
-        ct = ColorThief(image_path)
+            tabela = st.session_state.tabelas
+    elif caminho_para_imagem is not None:
+        ct = ColorThief(caminho_para_imagem)
         cor = ct.get_color(quality=1)
         red, green, blue = cor
         fornecedores = opcao_fornecedores
-        tabela = st.session_state.tables
+        tabela = st.session_state.tabelas
         tabela = tabela[fornecedores]
-        response_df = primary_select(red, green, blue, tabela)
-        st.session_state.resultados = response_df
+        dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
+        st.session_state.resultados = dataframe_da_resposta
     else:
-        st.write('Não foi conseguido pegar imagem')
+        st.write('Não foi colocado uma imagem ou um valor para procurar a cor')
         
-def change_box_color():
-    if st.session_state.color == '#ffffff':
-        st.session_state.color = '#000000'
+def mudar_cor_da_caixa():
+    if st.session_state.cor == '#ffffff':
+        st.session_state.cor = '#000000'
     else:
-        st.session_state.color = '#ffffff'
+        st.session_state.cor = '#ffffff'
 
-def findrgb(procura,upload,camera ,opcao_fornecedores):
+def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores):
     st.session_state.resultados = []
     if procura or upload or camera:
         if upload is not None:
@@ -137,61 +130,51 @@ def findrgb(procura,upload,camera ,opcao_fornecedores):
             cor = ct.get_color(quality=1)
             red, green, blue = cor
             fornecedores = opcao_fornecedores
-            tabela = st.session_state.tables
+            tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
-            response_df = primary_select(red, green, blue, tabela)
-            if response_df.empty:
+            dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
+            if dataframe_da_resposta.empty:
                 st.text('Erro imagem desfocada, selecione outra imagem')
             else:
-                st.session_state.resultados = response_df
+                st.session_state.resultados = dataframe_da_resposta
         elif camera is not None:
             ct = ColorThief(camera)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
             fornecedores = opcao_fornecedores
-            tabela = st.session_state.tables
+            tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
-            response_df = primary_select(red, green, blue, tabela)
-            if response_df.empty:
+            dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
+            if dataframe_da_resposta.empty:
                 st.text('Erro imagem desfocada, tire outra foto')
             else:
-                st.session_state.resultados = response_df
-        elif procura is not None:
-            fornecedores = opcao_fornecedores
-            if procura[0].isalpha():
-                nome = procura
-                # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
-                tabela = st.session_state.tables
-                tabela = tabela[fornecedores]
-                response_df = search_name_for_id(nome, tabela)
-                st.session_state.resultados = response_df
-            if procura[0].isnumeric():
-                codigo = procura
-                tabela = st.session_state.tables
-                tabela = tabela[fornecedores]
-                response_df = select_códigos(codigo, tabela)
-                st.session_state.resultados = response_df
-            if procura[0] == '#':
-                hexadecimal = procura
-                tabela = st.session_state.tables
-                tabela = tabela[fornecedores]
-                response_df = select_hexadecimal(hexadecimal, tabela)
-                st.session_state.resultados = response_df
+                st.session_state.resultados = dataframe_da_resposta
+    elif procura is not None:
+        fornecedores = opcao_fornecedores
+        if procura[0].isalpha():
+            nome = procura
+            # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
+            tabela = st.session_state.tabelas
+            tabela = tabela[fornecedores]
+            dataframe_da_resposta = procurar_o_nome_para_obter_a_id(nome, tabela)
+            st.session_state.resultados = dataframe_da_resposta
+        if procura[0].isnumeric():
+            codigo = procura
+            tabela = st.session_state.tabelas
+            tabela = tabela[fornecedores]
+            dataframe_da_resposta = procurar_códigos(codigo, tabela)
+            st.session_state.resultados = dataframe_da_resposta
+        if procura[0] == '#':
+            hexadecimal = procura
+            tabela = st.session_state.tabelas
+            tabela = tabela[fornecedores]
+            dataframe_da_resposta = procurar_hexadecimal(hexadecimal, tabela)
+            st.session_state.resultados = dataframe_da_resposta
     else:
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
-def clear_images():
-    folder_path = "image/"
-    for filename in os.listdir(folder_path):
-        if filename.endswith('.png'):
-            os.remove(os.path.join(folder_path, filename))
-            print(f"Deleted: {filename}")
-        if filename.endswith('.jpg'):
-            os.remove(os.path.join(folder_path, filename))
-            print(f"Deleted: {filename}")
-        if filename.endswith('.jpeg'):
-            os.remove(os.path.join(folder_path, filename))
-            print(f"Deleted: {filename}")
+
+            
 def receivecolors(modo):
     if modo == 'Procura de palhetas':
         if len(st.session_state.resultados) > 0:
@@ -202,13 +185,13 @@ def receivecolors(modo):
             time.sleep(1.5)
             data_df = pd.DataFrame(data, index=[0])
             data = data_df.to_dict(orient='records')
-            tabela = st.session_state.tables
+            tabela = st.session_state.tabelas
             fornecedores = opcao_fornecedores
             try:
                 # Processar a cor principal
                 cor_principal = data[0]
                 red, green, blue = cor_principal['red'], cor_principal['green'], cor_principal['blue']
-                c, m, y, k = rgb_to_cmyk(red, green, blue)
+                c, m, y, k = rgb_para_cmyk(red, green, blue)
                 fornecedores = cor_principal['fornecedores']
                 nome = cor_principal['nome']
                 hexadecimal = cor_principal['hexadecimal']
@@ -222,7 +205,7 @@ def receivecolors(modo):
                 # Processar complementos
                 complemento1 = complementos[0]
                 redc1, greenc1, bluec1 = complemento1['red'], complemento1['green'], complemento1['blue']
-                cc1, mc1, yc1, kc1 = rgb_to_cmyk(redc1, greenc1, bluec1)
+                cc1, mc1, yc1, kc1 = rgb_para_cmyk(redc1, greenc1, bluec1)
                 fornecedoresc1 = complemento1['fornecedores']
                 nomec1 = complemento1['nome']
                 hexadecimalc1 = complemento1['hexadecimal']
@@ -231,7 +214,7 @@ def receivecolors(modo):
 
                 complemento2 = complementos[1]
                 redc2, greenc2, bluec2 = complemento2['red'], complemento2['green'], complemento2['blue']
-                cc2, mc2, yc2, kc2 = rgb_to_cmyk(redc2, greenc2, bluec2)
+                cc2, mc2, yc2, kc2 = rgb_para_cmyk(redc2, greenc2, bluec2)
                 fornecedoresc2 = complemento2['fornecedores']
                 nomec2 = complemento2['nome']
                 hexadecimalc2 = complemento2['hexadecimal']
@@ -279,7 +262,17 @@ def receivecolors(modo):
         else:
             st.write("Nenhuma cor encontrada")
     elif modo == "Comparação de Marcas":
-        
+            if len(st.session_state.resultados) > 0:
+                data = st.session_state.resultados
+                cores_df = pd.DataFrame(data)
+                container = st.container()
+                st.toast('Carregando...')
+                time.sleep(1.5)
+                data_df = pd.DataFrame(data, index=[0])
+                data = data_df.to_dict(orient='records')
+                tabela = st.session_state.tabelas
+                fornecedores = opcao_fornecedores
+            
 
 
 # Interface do usuário
@@ -289,7 +282,7 @@ with st.container():
     camera = st.camera_input(label = "Use a camera para capturar a cor ou carregue uma imagem abaixo")
     img_file = st.file_uploader("", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = True
-change_color = st.button("Alterar cor da caixa" , on_click=change_box_color)
+change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
 box_color = st.session_state.color
 aspect_choice = "1:1"
 aspect_dict = {
@@ -321,7 +314,8 @@ if modo == "Procura de Palhetas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
                 
-                findrgb(procura, "image/cropped.png", camera, opcao_fornecedores, modo)
+                encontrar_valor_rgb
+            (procura, "image/cropped.png", camera, opcao_fornecedores, modo)
 
     elif camera:
             foto = image2.open(camera)
@@ -337,9 +331,10 @@ if modo == "Procura de Palhetas":
             if edited_foto:
                 enhancer = ImageEnhance.Brightness(edited_foto)
                 enhancer.enhance(iluminação).save("image/cropped.png")
-                findrgb(procura, img_file, "image/cropped.png", opcao_fornecedores, modo)
+                encontrar_valor_rgb
+            (procura, img_file, "image/cropped.png", opcao_fornecedores, modo)
     elif procura:
-            findrgb(procura, None, None, opcao_fornecedores)
+            encontrar_valor_rgb(procura, None, None, opcao_fornecedores)
 if modo == "Comparação de Marcas":
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
@@ -354,5 +349,5 @@ if modo == "Comparação de Marcas":
             if cropped_img:
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
-                findSimilar("image/cropped.png", procura )
+                encontrar_cor_similar("image/cropped.png", procura )
 receivecolors(modo)

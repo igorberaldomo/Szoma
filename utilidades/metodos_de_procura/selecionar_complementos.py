@@ -2,18 +2,18 @@ import os, json
 import pandas as pd
 import sqlalchemy
 import streamlit as st
-from utils.conect_to_engine_developer import conect_to_engine_developer
-from utils.conect_to_engine_production import conect_to_engine_production
-from utils.create_pandas_table import generate_pandas_table
-from utils.get_all_entries import get_all_entries
-from utils.filter_lines import filter_lines
+from utilidades.método_de_conecção_local import método_de_conecção_local
+from utilidades.método_de_conecção_produção import método_de_conecção_produção
+from utilidades.create_pandas_table import generate_pandas_table
+from utilidades.procurar_todas_as_entradas import procurar_todas_as_entradas
+from utilidades.edição_de_linhas.filtrar_linhas_necessárias import filtrar_linhas_necessárias
 
 
-# engine = conect_to_engine_developer()
-engine = conect_to_engine_production()
+# engine = método_de_conecção_local()
+engine = método_de_conecção_produção()
 
 
-def select_complementos(red, green, blue, palheta, tabela):
+def selecionar_complementos(red, green, blue, palheta, tabela):
     lista_complementos = []
     if palheta == "triade":
         lista_complementos.clear()
@@ -242,8 +242,8 @@ def select_complementos(red, green, blue, palheta, tabela):
             x += 1
 
         # filtra as linhas necessárias 
-        resultado1 = filter_lines(resultado1)
-        resultado2 = filter_lines(resultado2)
+        resultado1 = filtrar_linhas_necessárias(resultado1)
+        resultado2 = filtrar_linhas_necessárias(resultado2)
         
         # adiciona as cores mais perto da cor ideal que seguem o padrão nas listas
         if complemento1 == True & complemento2 == True:
@@ -396,8 +396,8 @@ def select_complementos(red, green, blue, palheta, tabela):
             x += 1
         
         # filtra as linhas necessárias  
-        resultado1 = filter_lines(resultado1)
-        resultado2 = filter_lines(resultado2)
+        resultado1 = filtrar_linhas_necessárias(resultado1)
+        resultado2 = filtrar_linhas_necessárias(resultado2)
         
         # coloca a cor na lista
         if complemento1 == True & complemento2 == True:
@@ -593,8 +593,8 @@ def select_complementos(red, green, blue, palheta, tabela):
             x += 1
             
         # filtra as linhas necessárias  
-        resultado1 = filter_lines(resultado1)
-        resultado2 = filter_lines(resultado2)
+        resultado1 = filtrar_linhas_necessárias(resultado1)
+        resultado2 = filtrar_linhas_necessárias(resultado2)
         
         # coloca na lista de complementos
         if complemento1 == True & complemento2 == True:

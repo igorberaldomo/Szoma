@@ -1,9 +1,10 @@
-from utils.conect_to_engine_production import conect_to_engine_production
+from utilidades.método_de_conecção_produção import método_de_conecção_produção
 import pandas as pd
 
 
-engine = conect_to_engine_production()
+engine = método_de_conecção_produção()
 def select_id(request_id, nome, fornecedores):
+    # metodo para procurar as tabelas pelo id
     if fornecedores != "todos":
         seach_string = f"Select * from {fornecedores} WHERE id = {request_id}"
         resultset = pd.read_sql(seach_string, engine)
