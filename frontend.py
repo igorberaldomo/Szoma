@@ -123,7 +123,7 @@ def mudar_cor_da_caixa():
     else:
         st.session_state.cor = '#ffffff'
 
-def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores,filtros):
+def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
     st.session_state.resultados = []
     if procura or upload or camera:
         if upload is not None:
@@ -146,7 +146,7 @@ def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores,filtros):
             ct = ColorThief(camera)
             cor = ct.get_color(quality=1)
             red, green, blue = cor
-            if filtros =="Luz Quente":
+            if filtros == "Luz Quente": # luz quente muda os tons em vermelho e verde por 
                 red = red + 16
                 green = green + 16
                 blue = blue + 48
@@ -158,26 +158,26 @@ def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores,filtros):
                 st.text('Erro imagem desfocada, tire outra foto')
             else:
                 st.session_state.resultados = dataframe_da_resposta
-    elif procura is not None:
-        fornecedores = opcao_fornecedores
-        if procura[0].isalpha():
-            nome = procura
-            # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
-            tabela = st.session_state.tabelas
-            dataframe_da_resposta = procurar_o_nome_para_obter_a_id(nome, tabela)
-            st.session_state.resultados = dataframe_da_resposta
-        if procura[0].isnumeric():
-            codigo = procura
-            tabela = st.session_state.tabelas
-            tabela = tabela[fornecedores]
-            dataframe_da_resposta = procurar_códigos(codigo, tabela)
-            st.session_state.resultados = dataframe_da_resposta
-        if procura[0] == '#':
-            hexadecimal = procura
-            tabela = st.session_state.tabelas
-            tabela = tabela[fornecedores]
-            dataframe_da_resposta = procurar_hexadecimal(hexadecimal, tabela)
-            st.session_state.resultados = dataframe_da_resposta
+        elif procura is not None:
+            fornecedores = opcao_fornecedores
+            if procura[0].isalpha():
+                nome = procura
+                # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
+                tabela = st.session_state.tabelas
+                dataframe_da_resposta = procurar_o_nome_para_obter_a_id(nome, tabela)
+                st.session_state.resultados = dataframe_da_resposta
+            if procura[0].isnumeric():
+                codigo = procura
+                tabela = st.session_state.tabelas
+                tabela = tabela[fornecedores]
+                dataframe_da_resposta = procurar_códigos(codigo, tabela)
+                st.session_state.resultados = dataframe_da_resposta
+            if procura[0] == '#':
+                hexadecimal = procura
+                tabela = st.session_state.tabelas
+                tabela = tabela[fornecedores]
+                dataframe_da_resposta = procurar_hexadecimal(hexadecimal, tabela)
+                st.session_state.resultados = dataframe_da_resposta
     else:
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
@@ -302,11 +302,11 @@ aspect_dict = {
 }
 aspect_ratio = aspect_dict[aspect_choice]
 
-modo = st.selectbox('Modo', options=("Procura de Palhetas","Comparação de Marcas"))
+modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
 if modo == "Procura de Palhetas":
     opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
     tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
-    filtros = st.selectbox('Filtros', options=("Luz Fria", "Luz Quente"))
+    filtros = st.selectbox('Filtros', options=("Luz Fria","Luz Neutra","Luz Quente"))
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
 
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
@@ -346,6 +346,7 @@ if modo == "Procura de Palhetas":
             encontrar_valor_rgb(procura, None, None, opcao_fornecedores,filtros)
 if modo == "Comparação de Marcas":
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
+    
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
     if img_file:
             img = image2.open(img_file)
