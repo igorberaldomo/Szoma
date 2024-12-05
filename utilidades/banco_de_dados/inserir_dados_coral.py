@@ -11,7 +11,7 @@ load_dotenv()
 
 
 # rode isso para criar o esqueleto da tabela coral
-def db_table_insertinto_coral():
+def inserir_dados_coral():
     DATABASE_URL = os.getenv("AWS_URL")
     engine = sqlalchemy.create_engine( DATABASE_URL , pool_size=5, max_overflow=10)
 
