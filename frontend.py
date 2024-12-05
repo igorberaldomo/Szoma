@@ -199,7 +199,7 @@ def receivecolors(modo):
                 ncs = cor_principal['ncs']
                 # Calcular complementos
                 tabela = tabela[fornecedores]
-                complementos = select_complementos(red, green, blue, tipo_de_palheta, tabela)
+                complementos = selecionar_complementos(red, green, blue, tipo_de_palheta, tabela)
                 st.session_state.complementos = complementos
 
                 # Processar complementos
