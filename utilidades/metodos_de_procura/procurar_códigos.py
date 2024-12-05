@@ -1,5 +1,5 @@
 
-from utilidades.método_de_conecção_produção import método_de_conecção_produção
+from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
 import pandas as pd
 import streamlit as st
 

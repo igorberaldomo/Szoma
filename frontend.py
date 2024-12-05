@@ -13,7 +13,7 @@ from utilidades.metodos_de_procura.procurar_hexadecimal import procurar_hexadeci
 from utilidades.metodos_de_procura.procurar_códigos import procurar_códigos
 from utilidades.metodos_de_procura.procurar_o_nome_para_obter_a_id import procurar_o_nome_para_obter_a_id
 from utilidades.metodos_de_procura.selecionar_cor_principal import selecionar_cor_principal
-from utilidades.método_de_conecção_local import método_de_conecção_local
+from utilidades.conecções.metodo_de_conecção_produção import método_de_conecção_produção
 
 
 
@@ -44,7 +44,7 @@ visibility:hidden
 
 @st.cache_data
 def buscar_dados_do_banco():
-    engine = método_de_conecção_local()
+    engine = método_de_conecção_produção()
     procuras = {
     "suvinil": "SELECT nome,red,green,blue,ncs,codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from suvinil",
     "coral": "SELECT nome,red,green,blue,null as ncs,null as codigo_suvinil,hexadecimal,pantone_código,pantone_name,pantone_hex,fornecedores from coral",
