@@ -1,10 +1,10 @@
-from utilidades.conect_to_engine_production import conect_to_engine_production
+from utilidades.método_de_conecção_produção import método_de_conecção_produção
 
 import pandas as pd
 
 
 
-engine = conect_to_engine_production()
+engine = método_de_conecção_produção()
 def tabela_pandas(segundo_query, primeiro_query):
     #  essa função pega os dados e gera um pandas dataframe para uso futuro
     lista_pandas = []
