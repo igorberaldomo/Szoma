@@ -301,8 +301,6 @@ if modo == "Procura de Palhetas":
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
     filtros = st.selectbox('Filtros', options=("luz quente", "luz neutra", "luz fria"))
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
-    resultados = st.session_state.resultados
-    st.write((resultados))
     # luz quente 2700, luz neutra 4000, luz fria 6500, luz fria é branca
     if img_file:
             img = image2.open(img_file)
