@@ -291,11 +291,10 @@ with st.container():
     camera = st.camera_input(label = "Use a camera para capturar a cor ")
     img_file = st.file_uploader(label = "Carregue uma imagem", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = True
-change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
-box_color = st.session_state.cor
+
 aspect_choice = "1:1"
 aspect_dict = {
-    "1:1": (1, 1),
+    "1:1": (1, 1), 
     "16:9": (16, 9),
     "4:3": (4, 3),
     "2:3": (2, 3),
@@ -310,8 +309,9 @@ if modo == "Procura de Paletas":
     tipo_de_paleta = st.selectbox('Paletas', options=('triade', 'complementar', 'análoga'))
     filtros = st.selectbox('Filtros', options=("Luz Fria","Luz Neutra","Luz Quente"))
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
-
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
+    change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
+    box_color = st.session_state.cor
     # luz quente 2700, luz neutra 4000, luz fria 6500, luz fria é branca
     if img_file:
             img = image2.open(img_file)   
