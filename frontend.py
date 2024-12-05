@@ -96,7 +96,7 @@ def encontrar_cor_similar(caminho_para_imagem, procura):
             nome = procura
             # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
             tabela = st.session_state.tabelas
-            
+            resultados = procurar_o_nome_para_obter_a_id(nome,tabela)
         if procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
@@ -155,7 +155,6 @@ def encontrar_valor_rgb(procura,upload,camera ,opcao_fornecedores):
             nome = procura
             # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
             tabela = st.session_state.tabelas
-            tabela = tabela[fornecedores]
             dataframe_da_resposta = procurar_o_nome_para_obter_a_id(nome, tabela)
             st.session_state.resultados = dataframe_da_resposta
         if procura[0].isnumeric():
@@ -295,7 +294,6 @@ aspect_dict = {
 aspect_ratio = aspect_dict[aspect_choice]
 
 modo = st.selectbox('Modo', options=("Procura de Palhetas","Comparação de Marcas"))
-st.write(modo)
 if modo == "Procura de Palhetas":
     opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
     tipo_de_palheta = st.selectbox('Palhetas', options=('triade', 'complementar', 'análoga'))
