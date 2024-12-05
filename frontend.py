@@ -158,7 +158,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
                 st.text('Erro imagem desfocada, tire outra foto')
             else:
                 st.session_state.resultados = dataframe_da_resposta
-        elif procura is not Noe:
+        elif procura is not None:
             fornecedores = opcao_fornecedores
             if procura[0].isalpha():
                 nome = procura
