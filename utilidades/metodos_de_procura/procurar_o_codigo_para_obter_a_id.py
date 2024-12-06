@@ -41,8 +41,11 @@ def procurar_o_codigo_para_obter_a_id(codigo, tabela):
                     resultset.append(tabela_escolida.iloc[[codigo_id]])
                     codigo_id = -1 
         # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras, então desfazemos as posições pegamos os dados e refazemos a tabela
-        resultset = resultset.to_dict(orient='records')
-        resultset = {k:[v] for k,v in resultset[0].items()}
-        resultset_df = pd.DataFrame(resultset)
-        st.write(resultset)
+        c = 0
+        for c in range(len(resultset)):
+            resultset = resultset[c].to_dict(orient='records')
+            resultset = {k:[v] for k,v in resultset[c][0].items()}
+            resultset_df = pd.DataFrame(resultset[c])
+            st.write(resultset)
+            c+=1
         return resultset
