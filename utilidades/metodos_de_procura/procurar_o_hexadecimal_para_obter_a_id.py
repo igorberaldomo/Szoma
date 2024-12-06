@@ -1,3 +1,11 @@
+import json
+import pandas as pd
+import sqlalchemy
+import streamlit as st
+from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
+
+engine = método_de_conecção_produção()
+
 def procurar_o_hexadecimal_para_obter_a_id(hexadecimal, tabela):
     with open("procura/dicionário_procura_hexadecimal_id.json", "r") as file:
         search_dict = json.load(file)
