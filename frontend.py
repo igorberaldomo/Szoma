@@ -12,7 +12,6 @@ from utilidades.metodos_de_procura.selecionar_complementos import selecionar_com
 from utilidades.metodos_de_procura.procurar_hexadecimal import procurar_hexadecimal
 from utilidades.metodos_de_procura.procurar_códigos import procurar_códigos
 from utilidades.metodos_de_procura.procurar_o_nome_para_obter_a_id import procurar_o_nome_para_obter_a_id
-
 from utilidades.metodos_de_procura.procurar_o_codigo_para_obter_a_id import procurar_o_codigo_para_obter_a_id
 from utilidades.metodos_de_procura.procurar_o_hexadecimal_para_obter_a_id import procurar_o_hexadecimal_para_obter_a_id
 from utilidades.metodos_de_procura.selecionar_cor_principal import selecionar_cor_principal
@@ -288,18 +287,6 @@ def receivecolors():
         except Exception as e:
 
             st.write("Nenhuma cor encontrada")
-    elif modo == "Comparação de Marcas":
-            if len(st.session_state.resultados) > 0:
-                data = st.session_state.resultados
-                cores_df = pd.DataFrame(data)
-                container = st.container()
-                st.toast('Carregando...')
-                time.sleep(1.5)
-                data_df = pd.DataFrame(data, index=[0])
-                data = data_df.to_dict(orient='records')
-                tabela = st.session_state.tabelas
-                fornecedores = opcao_fornecedores
-            
 
 
 
@@ -322,14 +309,6 @@ aspect_dict = {
     "Nenhum": None
 }
 aspect_ratio = aspect_dict[aspect_choice]
-
-modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
-if modo == "Procura de Paletas":
-    opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
-    tipo_de_paleta = st.selectbox('Paletas', options=('triade', 'complementar', 'análoga'))
-    filtros = st.selectbox('Filtros', options=("Luz Fria","Luz Neutra","Luz Quente"))
-    procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
-
 
 modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
 if modo == "Procura de Paletas":
