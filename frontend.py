@@ -200,13 +200,25 @@ def encontrar_valor_rgb(procura, upload, camera ,opção_fornecedores,filtros):
     else:
         st.text('Por favor, insira uma imagem ou um valor para procurar a cor')
 
-
-            
+def show_similar_colors():
+    if len(st.session_state.resultados) >0:
+            data = st.session_state.resultados
+            container = st.container()
+            st.toast('Carregando...')
+            time.sleep(1.5)
+            data_df = pd.DataFrame(data, index=[0])
+            data = data_df.to_dict(orient='records')
+            tabela = st.session_state.tabelas
+            try:
+                red, green, blue = data[0]['red'], data[0]['green'], data[0]['blue']
+                nome = data[0]['nome']
+            except Exception as e:
+                st.write("erro cores não encontradas")
+                cores = procurar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
 
 def receivecolors():
     if len(st.session_state.resultados) >0:
         data = st.session_state.resultados
-        cores_df = pd.DataFrame(data)
         container = st.container()
         st.toast('Carregando...')
         time.sleep(1.5)
@@ -390,4 +402,4 @@ if modo == "Comparação de Marcas":
 
     elif procurar_marcas:
             encontrar_cor_similar(None, procurar_marcas, fornecedores)
-
+    show_similar_colors()
