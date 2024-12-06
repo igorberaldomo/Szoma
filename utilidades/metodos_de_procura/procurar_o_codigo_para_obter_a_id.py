@@ -44,8 +44,8 @@ def procurar_o_codigo_para_obter_a_id(codigo, tabela):
         c = 0
         for c in range(len(resultset)):
             resultset = resultset[c].to_dict(orient='records')
-            resultset = {k:[v] for k,v in resultset[c][0].items()}
-            resultset_df = pd.DataFrame(resultset[c])
+            resultset = {k:[v] for k,v in resultset[0].items()}
+            resultset_df = pd.DataFrame(resultset)
             st.write(resultset)
             c+=1
         return resultset
