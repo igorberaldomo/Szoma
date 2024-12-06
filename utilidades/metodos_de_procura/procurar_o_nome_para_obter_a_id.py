@@ -6,7 +6,6 @@ from utilidades.conecções.método_de_conecção_produção import método_de_c
 
 engine = método_de_conecção_produção()
 
-
 def procurar_o_nome_para_obter_a_id(nome, tabela):
     with open("procura/dicionário_procura_nome_id.json", "r") as file:
         search_dict = json.load(file)
@@ -42,5 +41,6 @@ def procurar_o_nome_para_obter_a_id(nome, tabela):
         resultset = tabela_escolida.iloc[[nome_id]]
         resultset = resultset.to_dict(orient="records")
         resultset = {k: [v] for k, v in resultset[0].items()}
+
         resultset_df = pd.DataFrame(resultset)
         return resultset
