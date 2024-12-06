@@ -101,7 +101,7 @@ def encontrar_cor_similar(caminho_para_imagem, procura,opcão_fornecedores):
             tabela = st.session_state.tabelas
             resultados = procurar_o_nome_para_obter_a_id(nome,tabela)
             st.session_state.resultados = resultados
-        if procura[0].isnumeric():
+        elif procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
 
@@ -111,7 +111,7 @@ def encontrar_cor_similar(caminho_para_imagem, procura,opcão_fornecedores):
                 tabela = tabela[opcão_fornecedores]
                 resultados = procurar_códigos(codigo, tabela)
             st.session_state.resultados = resultados
-        if procura[0] == '#':
+        elif procura[0] == '#':
             hexadecimal = procura
             tabela = st.session_state.tabelas
             if opcão_fornecedores == "todos":
@@ -386,7 +386,7 @@ if modo == "Comparação de Marcas":
             if cropped_img:
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
-                encontrar_cor_similar("image/cropped.png", procurar_marcas, fornecedores)
+                encontrar_cor_similar("image/cropped.png", None, fornecedores)
 
     elif procurar_marcas:
             encontrar_cor_similar(None, procurar_marcas, fornecedores)
