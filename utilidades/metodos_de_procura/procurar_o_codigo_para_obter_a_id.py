@@ -4,29 +4,37 @@ def procurar_o_codigo_para_obter_a_id(codigo, tabela):
         codigo_id = -1
         resultset = list()
         # procura no json o id da cor que bate com o codigo digitado assim como a tabela que ela pertence   
-        if codigo_id == -1 :
+        if codigo_id == -1:
             for keys in search_dict["suvinil"][0]:
                 if codigo in keys:
                     codigo_id = search_dict["suvinil"][0][codigo]
-                    tabela_escolida = tabela["suvinil"]   
+                    tabela_escolida = tabela["suvinil"]
+                    resultset.append(tabela_escolida.iloc[[codigo_id]])
+                    codigo_id = -1
         if codigo_id == -1:
             for keys in search_dict["sherwin-willians"][0]:
                 if codigo in keys:
                     codigo_id = search_dict["sherwin-willians"][0][codigo]
-                    tabela_escolida = tabela["sherwin-willians"]   
+                    tabela_escolida = tabela["sherwin-willians"]
+                    resultset.append(tabela_escolida.iloc[[codigo_id]])
+                    codigo_id = -1 
         if codigo_id == -1:
             for keys in search_dict["anjo"][0]:
                 if codigo in keys:
                     codigo_id = search_dict["anjo"][0][codigo]
-                    tabela_escolida = tabela["anjo"]   
+                    tabela_escolida = tabela["anjo"]
+                    resultset.append(tabela_escolida.iloc[[codigo_id]])
+                    codigo_id = -1   
         if codigo_id == -1:
             for keys in search_dict["coral"][0]:
                 if codigo in keys:
                     codigo_id = search_dict["coral"][0][codigo]
-                    tabela_escolida = tabela["coral"]   
+                    tabela_escolida = tabela["coral"]
+                    resultset.append(tabela_escolida.iloc[[codigo_id]])
+                    codigo_id = -1 
         # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras, então desfazemos as posições pegamos os dados e refazemos a tabela
-        resultset = tabela_escolida.iloc[[codigo_id]]
         resultset = resultset.to_dict(orient='records')
         resultset = {k:[v] for k,v in resultset[0].items()}
         resultset_df = pd.DataFrame(resultset)
+        st.write(resultset_df)
         return resultset
