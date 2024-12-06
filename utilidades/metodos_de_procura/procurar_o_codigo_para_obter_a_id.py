@@ -7,28 +7,28 @@ def procurar_o_codigo_para_obter_a_id(codigo, tabela):
         if codigo_id == -1:
             for keys in search_dict["suvinil"][0]:
                 if codigo in keys:
-                    codigo_id = search_dict["suvinil"][0]["pantone"][codigo]
+                    codigo_id = search_dict["suvinil"][0][codigo]
                     tabela_escolida = tabela["suvinil"]
                     resultset.append(tabela_escolida.iloc[[codigo_id]])
                     codigo_id = -1
         if codigo_id == -1:
             for keys in search_dict["sherwin-willians"][0]:
                 if codigo in keys:
-                    codigo_id = search_dict["sherwin-willians"][0]["pantone"][codigo]
+                    codigo_id = search_dict["sherwin-willians"][0][codigo]
                     tabela_escolida = tabela["sherwin-willians"]
                     resultset.append(tabela_escolida.iloc[[codigo_id]])
                     codigo_id = -1 
         if codigo_id == -1:
             for keys in search_dict["anjo"][0]:
                 if codigo in keys:
-                    codigo_id = search_dict["anjo"][0]["pantone"][codigo]
+                    codigo_id = search_dict["anjo"][0][codigo]
                     tabela_escolida = tabela["anjo"]
                     resultset.append(tabela_escolida.iloc[[codigo_id]])
                     codigo_id = -1   
         if codigo_id == -1:
             for keys in search_dict["coral"][0]:
                 if codigo in keys:
-                    codigo_id = search_dict["coral"][0]["pantone"][codigo]
+                    codigo_id = search_dict["coral"][0][codigo]
                     tabela_escolida = tabela["coral"]
                     resultset.append(tabela_escolida.iloc[[codigo_id]])
                     codigo_id = -1 
