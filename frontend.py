@@ -92,7 +92,7 @@ def buscar_dados_do_banco():
 tabelas = buscar_dados_do_banco()
 st.session_state.tabelas = tabelas
 
-def encontrar_cor_similar(caminho_para_imagem, procura):
+def encontrar_cor_similar(caminho_para_imagem, procura,opcão_fornecedores):
     # esse métodos parecem com aqueles no encontrar rgb mas os métodos abaixo são maiores em escopo não necessitando do nome dos fornecedores
     if procura is not None:
         if procura[0].isalpha():
@@ -104,18 +104,26 @@ def encontrar_cor_similar(caminho_para_imagem, procura):
         if procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
-            resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
+            if opcão_fornecedores == "todos":
+                resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
+            else:
+                tabela = tabela[opcão_fornecedores]
+                resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
             st.session_state.resultados = resultados
         if procura[0] == '#':
             hexadecimal = procura
             tabela = st.session_state.tabelas
-            resultados = procurar_o_hexadecimal_para_obter_a_id(hexadecimal, tabela)
+            if opcão_fornecedores == "todos":
+                resultados = procurar_o_hexadecimal_para_obter_a_id(codigo, tabela)
+            else:
+                tabela = tabela[opcão_fornecedores]
+                resultados = procurar_hexadecimal(hexadecimal, tabela)
             st.session_state.resultados = resultados
     elif caminho_para_imagem is not None:
         ct = ColorThief(caminho_para_imagem)
         cor = ct.get_color(quality=1)
         red, green, blue = cor
-        fornecedores = opcao_fornecedores
+        fornecedores = opção_fornecedores
         tabela = st.session_state.tabelas
         tabela = tabela[fornecedores]
         dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
@@ -129,7 +137,7 @@ def mudar_cor_da_caixa():
     else:
         st.session_state.cor = '#ffffff'
 
-def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
+def encontrar_valor_rgb(procura, upload, camera ,opção_fornecedores,filtros):
     st.session_state.resultados = []
     if procura or upload or camera:
         if upload is not None:
@@ -140,7 +148,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
                 red = red + 16
                 green = green + 16
                 blue = blue + 48
-            fornecedores = opcao_fornecedores
+            fornecedores = opção_fornecedores
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
             dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
@@ -156,7 +164,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
                 red = red + 16
                 green = green + 16
                 blue = blue + 48
-            fornecedores = opcao_fornecedores
+            fornecedores = opção_fornecedores
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
             dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
@@ -165,7 +173,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opcao_fornecedores,filtros):
             else:
                 st.session_state.resultados = dataframe_da_resposta
         elif procura is not None:
-            fornecedores = opcao_fornecedores
+            fornecedores = opção_fornecedores
             if procura[0].isalpha():
                 nome = procura
                 # para essa função os fornecedores serão determinados dentro da função sendo necessário passar todas as tabelas
@@ -199,7 +207,7 @@ def receivecolors():
         data_df = pd.DataFrame(data, index=[0])
         data = data_df.to_dict(orient='records')
         tabela = st.session_state.tabelas
-        fornecedores = opcao_fornecedores
+        fornecedores = opção_fornecedores
         try:
             # Processar a cor principal
             cor_principal = data[0]
@@ -297,7 +305,7 @@ aspect_ratio = aspect_dict[aspect_choice]
 
 modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
 if modo == "Procura de Paletas":
-    opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+    opção_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
     tipo_de_paleta = st.selectbox('Paletas', options=('triade', 'complementar', 'análoga'))
     filtros = st.selectbox('Filtros', options=("Luz Fria","Luz Neutra","Luz Quente"))
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
@@ -319,7 +327,7 @@ if modo == "Procura de Paletas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")    
                     
-                encontrar_valor_rgb(procura, "image/cropped.png", camera, opcao_fornecedores,filtros)
+                encontrar_valor_rgb(procura, "image/cropped.png", camera, opção_fornecedores,filtros)
 
     elif camera:
             foto = image2.open(camera)
@@ -335,16 +343,16 @@ if modo == "Procura de Paletas":
             if edited_foto:
                 enhancer = ImageEnhance.Brightness(edited_foto)
                 enhancer.enhance(iluminação).save("image/cropped.png")
-                encontrar_valor_rgb(procura, img_file, "image/cropped.png", opcao_fornecedores,filtros)
+                encontrar_valor_rgb(procura, img_file, "image/cropped.png", opção_fornecedores,filtros)
     elif procura:
-            encontrar_valor_rgb(procura, None, None, opcao_fornecedores,filtros)
+            encontrar_valor_rgb(procura, None, None, opção_fornecedores,filtros)
     receivecolors()
     
     
 if modo == "Comparação de Marcas":
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
     realtime_update = True
-
+    opção_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
     aspect_choice = "1:1"
     aspect_dict = {
         "1:1": (1, 1), 
@@ -369,4 +377,4 @@ if modo == "Comparação de Marcas":
                 enhancer.enhance(iluminação).save("image/cropped.png")
                 encontrar_cor_similar("image/cropped.png", procura )
     elif procura:
-            encontrar_cor_similar(None, procura)
+            encontrar_cor_similar(None, procura, opção_fornecedores)
