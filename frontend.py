@@ -91,6 +91,7 @@ tabelas = buscar_dados_do_banco()
 st.session_state.tabelas = tabelas
 
 def encontrar_cor_similar(caminho_para_imagem, procura):
+    # esse métodos parecem com aqueles no encontrar rgb mas os métodos abaixo são maiores em escopo não necessitando do nome dos fornecedores
     if procura is not None:
         if procura[0].isalpha():
             nome = procura
