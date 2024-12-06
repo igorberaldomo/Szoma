@@ -369,4 +369,5 @@ if modo == "Comparação de Marcas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
                 encontrar_cor_similar("image/cropped.png", procura )
-
+    elif procura:
+            encontrar_cor_similar(None, procura)
