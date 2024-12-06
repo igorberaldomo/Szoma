@@ -12,9 +12,11 @@ from utilidades.metodos_de_procura.selecionar_complementos import selecionar_com
 from utilidades.metodos_de_procura.procurar_hexadecimal import procurar_hexadecimal
 from utilidades.metodos_de_procura.procurar_códigos import procurar_códigos
 from utilidades.metodos_de_procura.procurar_o_nome_para_obter_a_id import procurar_o_nome_para_obter_a_id
+from utilidades.metodos_de_procura.procurar_o_codigo_para_obter_a_id import procurar_o_codigo_para_obter_a_id
+from utilidades.metodos_de_procura.procurar_o_hexadecimal_para_obter_a_id copy import procurar_o_hexadecimal_para_obter_a_id
 from utilidades.metodos_de_procura.selecionar_cor_principal import selecionar_cor_principal
 from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
-from utilidades.metodos_de_procura.procurar_o_codigo_para_obter_a_id import procurar_o_codigo_para_obter_a_id
+
 
 
 
@@ -102,12 +104,13 @@ def encontrar_cor_similar(caminho_para_imagem, procura):
         if procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
+            st.write(procura)
             resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
             st.session_state.resultados = resultados
         if procura[0] == '#':
             hexadecimal = procura
             tabela = st.session_state.tabelas
-            resultados = procurar_hexadecimal_para_obter_a_id(hexadecimal, tabela)
+            resultados = procurar_o_hexadecimal_para_obter_a_id(hexadecimal, tabela)
             st.session_state.resultados = resultados
     elif caminho_para_imagem is not None:
         ct = ColorThief(caminho_para_imagem)
@@ -366,4 +369,5 @@ if modo == "Comparação de Marcas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
                 encontrar_cor_similar("image/cropped.png", procura )
-
+    elif procura:
+            encontrar_cor_similar(None, procura)
