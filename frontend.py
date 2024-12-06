@@ -381,9 +381,9 @@ if modo == "Procura de Paletas":
     
     
 if modo == "Comparação de Marcas":
-    procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
+    procurar_marcas = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
     realtime_update = True
-    opção_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+    fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
     aspect_choice = "1:1"
     aspect_dict = {
         "1:1": (1, 1), 
@@ -394,7 +394,7 @@ if modo == "Comparação de Marcas":
     }
     aspect_ratio = aspect_dict[aspect_choice]
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=0.8, step=0.1)
-    change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
+    change_color_button = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
     box_color = st.session_state.cor
     if img_file:
             img = image2.open(img_file)
@@ -407,8 +407,8 @@ if modo == "Comparação de Marcas":
             if cropped_img:
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
-                encontrar_cor_similar("image/cropped.png", procura )
+                encontrar_cor_similar("image/cropped.png", procurar_marcas)
 
-    elif procura:
-            encontrar_cor_similar(None, procura, opção_fornecedores)
+    elif procurar_marcas:
+            encontrar_cor_similar(None, procurar_marcas, fornecedores)
 
