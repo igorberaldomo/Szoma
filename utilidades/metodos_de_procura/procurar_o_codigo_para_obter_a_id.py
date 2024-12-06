@@ -42,6 +42,7 @@ def procurar_o_codigo_para_obter_a_id(codigo, tabela):
                     codigo_id = -1 
         # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras, então desfazemos as posições pegamos os dados e refazemos a tabela
         c = 0
+        st.write(resultset)
         for c in range(len(resultset[0])):
             resultset = resultset[0][c].to_dict(orient='records')
             resultset = {k:[v] for k,v in resultset[0].items()}
