@@ -102,6 +102,7 @@ def encontrar_cor_similar(caminho_para_imagem, procura):
         if procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
+            st.write(procura)
             resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
             st.session_state.resultados = resultados
         if procura[0] == '#':
