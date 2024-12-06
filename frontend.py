@@ -110,13 +110,13 @@ def encontrar_cor_similar(caminho_para_imagem, procura,opcão_fornecedores):
                 resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
             else:
                 tabela = tabela[opcão_fornecedores]
-                resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
+                resultados = procurar_códigos(codigo, tabela)
             st.session_state.resultados = resultados
         if procura[0] == '#':
             hexadecimal = procura
             tabela = st.session_state.tabelas
             if opcão_fornecedores == "todos":
-                resultados = procurar_o_hexadecimal_para_obter_a_id(codigo, tabela)
+                resultados = procurar_o_hexadecimal_para_obter_a_id(hexadecimal, tabela)
             else:
                 tabela = tabela[opcão_fornecedores]
                 resultados = procurar_hexadecimal(hexadecimal, tabela)
