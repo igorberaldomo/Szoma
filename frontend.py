@@ -12,11 +12,11 @@ from utilidades.metodos_de_procura.selecionar_complementos import selecionar_com
 from utilidades.metodos_de_procura.procurar_hexadecimal import procurar_hexadecimal
 from utilidades.metodos_de_procura.procurar_códigos import procurar_códigos
 from utilidades.metodos_de_procura.procurar_o_nome_para_obter_a_id import procurar_o_nome_para_obter_a_id
+
 from utilidades.metodos_de_procura.procurar_o_codigo_para_obter_a_id import procurar_o_codigo_para_obter_a_id
 from utilidades.metodos_de_procura.procurar_o_hexadecimal_para_obter_a_id import procurar_o_hexadecimal_para_obter_a_id
 from utilidades.metodos_de_procura.selecionar_cor_principal import selecionar_cor_principal
 from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
-
 
 
 
@@ -90,6 +90,7 @@ def buscar_dados_do_banco():
     return dataframes
 # para acessar tabela use table['nome_da_tabela']
 tabelas = buscar_dados_do_banco()
+
 st.session_state.tabelas = tabelas
 
 def encontrar_cor_similar(caminho_para_imagem, procura,opcão_fornecedores):
@@ -104,6 +105,7 @@ def encontrar_cor_similar(caminho_para_imagem, procura,opcão_fornecedores):
         if procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
+
             if opcão_fornecedores == "todos":
                 resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
             else:
@@ -138,6 +140,7 @@ def mudar_cor_da_caixa():
         st.session_state.cor = '#ffffff'
 
 def encontrar_valor_rgb(procura, upload, camera ,opção_fornecedores,filtros):
+
     st.session_state.resultados = []
     if procura or upload or camera:
         if upload is not None:
@@ -148,7 +151,9 @@ def encontrar_valor_rgb(procura, upload, camera ,opção_fornecedores,filtros):
                 red = red + 16
                 green = green + 16
                 blue = blue + 48
+
             fornecedores = opção_fornecedores
+
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
             dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
@@ -164,7 +169,9 @@ def encontrar_valor_rgb(procura, upload, camera ,opção_fornecedores,filtros):
                 red = red + 16
                 green = green + 16
                 blue = blue + 48
+
             fornecedores = opção_fornecedores
+
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
             dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
@@ -197,6 +204,7 @@ def encontrar_valor_rgb(procura, upload, camera ,opção_fornecedores,filtros):
 
 
             
+
 def receivecolors():
     if len(st.session_state.resultados) >0:
         data = st.session_state.resultados
@@ -278,19 +286,32 @@ def receivecolors():
                     hexadecimalc2, fornecedoresc2, nomec2, pantone_codigoc2,ncs2, redc2, greenc2, bluec2, cc2, mc2, yc2, kc2)
                 st.markdown(script, unsafe_allow_html=True)
         except Exception as e:
+
             st.write("Nenhuma cor encontrada")
-            st.write(f"Erro: {e}")
-    else:
-        st.write("Nenhuma cor encontrada")
+    elif modo == "Comparação de Marcas":
+            if len(st.session_state.resultados) > 0:
+                data = st.session_state.resultados
+                cores_df = pd.DataFrame(data)
+                container = st.container()
+                st.toast('Carregando...')
+                time.sleep(1.5)
+                data_df = pd.DataFrame(data, index=[0])
+                data = data_df.to_dict(orient='records')
+                tabela = st.session_state.tabelas
+                fornecedores = opcao_fornecedores
+            
+
 
 
 # Interface do usuário
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
 with st.container():
+
     camera = st.camera_input(label = "Use a camera para capturar a cor ")
     img_file = st.file_uploader(label = "Carregue uma imagem", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = True
+
 
 aspect_choice = "1:1"
 aspect_dict = {
@@ -302,6 +323,13 @@ aspect_dict = {
 }
 aspect_ratio = aspect_dict[aspect_choice]
 
+modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
+if modo == "Procura de Paletas":
+    opcao_fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+    tipo_de_paleta = st.selectbox('Paletas', options=('triade', 'complementar', 'análoga'))
+    filtros = st.selectbox('Filtros', options=("Luz Fria","Luz Neutra","Luz Quente"))
+    procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
+
 
 modo = st.selectbox('Modo', options=("Procura de Paletas","Comparação de Marcas"))
 if modo == "Procura de Paletas":
@@ -312,6 +340,7 @@ if modo == "Procura de Paletas":
     iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=0.8, step=0.1)
     change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
     box_color = st.session_state.cor
+
     # luz quente 2700, luz neutra 4000, luz fria 6500, luz fria é branca
     if img_file:
             img = image2.open(img_file)   
@@ -326,8 +355,9 @@ if modo == "Procura de Paletas":
             if cropped_img:
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")    
-                    
+
                 encontrar_valor_rgb(procura, "image/cropped.png", camera, opção_fornecedores,filtros)
+
 
     elif camera:
             foto = image2.open(camera)
@@ -343,6 +373,7 @@ if modo == "Procura de Paletas":
             if edited_foto:
                 enhancer = ImageEnhance.Brightness(edited_foto)
                 enhancer.enhance(iluminação).save("image/cropped.png")
+
                 encontrar_valor_rgb(procura, img_file, "image/cropped.png", opção_fornecedores,filtros)
     elif procura:
             encontrar_valor_rgb(procura, None, None, opção_fornecedores,filtros)
@@ -369,6 +400,7 @@ if modo == "Comparação de Marcas":
             img = image2.open(img_file)
             cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
                                         aspect_ratio=aspect_ratio)           
+
             st.write("Prévia")
             _ = cropped_img.thumbnail((150,150))
             st.image(cropped_img)
@@ -376,5 +408,7 @@ if modo == "Comparação de Marcas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")
                 encontrar_cor_similar("image/cropped.png", procura )
+
     elif procura:
             encontrar_cor_similar(None, procura, opção_fornecedores)
+
