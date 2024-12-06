@@ -92,7 +92,7 @@ tabelas = buscar_dados_do_banco()
 
 st.session_state.tabelas = tabelas
 
-def encontrar_cor_similar(caminho_para_imagem, procura,opcão_fornecedores):
+def encontrar_cor_similar(caminho_para_imagem, procura,opção_fornecedores):
     # esse métodos parecem com aqueles no encontrar rgb mas os métodos abaixo são maiores em escopo não necessitando do nome dos fornecedores
     if procura is not None:
         if procura[0].isalpha():
@@ -105,19 +105,19 @@ def encontrar_cor_similar(caminho_para_imagem, procura,opcão_fornecedores):
             codigo = procura
             tabela = st.session_state.tabelas
 
-            if opcão_fornecedores == "todos":
+            if opção_fornecedores == "todos":
                 resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
             else:
-                tabela = tabela[opcão_fornecedores]
+                tabela = tabela[opção_fornecedores]
                 resultados = procurar_códigos(codigo, tabela)
             st.session_state.resultados = resultados
         elif procura[0] == '#':
             hexadecimal = procura
             tabela = st.session_state.tabelas
-            if opcão_fornecedores == "todos":
+            if opção_fornecedores == "todos":
                 resultados = procurar_o_hexadecimal_para_obter_a_id(hexadecimal, tabela)
             else:
-                tabela = tabela[opcão_fornecedores]
+                tabela = tabela[opção_fornecedores]
                 resultados = procurar_hexadecimal(hexadecimal, tabela)
             st.session_state.resultados = resultados
     elif caminho_para_imagem is not None:
