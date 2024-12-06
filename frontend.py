@@ -210,11 +210,68 @@ def show_similar_colors():
             data = data_df.to_dict(orient='records')
             tabela = st.session_state.tabelas
             try:
+                hexadecimal = data[0]['hexadecimal']
+                nome, fornecedor = data[0]['nome'], data[0]['fornecedores']
                 red, green, blue = data[0]['red'], data[0]['green'], data[0]['blue']
-                nome = data[0]['nome']
+                if red > 155 or green > 155 or blue > 155:
+                    textcolor = '#000000'
+                else:
+                    textcolor = '#ffffff'
+                cores = selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
+                if len(cores) >= 1:
+                    hexadecimal = cores[0]['hexadecimal']
+                    nome1, fornecedor1 = cores[0]['nome'], cores[0]['fornecedores']
+                if len(cores) >= 2:
+                    hexadecimal = cores[1]['hexadecimal']
+                    nome2, fornecedor2 = cores[1]['nome'], cores[1]['fornecedores']
+                if len(cores) >= 3:
+                    hexadecimal = cores[2]['hexadecimal']
+                    nome3, fornecedor3 = cores[2]['nome'], cores[2]['fornecedores']
+                if len(cores) >= 4:
+                    hexadecimal = cores[3]['hexadecimal']
+                    nome4, fornecedor4 = cores[3]['nome'], cores[3]['fornecedores']
+                if len(cores) >= 5:
+                    hexadecimal = cores[4]['hexadecimal']
+                    nome5, fornecedor5 = cores[4]['nome'], cores[4]['fornecedores']
+                if len(cores) >= 6:
+                    hexadecimal = cores[5]['hexadecimal']
+                    nome6, fornecedor6 = cores[5]['nome'], cores[5]['fornecedores']
+                with container:
+                    script = (
+                        "<div style='height: 300px; width: 700px; background-color: white; position: relative;'>" 
+                            "<p style='position: absolute; top: 80px; left: 50px; '>Cor Principal</p>"
+                            "<div style='height: 100px; width: 100px; background-color: {}; position: absolute; top: 120px; left: 50px;'>"
+                                "<p style='position: absolute; top: 60px; left: 0px; font-size: 20px; text-color: {};'>{}{}</p>"
+                            "</div>"
+                        "<div style='height: 200px; width: 300px; background-color: white; position: absolute; top: 50px; left: 350px;'>"
+                            "<div style=' display: flex; flex-direction: row;'>"
+                            "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px '>"
+                                "<p style='position: absolute; top: 50px; left: 10px; font-size: 20px'{}{}</p>"
+                        "</div>"
+                        "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
+                            "<p style='position: absolute; top: 50px; left: 110px; font-size: 20px;'>{}{}</p>"
+                        "</div>"
+                        "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
+                            "<p style='position: absolute; top: 50px; left: 210px; font-size: 20px;'>{}{}</p>"
+                        "</div>"
+                    "</div>"
+                    "<div style=' display: flex; flex-direction: row;'>"
+                    "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
+                        "<p style='position: absolute; top: 150px; left: 10px; font-size: 20px;'>{}{}</p>"
+                    "</div>"
+                    "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
+                        "<p style='position: absolute; top: 150px; left: 110px; font-size: 20px;'>{}{}</p>"
+                    "</div>"
+                    "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
+                        "<p style='position: absolute; top: 150px; left: 210px; font-size: 20px;'>{}{}</p>"
+                "</div>"
+            "</div>"
+        "</div>"
+    "</div>"). format( )
             except Exception as e:
                 st.write("erro cores não encontradas")
-                cores = procurar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
+                
+                
 
 def receivecolors():
     if len(st.session_state.resultados) >0:
