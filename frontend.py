@@ -104,7 +104,6 @@ def encontrar_cor_similar(caminho_para_imagem, procura,opção_fornecedores):
         elif procura[0].isnumeric():
             codigo = procura
             tabela = st.session_state.tabelas
-
             if opção_fornecedores == "todos":
                 resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
             else:
@@ -360,9 +359,10 @@ if modo == "Procura de Paletas":
     
     
 if modo == "Comparação de Marcas":
+    fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
     procurar_marcas = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
     realtime_update = True
-    fornecedores = st.selectbox('Marcas de tinta', options=('todos', 'coral', 'suvinil', 'sherwin-willians','anjo'))
+
     aspect_choice = "1:1"
     aspect_dict = {
         "1:1": (1, 1), 
