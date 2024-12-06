@@ -102,9 +102,12 @@ def encontrar_cor_similar(caminho_para_imagem, procura):
             codigo = procura
             tabela = st.session_state.tabelas
             resultados = procurar_o_codigo_para_obter_a_id(codigo, tabela)
+            st.session_state.resultados = resultados
         if procura[0] == '#':
             hexadecimal = procura
             tabela = st.session_state.tabelas
+            resultados = procurar_hexadecimal_para_obter_a_id(hexadecimal, tabela)
+            st.session_state.resultados = resultados
     elif caminho_para_imagem is not None:
         ct = ColorThief(caminho_para_imagem)
         cor = ct.get_color(quality=1)

@@ -3,12 +3,7 @@ def procurar_o_codigo_para_obter_a_id(codigo, tabela):
         search_dict = json.load(file)
         codigo_id = -1
         resultset = list()
-        # procura no json o id da cor que bate com o codigo digitado assim como a tabela que ela pertence
-        if codigo_id == -1:
-            for keys in search_dict["quickSearch"][0]:
-                if codigo in keys:
-                    codigo_id = search_dict["quickSearch"][0][codigo]
-                    tabela_escolida = tabela["coral"]      
+        # procura no json o id da cor que bate com o codigo digitado assim como a tabela que ela pertence   
         if codigo_id == -1 :
             for keys in search_dict["suvinil"][0]:
                 if codigo in keys:
