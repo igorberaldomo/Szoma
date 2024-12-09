@@ -15,6 +15,7 @@ from utilidades.metodos_de_procura.procurar_o_nome_para_obter_a_id import procur
 from utilidades.metodos_de_procura.procurar_o_codigo_para_obter_a_id import procurar_o_codigo_para_obter_a_id
 from utilidades.metodos_de_procura.procurar_o_hexadecimal_para_obter_a_id import procurar_o_hexadecimal_para_obter_a_id
 from utilidades.metodos_de_procura.selecionar_cor_principal import selecionar_cor_principal
+from utilidades.metodos_de_procura.selecionar_cores_em_todos_os_fornecedores import selecionar_cores_em_todos_os_fornecedores
 from utilidades.conecções.método_de_conecção_produção import método_de_conecção_produção
 
 
@@ -217,25 +218,64 @@ def show_similar_colors():
                     textcolor = '#000000'
                 else:
                     textcolor = '#ffffff'
+                args = (hexadecimal,textcolor,fornecedor,nome)
                 cores = selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
                 if len(cores) >= 1:
-                    hexadecimal = cores[0]['hexadecimal']
+                    red1, green1, blue1 = cores[0]['red'], cores[0]['green'], cores[0]['blue']
+                    hexadecimal1 = cores[0]['hexadecimal']
                     nome1, fornecedor1 = cores[0]['nome'], cores[0]['fornecedores']
+                    if red1 > 155 or green1 > 155 or blue1 > 155:
+                        textcolor1 = '#000000'
+                    else:
+                        textcolor1 = '#ffffff'
+                    args += (hexadecimal1,textcolor1,fornecedor1,nome1)
                 if len(cores) >= 2:
-                    hexadecimal = cores[1]['hexadecimal']
+                    red2, green2, blue2 = cores[1]['red'], cores[1]['green'], cores[1]['blue']
+                    hexadecimal2 = cores[1]['hexadecimal']
                     nome2, fornecedor2 = cores[1]['nome'], cores[1]['fornecedores']
+                    if red2 > 155 or green2 > 155 or blue2 > 155:
+                        textcolor2 = '#000000'
+                    else:
+                        textcolor2 = '#ffffff'
+                    args += (hexadecimal2,textcolor2,fornecedor2,nome2)
                 if len(cores) >= 3:
-                    hexadecimal = cores[2]['hexadecimal']
+                    red3, green3, blue3 = cores[2]['red'], cores[2]['green'], cores[2]['blue']
+                    hexadecimal3 = cores[2]['hexadecimal']
                     nome3, fornecedor3 = cores[2]['nome'], cores[2]['fornecedores']
+                    if red3 > 155 or green3 > 155 or blue3 > 155:
+                        textcolor3 = '#000000'
+                    else:
+                        textcolor3 = '#ffffff'
+                    args += (hexadecimal3,textcolor3,fornecedor3,nome3)
                 if len(cores) >= 4:
-                    hexadecimal = cores[3]['hexadecimal']
+                    red4, green4, blue4 = cores[3]['red'], cores[3]['green'], cores[3]['blue']
+                    hexadecimal4 = cores[3]['hexadecimal']
                     nome4, fornecedor4 = cores[3]['nome'], cores[3]['fornecedores']
+                    if red4 > 155 or green4 > 155 or blue4 > 155:
+                        textcolor4 = '#000000'
+                    else:
+                        textcolor4 = '#ffffff'
+                    args += (hexadecimal4,textcolor4,fornecedor4,nome4)
                 if len(cores) >= 5:
-                    hexadecimal = cores[4]['hexadecimal']
+                    red5, green5, blue5 = cores[4]['red'], cores[4]['green'], cores[4]['blue']
+                    hexadecimal5 = cores[4]['hexadecimal']
                     nome5, fornecedor5 = cores[4]['nome'], cores[4]['fornecedores']
+                    if red5 > 155 or green5 > 155 or blue5 > 155:
+                        textcolor5 = '#000000'
+                    else:
+                        textcolor5 = '#ffffff'
+                    args += (hexadecimal5,textcolor5,fornecedor5,nome5)
                 if len(cores) >= 6:
-                    hexadecimal = cores[5]['hexadecimal']
+                    red6, green6, blue6 = cores[5]['red'], cores[5]['green'], cores[5]['blue']
+                    hexadecimal6 = cores[5]['hexadecimal']
                     nome6, fornecedor6 = cores[5]['nome'], cores[5]['fornecedores']
+                    if red6 > 155 or green6 > 155 or blue6 > 155:
+                        textcolor6 = '#000000'
+                    else:
+                        textcolor6 = '#ffffff'
+                    args += (hexadecimal6,textcolor6,fornecedor6,nome6)
+                    
+                
                 with container:
                     script = (
                         "<div style='height: 300px; width: 700px; background-color: white; position: relative;'>" 
@@ -246,28 +286,28 @@ def show_similar_colors():
                         "<div style='height: 200px; width: 300px; background-color: white; position: absolute; top: 50px; left: 350px;'>"
                             "<div style=' display: flex; flex-direction: row;'>"
                             "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px '>"
-                                "<p style='position: absolute; top: 50px; left: 10px; font-size: 20px'{}{}</p>"
+                                "<p style='position: absolute; top: 50px; left: 10px; font-size: 20px;text-color: {};'{}{}</p>"
                         "</div>"
                         "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
-                            "<p style='position: absolute; top: 50px; left: 110px; font-size: 20px;'>{}{}</p>"
+                            "<p style='position: absolute; top: 50px; left: 110px; font-size: 20px;text-color: {};'>{}{}</p>"
                         "</div>"
                         "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
-                            "<p style='position: absolute; top: 50px; left: 210px; font-size: 20px;'>{}{}</p>"
+                            "<p style='position: absolute; top: 50px; left: 210px; font-size: 20px;text-color: {};'>{}{}</p>"
                         "</div>"
                     "</div>"
                     "<div style=' display: flex; flex-direction: row;'>"
                     "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
-                        "<p style='position: absolute; top: 150px; left: 10px; font-size: 20px;'>{}{}</p>"
+                        "<p style='position: absolute; top: 150px; left: 10px; font-size: 20px;text-color: {};'>{}{}</p>"
                     "</div>"
                     "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
-                        "<p style='position: absolute; top: 150px; left: 110px; font-size: 20px;'>{}{}</p>"
+                        "<p style='position: absolute; top: 150px; left: 110px; font-size: 20px;text-color: {};'>{}{}</p>"
                     "</div>"
                     "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
-                        "<p style='position: absolute; top: 150px; left: 210px; font-size: 20px;'>{}{}</p>"
+                        "<p style='position: absolute; top: 150px; left: 210px; font-size: 20px;text-color: {};'>{}{}</p>"
                 "</div>"
             "</div>"
         "</div>"
-    "</div>"). format( )
+    "</div>"). format(args)
             except Exception as e:
                 st.write("erro cores não encontradas")
                 
