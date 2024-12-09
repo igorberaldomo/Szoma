@@ -1,7 +1,7 @@
 
 def selecionar_cores_em_todos_os_fornecedores(red, green,blue,suvinil):
     lista_cores_final = []
-    desvio = 10
+    desvio = 30
     tem_resultados = False
     minimo_vermelho = red - desvio
     maximo_vermelho = red + desvio
