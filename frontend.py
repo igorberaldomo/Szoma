@@ -156,7 +156,6 @@ def encontrar_valor_rgb(procura, upload, camera ,opção_fornecedores,filtros):
             tabela = st.session_state.tabelas
             tabela = tabela[fornecedores]
             dataframe_da_resposta = selecionar_cor_principal(red, green, blue, tabela)
-            st.write(dataframe_da_resposta)
             if dataframe_da_resposta.empty:
                 st.text('Erro imagem desfocada, selecione outra imagem')
             else:
