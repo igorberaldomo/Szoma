@@ -219,6 +219,8 @@ def show_similar_colors():
                 textcolor = '#ffffff'
             cores = selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
             cores = cores[0]
+            st.write(cores)
+            st.write(cores[0])
             try:              
                 if len(cores) >= 1:
                     red1, green1, blue1 = cores[0]['red'], cores[0]['green'], cores[0]['blue']
