@@ -274,7 +274,8 @@ def show_similar_colors():
                     else:
                         textcolor6 = '#ffffff'
                     args += (hexadecimal6,textcolor6,fornecedor6,nome6)
-                    
+                st.write(cores)
+                st.write(args)    
                 
                 with container:
                     script = (
