@@ -23,8 +23,9 @@ def selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela):
     if maximo_azul > 255:
         maximo_azul = 255
     
-    resultados = list
+    resultados = list()
     suvinil = tabela["suvinil"]
+    st.write(suvinil[0])
     # busca na tabela suvinil
     c = 0
     for c in range(len(suvinil)):
