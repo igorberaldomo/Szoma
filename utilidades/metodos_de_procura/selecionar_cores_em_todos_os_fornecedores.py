@@ -64,4 +64,5 @@ def selecionar_cores_em_todos_os_fornecedores(red, green,blue,suvinil):
     for c in range(len(resultados)):
         lista_cores_final.append(resultados[c])
         c += 1
+    st.write(lista_cores_final)
     return lista_cores_final
