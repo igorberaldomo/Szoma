@@ -267,8 +267,8 @@ def show_similar_colors():
                     script = (
                         "<div style='height: 400px; width: 700px; background-color:green display:flex; flex-direction: row'>"
                             "<p style='padding: 10px '>Cor Principal</p>"
-                            "<div style='margin: 10px 0px 0px 0px;height: 100px; width: 150px; background-color: {}; '>"
-                                "<p style='padding: 60px 0px 0px 10px; font-size: 16px; color: {};'>{}:{}</p>"
+                            "<div style='background-color: {} ; height: 80px; width: 200px; padding: 0px; margin: 05px 0px 0px 0px;'>"
+                                 "<p style='padding: 55px 0px 0px 05px; font-size: 16px; color: {};'>{}:{}</p>"
                             "</div>"
                             "<div style='height: 300px; width: 500px;  padding: 0px; margin:-140px 10px 0px 280px; display: flex; flex-direction: column;'>"
                                 "<div style=' height: 90px; width: 440px; padding: 0px; margin: 10px 0px 0px 05px; display: flex; flex-direction: row; justify-content: space-around'>"
