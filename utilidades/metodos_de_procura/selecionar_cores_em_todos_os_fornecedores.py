@@ -25,7 +25,7 @@ def selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela):
     
     resultados = list()
     suvinil = tabela["suvinil"]
-    st.write(suvinil[0])
+    st.write(suvinil)
     # busca na tabela suvinil
     c = 0
     for c in range(len(suvinil)):
