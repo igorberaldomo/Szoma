@@ -300,7 +300,7 @@ def show_similar_colors():
                     "</div>"
                     "</div>"
                     "</div>"). format(hexadecimal,textcolor,fornecedor,nome,hexadecimal1,textcolor1,fornecedor1,nome1, hexadecimal2,textcolor2,fornecedor2,nome2,hexadecimal3,textcolor3,fornecedor3,nome3, hexadecimal4,textcolor4,fornecedor4,nome4, hexadecimal5,textcolor5,fornecedor5,nome5,hexadecimal6,textcolor6,fornecedor6,nome6)
-                    st.markdown(script, unsafe_allow_html=True)
+                    st.markdown(, unsafe_allow_html=True)
             except Exception as e:
                 st.write("erro cores não encontradas")
                 
