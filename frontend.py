@@ -270,7 +270,7 @@ def show_similar_colors():
                             "<div style='margin: 100px 0px 0px -80px;height: 100px; width: 150px; background-color: {}; '>"
                                 "<p style='padding: 60px 0px 0px 10px; font-size: 16px; color: {};'>{}:{}</p>"
                             "</div>"
-                            "<div style='height: 300px; width: 500px;  padding: 0px; margin:90px 10px 0px 90px; display: flex; flex-direction: column;'>"
+                            "<div style='height: 300px; width: 500px;  padding: 0px; margin:10px 10px 0px 90px; display: flex; flex-direction: column;'>"
                                 "<div style=' height: 90px; width: 440px; padding: 0px; margin: 10px 0px 0px 05px; display: flex; flex-direction: row; justify-content: space-around'>"
                                     "<div style='background-color: {} ; height: 80px; width: 200px; padding: 0px; margin: 05px 0px 0px 0px;'>"
                                         "<p style='padding: 40px 0px 0px 0px; font-size: 16px; color: {};'>{}:{}</p>"
