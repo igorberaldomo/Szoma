@@ -1,5 +1,5 @@
 
-def procurar_cores_em_todos_os_fornecedores(red, green,blue,suvinil):
+def selecionar_cores_em_todos_os_fornecedores(red, green,blue,suvinil):
     lista_cores_final = []
     desvio = 10
     tem_resultados = False
