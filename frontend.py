@@ -265,7 +265,7 @@ def show_similar_colors():
                 
                 with container:
                     script = (
-                        "<div style='height: 400px; width: 700px; background-color:white display:flex; flex-direction: row'>"
+                        "<div style='height: 400px; width: 700px; background-color:green display:flex; flex-direction: row'>"
                             "<p style='padding: 10px '>Cor Principal</p>"
                             "<div style='margin: 100px 0px 0px -80px;height: 100px; width: 150px; background-color: {}; '>"
                                 "<p style='padding: 60px 0px 0px 10px; font-size: 16px; color: {};'>{}:{}</p>"
