@@ -219,6 +219,7 @@ def show_similar_colors():
                 textcolor = '#ffffff'
             args = (hexadecimal,textcolor,fornecedor,nome)
             cores = selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
+            st.write(cores)
             st.write(args) 
             try:              
                 if len(cores) >= 1:
