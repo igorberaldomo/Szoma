@@ -1,3 +1,4 @@
+import streamlit as st
 
 def selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela):
     lista_cores_final = []
