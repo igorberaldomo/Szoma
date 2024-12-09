@@ -391,10 +391,9 @@ def receivecolors():
 # Interface do usuário
 st.title('Find Me')
 st.subheader('Onde você acha sua cor')
-@st.dialog("Use a camera para capturar a cor ")
-def take_picture():
-    camera = st.camera_input(label = "")
 
+with st.expander("retire sua foto"):
+    camera = st.camera_input(label = "Use a camera para capturar a cor ")
 img_file = st.file_uploader(label = "Carregue uma imagem", type=['png', 'jpg', 'jpeg'], accept_multiple_files=False)
 realtime_update = True
 
