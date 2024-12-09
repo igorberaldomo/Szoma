@@ -304,10 +304,11 @@ def show_similar_colors():
                     "</div>"
                     "<div style='height: 80px; width: 80px; background-color: {}; margin: 10px'>"
                         "<p style='position: absolute; top: 150px; left: 210px; font-size: 20px;text-color: {};'>{}{}</p>"
-                "</div>"
-            "</div>"
-        "</div>"
-    "</div>"). format(args)
+                    "</div>"
+                    "</div>"
+                    "</div>"
+                    "</div>"). format(args)
+                    st.markdown(script, unsafe_allow_html=True)
             except Exception as e:
                 st.write("erro cores não encontradas")
                 
