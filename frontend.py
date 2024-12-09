@@ -217,10 +217,8 @@ def show_similar_colors():
                 textcolor = '#000000'
             else:
                 textcolor = '#ffffff'
-            args = (hexadecimal,textcolor,fornecedor,nome)
             cores = selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
             cores = cores[0]
-
             try:              
                 if len(cores) >= 1:
                     red1, green1, blue1 = cores[0]['red'], cores[0]['green'], cores[0]['blue']
@@ -230,7 +228,6 @@ def show_similar_colors():
                         textcolor1 = '#000000'
                     else:
                         textcolor1 = '#ffffff'
-                    args += (hexadecimal1,textcolor1,fornecedor1,nome1)
                 if len(cores) >= 2:
                     red2, green2, blue2 = cores[1]['red'], cores[1]['green'], cores[1]['blue']
                     hexadecimal2 = cores[1]['hexadecimal']
@@ -238,8 +235,7 @@ def show_similar_colors():
                     if red2 > 155 or green2 > 155 or blue2 > 155:
                         textcolor2 = '#000000'
                     else:
-                        textcolor2 = '#ffffff'
-                    args += (hexadecimal2,textcolor2,fornecedor2,nome2)
+                        textcolor2 = '#ffffff'  
                 if len(cores) >= 3:
                     red3, green3, blue3 = cores[2]['red'], cores[2]['green'], cores[2]['blue']
                     hexadecimal3 = cores[2]['hexadecimal']
@@ -248,7 +244,6 @@ def show_similar_colors():
                         textcolor3 = '#000000'
                     else:
                         textcolor3 = '#ffffff'
-                    args += (hexadecimal3,textcolor3,fornecedor3,nome3)
                 if len(cores) >= 4:
                     red4, green4, blue4 = cores[3]['red'], cores[3]['green'], cores[3]['blue']
                     hexadecimal4 = cores[3]['hexadecimal']
@@ -257,7 +252,6 @@ def show_similar_colors():
                         textcolor4 = '#000000'
                     else:
                         textcolor4 = '#ffffff'
-                    args += (hexadecimal4,textcolor4,fornecedor4,nome4)
                 if len(cores) >= 5:
                     red5, green5, blue5 = cores[4]['red'], cores[4]['green'], cores[4]['blue']
                     hexadecimal5 = cores[4]['hexadecimal']
@@ -266,7 +260,6 @@ def show_similar_colors():
                         textcolor5 = '#000000'
                     else:
                         textcolor5 = '#ffffff'
-                    args += (hexadecimal5,textcolor5,fornecedor5,nome5)
                 if len(cores) >= 6:
                     red6, green6, blue6 = cores[5]['red'], cores[5]['green'], cores[5]['blue']
                     hexadecimal6 = cores[5]['hexadecimal']
@@ -275,9 +268,6 @@ def show_similar_colors():
                         textcolor6 = '#000000'
                     else:
                         textcolor6 = '#ffffff'
-                    args += (hexadecimal6,textcolor6,fornecedor6,nome6)
-                st.write(args) 
-                
                 with container:
                     script = (
                         "<div style='height: 300px; width: 700px; background-color: white; position: relative;'>" 
@@ -309,7 +299,7 @@ def show_similar_colors():
                     "</div>"
                     "</div>"
                     "</div>"
-                    "</div>"). format(args)
+                    "</div>"). format(hexadecimal,textcolor,fornecedor,nome,hexadecimal1,textcolor1,fornecedor1,nome1, hexadecimal2,textcolor2,fornecedor2,nome2,hexadecimal3,textcolor3,fornecedor3,nome3, hexadecimal4,textcolor4,fornecedor4,nome4, hexadecimal5,textcolor5,fornecedor5,nome5,hexadecimal6,textcolor6,fornecedor6,nome6)
                     st.markdown(script, unsafe_allow_html=True)
             except Exception as e:
                 st.write("erro cores não encontradas")
