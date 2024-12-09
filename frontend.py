@@ -221,54 +221,49 @@ def show_similar_colors():
             cores = cores[0]
             st.write(cores[0]['nome'])
             try:              
-                if len(cores) >= 1:
-                    red1, green1, blue1 = cores[0]['red'], cores[0]['green'], cores[0]['blue']
-                    hexadecimal1 = cores[0]['hexadecimal']
-                    nome1, fornecedor1 = cores[0]['nome'], cores[0]['fornecedores']
-                    if red1 > 155 or green1 > 155 or blue1 > 155:
-                        textcolor1 = '#000000'
-                    else:
-                        textcolor1 = '#ffffff'
-                if len(cores) >= 2:
-                    red2, green2, blue2 = cores[1]['red'], cores[1]['green'], cores[1]['blue']
-                    hexadecimal2 = cores[1]['hexadecimal']
-                    nome2, fornecedor2 = cores[1]['nome'], cores[1]['fornecedores']
-                    if red2 > 155 or green2 > 155 or blue2 > 155:
-                        textcolor2 = '#000000'
-                    else:
-                        textcolor2 = '#ffffff'  
-                if len(cores) >= 3:
-                    red3, green3, blue3 = cores[2]['red'], cores[2]['green'], cores[2]['blue']
-                    hexadecimal3 = cores[2]['hexadecimal']
-                    nome3, fornecedor3 = cores[2]['nome'], cores[2]['fornecedores']
-                    if red3 > 155 or green3 > 155 or blue3 > 155:
-                        textcolor3 = '#000000'
-                    else:
-                        textcolor3 = '#ffffff'
-                if len(cores) >= 4:
-                    red4, green4, blue4 = cores[3]['red'], cores[3]['green'], cores[3]['blue']
-                    hexadecimal4 = cores[3]['hexadecimal']
-                    nome4, fornecedor4 = cores[3]['nome'], cores[3]['fornecedores']
-                    if red4 > 155 or green4 > 155 or blue4 > 155:
-                        textcolor4 = '#000000'
-                    else:
-                        textcolor4 = '#ffffff'
-                if len(cores) >= 5:
-                    red5, green5, blue5 = cores[4]['red'], cores[4]['green'], cores[4]['blue']
-                    hexadecimal5 = cores[4]['hexadecimal']
-                    nome5, fornecedor5 = cores[4]['nome'], cores[4]['fornecedores']
-                    if red5 > 155 or green5 > 155 or blue5 > 155:
-                        textcolor5 = '#000000'
-                    else:
-                        textcolor5 = '#ffffff'
-                if len(cores) >= 6:
-                    red6, green6, blue6 = cores[5]['red'], cores[5]['green'], cores[5]['blue']
-                    hexadecimal6 = cores[5]['hexadecimal']
-                    nome6, fornecedor6 = cores[5]['nome'], cores[5]['fornecedores']
-                    if red6 > 155 or green6 > 155 or blue6 > 155:
-                        textcolor6 = '#000000'
-                    else:
-                        textcolor6 = '#ffffff'
+
+                red1, green1, blue1 = cores[0]['red'], cores[0]['green'], cores[0]['blue']
+                hexadecimal1 = cores[0]['hexadecimal']
+                nome1, fornecedor1 = cores[0]['nome'], cores[0]['fornecedores']
+                if red1 > 155 or green1 > 155 or blue1 > 155:
+                    textcolor1 = '#000000'
+                else:
+                    textcolor1 = '#ffffff'
+                red2, green2, blue2 = cores[1]['red'], cores[1]['green'], cores[1]['blue']
+                hexadecimal2 = cores[1]['hexadecimal']
+                nome2, fornecedor2 = cores[1]['nome'], cores[1]['fornecedores']
+                if red2 > 155 or green2 > 155 or blue2 > 155:
+                    textcolor2 = '#000000'
+                else:
+                    textcolor2 = '#ffffff'  
+                red3, green3, blue3 = cores[2]['red'], cores[2]['green'], cores[2]['blue']
+                hexadecimal3 = cores[2]['hexadecimal']
+                nome3, fornecedor3 = cores[2]['nome'], cores[2]['fornecedores']
+                if red3 > 155 or green3 > 155 or blue3 > 155:
+                    textcolor3 = '#000000'
+                else:
+                    textcolor3 = '#ffffff'
+                red4, green4, blue4 = cores[3]['red'], cores[3]['green'], cores[3]['blue']
+                hexadecimal4 = cores[3]['hexadecimal']
+                nome4, fornecedor4 = cores[3]['nome'], cores[3]['fornecedores']
+                if red4 > 155 or green4 > 155 or blue4 > 155:
+                    textcolor4 = '#000000'
+                else:
+                    textcolor4 = '#ffffff'
+                red5, green5, blue5 = cores[4]['red'], cores[4]['green'], cores[4]['blue']
+                hexadecimal5 = cores[4]['hexadecimal']
+                nome5, fornecedor5 = cores[4]['nome'], cores[4]['fornecedores']
+                if red5 > 155 or green5 > 155 or blue5 > 155:
+                    textcolor5 = '#000000'
+                else:
+                    textcolor5 = '#ffffff'
+                red6, green6, blue6 = cores[5]['red'], cores[5]['green'], cores[5]['blue']
+                hexadecimal6 = cores[5]['hexadecimal']
+                nome6, fornecedor6 = cores[5]['nome'], cores[5]['fornecedores']
+                if red6 > 155 or green6 > 155 or blue6 > 155:
+                    textcolor6 = '#000000'
+                else:
+                    textcolor6 = '#ffffff'
                 with container:
                     script = (
                         "<div style='height: 300px; width: 700px; background-color: white; display:flex; flex-direction: row'>"
