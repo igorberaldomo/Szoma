@@ -211,16 +211,18 @@ def show_similar_colors():
             data_df = pd.DataFrame(data, index=[0])
             data = data_df.to_dict(orient='records')
             tabela = st.session_state.tabelas
-            try:
-                hexadecimal = data[0]['hexadecimal']
-                nome, fornecedor = data[0]['nome'], data[0]['fornecedores']
-                red, green, blue = data[0]['red'], data[0]['green'], data[0]['blue']
-                if red > 155 or green > 155 or blue > 155:
-                    textcolor = '#000000'
-                else:
-                    textcolor = '#ffffff'
-                args = (hexadecimal,textcolor,fornecedor,nome)
-                cores = selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
+            hexadecimal = data[0]['hexadecimal']
+            nome, fornecedor = data[0]['nome'], data[0]['fornecedores']
+            red, green, blue = data[0]['red'], data[0]['green'], data[0]['blue']
+            if red > 155 or green > 155 or blue > 155:
+                textcolor = '#000000'
+            else:
+                textcolor = '#ffffff'
+            args = (hexadecimal,textcolor,fornecedor,nome)
+            cores = selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
+            st.write(cores)
+            st.write(args) 
+            try:              
                 if len(cores) >= 1:
                     red1, green1, blue1 = cores[0]['red'], cores[0]['green'], cores[0]['blue']
                     hexadecimal1 = cores[0]['hexadecimal']
@@ -275,8 +277,7 @@ def show_similar_colors():
                     else:
                         textcolor6 = '#ffffff'
                     args += (hexadecimal6,textcolor6,fornecedor6,nome6)
-                st.write(cores)
-                st.write(args)    
+   
                 
                 with container:
                     script = (
