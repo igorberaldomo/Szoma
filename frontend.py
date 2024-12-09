@@ -219,10 +219,7 @@ def show_similar_colors():
                 textcolor = '#ffffff'
             cores = selecionar_cores_em_todos_os_fornecedores(red, green,blue,tabela)
             cores = cores[0]
-            st.write(cores[0]['nome'])
-            try:              
-
-                red1, green1, blue1 = cores[0]['red'], cores[0]['green'], cores[0]['blue']
+            red1, green1, blue1 = cores[0]['red'], cores[0]['green'], cores[0]['blue']
                 hexadecimal1 = cores[0]['hexadecimal']
                 nome1, fornecedor1 = cores[0]['nome'], cores[0]['fornecedores']
                 if red1 > 155 or green1 > 155 or blue1 > 155:
@@ -264,6 +261,8 @@ def show_similar_colors():
                     textcolor6 = '#000000'
                 else:
                     textcolor6 = '#ffffff'
+            try:              
+                
                 with container:
                     script = (
                         "<div style='height: 300px; width: 700px; background-color: white; display:flex; flex-direction: row'>"
