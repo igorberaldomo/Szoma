@@ -67,7 +67,7 @@ def selecionar_complementos(red, green, blue, palheta, tabela):
         if difGB < 0:
             difGB = difGB * -1
         # se a diferença entre as cores for menor ou igual a 3, ela tem dois ou mais valores próximos o suficiente para causar que duas cores do complemento sejam iguais
-        if difRB < 3 and difRG < 3 and difGB < 3:
+        if (difRB < 3 and difRG < 3 and difGB < 3) or difRB <3 or difRG < 3 or difGB < 3:
             # como precisamos de cores diferentes para os complementos 
             if red > 128 or green > 128 or blue > 128:
                 maior_valor  = [maior_valor_de_menor, maior_valor_de_maior, maior_valor_de_meio]
