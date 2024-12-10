@@ -99,6 +99,9 @@ with open ("sherwin-williams.json", "r+") as file:
                 if total_dif < min_dif:
                     min_dif = total_dif
                     pantone = nearest_pantone[c]
+                if total_dif == 0:
+                    pantone = nearest_pantone[c]
+                    break
                 c += 1
             return pantone
                                 
