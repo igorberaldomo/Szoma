@@ -349,7 +349,7 @@ def receivecolors():
             # renderizar complementos
             with container:
                 script = ("<div style='display: flex; flex-direction: row; justify-content: space-around; margin: 0px; padding:0px;width: 700px ;margin: 0px auto; height: 480px;'>"
-                        "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
+                        "<div style='background-color: white ; width: 680px; height: 480px; padding: 10px;box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 10px 0px 0px 10px;'>"
                         "<div><h5 style='margin: 0px; padding:0px; color:black;'><strong>Cor principal:</strong></h5>"
                         "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
                         "<p style='color:black; margin: 0px; padding:0px'>{}: {}</p>"
@@ -358,7 +358,7 @@ def receivecolors():
                         "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
                         "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
                         "</div></div>"
-                        "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;"
+                        "<div style='background-color: white ; width: 680px; height: 480px; padding: 10px;"
                         "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);'>"
                         "<div><h5 style='color:black;margin: 0px; padding:0px'>Cor secundária 1:</h5>"
                         "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
@@ -368,7 +368,7 @@ def receivecolors():
                         "<p style='color:black;margin: 0px; padding:0px'>RGB: {},{},{} </p>"
                         "<p style='color:black;margin: 0px; padding:0px'>Cyan: {:.2f}<br>Magenta: {:.2f}<br>Yellow: {:.2f}<br>Key: {:.2f}</p>"
                         "</div></div>"
-                        "<div style='background-color: white ; width: 660px; height: 480px; padding: 10px;"
+                        "<div style='background-color: white ; width: 680px; height: 480px; padding: 10px;"
                         "box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.25);border-radius: 0px 10px 10px 0px;'>"
                         "<div><h5 style='margin: 0px; padding:0px; color:black;'>Cor secundária 2:</h5>"
                         "<div id='container' style='background-color: {}; width: 200px; height: 200px;'></div>"
@@ -414,7 +414,7 @@ if modo == "Procura de Paletas":
     tipo_de_paleta = st.selectbox('Paletas', options=('triade', 'complementar', 'análoga'))
     filtros = st.selectbox('Filtros', options=("Luz Fria","Luz Neutra","Luz Quente"))
     procura = st.text_input('Digite o nome da cor, o código Pantone (00-0000) ou o hexadecimal (#000000):')
-    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=0.8, step=0.1)
+    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
     change_color = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
     box_color = st.session_state.cor
 
@@ -471,7 +471,7 @@ if modo == "Comparação de Marcas":
         "Nenhum": None
     }
     aspect_ratio = aspect_dict[aspect_choice]
-    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=0.8, step=0.1)
+    iluminação = st.slider('Iluminação', min_value=0.0, max_value=1.0, value=1.0, step=0.1)
     change_color_button = st.button("Alterar cor da caixa" , on_click=mudar_cor_da_caixa)
     box_color = st.session_state.cor
     if img_file:
