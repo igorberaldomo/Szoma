@@ -31,7 +31,7 @@ def selecionar_cor_principal(red, green, blue, tabela):
         # aplica a procura na tabela
         resultset = tabela[(tabela['red'] >= minred) & (tabela['red'] <= maxred) & (tabela['green'] >= mingreen) & (tabela['green'] <= maxgreen) & (tabela['blue'] >= minblue) & (tabela['blue'] <= maxblue)]
         resultset = resultset.to_dict(orient='index')
-        menor_diferência = 0
+        menor_diferença = 0
         posição = 0
         for key, value in resultset.items(): 
             r = resultset[key]['red']
@@ -39,13 +39,14 @@ def selecionar_cor_principal(red, green, blue, tabela):
             b = resultset[key]['blue']
             diferença = abs(red - r) + abs(green - g) + abs(blue - b)
             if key == 0:
-                menor_diferência = diferença
+                menor_diferença = diferença
                 posição = key
-            if diferença < menor_diferência:
-                menor_diferência = diferença
+            if diferença < menor_diferença:
+                menor_diferença = diferença
                 posição = key
-            if menor_diferência == 0:
+            if menor_diferença == 0:
                 posição = key
+                break
             key += 1
         dct = {'nome': resultset[posição]['nome'], 'red': resultset[posição]['red'], 'green': resultset[posição]['green'], 'blue': resultset[posição]['blue'], 'ncs': resultset[posição]['ncs'], 'codigo_suvinil': resultset[posição]['codigo_suvinil'], 'hexadecimal': resultset[posição]['hexadecimal'], 'pantone_código': resultset[posição]['pantone_código'], 'pantone_name': resultset[posição]['pantone_name'], 'pantone_hex': resultset[posição]['pantone_hex'], 'fornecedores': resultset[posição]['fornecedores']} 
         dct = {k:[v] for k,v in dct.items()}     
