@@ -452,7 +452,8 @@ if modo == "Args de Paletas":
                 enhancer.enhance(iluminação).save("image/cropped.png")
 
                 find_rgb_value(args, img_file, "image/cropped.png", opção_fornecedores,filtros)
-    elif args: 
+    elif args:
+        tabela = st.session_state.tables 
         st.write(tabela['todos'])
         find_rgb_value(args, None, None, opção_fornecedores,filtros)
 
