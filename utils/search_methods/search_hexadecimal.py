@@ -4,6 +4,7 @@ import pandas as pd
 
 engine = production_connection()
 def search_hexadecimal(hexadecimal, tabela):
+    st.write(hexadecimal)
     resultset = dict()
     for index, row in tabela.iterrows():
         if row['hexadecimal'] == hexadecimal or row['pantone_hex'] == hexadecimal:

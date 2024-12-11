@@ -137,7 +137,7 @@ def mudar_cor_da_caixa():
     else:
         st.session_state.cor = '#ffffff'
 
-def encontrar_valor_rgb(args, upload, camera ,opção_fornecedores,filtros):
+def find_rgb_value(args, upload, camera ,opção_fornecedores,filtros):
 
     st.session_state.resultados = []
     if args or upload or camera:
@@ -433,7 +433,7 @@ if modo == "Args de Paletas":
                 enhancer = ImageEnhance.Brightness(cropped_img)
                 enhancer.enhance(iluminação).save("image/cropped.png")    
 
-                encontrar_valor_rgb(args, "image/cropped.png", camera, opção_fornecedores,filtros)
+                find_rgb_value(args, "image/cropped.png", camera, opção_fornecedores,filtros)
 
 
     elif camera:
@@ -451,9 +451,9 @@ if modo == "Args de Paletas":
                 enhancer = ImageEnhance.Brightness(edited_foto)
                 enhancer.enhance(iluminação).save("image/cropped.png")
 
-                encontrar_valor_rgb(args, img_file, "image/cropped.png", opção_fornecedores,filtros)
+                find_rgb_value(args, img_file, "image/cropped.png", opção_fornecedores,filtros)
     elif args:
-            encontrar_valor_rgb(args, None, None, opção_fornecedores,filtros)
+            find_rgb_value(args, None, None, opção_fornecedores,filtros)
     receivecolors()
     
     
