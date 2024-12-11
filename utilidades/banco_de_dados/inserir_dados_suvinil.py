@@ -71,4 +71,4 @@ def inserir_dados_suvinil():
                 print(c)
                 conn.commit()
             c+=1
-db_table_insertinto_suvinil()
+inserir_dados_suvinil()

@@ -48,4 +48,4 @@ def inserir_dados_padrao_cores():
                 result = conn.execute(stmt)
                 conn.commit()
             c+=1
-db_table_insertinto_padrao_cores()
+inserir_dados_padrao_cores()

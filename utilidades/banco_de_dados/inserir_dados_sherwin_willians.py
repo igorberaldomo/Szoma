@@ -66,4 +66,4 @@ def inserir_dados_Sherwin_Willians():
                 print(c)
                 conn.commit()
             c+=1
-db_table_insertinto_Sherwin_Willians()
+inserir_dados_Sherwin_Willians()

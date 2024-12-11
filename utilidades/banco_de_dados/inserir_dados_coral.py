@@ -66,4 +66,4 @@ def inserir_dados_coral():
                 result = conn.execute(stmt)
                 conn.commit()
             c+=1
-db_table_insertinto_coral()
+inserir_dados_coral()
