@@ -14,27 +14,27 @@ def search_nome_to_find_id(nome, tabela):
         # procura no json o id da cor que bate com o nome digitado assim como a tabela que ela pertence
         if nome_id == -1:
             for keys in search_dict["quickSearch"][0]:
-                if nome in keys:
+                if nome.capitalize() in keys:
                     nome_id = search_dict["quickSearch"][0][nome]
                     tabela_escolida = tabela["coral"]
         if nome_id == -1:
             for keys in search_dict["suvinil"][0]:
-                if nome in keys:
+                if nome.capitalize() in keys:
                     nome_id = search_dict["suvinil"][0][nome]
                     tabela_escolida = tabela["suvinil"]
         if nome_id == -1:
             for keys in search_dict["sherwin-willians"][0]:
-                if nome in keys:
+                if nome.capitalize() in keys:
                     nome_id = search_dict["sherwin-willians"][0][nome]
                     tabela_escolida = tabela["sherwin-willians"]
         if nome_id == -1:
             for keys in search_dict["anjo"][0]:
-                if nome in keys:
+                if nome.capitalize() in keys:
                     nome_id = search_dict["anjo"][0][nome]
                     tabela_escolida = tabela["anjo"]
         if nome_id == -1:
             for keys in search_dict["coral"][0]:
-                if nome in keys:
+                if nome.capitalize() in keys:
                     nome_id = search_dict["coral"][0][nome]
                     tabela_escolida = tabela["coral"]
         # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras, então desfazemos as posições pegamos os dados e refazemos a tabela
