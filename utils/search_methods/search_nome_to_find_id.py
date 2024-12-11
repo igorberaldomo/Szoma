@@ -38,6 +38,7 @@ def search_nome_to_find_id(nome, tabela):
                     nome_id = search_dict["coral"][0]
                     tabela_escolida = tabela["coral"]
         # o metodo iloc mantem a posição original da tabela, nós precisamos que ele esteja na posição 0 para para executar as procuras, então desfazemos as posições pegamos os dados e refazemos a tabela
+        st.write(nome_id)
         resultset = tabela_escolida.iloc[nome_id]
         resultset = resultset.to_dict(orient="records")
         resultset = {k: [v] for k, v in resultset[0].items()}
