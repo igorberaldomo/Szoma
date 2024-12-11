@@ -454,6 +454,7 @@ if modo == "Args de Paletas":
                 find_rgb_value(args, img_file, "image/cropped.png", opção_fornecedores,filtros)
     elif args:
             find_rgb_value(args, None, None, opção_fornecedores,filtros)
+            st.write(tabela['todos'])
     receivecolors()
     
     
